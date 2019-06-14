@@ -1,0 +1,54 @@
+FROM daocloud.io/library/ubuntu:18.10
+LABEL Name=google/cordova-docs Version=1.0.1
+
+WORKDIR /root/app
+
+RUN sed -i "s|http://archive.ubuntu.com|http://mirrors.aliyun.com|g" /etc/apt/sources.list && rm -Rf /var/lib/apt/lists/* && apt-get -y update
+
+RUN apt-get install -y ruby-full
+
+RUN apt-get install -y nodejs
+RUN apt-get install -y npm
+RUN npm config set registry http://registry.npm.taobao.org
+
+RUN apt-get install -y python2.7
+
+RUN gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/
+RUN gem install bundler
+
+CMD ["/bin/bash" ,"-c" ,"while true;do echo hello docker;sleep 1;done"]
+
+
+
+
+docker run -d --privileged -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock  --restart=always  portainer/portainer:1.20.1
+
+## docker build --rm -f "Dockerfile-dev" -t cordova-docs:latest2 . 
+## docker-compose up -d
+
+####docker run -it cordova-docs:latest2 -v /home/ubuntu/cordova-docs/:/root/app/ /bin/bash
+
+## docker ps
+
+## docker exec -it b232abe3c967 /bin/bash
+
+bundle config mirror.https://rubygems.org https://gems.ruby-china.com
+bundle install --path ./ruby_modules
+
+部署：
+node_modules/.bin/gulp serve
+
+构建静态html文件
+node_modules/.bin/gulp build --prod
+
+## 构建镜像
+docker build -t hub.tencentyun.com/google/cordava-docs:v1.0.0 .
+
+1、登录 hub 
+docker login --username=google hub.tencentyun.com
+
+2、pull/push
+docker tag [ImageId] hub.tencentyun.com/google/cordava-docs:v1.0.0
+docker push hub.tencentyun.com/google/cordava-docs:v1.0.1
+
+
