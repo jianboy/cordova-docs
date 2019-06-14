@@ -26,3 +26,8 @@ Gemfile.lock
 
 /package-lock.json
 npm-debug.log
+
+
+/f2j/.settings
+/f2j/target
+/f2j/bin
