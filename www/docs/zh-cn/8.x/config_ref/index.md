@@ -66,7 +66,7 @@ toc_title: Config.xml
         </widget>
     
 
-以下的配置元素出现在顶级 `config.xml` 档，并在所有受支援的Cordova平台支援：
+以下的配置元素出现在顶级 `config.xml` 档，并在所有受支援的Cordova平台支持：
 
 *   `<widget>`元素的 `id` 属性提供了应用程式的反向域识别码和 `version` 主要/次要/修补程式符号表示其完整版本号码。
     

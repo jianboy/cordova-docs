@@ -253,7 +253,7 @@ plugman 中止与非零代码为其目标专案不能满足发动机的约束任
     </platform>
     
 
-所需 `name` 属性标识一个平台支援，将与该平台关联元素的子级。
+所需 `name` 属性标识一个平台支持，将与该平台关联元素的子级。
 
 平台名称应该是小写字母。平台名称，如任意选择，列出：
 
@@ -341,7 +341,7 @@ XML 的的示例：
 
  [1]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement
 
-Windows 平台支援两个附加属性 （两个可选） 时影响 `package.appxmanifest` 元名称：
+Windows 平台支持两个附加属性 （两个可选） 时影响 `package.appxmanifest` 元名称：
 
 该 `device-target` 属性指示，只应包括，当生成指定的目标装置类型。 受支援的值是 `win`、 `phone` 或 `all`.
 
@@ -471,7 +471,7 @@ Android 的示例：
 
 ### *framework*视窗
 
-Windows 平台支援三个附加属性 (所有可选) 精炼时框架应包括:
+Windows 平台支持三个附加属性 (所有可选) 精炼时框架应包括:
 
     <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
     

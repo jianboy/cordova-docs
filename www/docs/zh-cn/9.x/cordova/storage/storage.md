@@ -41,7 +41,7 @@ toc_title: Store data
 
  [3]: http://dev.w3.org/html5/webdatabase/
 
-以下平台支援 WebSQL：
+以下平台支持 WebSQL：
 
 *   Android 系统
 *   黑莓 10
@@ -54,7 +54,7 @@ toc_title: Store data
 
  [4]: http://www.w3.org/TR/IndexedDB/
 
-以下平台支援 IndexedDB：
+以下平台支持 IndexedDB：
 
 *   黑莓 10
 *   火狐浏览器的作业系统

@@ -17,11 +17,11 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: 平台支援
+title: 平台支持
 toc_title: Platform support
 ---
 
-# 平台支援
+# 平台支持
 
 下面显示一的组开发工具和设备的 Api 可为每个移动平台。 Api 在此处列出的设备是由核心外挂程式，提供额外的 Api 都是通过[协力厂商外挂程式][1]提供。 列标题显示的 CLI 速记名称。
 

@@ -25,11 +25,11 @@ toc_title: Ubuntu
 
 ## 初始版本
 
-欢迎来到Cordova Ubuntu 平台支援的初始版本。 此版本中，重点是在 Ubuntu 的系统上开发和使用概述中讨论的跨平台工作流。 这包括将 Ubuntu 平台添加到您的专案，添加标准Cordova外挂程式，以及建设和运行的 Ubuntu 平台的应用程式。
+欢迎来到Cordova Ubuntu 平台支持的初始版本。 此版本中，重点是在 Ubuntu 的系统上开发和使用概述中讨论的跨平台工作流。 这包括将 Ubuntu 平台添加到您的专案，添加标准Cordova外挂程式，以及建设和运行的 Ubuntu 平台的应用程式。
 
 ### Ubuntu SDK
 
-您还可能想要安装 Ubuntu QtCreator 开发环境。 请参阅[developer.ubuntu.com][1]为更多的资讯。 (QtCreator SDK 不是需要将 Ubuntu 平台支援添加到应用程式Cordova。)
+您还可能想要安装 Ubuntu QtCreator 开发环境。 请参阅[developer.ubuntu.com][1]为更多的资讯。 (QtCreator SDK 不是需要将 Ubuntu 平台支持添加到应用程式Cordova。)
 
  [1]: http://developer.ubuntu.com
 
