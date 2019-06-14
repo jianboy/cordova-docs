@@ -1,0 +1,2030 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                安全指南 - Cordova 中文网
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+        
+
+        
+            
+        
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/zh-cn/latest/guide/appdev/security/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/ZeroClipboard.js"></script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/zh-cn/9.x/">cordova中文文档</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">插件</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">cordova博客<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/community" id="blog_button">cordova中文社区<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">贡献</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">快速开始</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                        
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '9.x' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                简介
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/overview/index.html">
+                Overview
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                创建 APP
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/cli/index.html">
+                创建你的第一个app
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/support/index.html">
+                平台支持
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                平台开发
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/platforms/android/index.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/platforms/blackberry10/home.html">
+                黑莓 10
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/platforms/ios/index.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/platforms/osx/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/platforms/ubuntu/index.html">
+                Ubuntu
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/platforms/win8/index.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/platforms/wp8/home.html">
+                WP8
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../platform_plugin_versioning_ref/index.html">
+                平台和版本管理
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../config_ref/images.html">
+                自定义图标
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../cordova/storage/storage.html">
+                存储数据
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/appdev/privacy/index.html">
+                隐私管理
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="this-page" href="../../../guide/appdev/security/index.html">
+                安全管理
+            </a>
+            
+                <span class="entry-highlight"></span>
+            
+        
+
+        
+        <div id="page-toc" class="page-toc"></div>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/appdev/whitelist/index.html">
+                白名单
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                创建插件
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/hybrid/plugins/index.html">
+                创建一个插件
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                平台开发
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/platforms/android/plugin.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/platforms/blackberry10/plugin.html">
+                黑莓 10
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/platforms/ios/plugin.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/platforms/win8/plugin.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/platforms/wp8/plugin.html">
+                WP8
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../plugin_ref/plugman.html">
+                使用 Plugman
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                高级开发
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/hybrid/webviews/index.html">
+                原生应用中嵌入Cordova
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/next/index.html">
+                下一步
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                参考
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="../../../config_ref/index.html">
+                Config.xml文件
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../cordova/events/events.html">
+                事件
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-cli/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/appdev/hooks/index.html">
+                Hooks
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../plugin_ref/spec.html">
+                Plugin.xml文件
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                插件 APIs
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-battery-status/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-camera/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-console/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-contacts/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-device/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-device-motion/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-device-orientation/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-dialogs/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-file/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-file-transfer/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-geolocation/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-globalization/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-inappbrowser/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-media/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-media-capture/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-network-information/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-splashscreen/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-vibration/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-statusbar/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-whitelist/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-legacy-whitelist/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Table of Contents
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+
+
+
+<li>
+    <a class="" href="../../../guide/overview/index.html">
+        Overview
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="../../../guide/cli/index.html">
+        创建你的第一个app
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../guide/support/index.html">
+        平台支持
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="../../../guide/platforms/android/index.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../guide/platforms/blackberry10/home.html">
+        黑莓 10
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../guide/platforms/ios/index.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../guide/platforms/osx/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../guide/platforms/ubuntu/index.html">
+        Ubuntu
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../guide/platforms/win8/index.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../guide/platforms/wp8/home.html">
+        WP8
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="../../../platform_plugin_versioning_ref/index.html">
+        平台和版本管理
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../config_ref/images.html">
+        自定义图标
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../cordova/storage/storage.html">
+        存储数据
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../guide/appdev/privacy/index.html">
+        隐私管理
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="this-page" href="../../../guide/appdev/security/index.html">
+        安全管理
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../guide/appdev/whitelist/index.html">
+        白名单
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="../../../guide/hybrid/plugins/index.html">
+        创建一个插件
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="../../../guide/platforms/android/plugin.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../guide/platforms/blackberry10/plugin.html">
+        黑莓 10
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../guide/platforms/ios/plugin.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../guide/platforms/win8/plugin.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../guide/platforms/wp8/plugin.html">
+        WP8
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="../../../plugin_ref/plugman.html">
+        使用 Plugman
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="../../../guide/hybrid/webviews/index.html">
+        原生应用中嵌入Cordova
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../guide/next/index.html">
+        下一步
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="../../../config_ref/index.html">
+        Config.xml文件
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../cordova/events/events.html">
+        事件
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-cli/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../guide/appdev/hooks/index.html">
+        Hooks
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../plugin_ref/spec.html">
+        Plugin.xml文件
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-battery-status/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-camera/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-console/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-contacts/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-device/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-device-motion/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-device-orientation/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-dialogs/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-file/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-file-transfer/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-geolocation/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-globalization/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-inappbrowser/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-media/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-media-capture/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-network-information/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-splashscreen/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-vibration/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-statusbar/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-whitelist/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-legacy-whitelist/index.html">
+        
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                        
+                        
+                            
+                        
+
+                        <a class="edit" href="https://github.com/apache/cordova-docs/tree/master/www/docs/zh-cn/dev/guide/appdev/security/index.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Edit Source on GitHub</a>
+                    
+                
+
+                <!-- Language dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        简体中文
+                        <span class="caret"></span>
+                    </button>
+
+                    <!-- List all languages -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/en/9.x/guide/appdev/security/index.html" class="">
+                                
+                                    English
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-cn/9.x/guide/appdev/security/index.html" class="">
+                                
+                                    <span class="selected">
+                                        简体中文
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-tw/9.x/guide/appdev/security/index.html" class="">
+                                
+                                    繁體中文
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        9.x
+                        
+                            (Latest)
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+                                
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/zh-cn/dev/guide/appdev/security/index.html" class="">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+                                
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/zh-cn/9.x/guide/appdev/security/index.html" class="">
+                                
+                                    <span class="selected">
+                                        
+                                9.x
+                                
+                                    (Latest)
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+                                
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/zh-cn/8.x/guide/appdev/security/index.html" class="">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+                                
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/zh-cn/7.x/guide/appdev/security/index.html" class="">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+                                
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/zh-cn/6.x/guide/appdev/security/index.html" class="">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>安全指南</h1>
+
+<p>以下指南包括开发Cordova的应用程式时，应考虑一些安全最佳做法。 请务必注意安全是一个非常复杂的主题，因此本指南不是详尽无遗。 如果你认为你可以贡献本指南，请随时在Cordova的 bug 追踪器下<a href="https://issues.apache.org/jira/browse/CB/component/12316407">&quot;文档&quot;</a>中档的问题。 本指南旨在适用于一般Cordova发展 （所有平台），但将指出特定于平台的特殊注意事项。</p>
+
+<h2>本指南讨论了下列主题：</h2>
+
+<ul>
+<li>  白名单</li>
+<li>  Iframe 和回档 Id 机制</li>
+<li>  证书寄</li>
+<li>  自签名的证书</li>
+<li>  加密的存储</li>
+<li>  一般提示</li>
+<li>  推荐的文章和其他资源</li>
+</ul>
+
+<h2>白名单</h2>
+
+<ul>
+<li><p>阅读和理解，白名单指南</p></li>
+<li><p>域白名单不能在 Android API 10 及以下，WP8 iframe 和用户端代码。 这意味著攻击者可以载入任何域中的 iframe，在 iframe 内页面上的任何脚本可以直接存取Cordova JavaScript 物件和相应的本机 JAVA 物件。 当为这些平台构建应用程式时，应考虑到这种情况。 在实践中这意味著确保目标高于 10，Android API 和如果可能的话您不使用 iframe 载入外部内容-使用 inAppBrowser 外挂程式或其他协力厂商外挂程式。</p></li>
+</ul>
+
+<h2>Iframe 和回档 Id 机制</h2>
+
+<p>如果内容提供在 iframe 从白名单中的域中，该域将可以访问到本机的Cordova桥。 这意味著，如果白名单中的协力厂商广告网路和服务通过 iframe 的那些广告，它有可能是恶意的广告将能够打破 iframe 并执行恶意操作。 因此，您通常不应使用 iframe 除非你控制的伺服器的承载的 iframe 内容。 此外请注意有协力厂商外挂程式提供支援的广告网路。 注意此语句不是真正的 iOS，拦截一切包括 iframe 的连接。</p>
+
+<h2>证书寄</h2>
+
+<p>Cordova不支援真正的证书固定。 对此的一个主要障碍是证书的缺乏在 android 系统中的本机 Api 拦截 SSL 连线执行检查伺服器。 （虽然有可能要做证书寄于 Android 在 JAVA 中使用 JSSE，c + +，编写在 android 系统上的 web 视图和 web 视图为你处理伺服器连接，所以它是不可能有使用 JAVA 和 JSSE)。因为 Apache Cordova要跨多个平台提供一致的 Api，不具有能力的一个主要平台打破了这种一致性。</p>
+
+<p>有种方法近似证书锁定，如检查伺服器的公开金钥 （指纹） 预期值，当您的应用程式启动时或在其他不同的时间，在您的应用程式的存留期内。 有协力厂商外挂程式可供能不能做到的Cordova。 然而，这不是真实证书将锁定，将自动验证每个连接到伺服器上的预期值相同。</p>
+
+<h2>自签名的证书</h2>
+
+<p>不建议在您的伺服器上使用自签名的证书。 如果你渴望 SSL，那么强烈建议您的伺服器具有已正确地签署了著名的 CA （凭证授权单位） 的证书。 不能做真正的证书寄使这一重要。</p>
+
+<p>原因是接受自签名的证书绕过凭证连结验证，它允许任何伺服器凭证才被视为有效的设备。 这将打开沟通的人在中间的攻击。 它变得非常容易为骇客不仅拦截并读取在设备和伺服器之间的所有通信，但也要修改通信。 设备永远不会知道这种情况发生，因为它不会验证服务器的证书由受信任的 CA 签署。 该设备具有伺服器是它期望的人没有证据证明。 因为做的人在中间攻击的易用性，接受自签名的证书才略微比只在不受信任的网路上运行而不是 HTTPs 的 HTTP。 是的交通将会被加密，但它可能会用金钥加密从一个男人-中--中间，所以拦截中可以访问的一切，所以加密是无用除了对被动的观察员。 使用者信任 SSL 以是安全的和这将故意做出它不安全的所以，SSL 利用成为具误导性。 如果这将受信任的网路上使用 （即，您是完全控制企业内部），然后仍不建议使用自签名的证书。 在受信任的网路中的两项建议是因为网路本身是受信任的只是使用 HTTP 或获取由受信任的 CA （不自签名） 签署的证书。 网路是受信任的或者它不是。</p>
+
+<p>在这里所描述的原则不是特定于 Apache Cordova，它们适用于所有用户端-伺服器通信。</p>
+
+<p>当运行时Cordova在 android 系统上，使用 <code>android:debuggable=&quot;true&quot;</code> 应用程式中清单将允许 SSL 错误，例如凭证连结验证错误的自签章凭证。 所以您可以在此配置中，使用自签名的证书，但这不是一种配置，您的应用程式是在生产时，应使用。 意思是，只有在应用程式开发期间使用。</p>
+
+<h2>加密的存储</h2>
+
+<p>（TBD）</p>
+
+<h2>一般提示</h2>
+
+<h3>不要使用 Android 姜饼 ！</h3>
+
+<ul>
+<li>  设置您的 min-目标-sdk 级别高于 10。API 10 是姜饼，和姜饼由谷歌或设备制造商，不再受支援，因此不推荐由Cordova队。 </li>
+<li>  姜饼已被证明是不安全和最大的一个有针对性的移动开放源码软体<a href="http://bgr.com/2012/11/06/android-security-gingerbread-malware/">HTTP://www.mobilemag.com/2012/11/06/andriod-2-3-gingerbread-security/</a>. </li>
+<li>  在 Android 上的白名单不工作与姜饼或更低。 这意味著攻击者可以载入，然后会对所有的Cordova Api 的访问，可以使用该存取权限来窃取个人资料、 发送 SMS 消息到溢价率的数位，以及执行其他恶意行为的 iframe 中的恶意程式码。 </li>
+</ul>
+
+<h3>使用 InAppBrowser 的外部连结</h3>
+
+<ul>
+<li>  打开任何外部网站的连结时，请使用 InAppBrowser。 这是比白一个功能变数名称和直接在您的应用程式中包括的内容，因为 InAppBrowser 将使用本机浏览器的安全功能，并不会给网站访问到您的Cordova环境安全得多。 即使您信任的协力厂商网站，并将其包括在您的应用程式中直接，那协力厂商网站可能连结到恶意 web 内容。 </li>
+</ul>
+
+<h3>验证所有使用者输入</h3>
+
+<ul>
+<li>  始终验证您的应用程式接受的任何和所有输入。 这包括使用者名、 密码、 日期、 上载的媒体等。 因为攻击者可以操纵您的 HTML 和 JS 资产 （无论是通过反编译您的应用程式或使用像 chrome://inspect 这样的调试工具），这应该也执行验证您在伺服器上，尤其是在将资料提交给任何后端服务之前。 </li>
+<li>  其他来来源资料应进行的验证： 使用者文档、 连络人、 推式通知</li>
+</ul>
+
+<h3>不缓存敏感性资料</h3>
+
+<ul>
+<li>  如果使用者名、 密码、 地理定位资讯和其他敏感性资料被缓存，然后它可以潜在检索以后由未经授权的使用者或应用程式。</li>
+</ul>
+
+<h3>除非你知道你在做什么，否则不要使用 eval()</h3>
+
+<ul>
+<li>  JavaScript 函数 eval() 有被虐待的历史悠久。不正确地使用它，可以打开您的代码注入攻击，调试困难和代码执行速度变慢了。 </li>
+</ul>
+
+<h3>不要假定您的原始程式码是安全的</h3>
+
+<ul>
+<li>  因为从 HTML 和 JavaScript 的资产在本机容器中获取打包生成的Cordova应用程式，不应考虑您的代码是安全的。 它是可能要进行反向工程Cordova应用程式。 </li>
+</ul>
+
+<h2>推荐的文章和其他资源</h2>
+
+<ul>
+<li>  <a href="https://www.owasp.org/index.php/HTML5_Security_Cheat_Sheet">HTML5 安全作弊，详细说明了如何确保您的 HTML5 应用程式</a></li>
+<li>  <a href="https://github.com/phonegap/phonegap/wiki/Platform-Security">Phonegap 条设备安全问题，例如，使用加密的资料</a></li>
+<li>  <a href="http://www.cis.syr.edu/%7Ewedu/Research/paper/webview_acsac2011.pdf">关于 web 视图中的众所周知的安全缺陷白皮书基于混合应用程式</a></li>
+</ul>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 Apache软件基金会, 许可授权在 <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    
+    
+
+
+
+    
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  9.x", "language: zh-cn"] }
+    });
+</script>
+
+</body>
+</html>

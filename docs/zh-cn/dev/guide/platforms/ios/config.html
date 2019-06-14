@@ -1,0 +1,1998 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                iOS 配置 - Cordova 中文网
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+        
+
+        
+            
+        
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/zh-cn/latest/guide/platforms/ios/config.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/ZeroClipboard.js"></script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/zh-cn/9.x/">cordova中文文档</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">插件</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">cordova博客<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/community" id="blog_button">cordova中文社区<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">贡献</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">快速开始</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                        
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search 'dev' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                简介
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/overview/index.html">
+                Overview
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                创建 APP
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/cli/index.html">
+                创建你的第一个app
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/support/index.html">
+                平台支持
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                平台开发
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/platforms/android/index.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/platforms/blackberry10/home.html">
+                黑莓 10
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/platforms/ios/index.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/platforms/osx/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/platforms/ubuntu/index.html">
+                Ubuntu
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/platforms/win8/index.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/platforms/wp8/home.html">
+                WP8
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../platform_plugin_versioning_ref/index.html">
+                平台和版本管理
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../config_ref/images.html">
+                自定义图标
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../cordova/storage/storage.html">
+                存储数据
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/appdev/privacy/index.html">
+                隐私管理
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/appdev/security/index.html">
+                安全管理
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/appdev/whitelist/index.html">
+                白名单
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                创建插件
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/hybrid/plugins/index.html">
+                创建一个插件
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                平台开发
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/platforms/android/plugin.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/platforms/blackberry10/plugin.html">
+                黑莓 10
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/platforms/ios/plugin.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/platforms/win8/plugin.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/platforms/wp8/plugin.html">
+                WP8
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../plugin_ref/plugman.html">
+                使用 Plugman
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                高级开发
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/hybrid/webviews/index.html">
+                原生应用中嵌入Cordova
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/next/index.html">
+                下一步
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                参考
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="../../../config_ref/index.html">
+                Config.xml文件
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../cordova/events/events.html">
+                事件
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-cli/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../guide/appdev/hooks/index.html">
+                Hooks
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../plugin_ref/spec.html">
+                Plugin.xml文件
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                插件 APIs
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-battery-status/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-camera/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-console/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-contacts/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-device/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-device-motion/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-device-orientation/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-dialogs/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-file/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-file-transfer/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-geolocation/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-globalization/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-inappbrowser/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-media/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-media-capture/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-network-information/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-splashscreen/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-vibration/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-statusbar/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-whitelist/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="../../../reference/cordova-plugin-legacy-whitelist/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Table of Contents
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+
+
+
+<li>
+    <a class="" href="../../../guide/overview/index.html">
+        Overview
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="../../../guide/cli/index.html">
+        创建你的第一个app
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../guide/support/index.html">
+        平台支持
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="../../../guide/platforms/android/index.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../guide/platforms/blackberry10/home.html">
+        黑莓 10
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../guide/platforms/ios/index.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../guide/platforms/osx/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../guide/platforms/ubuntu/index.html">
+        Ubuntu
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../guide/platforms/win8/index.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../guide/platforms/wp8/home.html">
+        WP8
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="../../../platform_plugin_versioning_ref/index.html">
+        平台和版本管理
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../config_ref/images.html">
+        自定义图标
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../cordova/storage/storage.html">
+        存储数据
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../guide/appdev/privacy/index.html">
+        隐私管理
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../guide/appdev/security/index.html">
+        安全管理
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../guide/appdev/whitelist/index.html">
+        白名单
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="../../../guide/hybrid/plugins/index.html">
+        创建一个插件
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="../../../guide/platforms/android/plugin.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../guide/platforms/blackberry10/plugin.html">
+        黑莓 10
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../guide/platforms/ios/plugin.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../guide/platforms/win8/plugin.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../guide/platforms/wp8/plugin.html">
+        WP8
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="../../../plugin_ref/plugman.html">
+        使用 Plugman
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="../../../guide/hybrid/webviews/index.html">
+        原生应用中嵌入Cordova
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../guide/next/index.html">
+        下一步
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="../../../config_ref/index.html">
+        Config.xml文件
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../cordova/events/events.html">
+        事件
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-cli/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../guide/appdev/hooks/index.html">
+        Hooks
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../plugin_ref/spec.html">
+        Plugin.xml文件
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-battery-status/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-camera/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-console/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-contacts/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-device/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-device-motion/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-device-orientation/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-dialogs/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-file/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-file-transfer/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-geolocation/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-globalization/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-inappbrowser/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-media/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-media-capture/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-network-information/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-splashscreen/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-vibration/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-statusbar/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-whitelist/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="../../../reference/cordova-plugin-legacy-whitelist/index.html">
+        
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                        
+                        
+                            
+                        
+
+                        <a class="edit" href="https://github.com/apache/cordova-docs/tree/master/www/docs/zh-cn/dev/guide/platforms/ios/config.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Edit Source on GitHub</a>
+                    
+                
+
+                <!-- Language dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        简体中文
+                        <span class="caret"></span>
+                    </button>
+
+                    <!-- List all languages -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/en/dev/guide/platforms/ios/config.html" class="">
+                                
+                                    English
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-cn/dev/guide/platforms/ios/config.html" class="">
+                                
+                                    <span class="selected">
+                                        简体中文
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-tw/dev/guide/platforms/ios/config.html" class="">
+                                
+                                    繁體中文
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        dev
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+                                
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/zh-cn/dev/guide/platforms/ios/config.html" class="">
+                                
+                                    <span class="selected">
+                                        
+                                dev
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+                                
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/zh-cn/9.x/guide/platforms/ios/config.html" class="">
+                                
+                                    
+                                9.x
+                                
+                                    (Latest)
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+                                
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/zh-cn/8.x/guide/platforms/ios/config.html" class="">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+                                
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/zh-cn/7.x/guide/platforms/ios/config.html" class="">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+                                
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/zh-cn/6.x/guide/platforms/ios/config.html" class="">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+                <div class="alert docs-alert alert-info" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    This version of the documentation is under development!
+                    <a href="/docs/zh-cn/latest/guide/platforms/ios/config.html">
+                        Click here for the latest released version.
+                    </a>
+                </div>
+            
+
+            <!-- outdated warning -->
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>iOS 配置</h1>
+
+<p><code>config.xml</code>档控制应用于每个应用程式和 CordovaWebView 实例的应用程式的基本设置。 本节详细说明仅适用于 iOS 版本的首选项。 有关全域配置选项的资讯，请参阅 <a href="config_ref_index.md.html#The%20config.xml%20File">config.xml 档</a>。</p>
+
+<ul>
+<li><p><code>EnableViewportScale</code>(boolean 类型的值，预设值为 <code>false</code> ）： 设置为 <code>true</code> ，以便视区元标记来禁用或限制的范围的使用者比例，这预设启用的。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="EnableViewportScale" value="true"/&gt;
+</code></pre></div>
+<p>放置在 HTML 中禁用缩放和适合的视口，如下内容灵活地内呈现 web 视图：</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' /&gt;
+</code></pre></div></li>
+<li><p><code>MediaPlaybackAllowsAirPlay</code>(预设为<code>true</code>的布林值): 设置为<code>false</code> ，以防止空气发挥被使用在此视图中。 在预设 UIWebView 和 WKWebView 中可用。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="MediaPlaybackAllowsAirPlay" value="false"/&gt;
+</code></pre></div></li>
+<li><p><code>MediaPlaybackRequiresUserAction</code>(预设为<code>false</code>的布林值): 设置为<code>true</code>以防止自动播放<code>自动播放</code>属性或通过 JavaScript HTML5 视频或音讯。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="MediaPlaybackRequiresUserAction" value="true"/&gt;
+</code></pre></div></li>
+<li><p><code>AllowInlineMediaPlayback</code>(预设为<code>false</code>的布林值): 设置为<code>true</code> ，允许 HTML5 媒体重播显示<em>内联</em>在萤幕布局，使用浏览器提供的控制项，而不是本机控制项内。 这项工作，将添加到任何<code>&lt; video &gt;</code>元素的<code>webkit playsinline</code>属性。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="AllowInlineMediaPlayback" value="true"/&gt;
+</code></pre></div></li>
+<li><p><code>BackupWebStorage</code>(字串，要么<code>none</code>，<code>local</code>，或预设<code>云</code>): 设置为<code>cloud</code>以允许通过 iCloud 备份 web 存储资料。 设置为<code>local</code>以允许只有本地备份通过 iTunes 同步。 设置为<code>none</code>防止 web 存储备份。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="BackupWebStorage" value="local"/&gt;
+</code></pre></div></li>
+<li><p><code>TopActivityIndicator</code>(字串，预设为<code>gray</code>): 控制状态列指示大量的处理器活动中旋转的小图示的外观。 有效值为<code>whiteLarge</code>、<code>white</code>和<code>gray</code>.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="TopActivityIndicator" value="white"/&gt;
+</code></pre></div></li>
+<li><p><code>KeyboardDisplayRequiresUserAction</code>(预设为<code>true</code>的布林值): 设置为<code>false</code>以允许键盘显示表单输入调用<code>focus ()</code>时。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="KeyboardDisplayRequiresUserAction" value="false"/&gt;
+</code></pre></div></li>
+<li><p><code>SuppressesIncrementalRendering</code>(预设为<code>false</code>的布林值): 设置为<code>true</code> ，等待，直到在呈现到萤幕之前已收到的所有内容。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="SuppressesIncrementalRendering" value="true"/&gt;
+</code></pre></div></li>
+<li><p><code>GapBetweenPages</code>(浮动，预设值为``): 的大小，以磅为单位，页面之间的差距。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="GapBetweenPages" value="0"/&gt;
+</code></pre></div></li>
+<li><p><code>PageLength</code>(浮动，预设值为``): 每个页面，在页面流的方向点的大小。 当 PaginationMode 是从右至左或从左至右，此属性工作表示每个页面的宽度。 当 PaginationMode 是 topToBottom 或 bottomToTop 时，此属性工作表示每个页面的高度。 预设值为 0，这意味著布局使用视区的大小来确定页面的大小。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="PageLength" value="0"/&gt;
+</code></pre></div></li>
+<li><p><code>PaginationBreakingMode</code>(字串，预设为<code>页面</code>): 有效值为<code>页</code>和<code>列</code>。在列或页破发生的方式。 此属性确定是否某些 CSS 属性关于列和页破是荣幸还是忽略。 当此属性设置为<code>列</code>时，内容方面与到位的页破断列相关的 CSS 属性。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="PaginationBreakingMode" value="page"/&gt;
+</code></pre></div></li>
+<li><p><code>PaginationMode</code>(字串，预设为<code>unpaginated</code>): 有效值为<code>unpaginated</code>， <code>leftToRight</code>、 <code>topToBottom</code>、 <code>bottomToTop</code>和<code>rightToLeft</code>。 此属性可确定是否在 web 视图中的内容分解成页面全屏显示视图一次，或一个长的滚动视图所示。 如果设置为分页的表单，此属性切换分页的布局的内容，其内容造成 web 视图使用场地的 PageLength 和 GapBetweenPages 的值。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="PaginationMode" value="unpaginated"/&gt;
+</code></pre></div></li>
+<li><p><code>UIWebViewDecelerationSpeed</code>(字串，预设为<code>normal</code>): 有效的值都是<code>normal</code>，<code>fast</code>。 此属性控制减速的势头滚动。 对于大多数本机应用程式的预设速度是<code>normal</code>和<code>fast</code>是移动 Safari 的预设值。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="UIWebViewDecelerationSpeed" value="fast" /&gt;
+</code></pre></div></li>
+<li><p><code>ErrorUrl</code>(字串，预设情况下未设置): 如果设置，将显示在应用程式中出现错误时所引用的本地网页。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="ErrorUrl" value="myErrorPage.html"/&gt;
+</code></pre></div></li>
+<li><p><code>OverrideUserAgent</code>(字串，预设情况下未设置): 如果设置，值将替换旧使用者代理的 web 视图。 它有利于从应用程式或浏览器请求时请求远端页面，识别。 使用持谨慎态度，这可能导致与 web 伺服器的 compitiable 问题。 对于大多数情况下，改用 AppendUserAgent。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="OverrideUserAgent" value="Mozilla/5.0 My Browser" /&gt;
+</code></pre></div></li>
+<li><p><code>AppendUserAgent</code>(字串，预设情况下未设置): 如果设置，值将附加到年底老使用者代理的 web 视图。 当使用 OverrideUserAgent，此值将被忽略。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="AppendUserAgent" value="My Browser" /&gt;
+</code></pre></div></li>
+</ul>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 Apache软件基金会, 许可授权在 <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    
+    
+
+
+
+    
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  dev", "language: zh-cn"] }
+    });
+</script>
+
+</body>
+</html>

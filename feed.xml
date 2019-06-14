@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cordova 中文网</title>
+    <description>Apache Cordova是一组设备api，允许web移动应用程序开发人员通过JavaScript访问本机设备功能。
+</description>
+    <link>https://cordova.apache.org/</link>
+    <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 14 Jun 2019 21:40:48 +0000</pubDate>
+    <lastBuildDate>Fri, 14 Jun 2019 21:40:48 +0000</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Cordova iOS 5.0.1 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that &lt;code&gt;Cordova iOS 5.0.1&lt;/code&gt; has been released! This release fixes various bugs related to Xcode 10.2 simulators and Cocoapod support.&lt;/p&gt;
+
+&lt;p&gt;To upgrade:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;cd my_project
+npx cordova platform remove ios
+npx cordova platform add ios@5.0.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To add it explicitly:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;npx cordova platform add ios@5.0.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;!--more--&gt;
+
+&lt;h2&gt;Curated Changelog&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/596&quot;&gt;GH-596&lt;/a&gt; More logging for simulator selection and deployment&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/540&quot;&gt;GH-540&lt;/a&gt; Fix copy-www-build-step without shelljs&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/589&quot;&gt;GH-589&lt;/a&gt; Bump &lt;code&gt;ios-sim&lt;/code&gt; dependency version to fix simulator listing&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/577&quot;&gt;GH-577&lt;/a&gt; Don&amp;#39;t write spec to podfile when it&amp;#39;s an empty string&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/535&quot;&gt;GH-535&lt;/a&gt; Run prepare with the correct ConfigParser&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/571&quot;&gt;GH-581&lt;/a&gt; Null check for missing pathname&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/566&quot;&gt;GH-566&lt;/a&gt; Override id with &lt;code&gt;ios-CFBundleIdentifier&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/450&quot;&gt;GH-450&lt;/a&gt; Fix deadlocks in iOS 12 when &lt;code&gt;UIWebView loadRequest&lt;/code&gt; is called multiple times&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/546&quot;&gt;GH-546&lt;/a&gt; Fix setting of target-device to handset in combination with plugins and resource-file&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/560&quot;&gt;GH-560&lt;/a&gt; Fixing dynamic framework installation path&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/528&quot;&gt;GH-528&lt;/a&gt; ignore Swift version settings of Cocoapods library on non-macOS environments&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/542&quot;&gt;GH-542&lt;/a&gt; Enabling &lt;code&gt;Defines Module&lt;/code&gt; flag&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 22 Apr 2019 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2019/04/22/cordova-ios-5.0.1.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2019/04/22/cordova-ios-5.0.1.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
+    
+      <item>
+        <title>Node 6.x and 8.x Deprecation Timeline for Apache Cordova</title>
+        <description>&lt;p&gt;Currently, all of the latest released platforms, tools, and core libraries require a minimum version of &lt;code&gt;node 6.x&lt;/code&gt; to be installed. Additionally, we have added support for &lt;code&gt;node 10.x&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The Node.js Foundation has reported that the End-of-Life (EOL) for version 6.x will be April 30th, 2019. Looking ahead, the Node.JS Foundation has also scheduled the deprecation of 8.x on December 31, 2019 to be aligned with the scheduled End-of-Life of OpenSSL-1.0.2.&lt;/p&gt;
+
+&lt;p&gt;Since October 30th, 2018, &lt;code&gt;node 10.x&lt;/code&gt; has started its active Long Term Support ([LTS][1]) period. Thus, as &lt;code&gt;node 10.x&lt;/code&gt; is the default download from &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt;, we also recommend users to upgrade to the current LTS (10.x) before/by the time 8.x has reached EOL.&lt;/p&gt;
+
+&lt;p&gt;During these two distinct deprecation periods, we will prepare our tools, platforms, core libraries, and plugins to follow the Node.js Foundation reported EOL schedule.&lt;/p&gt;
+
+&lt;p&gt;We will also plan to add &lt;code&gt;node 12.x&lt;/code&gt; support. Currently, &lt;code&gt;node 12.x&lt;/code&gt; is pending for release on April 23rd, 2019.&lt;/p&gt;
+
+&lt;p&gt;JavaScript files in plugins themselves are unaffected since the JavaScript support for them is dependent on platform browser support. For the Electron platform, if using Node.js APIs there is a possibility of experience an effect.  &lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2&gt;Cordova Timeline&lt;/h2&gt;
+
+&lt;h3&gt;&lt;strong&gt;March 2019&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;All AppVeyor/Travis CI builds will continue to test on Node.js 6.x, 8.x, and 10.x.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;&lt;strong&gt;April 2019&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;All AppVeyor/Travis CI builds will test on Node.js 6.x, 8.x, 10.x, and 12.x.&lt;/li&gt;
+&lt;li&gt;Update requirement check and notify users: &lt;code&gt;Warning: Node.js 6.x has been deprecated. Please upgrade to the latest Node.js version available (LTS version recommended).&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;&lt;strong&gt;Fall 2019&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Update requirement check and notify users: &lt;code&gt;Warning: Node.js 8.x has been deprecated. Please upgrade to the latest Node.js version available (LTS version recommended).&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;&lt;strong&gt;Winter 2019&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Removed Node.js 6.x support.&lt;/li&gt;
+&lt;li&gt;Removed Node.js 8.x support.&lt;/li&gt;
+&lt;li&gt;Added Node.js 12.x  support.&lt;/li&gt;
+&lt;li&gt;Platforms, tools, and core libraries to bump up a major version.&lt;/li&gt;
+&lt;li&gt;All AppVeyor/Travis CI builds will test on Node.js 10.x, and 12.x.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Node Deprecation Timeline (Reported: Jan. 29, 2019)&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;/static/img/2019-01-29-node-eol-timeline.svg&quot;&gt;&lt;img src=&quot;/static/img/2019-01-29-node-eol-timeline.svg&quot; alt=&quot;Node Deprecation Timeline&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 11 Apr 2019 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/news/2019/04/11/nodejs-6.x-8.x-deprecation-timeline.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/news/2019/04/11/nodejs-6.x-8.x-deprecation-timeline.html</guid>
+        
+        <category>deprecation</category>
+        
+        <category>timeline</category>
+        
+        <category>node</category>
+        
+        
+        <category>news</category>
+        
+      </item>
+    
+      <item>
+        <title>Cordova Plugman 3.0.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;plugman 3.0.0&lt;/code&gt;! Plugman is a command line tool which we provide to install and uninstall plugins in a &lt;a href=&quot;https://cordova.apache.org/docs/en/latest/guide/overview/index.html#development-paths&quot;&gt;platform-centered workflow&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/plugman&quot;&gt;plugman@3.0.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;npm uninstall -g plugman
+npm install -g plugman@3.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;In addition to various improvements and fixes, this release has removed the &lt;code&gt;browserify&lt;/code&gt; and &lt;code&gt;fetch&lt;/code&gt; options.&lt;/p&gt;
+
+&lt;p&gt;As NodeJS 4.x support has been dropped by the NodeJS team on April 30th, 2018, we have raised the minimum required NodeJS version for this release to 6.x.&lt;/p&gt;
+
+&lt;p&gt;Please report any issues you find at &lt;a href=&quot;http://issues.cordova.io/&quot;&gt;issues.cordova.io&lt;/a&gt;!&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugman/pull/108&quot;&gt;GH-108&lt;/a&gt; Cordova Plugman Release Preparation (Cordova 9)
+
+&lt;ul&gt;
+&lt;li&gt;Bumped Dependencies&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cordova-lib@^9.0.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;nopt@^4.0.1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Bumped Dev Dependencies&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;jasmine@^3.3.1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;eslint-plugin-standard@^4.0.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;eslint-plugin-promise@^4.0.1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;eslint-plugin-node@^8.0.1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;eslint-plugin-import@^2.16.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;eslint-config-standard@^12.0.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;eslint-config-semistandard@^13.0.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;eslint@^5.15.3&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Update to support nopt@^4.0.1&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugman/pull/96&quot;&gt;GH-96&lt;/a&gt; Remove &lt;code&gt;fetch&lt;/code&gt; option&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugman/pull/95&quot;&gt;GH-95&lt;/a&gt; Remove &lt;code&gt;browserify&lt;/code&gt; option&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugman/pull/94&quot;&gt;GH-94&lt;/a&gt; &lt;a href=&quot;https://issues.apache.org/jira/browse/CB-14164&quot;&gt;CB-14164&lt;/a&gt; Use native Promises instead of &lt;code&gt;Q&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugman/pull/93&quot;&gt;GH-93&lt;/a&gt; Code Refactor and Cleanup&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugman/pull/91&quot;&gt;GH-91&lt;/a&gt; Drop support for Node.js &amp;lt; 6&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2019/03/22/cordova-plugman-release-3.0.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2019/03/22/cordova-plugman-release-3.0.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
+    
+      <item>
+        <title>Cordova CLI 9.0.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;cordova 9.0.0&lt;/code&gt;!&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova&quot;&gt;cordova@9.0.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;npm uninstall -g cordova
+npm install -g cordova@9.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;In addition to various improvements and fixes, this release has updated its core library. &lt;/p&gt;
+
+&lt;p&gt;All of the latest platform releases are available by default.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;cordova-android@^8.0.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cordova-browser@^6.0.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cordova-electron@^1.0.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cordova-ios@^5.0.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cordova-osx@^5.0.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cordova-windows@^7.0.0&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Additionally, Cordova Electron, one of the newest supported platfroms, is available!&lt;/p&gt;
+
+&lt;p&gt;This release has also deprecated the &lt;code&gt;browserify&lt;/code&gt;,  &lt;code&gt;fetch&lt;/code&gt;, and &lt;code&gt;copy-from&lt;/code&gt; options.&lt;/p&gt;
+
+&lt;p&gt;As NodeJS 4.x support has been dropped by the NodeJS team on April 30th, 2018, we have raised the minimum required NodeJS version for this release to 6.x.&lt;/p&gt;
+
+&lt;p&gt;Please report any issues you find at &lt;a href=&quot;http://issues.cordova.io/&quot;&gt;issues.cordova.io&lt;/a&gt;!&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/414&quot;&gt;GH-414&lt;/a&gt; Cordova CLI Release Preparation (Cordova 9)
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Bumped Dependencies&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cordova-lib@^9.0.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cordova-common@^3.1.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;editor@^1.0.0&lt;/code&gt; (Prepended &lt;code&gt;^&lt;/code&gt; only)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;loud-rejection@^2.0.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bumped Dev Dependencies&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;jasmine@^3.3.1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;eslint-plugin-promise@^4.0.1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;eslint-plugin-node@^8.0.1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;eslint-plugin-import@^2.16.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;eslint-config-standard@^12.0.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;eslint-config-semistandard@^13.0.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;eslint@^5.15.2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Fix &lt;code&gt;logger[level]&lt;/code&gt; spy in Jasmine&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/397&quot;&gt;GH-397&lt;/a&gt; Update Node.js Deprecation Notice Message&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/395&quot;&gt;GH-395&lt;/a&gt; Fix typo: &amp;quot;esecially&amp;quot; to especially&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/364&quot;&gt;GH-364&lt;/a&gt; Fix spec label for build tests&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/344&quot;&gt;GH-344&lt;/a&gt; Check that &lt;code&gt;bin/cordova&lt;/code&gt; works on Travis CI&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-13740&quot;&gt;CB-13740&lt;/a&gt; gracefully handle platforms that don&amp;#39;t pass back requirements to check&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/327&quot;&gt;GH-327&lt;/a&gt; Stub telemetry calls during all tests&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/322&quot;&gt;GH-322&lt;/a&gt; Remove support for &lt;code&gt;fetch&lt;/code&gt; option&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/321&quot;&gt;GH-321&lt;/a&gt; Remove support for &lt;code&gt;browserify&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/317&quot;&gt;GH-317&lt;/a&gt; cli.spec: Telemetry-Related Improvements&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/316&quot;&gt;GH-316&lt;/a&gt; Remove &lt;code&gt;callback&lt;/code&gt; parameter of main CLI function&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/298&quot;&gt;GH-298&lt;/a&gt; Remove support for deprecated &lt;code&gt;--copy-from&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/298&quot;&gt;GH-298&lt;/a&gt; Cleanup code calling &lt;code&gt;cordova-create&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2019/03/22/cordova-cli-release-9.0.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2019/03/22/cordova-cli-release-9.0.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
+    
+      <item>
+        <title>Cordova Lib 9.0.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;cordova-lib 9.0.0&lt;/code&gt;!&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-lib&quot;&gt;cordova-lib@9.0.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;In addition to various improvements and fixes, this release has removed the &lt;code&gt;--browserify&lt;/code&gt; flag.&lt;/p&gt;
+
+&lt;p&gt;As NodeJS 4.x support has been dropped by the NodeJS team on April 30th, 2018, we have raised the minimum required NodeJS version for this release to 6.x.&lt;/p&gt;
+
+&lt;p&gt;Please report any issues you find at &lt;a href=&quot;http://issues.cordova.io/&quot;&gt;issues.cordova.io&lt;/a&gt;!&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/750&quot;&gt;GH-750&lt;/a&gt; Remove saving platforms/plugins to &lt;code&gt;config.xml&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/751&quot;&gt;GH-751&lt;/a&gt; Pass project &lt;code&gt;config.xml&lt;/code&gt; path to platform&amp;#39;s prepare&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/749&quot;&gt;GH-749&lt;/a&gt; Cordova Lib Release Preparation (Cordova 9)
+
+&lt;ul&gt;
+&lt;li&gt;Remove unused property &lt;code&gt;apiCompatibleSince&lt;/code&gt; from &lt;code&gt;platformsConfig.json&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Fix plugin dependency tests when using &lt;code&gt;npm &amp;gt;= 5&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Bumped Platform Pinning and Support Minor SemVer&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cordova-android@^8.0.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cordova-browser@^6.0.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cordova-electron@^1.0.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cordova-ios@^5.0.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cordova-osx@^5.0.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cordova-windows@^7.0.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Bumped dependencies&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;jasmine@^3.3.1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;globby@^9.1.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;underscore@^1.9.1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;semver@^5.6.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;read-chunk@^3.1.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;init-package-json@^1.10.3&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fs-extra@^7.0.1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Dev Dependencies&lt;/li&gt;
+&lt;li&gt;Updated &lt;code&gt;nyc&lt;/code&gt; Code Coverage&lt;/li&gt;
+&lt;li&gt;Updated ESlint with lint corrections&lt;/li&gt;
+&lt;li&gt;Added missing module &lt;code&gt;shelljs&lt;/code&gt; to fix test failures&lt;/li&gt;
+&lt;li&gt;Updated Package Cordova Dependencies&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cordova-common@^3.1.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cordova-create@^2.0.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cordova-fetch@^2.0.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cordova-serve@^3.0.0&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/748&quot;&gt;GH-748&lt;/a&gt; Remove handling of legacy &lt;code&gt;.fetch.json&lt;/code&gt; files&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/709&quot;&gt;GH-709&lt;/a&gt; &lt;code&gt;hooks/Context&lt;/code&gt; Improvements&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/622&quot;&gt;GH-622&lt;/a&gt; &lt;a href=&quot;https://issues.apache.org/jira/browse/CB-14166&quot;&gt;CB-14166&lt;/a&gt; (cli) Fixed issue when install plugins on &lt;strong&gt;Windows&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/744&quot;&gt;GH-744&lt;/a&gt; Add &lt;strong&gt;Electron&lt;/strong&gt; Platform&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/741&quot;&gt;GH-741&lt;/a&gt; Fix crash in &lt;code&gt;cordova requirements&lt;/code&gt; due to an unbound function&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/710&quot;&gt;GH-710&lt;/a&gt; Drop &lt;code&gt;Q&lt;/code&gt; Dependency and Use Native Promises&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/687&quot;&gt;GH-687&lt;/a&gt; Test, Fix and Cleanup &lt;code&gt;cordova serve&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/707&quot;&gt;GH-707&lt;/a&gt; Deprecate &lt;code&gt;requireCordovaModule&lt;/code&gt; for non-Cordova modules&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/705&quot;&gt;GH-705&lt;/a&gt; Dereference possible symlinks when copying plugin&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/686&quot;&gt;GH-686&lt;/a&gt; Remove support for old option format&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/685&quot;&gt;GH-685&lt;/a&gt; Remove unused dependency &lt;code&gt;properties-parser&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/684&quot;&gt;GH-684&lt;/a&gt; Code Cleanup and Refactor (Bits and pieces)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/683&quot;&gt;GH-683&lt;/a&gt; Remove unused npm utility functions&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/682&quot;&gt;GH-682&lt;/a&gt; GH-676 Remove Browserify&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/652&quot;&gt;GH-652&lt;/a&gt; Make &lt;code&gt;plugin.remove&lt;/code&gt; more easily understandable&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/650&quot;&gt;GH-650&lt;/a&gt; Make &lt;code&gt;cordova/platform/check&lt;/code&gt; more approachable&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/613&quot;&gt;GH-613&lt;/a&gt; Switch to using &lt;code&gt;fs-extra&lt;/code&gt; in favour of &lt;code&gt;shelljs&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/671&quot;&gt;GH-671&lt;/a&gt; Remove &lt;code&gt;cordova plugin search&lt;/code&gt; command&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/666&quot;&gt;GH-666&lt;/a&gt; Remove deprecated and unused content&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/651&quot;&gt;GH-651&lt;/a&gt; Remove all usage of Q-specific methods on Promise instances&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/662&quot;&gt;GH-662&lt;/a&gt; Remove unused content&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/663&quot;&gt;GH-663&lt;/a&gt; Update &lt;code&gt;read-chunk&lt;/code&gt; to properly close file descriptors on failure&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/658&quot;&gt;GH-658&lt;/a&gt; Remove deprecated platform support files&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/616&quot;&gt;GH-616&lt;/a&gt; Extend and improve &lt;code&gt;cordova info&lt;/code&gt; output&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2019/03/18/cordova-lib-release-9.0.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2019/03/18/cordova-lib-release-9.0.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
+    
+      <item>
+        <title>Cordova Electron 1.0.2 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova Electron 1.0.2&lt;/code&gt;!  This is one of Cordova&amp;#39;s supported platforms for building Electron applications.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-electron&quot;&gt;cordova-electron@1.0.2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;To install:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Cordova 8.x&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;cordova platform add cordova-electron@1.0.2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;As original release was for &lt;strong&gt;Cordova CLI 9.x&lt;/strong&gt;, the decision to support on &lt;strong&gt;Cordova CLI 8.x&lt;/strong&gt; was in the post-release phase.&lt;/p&gt;
+
+&lt;p&gt;With this release, &lt;strong&gt;Cordova CLI 8.x&lt;/strong&gt; now supports Electron.&lt;/p&gt;
+
+&lt;p&gt;Please note that any command that accept the platform argument, on &lt;strong&gt;Cordova CLI 8.x&lt;/strong&gt;, must be &lt;code&gt;cordova-electron&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;cordova run cordova-electron --nobuild
+cordova build cordova-electron
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;For a quick start guide and in-depth configuration setup, please check out our &lt;a href=&quot;https://github.com/apache/cordova-electron/blob/rel/1.0.2/DOCUMENTATION.md&quot;&gt;Cordova Electron Documention&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;Please report any issues you find at &lt;a href=&quot;http://issues.cordova.io/&quot;&gt;issues.cordova.io&lt;/a&gt;!&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/38&quot;&gt;GH-38&lt;/a&gt; Support User Defined &lt;strong&gt;Electron&lt;/strong&gt; Settings&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/37&quot;&gt;GH-37&lt;/a&gt; Remove &lt;code&gt;nodeIntegration&lt;/code&gt; Warning by Setting Default to &lt;code&gt;false&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/36&quot;&gt;GH-36&lt;/a&gt; Rename &lt;strong&gt;Electron&lt;/strong&gt; Main Entry File&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/35&quot;&gt;GH-35&lt;/a&gt; Refactor &lt;code&gt;build.js&lt;/code&gt; and Include Test Coverage&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/33&quot;&gt;GH-33&lt;/a&gt; Update &lt;code&gt;cordova run&lt;/code&gt; to Work with Pre-Cordova 9.x CLI&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2019/03/18/cordova-electron-release-1.0.2.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2019/03/18/cordova-electron-release-1.0.2.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
+    
+      <item>
+        <title>Cordova Windows 7.0.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova Windows 7.0.0&lt;/code&gt;!  This is one of Cordova&amp;#39;s supported platforms for building Windows applications.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-windows&quot;&gt;cordova-windows@7.0.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;cordova platform remove windows
+cordova platform add windows@7.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;As NodeJS 4.x support has been dropped by the NodeJS team on April 30th, 2018, we have raised the minimum required NodeJS version for this release to 6.x.&lt;/p&gt;
+
+&lt;p&gt;Please report any issues you find at &lt;a href=&quot;http://issues.cordova.io/&quot;&gt;issues.cordova.io&lt;/a&gt;!&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-windows/pull/324&quot;&gt;GH-324&lt;/a&gt; Change Temporary Directories for Tests&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-windows/pull/319&quot;&gt;GH-319&lt;/a&gt; Windows Platform Release Preparation (Cordova 9)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-windows/pull/317&quot;&gt;GH-317&lt;/a&gt; Copy &lt;code&gt;node_modules&lt;/code&gt; if the directory exists&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-windows/pull/293&quot;&gt;GH-293&lt;/a&gt; Remove Bundled Dependencies&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-windows/pull/286&quot;&gt;GH-286&lt;/a&gt; &lt;a href=&quot;https://issues.apache.org/jira/browse/CB-14225&quot;&gt;CB-14225&lt;/a&gt; Fix Sample Namespace Serialize Attribute in &lt;code&gt;template/Properties/Default.rd.xml&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-windows/pull/293&quot;&gt;GH-289&lt;/a&gt; &lt;a href=&quot;https://issues.apache.org/jira/browse/CB-14075&quot;&gt;CB-14075&lt;/a&gt; Remove Node 4 from CI&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-windows/pull/284&quot;&gt;GH-284&lt;/a&gt; &lt;a href=&quot;https://issues.apache.org/jira/browse/CB-14224&quot;&gt;CB-14224&lt;/a&gt; &lt;code&gt;Default.rd.xml&lt;/code&gt; header fixes&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2019/03/08/cordova-windows-release-7.0.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2019/03/08/cordova-windows-release-7.0.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
+    
+      <item>
+        <title>Cordova Electron 1.0.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova Electron 1.0.0&lt;/code&gt;!  This is one of Cordova&amp;#39;s newest supported platforms for building Electron applications.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-electron&quot;&gt;cordova-electron@1.0.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;To install:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Cordova CLI 9.x&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;cordova platform add electron@1.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Some of the major key features for this release:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Electron v4.0.1&lt;/li&gt;
+&lt;li&gt;Build Support (&lt;code&gt;electron-builder@^20.38.4&lt;/code&gt;)
+
+&lt;ul&gt;
+&lt;li&gt;Linux, macOS, and Windows&lt;/li&gt;
+&lt;li&gt;Signing for macOS and Windows&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;App and Installer Icon Support&lt;/li&gt;
+&lt;li&gt;Run Support (App Previewing)&lt;/li&gt;
+&lt;li&gt;Plugin Support
+
+&lt;ul&gt;
+&lt;li&gt;Plugins with browser support are also usable within Electron.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For a quick start guide and in-depth configuration setup, please check out our &lt;a href=&quot;https://github.com/apache/cordova-electron/blob/rel/1.0.0/DOCUMENTATION.md&quot;&gt;Cordova Electron Documention&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;Please report any issues you find at &lt;a href=&quot;http://issues.cordova.io/&quot;&gt;issues.cordova.io&lt;/a&gt;!&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/30&quot;&gt;GH-30&lt;/a&gt; Asset Install Fix from Mobilespec Report&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/28&quot;&gt;GH-28&lt;/a&gt; Fix Scope Issue with Code Refactor&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/27&quot;&gt;GH-27&lt;/a&gt; Build Script Improvements&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/24&quot;&gt;GH-24&lt;/a&gt; Remove Unused and Unreachable Code&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/20&quot;&gt;GH-20&lt;/a&gt; Fix Audit Report For High Severity Vulnerability&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/18&quot;&gt;GH-18&lt;/a&gt; Refactor &lt;code&gt;prepare.js&lt;/code&gt; and Increase Test Coverage&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/15&quot;&gt;GH-15&lt;/a&gt; Implement SettingsJson Class Tests and Update Documentation&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/13&quot;&gt;GH-13&lt;/a&gt; Implement Electron Custom App Icons Functionality&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/9&quot;&gt;GH-9&lt;/a&gt; Electron Build Improvements&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/8&quot;&gt;GH-8&lt;/a&gt; Create CDV Electron Settings JSON&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/7&quot;&gt;GH-7&lt;/a&gt; Electron Platform Release Preparation (Cordova 9)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/6&quot;&gt;GH-6&lt;/a&gt; Cleanup Bin Files&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/5&quot;&gt;GH-5&lt;/a&gt; Updated Correct Version Information&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/4&quot;&gt;GH-4&lt;/a&gt; Electron Major Improvements &amp;amp; Feature Support&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/1&quot;&gt;GH-1&lt;/a&gt; First Draft Release&lt;/li&gt;
+&lt;li&gt;Added NPM Install Step&lt;/li&gt;
+&lt;li&gt;Added Run Command Support&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;strong&gt;UPDATE 2019-03-06&lt;/strong&gt;: This blog post has been updated to remove &lt;strong&gt;pre-Cordova 9.x&lt;/strong&gt; reference.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2019/02/28/cordova-electron-release-1.0.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2019/02/28/cordova-electron-release-1.0.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
+    
+      <item>
+        <title>Cordova Android 8.0.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova Android 8.0.0&lt;/code&gt;!  This is one of Cordova&amp;#39;s supported platforms for building Android mobile applications.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-android&quot;&gt;cordova-android@8.0.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;cordova platform remove android
+cordova platform add android@8.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;In addition to the various improvements and bug fixes, this release also comes packed with some major features.&lt;/p&gt;
+
+&lt;p&gt;Some of the key features are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Bump Gradle to 4.10.3
+
+&lt;ul&gt;
+&lt;li&gt;Support Android SDK 28&lt;/li&gt;
+&lt;li&gt;Support Android Studio 3.3.0&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Added Adaptive Icon Support&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Additional, as NodeJS 4.x support has been dropped by the NodeJS team on April 30th, 2018, we have raised the minimum required NodeJS version for this release to 6.x.&lt;/p&gt;
+
+&lt;p&gt;Please report any issues you find at &lt;a href=&quot;http://issues.cordova.io/&quot;&gt;issues.cordova.io&lt;/a&gt;!&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/655&quot;&gt;GH-655&lt;/a&gt; Use custom Gradle properties to read minSdkVersion value from &lt;code&gt;config.xml&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/656&quot;&gt;GH-656&lt;/a&gt; Quick fix to support &lt;strong&gt;Android&lt;/strong&gt;&lt;em&gt;SDK&lt;/em&gt;ROOT&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/642&quot;&gt;GH-642&lt;/a&gt; &lt;strong&gt;Android&lt;/strong&gt; tools 3.3 &amp;amp; &lt;strong&gt;Gradle&lt;/strong&gt; 4.10.3 update&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/654&quot;&gt;GH-654&lt;/a&gt; Quick updates to top-level &lt;code&gt;project.properties&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/624&quot;&gt;GH-624&lt;/a&gt; Add missing log to Java version check&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/630&quot;&gt;GH-630&lt;/a&gt; Update &lt;code&gt;emulator.js&lt;/code&gt; to fix issue &lt;a href=&quot;https://github.com/apache/cordova-android/pull/608&quot;&gt;GH-608&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/620&quot;&gt;GH-620&lt;/a&gt; Fix requirements error messages for JDK 8&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/619&quot;&gt;GH-619&lt;/a&gt; javac error message fixes in requirements check&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/612&quot;&gt;GH-612&lt;/a&gt; Android Platform Release Preparation (Cordova 9)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/607&quot;&gt;GH-607&lt;/a&gt; Copy &lt;code&gt;node_modules&lt;/code&gt; if the directory exists&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/589&quot;&gt;GH-589&lt;/a&gt; Rewrite install dir resolution for legacy plugins&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/572&quot;&gt;GH-572&lt;/a&gt; Resolve issue with plugin &lt;code&gt;target-dir=&amp;quot;app*&amp;quot;&lt;/code&gt; subdirs&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/567&quot;&gt;GH-567&lt;/a&gt; Output current package name if package name can&amp;#39;t be validated&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/507&quot;&gt;GH-507&lt;/a&gt; Gradle Updates&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/550&quot;&gt;GH-550&lt;/a&gt; Fix for old plugins with non-Java sources&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/558&quot;&gt;GH-558&lt;/a&gt; Update &lt;code&gt;cordova.js&lt;/code&gt; from &lt;code&gt;cordova-js@4.2.3&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/553&quot;&gt;GH-553&lt;/a&gt; Check for &lt;code&gt;build-extras.gradle&lt;/code&gt; in the app-parent directory&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/551&quot;&gt;GH-551&lt;/a&gt; Add missing cast for &lt;code&gt;cdvMinSdkVersion&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/539&quot;&gt;GH-539&lt;/a&gt; Fix destination path fallback&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/544&quot;&gt;GH-544&lt;/a&gt; Remove obsolete check for JellyBean&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/465&quot;&gt;GH-465&lt;/a&gt; Removes Gradle property in-line command arguments for &lt;code&gt;gradle.properties&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/523&quot;&gt;GH-523&lt;/a&gt; Always put the Google repo above jcenter&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/486&quot;&gt;GH-486&lt;/a&gt; Change deprecated &amp;quot;compile&amp;quot; to &amp;quot;implementation&amp;quot;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/495&quot;&gt;GH-495&lt;/a&gt; Incorrect default sdk version issue fix&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/493&quot;&gt;GH-493&lt;/a&gt; Remove bundled dependencies&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/490&quot;&gt;GH-490&lt;/a&gt; Fixes build &amp;amp; run related bugs from builder refactor&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/448&quot;&gt;GH-448&lt;/a&gt; &lt;a href=&quot;https://issues.apache.org/jira/browse/CB-13685&quot;&gt;CB-13685&lt;/a&gt; Adaptive Icon Support&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/487&quot;&gt;GH-487&lt;/a&gt; Do not attempt an activity intent AND a url load into the webview, return from the internal webview load.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/461&quot;&gt;GH-461&lt;/a&gt; Remove old builders code&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/463&quot;&gt;GH-463&lt;/a&gt; Emulator: Add unit tests and remove Q&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/462&quot;&gt;GH-462&lt;/a&gt; Device: Add unit tests and remove Q&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/457&quot;&gt;GH-457&lt;/a&gt; Emulator: handle &amp;quot;device still connecting&amp;quot; error&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/445&quot;&gt;GH-445&lt;/a&gt; Run and retryPromise improvements and tests&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/452&quot;&gt;GH-452&lt;/a&gt; Emit log event instead of logging directly&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/449&quot;&gt;GH-449&lt;/a&gt; Increase old plugin compatibility&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/446&quot;&gt;GH-446&lt;/a&gt; &lt;a href=&quot;https://issues.apache.org/jira/browse/CB-14101&quot;&gt;CB-14101&lt;/a&gt; Fix Java version check for Java &amp;gt;= 9&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-14127&quot;&gt;CB-14127&lt;/a&gt; Move google maven repo ahead of jcenter&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-14038&quot;&gt;CB-14038&lt;/a&gt; Fix false positive detecting project type&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-13975&quot;&gt;CB-13975&lt;/a&gt; Fix to fire pause event when cdvStartInBackground=true&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-13830&quot;&gt;CB-13830&lt;/a&gt; Add handlers for plugins that use non-Java source files, such as Camera&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-13923&quot;&gt;CB-13923&lt;/a&gt; Fix -1 length for compressed files&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 16 Feb 2019 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2019/02/16/cordova-android-release-8.0.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2019/02/16/cordova-android-release-8.0.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
+    
+      <item>
+        <title>Cordova iOS 5.0.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova iOS 5.0.0&lt;/code&gt;!  This is one of Cordova&amp;#39;s supported platforms for building iOS mobile applications.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-ios&quot;&gt;cordova-ios@5.0.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;cordova platform remove ios
+cordova platform add ios@5.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;In addition to the various improvements and bug fixes, this release also comes packed with some major features.&lt;/p&gt;
+
+&lt;p&gt;Some of the key features are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/409&quot;&gt;GH-409&lt;/a&gt; &lt;a href=&quot;https://github.com/apache/cordova-ios/pull/489&quot;&gt;GH-489&lt;/a&gt; Supports Xcode 10 New Build System&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/405&quot;&gt;GH-405&lt;/a&gt; Improved Cocoapods Support&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/395&quot;&gt;GH-395&lt;/a&gt; Improved Swift Support&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/508&quot;&gt;GH-508&lt;/a&gt; Improved Automatic Provisioning Profile Signing&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This release only supports Xcode 9 and up. It is important to know that starting March 2019, Apple requires all new apps submitted to the App store to be built with the iOS 12.1 SDK or later (Xcode 10). &lt;a href=&quot;https://developer.apple.com/ios/submit/&quot;&gt;source&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Additional, as NodeJS 4.x support has been dropped by the NodeJS team on April 30th, 2018, we have raised the minimum required NodeJS version for this release to 6.x.&lt;/p&gt;
+
+&lt;p&gt;Please report any issues you find at &lt;a href=&quot;http://issues.cordova.io/&quot;&gt;issues.cordova.io&lt;/a&gt;!&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/515&quot;&gt;GH-515&lt;/a&gt; Remove Deprecated Local and Remote Push Notification Constants&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/512&quot;&gt;GH-512&lt;/a&gt; AppIcon and LaunchImage Updates&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/254&quot;&gt;GH-254&lt;/a&gt; Expose &lt;code&gt;CDVCommandStatus&lt;/code&gt; enum to Swift&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/508&quot;&gt;GH-508&lt;/a&gt; Remove removing certificates functions in xcode post scripts&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/489&quot;&gt;GH-489&lt;/a&gt; CordovaLib.xcodeproj file upgraded for Xcode 10&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/501&quot;&gt;GH-501&lt;/a&gt; &lt;code&gt;cordova-common&lt;/code&gt; backwards compatability for &lt;code&gt;getPodSpecs&lt;/code&gt; function&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/496&quot;&gt;GH-496&lt;/a&gt; iOS Platform Release Preparation (Cordova 9)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/494&quot;&gt;GH-494&lt;/a&gt; Fixes &lt;code&gt;$(PRODUCT_BUNDLE_IDENTIFIER)&lt;/code&gt; not being resolved for a product archive&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/481&quot;&gt;GH-481&lt;/a&gt; Add warning that function in spawn.js is deprecated&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/461&quot;&gt;GH-461&lt;/a&gt; &lt;code&gt;cordova run --list --device&lt;/code&gt; fails for Virtualhere devices&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/355&quot;&gt;GH-355&lt;/a&gt; &lt;a href=&quot;https://issues.apache.org/jira/browse/CB-13927&quot;&gt;CB-13927&lt;/a&gt; - Modified xcodeProjDir to filter out files/folders that contain &amp;quot;._&amp;quot;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/483&quot;&gt;GH-483&lt;/a&gt; Restore stdio behavior from previous spawn approach&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/479&quot;&gt;GH-479&lt;/a&gt; emit xcodebuild &amp;amp; other spawned CLI commands&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/482&quot;&gt;GH-482&lt;/a&gt; Copy node_modules if the directory exists&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/478&quot;&gt;GH-478&lt;/a&gt; Use &lt;code&gt;cross-spawn&lt;/code&gt; &amp;amp; &lt;code&gt;shelljs&lt;/code&gt; instead of &lt;code&gt;child-process&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/409&quot;&gt;GH-409&lt;/a&gt; Update project files for Xcode 10&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/474&quot;&gt;GH-474&lt;/a&gt; Fix issue after updating to macOS 10.14.2.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/405&quot;&gt;GH-405&lt;/a&gt; Cocoapods support improvement, using podspec tag in &lt;code&gt;plugin.xml&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/451&quot;&gt;GH-451&lt;/a&gt; Fix running &lt;code&gt;cordova build ios&lt;/code&gt; for emulators with Xcode 10.1 RELEASE&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/406&quot;&gt;GH-406&lt;/a&gt; Added missing &lt;code&gt;unorm&lt;/code&gt; dependency&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/398&quot;&gt;GH-398&lt;/a&gt; Removal of xcconfig build flag&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-14141&quot;&gt;CB-14141&lt;/a&gt; Don&amp;#39;t duplicate resource files in xcodeproj&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/397&quot;&gt;GH-397&lt;/a&gt; Update Objc-Test for Local &amp;amp; TravisCI&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/395&quot;&gt;GH-395&lt;/a&gt; Implement Swift Support and Testing&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-14242&quot;&gt;CB-14242&lt;/a&gt; remove committed node_modules&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-14242&quot;&gt;CB-14242&lt;/a&gt; &lt;code&gt;package.json&lt;/code&gt; remove bundledDependencies&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-14074&quot;&gt;CB-14074&lt;/a&gt; Remove Node 4 from CI&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-14244&quot;&gt;CB-14244&lt;/a&gt; &lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9366&quot;&gt;CB-9366&lt;/a&gt; log error.stack in cordova.js&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/376&quot;&gt;GH-376&lt;/a&gt; Fixed Get Apple OSX Version method&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-13581&quot;&gt;CB-13581&lt;/a&gt; open &lt;strong&gt;iOS&lt;/strong&gt; simulator by using child_process&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-14045&quot;&gt;CB-14045&lt;/a&gt; Reinit url after app freezes&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-14076&quot;&gt;CB-14076&lt;/a&gt; Setting UIWebViewDelegate on CDVWebViewEngineProtocol doesn&amp;#39;t work&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-14039&quot;&gt;CB-14039&lt;/a&gt; Inputs type text don&amp;#39;t work on &lt;strong&gt;iOS&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-13921&quot;&gt;CB-13921&lt;/a&gt; Update Xcode requirement to Xcode 9&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-13382&quot;&gt;CB-13382&lt;/a&gt; dealloc the webViewEngine&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-13523&quot;&gt;CB-13523&lt;/a&gt; Pass automaticProvisioning to build step&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-12940&quot;&gt;CB-12940&lt;/a&gt; Use deployment-target from &lt;code&gt;config.xml&lt;/code&gt; for platform version in Podfile&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-13824&quot;&gt;CB-13824&lt;/a&gt; Xcode 9/Swift 4 support&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/354&quot;&gt;GH-354&lt;/a&gt; exec purgeProjectFileCache when pod install&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/356&quot;&gt;GH-356&lt;/a&gt; Fix prototype declaration warnings&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-13510&quot;&gt;CB-13510&lt;/a&gt; Removed clipboard workaround, which was braking copy/paste functional &lt;strong&gt;iOS&lt;/strong&gt; 11&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/343&quot;&gt;GH-343&lt;/a&gt; &lt;a href=&quot;https://issues.apache.org/jira/browse/CB-13513&quot;&gt;CB-13513&lt;/a&gt; Declare ProvisioningStyle as Automatic in project.pbxproj template.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/351&quot;&gt;GH-351&lt;/a&gt; Prevent a memory leak when converting to JSON&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-13597&quot;&gt;CB-13597&lt;/a&gt; update podfile with &lt;strong&gt;iOS&lt;/strong&gt; version 9.0&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 09 Feb 2019 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2019/02/09/cordova-ios-release-5.0.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2019/02/09/cordova-ios-release-5.0.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
+    
+  </channel>
+</rss>
