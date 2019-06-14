@@ -18,7 +18,7 @@ license: >
     under the License.
 
 title: 图示和启动画面
-toc_title: Customize icons
+toc_title: 自定义图标
 ---
 
 # 图示和启动画面

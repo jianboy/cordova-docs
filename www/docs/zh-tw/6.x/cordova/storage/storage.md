@@ -18,7 +18,7 @@ license: >
     under the License.
 
 title: 存儲
-toc_title: Store data
+toc_title: 存储数据
 ---
 
 # 存儲

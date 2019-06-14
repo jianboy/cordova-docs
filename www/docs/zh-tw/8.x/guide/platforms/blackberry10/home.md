@@ -18,7 +18,7 @@ license: >
     under the License.
 
 title: Blackberry 10 Guides
-toc_title: Blackberry 10
+toc_title: 黑莓 10
 ---
 
 # Blackberry 10 Guides

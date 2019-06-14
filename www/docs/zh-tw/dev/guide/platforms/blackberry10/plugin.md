@@ -18,7 +18,7 @@ license: >
     under the License.
 
 title: 黑莓 10 外掛程式
-toc_title: Blackberry 10
+toc_title: 黑莓 10
 ---
 
 # 黑莓 10 外掛程式

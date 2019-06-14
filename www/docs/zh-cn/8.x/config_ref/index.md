@@ -18,7 +18,7 @@ license: >
     under the License.
 
 title: Config.xml 档
-toc_title: Config.xml
+toc_title: Config.xml文件
 ---
 
 # Config.xml 档

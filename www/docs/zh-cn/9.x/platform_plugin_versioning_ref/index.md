@@ -18,7 +18,7 @@ license: >
     under the License.
 
 title: 平台和外挂程式版本管理
-toc_title: Manage versions and platforms
+toc_title: 平台和版本管理
 ---
 
 # 平台和外挂程式版本管理

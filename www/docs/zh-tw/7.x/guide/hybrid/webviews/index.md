@@ -18,7 +18,7 @@ license: >
     under the License.
 
 title: 嵌入 WebViews
-toc_title: Embed Cordova in native apps
+toc_title: 原生应用中嵌入Cordova
 ---
 
 # 嵌入 WebViews

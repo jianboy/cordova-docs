@@ -18,7 +18,7 @@ license: >
     under the License.
 
 title: 外挂程式规范
-toc_title: Plugin.xml
+toc_title: Plugin.xml文件
 ---
 
 # 外挂程式规范

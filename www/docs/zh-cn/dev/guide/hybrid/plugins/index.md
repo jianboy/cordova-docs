@@ -18,7 +18,7 @@ license: >
     under the License.
 
 title: 外挂程式开发指南
-toc_title: Create a plugin
+toc_title: 创建一个插件
 ---
 
 # 外挂程式开发指南

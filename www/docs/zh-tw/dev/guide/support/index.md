@@ -18,7 +18,7 @@ license: >
     under the License.
 
 title: 平臺支援
-toc_title: Platform support
+toc_title: 平台支持
 ---
 
 # 平臺支援

@@ -18,7 +18,7 @@ license: >
     under the License.
 
 title: 安全指南
-toc_title: Manage security
+toc_title: 安全管理
 ---
 
 # 安全指南
