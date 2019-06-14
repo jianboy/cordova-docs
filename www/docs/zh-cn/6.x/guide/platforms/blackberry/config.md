@@ -17,12 +17,12 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: 黑莓手機配置
+title: 黑莓手机配置
 ---
 
-# 黑莓手機配置
+# 黑莓手机配置
 
-黑莓手機完全支援[W3C 構件規範][1]以及專有的 RIM 擴展。 請全面[黑莓 WebWorks 檔關於 config.xml][2]的詳細資訊，參閱。
+黑莓手机完全支援[W3C 构件规范][1]以及专有的 RIM 扩展。 请全面[黑莓 WebWorks 档关于 config.xml][2]的详细资讯，参阅。
 
  [1]: http://www.w3.org/TR/widgets/
  [2]: https://developer.blackberry.com/html5/documentation/working_with_config_xml_file_1866970_11.html

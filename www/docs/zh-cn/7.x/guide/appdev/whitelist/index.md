@@ -17,50 +17,50 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: 白名單指南
+title: 白名单指南
 toc_title: Whitelisting
 ---
 
-# 白名單指南
+# 白名单指南
 
-域白名單是一種控制訪問的安全模型向外部域，您的應用程式已不能控制。 科爾多瓦提供了一個可配置的安全性原則來定義可以訪問外部網站。 預設情況下，新的應用程式被配置為允許訪問任何網站。 在您的應用程式到生產之前，應制訂白名單和允許訪問特定的網路域和子域。
+域白名单是一种控制访问的安全模型向外部域，您的应用程式已不能控制。 科尔多瓦提供了一个可配置的安全性原则来定义可以访问外部网站。 预设情况下，新的应用程式被配置为允许访问任何网站。 在您的应用程式到生产之前，应制订白名单和允许访问特定的网路域和子域。
 
-對於 Android 和 iOS （如其 4.0 的版本），科爾多瓦的安全性原則是可擴展的通過一個外掛程式介面。 您的應用程式應使用 [cordova-plugin-whitelist][1]，因為它提供了更好的安全性和可配置性比早期版本的科爾多瓦。 雖然有可能實現自己的白名單外掛程式，它不建議除非您的應用程式有非常具體的安全性原則要求。 有關用法和配置，請參閱 [cordova-plugin-whitelist][1] 的詳細資訊。
+对于 Android 和 iOS （如其 4.0 的版本），科尔多瓦的安全性原则是可扩展的通过一个外挂程式介面。 您的应用程式应使用 [cordova-plugin-whitelist][1]，因为它提供了更好的安全性和可配置性比早期版本的科尔多瓦。 虽然有可能实现自己的白名单外挂程式，它不建议除非您的应用程式有非常具体的安全性原则要求。 有关用法和配置，请参阅 [cordova-plugin-whitelist][1] 的详细资讯。
 
  [1]: https://github.com/apache/cordova-plugin-whitelist
 
-對於其他平臺，科爾多瓦遵循 [W3C 部件訪問][2] 規範，這依賴于應用程式的 `config.xml` 檔以啟用對特定域的網路訪問中的 `<access>` 元素。 對於依賴于描述在命令列介面的 CLI 工作流程的專案，此檔位於專案的頂級目錄。 否則對於特定于平臺的發展路徑，以下各節列出的位置。 （每個平臺上見各種平臺指南的詳細資訊）。
+对于其他平台，科尔多瓦遵循 [W3C 部件访问][2] 规范，这依赖于应用程式的 `config.xml` 档以启用对特定域的网路访问中的 `<access>` 元素。 对于依赖于描述在命令列介面的 CLI 工作流程的专案，此档位于专案的顶级目录。 否则对于特定于平台的发展路径，以下各节列出的位置。 （每个平台上见各种平台指南的详细资讯）。
 
  [2]: http://www.w3.org/TR/widgets-access/
 
-下面的示例演示 `<access>` 白名單語法：
+下面的示例演示 `<access>` 白名单语法：
 
-*   [Google.com][3]訪問：
+*   [Google.com][3]访问：
     
         <access origin="http://google.com" />
         
 
-*   對安全[google.com][4]的訪問 ( `https://` ):
+*   对安全[google.com][4]的访问 ( `https://` ):
     
         <access origin="https://google.com" />
         
 
-*   子域[maps.google.com][5]訪問：
+*   子域[maps.google.com][5]访问：
     
         <access origin="http://maps.google.com" />
         
 
-*   對所有子域[google.com][3]，例如[mail.google.com][6]和[docs.google.com][7]的訪問：
+*   对所有子域[google.com][3]，例如[mail.google.com][6]和[docs.google.com][7]的访问：
     
         <access origin="http://*.google.com" />
         
 
-*   到*所有*的域，例如， [google.com][3]和[developer.mozilla.org][8]的訪問：
+*   到*所有*的域，例如， [google.com][3]和[developer.mozilla.org][8]的访问：
     
         <access origin="*" />
         
     
-    這是新創建的 CLI 專案的預設值。
+    这是新创建的 CLI 专案的预设值。
 
  [3]: http://google.com
  [4]: https://google.com
@@ -69,55 +69,55 @@ toc_title: Whitelisting
  [7]: http://docs.google.com
  [8]: http://developer.mozilla.org
 
-要知道有些網站可以自動從其主頁定向到不同的 url，例如，使用 HTTPs 協定或具體國家域。 例如 HTTP://www.google.com 將重定向在 HTTPs://www.google.com，使用 SSL/TLS，然後可能進一步將重定向到一個地理位置，例如 HTTPs://www.google.co.uk。 這樣的場景可能需要修改或額外的白名單的作品可以超越你所需的初期。 請考慮這您構建您的白名單。
+要知道有些网站可以自动从其主页定向到不同的 url，例如，使用 HTTPs 协定或具体国家域。 例如 HTTP://www.google.com 将重定向在 HTTPs://www.google.com，使用 SSL/TLS，然后可能进一步将重定向到一个地理位置，例如 HTTPs://www.google.co.uk。 这样的场景可能需要修改或额外的白名单的作品可以超越你所需的初期。 请考虑这您构建您的白名单。
 
-請注意白名單僅適用于主要的科爾多瓦 web 視圖，不適用於 InAppBrowser web 視圖或系統 web 瀏覽器中的打開連結。
+请注意白名单仅适用于主要的科尔多瓦 web 视图，不适用于 InAppBrowser web 视图或系统 web 浏览器中的打开连结。
 
-## 亞馬遜火 OS 白
+## 亚马逊火 OS 白
 
-在 `res/xml/config.xml` 中找到特定于平臺的白名單規則.
+在 `res/xml/config.xml` 中找到特定于平台的白名单规则.
 
 ## Android 白
 
-如上所述，看到 [cordova-plugin-whitelist][1] 的詳細資訊。科爾多瓦 android 4.0.0 之前，請參閱本文檔的舊版本。
+如上所述，看到 [cordova-plugin-whitelist][1] 的详细资讯。科尔多瓦 android 4.0.0 之前，请参阅本文档的旧版本。
 
-## iOS 白名單
+## iOS 白名单
 
-如上所述，看到 [cordova-plugin-whitelist][1] 的詳細資訊。科爾多瓦 ios 4.0.0 之前，請參閱本文檔的舊版本。
+如上所述，看到 [cordova-plugin-whitelist][1] 的详细资讯。科尔多瓦 ios 4.0.0 之前，请参阅本文档的旧版本。
 
-## 黑莓 10 白名單
+## 黑莓 10 白名单
 
-在 `www/config.xml` 中找到白名單規則.
+在 `www/config.xml` 中找到白名单规则.
 
-黑莓 10年使用萬用字元有別于其他平臺兩種方式：
+黑莓 10年使用万用字元有别于其他平台两种方式：
 
-*   必須顯式聲明由 `XMLHttpRequest` 訪問的任何內容。 設置 `origin="*"` 不能在這種情況下。 或者，可能使用黑莓手機配置中所述的 `WebSecurity` 偏好禁用所有 web 安全性：
+*   必须显式声明由 `XMLHttpRequest` 访问的任何内容。 设置 `origin="*"` 不能在这种情况下。 或者，可能使用黑莓手机配置中所述的 `WebSecurity` 偏好禁用所有 web 安全性：
     
         <preference name="websecurity" value="disable" />
         
 
-*   作為設置 `*.domain` 的替代方法，將其他 `subdomains` 屬性設置為 `true`。 它應該被預設設置為 `false`。 例如，下面的允許訪問 `google.com`，`maps.google.com` 和 `docs.google.com`：
+*   作为设置 `*.domain` 的替代方法，将其他 `subdomains` 属性设置为 `true`。 它应该被预设设置为 `false`。 例如，下面的允许访问 `google.com`，`maps.google.com` 和 `docs.google.com`：
     
         <access origin="http://google.com" subdomains="true" />
         
     
-    `Google.com` 以下縮小存取權限：
+    `Google.com` 以下缩小存取权限：
     
         <access origin="http://google.com" subdomains="false" />
         
     
-    指定訪問到所有的域，包括本地 `file://` 協定：
+    指定访问到所有的域，包括本地 `file://` 协定：
     
         <access origin="*" subdomains="true" />
         
 
-（有關支援的詳細資訊，請參閱黑莓的文檔 [訪問元素][9] 上.)
+（有关支援的详细资讯，请参阅黑莓的文档 [访问元素][9] 上.)
 
  [9]: https://developer.blackberry.com/html5/documentation/ww_developing/Access_element_834677_11.html
 
-## 火狐瀏覽器作業系統
+## 火狐浏览器作业系统
 
-火狐瀏覽器作業系統特定的域還有白名單沒有概念。 相反，有特殊的許可權稱為 [SystemXHR][10]。 有必要將此許可權添加到 `config.xml`：
+火狐浏览器作业系统特定的域还有白名单没有概念。 相反，有特殊的许可权称为 [SystemXHR][10]。 有必要将此许可权添加到 `config.xml`：
 
  [10]: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#Permissions
 
@@ -126,21 +126,21 @@ toc_title: Whitelisting
     </platform>
     
 
-`XMLHttpRequest` 物件需要使用兩個參數 `mozAnon` 和 `mozSystem` 進行具現化：
+`XMLHttpRequest` 物件需要使用两个参数 `mozAnon` 和 `mozSystem` 进行具现化：
 
     var request = new XMLHttpRequest({
         mozAnon: true,
         mozSystem: true});
     
 
-此解決方案是透明的因此沒有其他平臺的區別。
+此解决方案是透明的因此没有其他平台的区别。
 
-## Windows Phone 白名單
+## Windows Phone 白名单
 
-Windows Phone 8 的白名單規則是在應用程式的 `config.xml` 檔中找到的。
+Windows Phone 8 的白名单规则是在应用程式的 `config.xml` 档中找到的。
 
-## 泰白名單
+## 泰白名单
 
-白名單規則是在應用程式的 `config.xml` 檔中找到的。 平臺依靠相同的 `subdomains` 屬性作為黑莓平臺。 （有關支援的詳細資訊，請參閱 Tizen 的文檔 [訪問元素][11] 上.)
+白名单规则是在应用程式的 `config.xml` 档中找到的。 平台依靠相同的 `subdomains` 属性作为黑莓平台。 （有关支援的详细资讯，请参阅 Tizen 的文档 [访问元素][11] 上.)
 
  [11]: https://developer.tizen.org/help/index.jsp?topic=%2Forg.tizen.web.appprogramming%2Fhtml%2Fide_sdk_tools%2Fconfig_editor_w3celements.htm

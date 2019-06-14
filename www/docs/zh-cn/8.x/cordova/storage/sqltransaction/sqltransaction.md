@@ -22,24 +22,24 @@ title: SQLTransaction
 
 # SQLTransaction
 
-允許對資料庫的 SQL 語句的執行。
+允许对资料库的 SQL 语句的执行。
 
 ## 方法
 
-*   **executeSql**: 執行一個 SQL 語句。
+*   **executeSql**: 执行一个 SQL 语句。
 
-## 詳細資訊
+## 详细资讯
 
-調用 `Database` 物件的交易方法，刀路 `SQLTransaction` 指定的回檔方法的物件。
+调用 `Database` 物件的交易方法，刀路 `SQLTransaction` 指定的回档方法的物件。
 
-## 支援的平臺
+## 支援的平台
 
-*   Android 系統
-*   黑莓手機 WebWorks （OS 6.0 和更高）
+*   Android 系统
+*   黑莓手机 WebWorks （OS 6.0 和更高）
 *   iOS
 *   Tizen
 
-## 執行 SQL 快速示例
+## 执行 SQL 快速示例
 
     function populateDB(tx) {
         tx.executeSql('DROP TABLE IF EXISTS DEMO');

@@ -17,41 +17,41 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: Config.xml 檔
+title: Config.xml 档
 toc_title: Config.xml
 ---
 
-# Config.xml 檔
+# Config.xml 档
 
-與全域設定檔，可以控制應用程式的行為的許多方面 `config.xml` 。 這與平臺無關的 XML 檔被安排基於 W3C 的[打包 Web 應用程式 （視窗小部件）][1]規範，並擴展指定核心科爾多瓦 API 功能、 外掛程式和平臺特定的設置。
+与全域设定档，可以控制应用程式的行为的许多方面 `config.xml` 。 这与平台无关的 XML 档被安排基于 W3C 的[打包 Web 应用程式 （视窗小部件）][1]规范，并扩展指定核心科尔多瓦 API 功能、 外挂程式和平台特定的设置。
 
  [1]: http://www.w3.org/TR/widgets/
 
-為專案創建與科爾多瓦 CLI （描述在命令列介面），可以在頂層目錄中找到此檔：
+为专案创建与科尔多瓦 CLI （描述在命令列介面），可以在顶层目录中找到此档：
 
         app/config.xml
     
 
-請注意之前的版本 3.3.1-0.2.0，該檔存在 `app/www/config.xml` ，並且仍然支援讓它在這裡。
+请注意之前的版本 3.3.1-0.2.0，该档存在 `app/www/config.xml` ，并且仍然支援让它在这里。
 
-當使用 CLI 來生成專案時，此檔的版本被動地被覆制到各種 `platforms/` 子目錄，例如：
+当使用 CLI 来生成专案时，此档的版本被动地被覆制到各种 `platforms/` 子目录，例如：
 
         app/platforms/ios/AppName/config.xml
         app/platforms/blackberry10/www/config.xml
         app/platforms/android/res/xml/config.xml
     
 
-本節詳細介紹全球和跨平臺的配置選項。請參見以下各節為平臺特定的選項：
+本节详细介绍全球和跨平台的配置选项。请参见以下各节为平台特定的选项：
 
 *   [iOS 配置](../guide/platforms/ios/config.html)
-*   [Android 系統組態](../guide/platforms/android/config.html)
+*   [Android 系统组态](../guide/platforms/android/config.html)
 *   [黑莓 10 配置](../guide/platforms/blackberry10/config.html)
 
-除了下面詳述的各種配置選項，您還可以配置每個目標平臺的圖像應用程式的核心的集。有關更多資訊，請參見圖示和啟動畫面。
+除了下面详述的各种配置选项，您还可以配置每个目标平台的图像应用程式的核心的集。有关更多资讯，请参见图示和启动画面。
 
 ## 核心配置元素
 
-此示例顯示了預設的 `config.xml` 生成的 CLI 的 `create` 命令，所述的命令列介面：
+此示例显示了预设的 `config.xml` 生成的 CLI 的 `create` 命令，所述的命令列介面：
 
         <widget id="com.example.hello" version="0.0.1">
             <name>HelloWorld</name>
@@ -66,25 +66,25 @@ toc_title: Config.xml
         </widget>
     
 
-以下的配置元素出現在頂級 `config.xml` 檔，並在所有受支援的科爾多瓦平臺支援：
+以下的配置元素出现在顶级 `config.xml` 档，并在所有受支援的科尔多瓦平台支援：
 
-*   `<widget>`元素的 `id` 屬性提供了應用程式的反向域識別碼和 `version` 主要/次要/修補程式符號表示其完整版本號碼。
+*   `<widget>`元素的 `id` 属性提供了应用程式的反向域识别码和 `version` 主要/次要/修补程式符号表示其完整版本号码。
     
-    小部件標記也可以指定替代版本，即 versionCode 為安卓系統和 CFBundleVersion 的 iOS 的屬性。請參閱下面的附加版本控制部分的詳細資訊。
+    小部件标记也可以指定替代版本，即 versionCode 为安卓系统和 CFBundleVersion 的 iOS 的属性。请参阅下面的附加版本控制部分的详细资讯。
 
-*   `<name>`元素指定應用程式的正式名稱，因為它出現在設備的主畫面上和在應用程式商店介面內。
+*   `<name>`元素指定应用程式的正式名称，因为它出现在设备的主画面上和在应用程式商店介面内。
 
-*   `<description>`和 `<author>` 的元素指定的中繼資料和聯繫資訊，可能會出現在應用程式商店清單內。
+*   `<description>`和 `<author>` 的元素指定的中继资料和联系资讯，可能会出现在应用程式商店清单内。
 
-*   可選的 `<content>` 元素在頂級 web 資產目錄中定義應用程式的起始頁。 預設值是 `index.html` ，其中通常出現在一個專案中的頂級 `www` 目錄。
+*   可选的 `<content>` 元素在顶级 web 资产目录中定义应用程式的起始页。 预设值是 `index.html` ，其中通常出现在一个专案中的顶级 `www` 目录。
 
-*   `<access>`元素定義應用程式能夠與進行通信的外部域的集。 如上所示的預設值允許它訪問任何伺服器。 請參閱域白名單指南的詳細資訊。
+*   `<access>`元素定义应用程式能够与进行通信的外部域的集。 如上所示的预设值允许它访问任何伺服器。 请参阅域白名单指南的详细资讯。
 
-*   `<preference>`標記設置各種選項作為對 `name` / `value` 屬性。 每個首選項的 `name` 是不區分大小寫。 很多優惠是獨有的特定平臺上，如列于此頁的頂部。 以下各節詳細介紹了適用于多個平臺的首選項。
+*   `<preference>`标记设置各种选项作为对 `name` / `value` 属性。 每个首选项的 `name` 是不区分大小写。 很多优惠是独有的特定平台上，如列于此页的顶部。 以下各节详细介绍了适用于多个平台的首选项。
 
 ### 其他的版本控制
 
-同時，Android 和 iOS iOS 支援第二個版本字串 （或數位） 除了一個可見在應用程式商店， [versionCode][2]為安卓系統和[CFBundleVersion][3] 。 下面是一個示例，顯式地設置 versionCode 和 CFBundleVersion
+同时，Android 和 iOS iOS 支援第二个版本字串 （或数位） 除了一个可见在应用程式商店， [versionCode][2]为安卓系统和[CFBundleVersion][3] 。 下面是一个示例，显式地设置 versionCode 和 CFBundleVersion
 
  [2]: http://developer.android.com/tools/publishing/versioning.html
  [3]: http://stackoverflow.com/questions/4933093/cfbundleversion-in-the-info-plist-upload-error
@@ -95,64 +95,64 @@ toc_title: Config.xml
           ios-CFBundleVersion="3.3.3">
     
 
-如果不指定替代版本，則將使用以下預設值：
+如果不指定替代版本，则将使用以下预设值：
 
         // assuming version = MAJOR.MINOR.PATCH-whatever
         versionCode = PATCH + MINOR * 100 + MAJOR * 10000
         CFBundleVersion = "MAJOR.MINOR.PATCH"
     
 
-## 全球首選項
+## 全球首选项
 
-以下全球首選項適用于所有平臺：
+以下全球首选项适用于所有平台：
 
-*   `Fullscreen`使您可以隱藏在螢幕頂部的狀態列。預設值是 `false` 。示例：
+*   `Fullscreen`使您可以隐藏在萤幕顶部的状态列。预设值是 `false` 。示例：
     
         <preference name="Fullscreen" value="true" />
         
 
-## 多平臺首選項
+## 多平台首选项
 
-下面的首選項應用到多個平臺，但不是向他們：
+下面的首选项应用到多个平台，但不是向他们：
 
-*   `DisallowOverscroll`(boolean 類型的值，預設值為 `false` ）： 設置為 `true` 如果你不想要當使用者滾動過去的開頭或結尾的內容時顯示的任何回饋資訊的介面。
+*   `DisallowOverscroll`(boolean 类型的值，预设值为 `false` ）： 设置为 `true` 如果你不想要当使用者滚动过去的开头或结尾的内容时显示的任何回馈资讯的介面。
     
         <preference name="DisallowOverscroll" value="true"/>
         
     
-    適用于 Android 和 iOS。 在 iOS，overscroll 手勢事業內容反彈到其原始位置。 在 android 系統，它們產生一個更微妙的光暈效果沿的頂部或底部邊緣的內容。
+    适用于 Android 和 iOS。 在 iOS，overscroll 手势事业内容反弹到其原始位置。 在 android 系统，它们产生一个更微妙的光晕效果沿的顶部或底部边缘的内容。
 
-*   `BackgroundColor`： 設置應用程式的背景色。 支援四個位元組的十六進位值，與第一個位元組代表一個 Alpha 色板、 和標準的 RGB 值為以下三個位元組。 此示例指定藍色：
+*   `BackgroundColor`： 设置应用程式的背景色。 支援四个位元组的十六进位值，与第一个位元组代表一个 Alpha 色板、 和标准的 RGB 值为以下三个位元组。 此示例指定蓝色：
     
         <preference name="BackgroundColor" value="0xff0000ff"/>
         
     
-    適用于 Android 和黑莓手機。覆蓋 CSS 否則為可跨*所有*平臺，例如：`body{background-color:blue}`.
+    适用于 Android 和黑莓手机。覆盖 CSS 否则为可跨*所有*平台，例如：`body{background-color:blue}`.
 
-*   `HideKeyboardFormAccessoryBar`(boolean 類型的值，預設值為 `false` ）： 設置為 `true` ，隱藏其他工具列出現在鍵盤上方説明使用者導航到另一個表單輸入從。
+*   `HideKeyboardFormAccessoryBar`(boolean 类型的值，预设值为 `false` ）： 设置为 `true` ，隐藏其他工具列出现在键盘上方说明使用者导航到另一个表单输入从。
     
         <preference name="HideKeyboardFormAccessoryBar" value="true"/>
         
     
-    適用于黑莓手機。
+    适用于黑莓手机。
 
-*   `Orientation`（字串，預設值為 `default`）： 允許您鎖定方向並防止介面回應變化的方向旋轉。 可能的值是 `default`，`landscape` 或 `portrait`。 示例：
+*   `Orientation`（字串，预设值为 `default`）： 允许您锁定方向并防止介面回应变化的方向旋转。 可能的值是 `default`，`landscape` 或 `portrait`。 示例：
     
         <preference name="Orientation" value="landscape" />
         
     
-    此外，您可以指定任何特定于平臺的定位值如果您放置 `<preference>` 元素中的 `<platform>` 元素：
+    此外，您可以指定任何特定于平台的定位值如果您放置 `<preference>` 元素中的 `<platform>` 元素：
     
         <platform name="android">
             <preference name="Orientation" value="sensorLandscape" />
         </platform>
         
     
-    適用于 Android、 iOS，WP8，亞馬遜火 OS 和火狐瀏覽器的作業系統。
+    适用于 Android、 iOS，WP8，亚马逊火 OS 和火狐浏览器的作业系统。
     
-    **注意**： `default` 值意味著科爾多瓦將帶定位首選項條目從平臺的清單/設定檔允許回退到其預設行為的平臺。
+    **注意**： `default` 值意味著科尔多瓦将带定位首选项条目从平台的清单/设定档允许回退到其预设行为的平台。
     
-    對於 iOS，指定縱向和橫向模式您將使用平臺特定的值`所有`:
+    对于 iOS，指定纵向和横向模式您将使用平台特定的值`所有`:
     
         <platform name="ios">
             <preference name="Orientation" value="all" />
@@ -160,25 +160,25 @@ toc_title: Config.xml
         
 ## *功能*元素
 
-如果你使用的 CLI 來構建應用程式，您將使用`外掛程式`命令來啟用設備的 Api。 這不修改頂級`config.xml`檔中，所以`< 功能 >`元素並不適用于您的工作流。 如果您直接在 SDK 和使用特定于平臺的`config.xml`檔作為源工作，你使用`< 功能 >`標記啟用設備級 Api 和外部外掛程式。 他們經常出現以特定于平臺的`config.xml`檔中的自訂值。 例如，下面是如何指定設備 API 為 Android 專案:
+如果你使用的 CLI 来构建应用程式，您将使用`外挂程式`命令来启用设备的 Api。 这不修改顶级`config.xml`档中，所以`< 功能 >`元素并不适用于您的工作流。 如果您直接在 SDK 和使用特定于平台的`config.xml`档作为源工作，你使用`< 功能 >`标记启用设备级 Api 和外部外挂程式。 他们经常出现以特定于平台的`config.xml`档中的自订值。 例如，下面是如何指定设备 API 为 Android 专案:
 
         <feature name="Device">
             <param name="android-package" value="org.apache.cordova.device.Device" />
         </feature>
     
 
-這裡是 iOS 專案元素的顯示方式:
+这里是 iOS 专案元素的显示方式:
 
         <feature name="Device">
             <param name="ios-package" value="CDVDevice" />
         </feature>
     
 
-有關如何指定每個功能，請參閱 API 參考的詳細資訊。看到外掛程式的外掛程式開發指南的詳細資訊。
+有关如何指定每个功能，请参阅 API 参考的详细资讯。看到外挂程式的外挂程式开发指南的详细资讯。
 
-## *平臺*的元素
+## *平台*的元素
 
-使用 CLI 來構建應用程式，時，有時需要指定首選項或其他特定于特定平臺的元素。 `<platform>`元素用於指定應該只出現在一個特定于平臺的`config.xml`檔中的配置。 例如，下面是如何指定那唯一的 android 應該使用全屏顯示首選項:
+使用 CLI 来构建应用程式，时，有时需要指定首选项或其他特定于特定平台的元素。 `<platform>`元素用于指定应该只出现在一个特定于平台的`config.xml`档中的配置。 例如，下面是如何指定那唯一的 android 应该使用全屏显示首选项:
 
         <platform name="android">
             <preference name="Fullscreen" value="true" />
@@ -187,6 +187,6 @@ toc_title: Config.xml
 
 ## *hook*元
 
-表示您自訂的腳本，將調用由科爾多瓦發生某些操作時 (例如，添加外掛程式或平臺編寫邏輯之後調用)。 當您需要擴展預設科爾多瓦功能時，這很有用。 更多的資訊，請參閱掛鉤的指南。
+表示您自订的脚本，将调用由科尔多瓦发生某些操作时 (例如，添加外挂程式或平台编写逻辑之后调用)。 当您需要扩展预设科尔多瓦功能时，这很有用。 更多的资讯，请参阅挂钩的指南。
 
     <hook type="after_plugin_install" src="scripts/afterPluginInstall.js" />

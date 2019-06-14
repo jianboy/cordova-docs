@@ -17,16 +17,16 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: 亞馬遜火 OS 外掛程式
+title: 亚马逊火 OS 外挂程式
 ---
 
-# 亞馬遜火 OS 外掛程式
+# 亚马逊火 OS 外挂程式
 
-按照有關的開發自訂外掛程式概述 Android 外掛程式指南中提供的說明。
+按照有关的开发自订外挂程式概述 Android 外挂程式指南中提供的说明。
 
-## 回聲亞馬遜火 OS 外掛程式示例
+## 回声亚马逊火 OS 外挂程式示例
 
-若要匹配的 JavaScript 介面*回波*特徵描述的應用程式外掛程式，使用 `plugin.xml` 來注入 `feature` 到本地平臺規範 `config.xml` 檔：
+若要匹配的 JavaScript 介面*回波*特征描述的应用程式外挂程式，使用 `plugin.xml` 来注入 `feature` 到本地平台规范 `config.xml` 档：
 
     <platform name="amazon-fireos">
         <config-file target="config.xml" parent="/*">
@@ -37,7 +37,7 @@ title: 亞馬遜火 OS 外掛程式
     </platform>
     
 
-然後添加以下到 `src/org/apache/cordova/plugin/Echo.java` 檔：
+然后添加以下到 `src/org/apache/cordova/plugin/Echo.java` 档：
 
     package org.apache.cordova.plugin;
     
@@ -73,7 +73,7 @@ title: 亞馬遜火 OS 外掛程式
     }
     
 
-如果你想要重用的亞馬遜火 OS 平臺 Android 外掛程式代碼然後修改通過指向 `android` 特定的原始檔案。例如，
+如果你想要重用的亚马逊火 OS 平台 Android 外挂程式代码然后修改通过指向 `android` 特定的原始档案。例如，
 
     <platform name="amazon-fireos">
         <config-file target="config.xml" parent="/*">
@@ -85,7 +85,7 @@ title: 亞馬遜火 OS 外掛程式
     </platform>
     
 
-如果你想要編寫自訂的外掛程式的亞馬遜火 OS 平臺，然後創建一個名為資料夾 `amazon` 下你的外掛程式 src / 資料夾和修改通過為指向 `amazon` 特定的原始檔案。 例如，
+如果你想要编写自订的外挂程式的亚马逊火 OS 平台，然后创建一个名为资料夹 `amazon` 下你的外挂程式 src / 资料夹和修改通过为指向 `amazon` 特定的原始档案。 例如，
 
     <platform name="amazon-fireos">
         <config-file target="config.xml" parent="/*">
@@ -97,10 +97,10 @@ title: 亞馬遜火 OS 外掛程式
     </platform>
     
 
-## 在你的外掛程式中使用亞馬遜 web 視圖
+## 在你的外挂程式中使用亚马逊 web 视图
 
-科爾多瓦的亞馬遜火 OS 使得使用的基於開放源碼鉻專案的自訂亞馬遜 web 視圖。它是 GPU 加速和優化的流體性能上點燃火。
+科尔多瓦的亚马逊火 OS 使得使用的基于开放源码铬专案的自订亚马逊 web 视图。它是 GPU 加速和优化的流体性能上点燃火。
 
-若要瞭解如何以最佳方式在您的專案中使用亞馬遜 web 視圖，查閱[亞馬遜開發人員門戶][1].
+若要了解如何以最佳方式在您的专案中使用亚马逊 web 视图，查阅[亚马逊开发人员门户][1].
 
  [1]: https://developer.amazon.com/sdk/fire/IntegratingAWV.html

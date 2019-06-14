@@ -17,126 +17,126 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: 使用 Plugman 來管理外掛程式
+title: 使用 Plugman 来管理外挂程式
 toc_title: Use Plugman
 ---
 
-# 使用 Plugman 來管理外掛程式
+# 使用 Plugman 来管理外挂程式
 
-從 3.0 版本開始，科爾多瓦實現所有設備 Api 作為外掛程式，然後留在預設情況下禁用。 此外，它還支援兩種不同的方法來添加和刪除外掛程式，根據您的工作流概述中討論的選擇：
+从 3.0 版本开始，科尔多瓦实现所有设备 Api 作为外挂程式，然后留在预设情况下禁用。 此外，它还支援两种不同的方法来添加和删除外挂程式，根据您的工作流概述中讨论的选择：
 
-*   如果您使用跨平臺的工作流，則使用 `cordova` CLI 實用程式添加外掛程式，如所述的命令列介面。 CLI 一次修改所有指定平臺的外掛程式。
+*   如果您使用跨平台的工作流，则使用 `cordova` CLI 实用程式添加外挂程式，如所述的命令列介面。 CLI 一次修改所有指定平台的外挂程式。
 
-*   如果你使用的平臺為中心的工作流程，您使用一個較低級別的[Plugman][1]命令列介面，分別為每個目標平臺。
+*   如果你使用的平台为中心的工作流程，您使用一个较低级别的[Plugman][1]命令列介面，分别为每个目标平台。
 
  [1]: https://github.com/apache/cordova-plugman/
 
-本節詳細介紹的 Plugman 實用程式。 消費作為節點模組 Plugman 或修改的原始程式碼的詳細資訊，請參閱[其庫中的讀我檔案][2].
+本节详细介绍的 Plugman 实用程式。 消费作为节点模组 Plugman 或修改的原始程式码的详细资讯，请参阅[其库中的读我档案][2].
 
  [2]: https://github.com/apache/cordova-plugman/blob/master/README.md
 
-## 安裝 Plugman
+## 安装 Plugman
 
-要安裝 plugman，您必須在您的機器上安裝的[節點][3]。 然後您可以運行下面的命令從任意位置在您的環境以全域，安裝 plugman，這樣就可從任何目錄中：
+要安装 plugman，您必须在您的机器上安装的[节点][3]。 然后您可以运行下面的命令从任意位置在您的环境以全域，安装 plugman，这样就可从任何目录中：
 
  [3]: http://nodejs.org/
 
     $ npm install -g plugman
     
 
-您還必須有有 `git` 上你 `PATH` ，以便能夠直接從遠端 git Url 安裝的外掛程式。
+您还必须有有 `git` 上你 `PATH` ，以便能够直接从远端 git Url 安装的外挂程式。
 
-**提示**： 如果您在安裝與 plugman 後發現 `npm` 你是仍然不能運行任何 `plugman` 的命令，請確保您已添加 `/npm/` 目錄到您`PATH`.
+**提示**： 如果您在安装与 plugman 后发现 `npm` 你是仍然不能运行任何 `plugman` 的命令，请确保您已添加 `/npm/` 目录到您`PATH`.
 
-**注**： 您可以跳過此步驟，如果你不想污染您的全球性 `npm` 通過全球範圍內安裝 Plugman 的命名空間。 如果這種情況，然後當你與外殼工具創建科爾多瓦專案，將有 `node_modules` 目錄裡面您的專案包含 Plugman。 由於全球範圍內你沒有安裝，您需要調用 `node` 的每個 Plugman 命令，例如 `node
-./node_modules/plugman/main.js -version` 。 本指南的其餘部分假定您已安裝 Plugman 就全球而言，意味著您可以調用它與只是`plugman`.
+**注**： 您可以跳过此步骤，如果你不想污染您的全球性 `npm` 通过全球范围内安装 Plugman 的命名空间。 如果这种情况，然后当你与外壳工具创建科尔多瓦专案，将有 `node_modules` 目录里面您的专案包含 Plugman。 由于全球范围内你没有安装，您需要调用 `node` 的每个 Plugman 命令，例如 `node
+./node_modules/plugman/main.js -version` 。 本指南的其余部分假定您已安装 Plugman 就全球而言，意味著您可以调用它与只是`plugman`.
 
-## 創建一個專案，科爾多瓦
+## 创建一个专案，科尔多瓦
 
-您可以使用 Plugman 之前，您必須創建一個科爾多瓦專案。 你可以用命令列介面或更低的級別的 shell 腳本。 使用 shell 腳本來創建您的專案的說明都位於平臺指南頁上列出的各項"命令列工具"指南。
+您可以使用 Plugman 之前，您必须创建一个科尔多瓦专案。 你可以用命令列介面或更低的级别的 shell 脚本。 使用 shell 脚本来创建您的专案的说明都位于平台指南页上列出的各项"命令列工具"指南。
 
-## 添加外掛程式
+## 添加外挂程式
 
-一旦你已經安裝了 Plugman，並已創建一個科爾多瓦專案，您可以開始將外掛程式添加到與平臺：
+一旦你已经安装了 Plugman，并已创建一个科尔多瓦专案，您可以开始将外挂程式添加到与平台：
 
     $ plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin <name|url|path> [--plugins_dir <directory>] [--www <directory>] [--variable <name>=<value> [--variable <name>=<value> ...]]
     
 
-使用最小的參數，此命令將外掛程式安裝到科爾多瓦的一個專案。 您必須指定一個為該平臺的平臺和科爾多瓦的專案位置。 此外必須指定與不同的外掛程式， `--plugin` 參數形式是：
+使用最小的参数，此命令将外挂程式安装到科尔多瓦的一个专案。 您必须指定一个为该平台的平台和科尔多瓦的专案位置。 此外必须指定与不同的外挂程式， `--plugin` 参数形式是：
 
-*   `name`： 目錄名稱外掛程式內容存在的地方。 這必須是現有目錄下的 `--plugins_dir` 路徑 （見下面的詳細資訊） 或一個外掛程式在科爾多瓦註冊表中的。
-*   `url`： URL 以 HTTPs:// 或 git 開始： / / 指向一個有效 git 存儲庫，是複本，包含 `plugin.xml` 檔。 這個資料庫的內容將複製到`--plugins_dir`.
-*   `path`： 目錄包含一個有效的外掛程式，其中包括路徑 `plugin.xml` 檔。此路徑的內容將被覆制到`--plugins_dir`.
+*   `name`： 目录名称外挂程式内容存在的地方。 这必须是现有目录下的 `--plugins_dir` 路径 （见下面的详细资讯） 或一个外挂程式在科尔多瓦注册表中的。
+*   `url`： URL 以 HTTPs:// 或 git 开始： / / 指向一个有效 git 存储库，是复本，包含 `plugin.xml` 档。 这个资料库的内容将复制到`--plugins_dir`.
+*   `path`： 目录包含一个有效的外挂程式，其中包括路径 `plugin.xml` 档。此路径的内容将被覆制到`--plugins_dir`.
 
-其他參數：
+其他参数：
 
-*   `--plugins_dir`預設值為 `<project>/cordova/plugins` ，但可以為每個包含子目錄中任何目錄獲取外掛程式。
-*   `--www`預設值為專案的 `www` 資料夾的位置，但可以作為科爾多瓦專案應用程式 web 資產使用的任何目錄。
-*   `--variable`允許指定某些變數在安裝時，有必要對某些外掛程式需要 API 金鑰或其他自訂的使用者定義的參數。 請[外掛程式規範][4]的詳細資訊，參閱。
+*   `--plugins_dir`预设值为 `<project>/cordova/plugins` ，但可以为每个包含子目录中任何目录获取外挂程式。
+*   `--www`预设值为专案的 `www` 资料夹的位置，但可以作为科尔多瓦专案应用程式 web 资产使用的任何目录。
+*   `--variable`允许指定某些变数在安装时，有必要对某些外挂程式需要 API 金钥或其他自订的使用者定义的参数。 请[外挂程式规范][4]的详细资讯，参阅。
 
  [4]: plugin_ref_spec.md.html#Plugin%20Specification
 
-## 刪除某個外掛程式
+## 删除某个外挂程式
 
-若要卸載外掛程式，你只需通過 `--uninstall` 標記，並提供外掛程式 id。
+若要卸载外挂程式，你只需通过 `--uninstall` 标记，并提供外挂程式 id。
 
     $ plugman --uninstall --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin <id> [--www <directory>] [--plugins_dir <directory>]
     
 
-## 説明命令
+## 说明命令
 
-Plugman 特色全球説明命令，可以説明你如果你卡住或遇到的問題。它將顯示所有可用的 Plugman 命令和它們的語法的清單：
+Plugman 特色全球说明命令，可以说明你如果你卡住或遇到的问题。它将显示所有可用的 Plugman 命令和它们的语法的清单：
 
     plugman -help
     plugman  # same as above
     
 
-**注**： `plugman -help` 可能會顯示一些額外的與註冊表相關的命令。 這些命令用於外掛程式開發人員，不可能進行協力廠商外掛程式登記處。
+**注**： `plugman -help` 可能会显示一些额外的与注册表相关的命令。 这些命令用于外挂程式开发人员，不可能进行协力厂商外挂程式登记处。
 
-您還可以將追加 `--debug|-d` 旗子到任何 Plugman 命令以運行該命令以詳細模式，將顯示任何內部調試消息，因為他們排放和可説明您跟蹤下像缺少檔的問題。
+您还可以将追加 `--debug|-d` 旗子到任何 Plugman 命令以运行该命令以详细模式，将显示任何内部调试消息，因为他们排放和可说明您跟踪下像缺少档的问题。
 
     # Adding Android battery-status plugin to "myProject":
     plugman -d --platform android --project myProject --plugin cordova-plugin-battery-status
     
 
-最後，您可以使用 `--version|-v` 標誌來查看您使用哪個版本的 Plugman。
+最后，您可以使用 `--version|-v` 标志来查看您使用哪个版本的 Plugman。
 
     plugman -v
     
 
-## 註冊表操作
+## 注册表操作
 
-那裡有很多的 plugman 命令，可以用於與[外掛程式註冊表][5]進行交互。 請注意這些註冊表命令是特定于*plugins.cordova.io*外掛程式註冊表，不可能由協力廠商外掛程式登記處執行。
+那里有很多的 plugman 命令，可以用于与[外挂程式注册表][5]进行交互。 请注意这些注册表命令是特定于*plugins.cordova.io*外挂程式注册表，不可能由协力厂商外挂程式登记处执行。
 
  [5]: http://plugins.cordova.io
 
-### 尋找一個外掛程式
+### 寻找一个外挂程式
 
-您可以使用 Plugman 來搜索[外掛程式註冊表][5]外掛程式 id 的匹配給定以空格分隔的關鍵字清單。
+您可以使用 Plugman 来搜索[外挂程式注册表][5]外挂程式 id 的匹配给定以空格分隔的关键字清单。
 
     plugman search <plugin keywords>
     
 
-### 更改外掛程式註冊表
+### 更改外挂程式注册表
 
-您可以獲取或設置當前外掛程式註冊表的 URL，使用的 plugman。通常你應該離開這在 HTTP://registry.cordova.io 設置，除非您想要使用協力廠商外掛程式註冊表。
+您可以获取或设置当前外挂程式注册表的 URL，使用的 plugman。通常你应该离开这在 HTTP://registry.cordova.io 设置，除非您想要使用协力厂商外挂程式注册表。
 
     plugman config set registry <url-to-registry>
     plugman config get registry
     
 
-### 獲取外掛程式的資訊
+### 获取外挂程式的资讯
 
-您可以獲得有關任何特定外掛程式在外掛程式庫中存儲的資訊：
+您可以获得有关任何特定外挂程式在外挂程式库中存储的资讯：
 
     plugman info <id>
     
 
-這將聯繫的外掛程式註冊表和提取資訊，如外掛程式的版本編號。
+这将联系的外挂程式注册表和提取资讯，如外挂程式的版本编号。
 
-## 安裝核心外掛程式
+## 安装核心外挂程式
 
-下面的示例顯示如何添加外掛程式，如需要，這樣您在您的專案中使用任何科爾多瓦 Api 仍然工作後你升級到 3.0 版本。對於每個命令，你需要選擇目標平臺，並引用該平臺的專案目錄。
+下面的示例显示如何添加外挂程式，如需要，这样您在您的专案中使用任何科尔多瓦 Api 仍然工作后你升级到 3.0 版本。对于每个命令，你需要选择目标平台，并引用该平台的专案目录。
 
 *   cordova-plugin-battery-status
     

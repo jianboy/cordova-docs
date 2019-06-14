@@ -22,21 +22,21 @@ title: menubutton
 
 # menubutton
 
-在使用者按功能表按鈕時，將觸發該事件。
+在使用者按功能表按钮时，将触发该事件。
 
     document.addEventListener("menubutton", yourCallbackFunction, false);
     
 
-## 詳細資訊
+## 详细资讯
 
-事件處理常式的應用覆蓋的預設功能表按鈕行為。
+事件处理常式的应用覆盖的预设功能表按钮行为。
 
-應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `[deviceready](events.deviceready.html)` 事件火災。
+应用程式通常应使用 `document.addEventListener` 将一个事件拦截器附加一次 `[deviceready](events.deviceready.html)` 事件火灾。
 
-## 支援的平臺
+## 支援的平台
 
-*   亞馬遜火 OS
-*   Android 系統
+*   亚马逊火 OS
+*   Android 系统
 *   黑莓 10
 
 ## 快速的示例

@@ -17,59 +17,59 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: iOS 平臺指南
+title: iOS 平台指南
 toc_title: iOS
 ---
 
-# iOS 平臺指南
+# iOS 平台指南
 
-本指南介紹如何設置您的 SDK 開發環境部署科爾多瓦的 iOS 設備 （如 iPhone 和 iPad 的應用程式。請參閱下列特定于平臺的詳細資訊：
+本指南介绍如何设置您的 SDK 开发环境部署科尔多瓦的 iOS 设备 （如 iPhone 和 iPad 的应用程式。请参阅下列特定于平台的详细资讯：
 
 *   [iOS 配置](config.html)
-*   [升級 iOS](upgrading.html)
+*   [升级 iOS](upgrading.html)
 *   [WebViews iOS](webview.html)
-*   [iOS 外掛程式](plugin.html)
-*   [iOS 殼工具指南](tools.html)
+*   [iOS 外挂程式](plugin.html)
+*   [iOS 壳工具指南](tools.html)
 
-上面的命令列工具請參閱科爾多瓦 3.0 以前的版本。關於當前介面的資訊，請參閱命令列介面。
+上面的命令列工具请参阅科尔多瓦 3.0 以前的版本。关于当前介面的资讯，请参阅命令列介面。
 
 ## 要求和支援
 
-蘋果公司 ® 生成僅在基於英特爾的 Mac OS X 作業系統上運行的 iOS 應用程式所需的工具。 僅在 OS X 版本 10.9 （小牛） 上運行 Xcode ® 6.0 （所需的最低版本） 或更高版本，並包含 iOS 8 SDK （軟體發展工具組）。 要提交到蘋果 App Store℠ 的應用程式需要的蘋果工具的最新版本。
+苹果公司 ® 生成仅在基于英特尔的 Mac OS X 作业系统上运行的 iOS 应用程式所需的工具。 仅在 OS X 版本 10.9 （小牛） 上运行 Xcode ® 6.0 （所需的最低版本） 或更高版本，并包含 iOS 8 SDK （软体发展工具组）。 要提交到苹果 App Store℠ 的应用程式需要的苹果工具的最新版本。
 
-您可以測試的許多科爾多瓦功能使用 iOS 模擬器安裝 ios SDK 和 Xcode，但你需要使用實際的設備完全提交到 App Store 之前測試的所有應用程式的裝置功能。 該設備必須至少有 iOS 裝有 6.x、 到科爾多瓦 3.0 支援的最低的 iOS 版本。配套設備包括所有 iPad ® 模型、 iPhone ® 3GS 以上，和 iPod ® 觸摸第三代或更高版本。 要安裝到設備上的應用程式，您必須也是蘋果公司的[iOS 開發者計畫][1]，該費用每 99 年美元的成員。 本指南演示如何將應用程式部署到 iOS 模擬器，不必註冊開發者計畫。
+您可以测试的许多科尔多瓦功能使用 iOS 模拟器安装 ios SDK 和 Xcode，但你需要使用实际的设备完全提交到 App Store 之前测试的所有应用程式的装置功能。 该设备必须至少有 iOS 装有 6.x、 到科尔多瓦 3.0 支援的最低的 iOS 版本。配套设备包括所有 iPad ® 模型、 iPhone ® 3GS 以上，和 iPod ® 触摸第三代或更高版本。 要安装到设备上的应用程式，您必须也是苹果公司的[iOS 开发者计划][1]，该费用每 99 年美元的成员。 本指南演示如何将应用程式部署到 iOS 模拟器，不必注册开发者计画。
 
  [1]: https://developer.apple.com/programs/ios/
 
-[Ios sim 卡][2]和[ios-deploy][3]工具允許您啟動到 iOS 模擬器的 iOS 應用程式並從命令列的 iOS 設備。
+[Ios sim 卡][2]和[ios-deploy][3]工具允许您启动到 iOS 模拟器的 iOS 应用程式并从命令列的 iOS 设备。
 
  [2]: https://www.npmjs.org/package/ios-sim
  [3]: https://www.npmjs.org/package/ios-deploy
 
-## 安裝 SDK
+## 安装 SDK
 
-有兩種方式下載 Xcode：
+有两种方式下载 Xcode：
 
-*   從[應用程式商店][4]，可通過搜索"Xcode"在**App Store**中的應用。
+*   从[应用程式商店][4]，可通过搜索"Xcode"在**App Store**中的应用。
 
-*   從[蘋果開發者下載][5]，而作為蘋果開發者需要註冊。
+*   从[苹果开发者下载][5]，而作为苹果开发者需要注册。
 
  [4]: https://itunes.apple.com/us/app/xcode/id497799835?mt=12
  [5]: https://developer.apple.com/downloads/index.action
 
-一旦安裝了 Xcode，幾個命令列工具需要為科爾多瓦運行啟用。 從**Xcode**功能表中，選擇**首選項**，然後**下載**選項卡。 從**元件**面板中，按**命令列工具**清單旁邊的**安裝**按鈕。
+一旦安装了 Xcode，几个命令列工具需要为科尔多瓦运行启用。 从**Xcode**功能表中，选择**首选项**，然后**下载**选项卡。 从**元件**面板中，按**命令列工具**清单旁边的**安装**按钮。
 
-## 安裝部署工具
+## 安装部署工具
 
-從普通型線路終端上運行：
+从普通型线路终端上运行：
 
         $ npm install -g ios-sim
         $ npm install -g ios-deploy
     
 
-## 創建一個新的專案
+## 创建一个新的专案
 
-使用`科爾多瓦`實用程式設置了一個新的專案，如所述在科爾多瓦的命令列介面。例如，在一個原始程式碼目錄：
+使用`科尔多瓦`实用程式设置了一个新的专案，如所述在科尔多瓦的命令列介面。例如，在一个原始程式码目录：
 
         $ cordova create hello com.example.hello "HelloWorld"
         $ cd hello
@@ -77,84 +77,84 @@ toc_title: iOS
         $ cordova prepare              # or "cordova build"
     
 
-## 部署應用程式
+## 部署应用程式
 
-要部署的應用程式連接的 iOS 設備上：
+要部署的应用程式连接的 iOS 设备上：
 
         $ cordova run ios --device
     
 
-部署預設 iOS 模擬器上的應用程式：
+部署预设 iOS 模拟器上的应用程式：
 
         $ cordova emulate ios
     
 
-您可以使用**cordova run ios --list**看到所有可用的目標和**cordova run ios --target=target_name**在一個特定的設備或模擬器上運行應用程式 （例如，`cordova run ios --target="iPhone-6"`).
+您可以使用**cordova run ios --list**看到所有可用的目标和**cordova run ios --target=target_name**在一个特定的设备或模拟器上运行应用程式 （例如，`cordova run ios --target="iPhone-6"`).
 
-您還可以使用**科爾多瓦運行 — — 説明**查看附加的生成和運行選項。
+您还可以使用**科尔多瓦运行 — — 说明**查看附加的生成和运行选项。
 
-## 在 SDK 中打開專案
+## 在 SDK 中打开专案
 
-一旦 ios 平臺添加到專案中，您可以打開它從內 Xcode。按兩下以打開`hello/platforms/ios/hello.xcodeproj`檔。螢幕應該如下所示：
+一旦 ios 平台添加到专案中，您可以打开它从内 Xcode。按两下以打开`hello/platforms/ios/hello.xcodeproj`档。萤幕应该如下所示：
 
 ![][6]
 
  [6]: {{ site.baseurl }}/static/img/guide/platforms/ios/helloworld_project.png
 
-## 部署到模擬程式
+## 部署到模拟程式
 
-若要預覽在 iOS 模擬器中的應用程式：
+若要预览在 iOS 模拟器中的应用程式：
 
-1.  請確保在左邊的面板中選擇*.xcodeproj*檔。
+1.  请确保在左边的面板中选择*.xcodeproj*档。
 
-2.  選擇**你好**app 立即向右面板中。
+2.  选择**你好**app 立即向右面板中。
 
-3.  從工具列上的**計畫**功能表中選擇預定的設備、 iPhone 等作為 6.0 模擬器在這裡突出了：
+3.  从工具列上的**计划**功能表中选择预定的设备、 iPhone 等作为 6.0 模拟器在这里突出了：
     
     ![][7]
 
-4.  按下**運行**按鈕出現在同一工具列左側的**計畫**中。 那生成、 部署並在模擬器中運行應用程式。 一個單獨的模擬器應用程式將打開，並顯示該應用程式：
+4.  按下**运行**按钮出现在同一工具列左侧的**计划**中。 那生成、 部署并在模拟器中运行应用程式。 一个单独的模拟器应用程式将打开，并显示该应用程式：
     
     ![][8]
     
-    只有一個模擬程式可能會運行一次，所以如果你想要在不同的模擬器中測試應用程式，您需要退出的模擬程式應用程式和運行一個不同的目標在 Xcode 的範圍內。
+    只有一个模拟程式可能会运行一次，所以如果你想要在不同的模拟器中测试应用程式，您需要退出的模拟程式应用程式和运行一个不同的目标在 Xcode 的范围内。
 
  [7]: {{ site.baseurl }}/static/img/guide/platforms/ios/select_xcode_scheme.png
  [8]: {{ site.baseurl }}/static/img/guide/platforms/ios/HelloWorldStandard.png
 
-Xcode 捆綁與最新版本的 iPhone 和 iPad 的模擬器。 舊版本也許可以從**Xcode → 首選項 → 下載 → 元件**面板。
+Xcode 捆绑与最新版本的 iPhone 和 iPad 的模拟器。 旧版本也许可以从**Xcode → 首选项 → 下载 → 元件**面板。
 
-## 將部署到設備
+## 将部署到设备
 
-關於各項要求部署到一個設備的詳細資訊，請參閱蘋果公司[關於應用程式分配工作流][9]的*啟動您的應用程式對設備*部分。 簡單地說，您需要部署之前執行以下操作：
+关于各项要求部署到一个设备的详细资讯，请参阅苹果公司[关于应用程式分配工作流][9]的*启动您的应用程式对设备*部分。 简单地说，您需要部署之前执行以下操作：
 
  [9]: https://developer.apple.com/library/prerelease/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html
 
-1.  加入蘋果 iOS 開發者計畫。
+1.  加入苹果 iOS 开发者计划。
 
-2.  創建*資源調配設定檔*內[iOS 資源調配門戶][10]。 您可以使用其*發展資源調配助理*來創建和安裝設定檔和證書 Xcode 需要。
+2.  创建*资源调配设定档*内[iOS 资源调配门户][10]。 您可以使用其*发展资源调配助理*来创建和安装设定档和证书 Xcode 需要。
 
-3.  驗證*代碼簽名*部分*代碼簽名標識*內的專案設置設置為您設置的設定檔名稱。
+3.  验证*代码签名*部分*代码签名标识*内的专案设置设置为您设置的设定档名称。
 
  [10]: https://developer.apple.com/ios/manage/overview/index.action
 
-要部署到設備：
+要部署到设备：
 
-1.  使用 USB 電纜將設備插入到您的 mac。
+1.  使用 USB 电缆将设备插入到您的 mac。
 
-2.  Xcode 視窗**計畫**下拉清單中選擇的專案的名稱。
+2.  Xcode 视窗**计划**下拉清单中选择的专案的名称。
 
-3.  從**設備**下拉清單中選擇您的設備。如果它通過 USB 連接電源，但仍然沒有出現，請按**管理器**按鈕，以解決任何錯誤。
+3.  从**设备**下拉清单中选择您的设备。如果它通过 USB 连接电源，但仍然没有出现，请按**管理器**按钮，以解决任何错误。
 
-4.  按下**運行**按鈕以生成、 部署並運行該應用程式在您的設備上。
+4.  按下**运行**按钮以生成、 部署并运行该应用程式在您的设备上。
 
-## 常見的問題
+## 常见的问题
 
-**否決警告**： 當應用程式更改或替換為另一個 API 程式設計介面 (API) 時，它被標記為*已棄用*。 該 API 仍可工作在短期內，但最終將被刪除。 一些這些過時的介面，反映在 Apache 科爾多瓦和 Xcode 問題關於他們的警告，當您生成和部署應用程式。
+**否决警告**： 当应用程式更改或替换为另一个 API 程式设计介面 (API) 时，它被标记为*已弃用*。 该 API 仍可工作在短期内，但最终将被删除。 一些这些过时的介面，反映在 Apache 科尔多瓦和 Xcode 问题关于他们的警告，当您生成和部署应用程式。
 
-`InvokeString`方法 Xcode 的警告有關啟動一個應用程式從一個自訂的 URL 的功能。 雖然從一個自訂的 URL 載入的機制發生了改變，此代碼是仍然存在，以便為科爾多瓦的較早版本創建的應用程式提供向後的功能。 應用程式範例不使用此功能，因此可以忽略這些警告。 若要防止出現這些警告，請移除引用已棄用的 invokeString API 的代碼：
+`InvokeString`方法 Xcode 的警告有关启动一个应用程式从一个自订的 URL 的功能。 虽然从一个自订的 URL 载入的机制发生了改变，此代码是仍然存在，以便为科尔多瓦的较早版本创建的应用程式提供向后的功能。 应用程式范例不使用此功能，因此可以忽略这些警告。 若要防止出现这些警告，请移除引用已弃用的 invokeString API 的代码：
 
-*   編輯*Classes/MainViewController.m*檔、 環繞的代碼與下面的塊 `/*` 和 `*/` 的評論如下所示，然後鍵入**命令-s**保存該檔：
+*   编辑*Classes/MainViewController.m*档、 环绕的代码与下面的块 `/*` 和 `*/` 的评论如下所示，然后键入**命令-s**保存该档：
     
         (void)webViewDidFinishLoad:(UIWebView*)theWebView
         {
@@ -174,40 +174,40 @@ Xcode 捆綁與最新版本的 iPhone 和 iPad 的模擬器。 舊版本也許�
         }
         
 
-*   編輯*Classes/AppViewDelegate.m*檔，注釋掉下面的行插入雙斜杠，如下所示，然後鍵入**命令-s**保存該檔：
+*   编辑*Classes/AppViewDelegate.m*档，注释掉下面的行插入双斜杠，如下所示，然后键入**命令-s**保存该档：
     
         //self.viewController.invokeString = invokeString;
         
 
-*   按**命令-b**重新生成專案並消除此警告。
+*   按**命令-b**重新生成专案并消除此警告。
 
 <!-- Does this fix only last until the next "cordova prepare"? -->
 
-**缺少標題**： 有關失蹤的標頭的編譯錯誤導致從生成位置的問題，可以通過 Xcode 偏好固定：
+**缺少标题**： 有关失踪的标头的编译错误导致从生成位置的问题，可以通过 Xcode 偏好固定：
 
-1.  選擇**Xcode → 首選項 → 位置**.
+1.  选择**Xcode → 首选项 → 位置**.
 
-2.  在**派生的資料**部分中，按**高級**按鈕並選擇**唯一**作為**生成位置**如下所示：
+2.  在**派生的资料**部分中，按**高级**按钮并选择**唯一**作为**生成位置**如下所示：
     
     ![][11]
 
  [11]: {{ site.baseurl }}/static/img/guide/platforms/ios/xcode_build_location.png
 
-這是一個新的 Xcode 安裝的預設設置，但可以設置不同的升級之後從 Xcode 舊版本。
+这是一个新的 Xcode 安装的预设设置，但可以设置不同的升级之后从 Xcode 旧版本。
 
-進一步的資訊，請參閱蘋果的文檔：
+进一步的资讯，请参阅苹果的文档：
 
-*   [開始開發 iOS 應用程式今天][12]快速概述的步驟開發 iOS 的應用程式。
+*   [开始开发 iOS 应用程式今天][12]快速概述的步骤开发 iOS 的应用程式。
 
-*   [會員中心主頁][13]提供幾個 iOS 的連結技術資源包括技術資源，資源調配門戶、 分佈指南和社區論壇。
+*   [会员中心主页][13]提供几个 iOS 的连结技术资源包括技术资源，资源调配门户、 分布指南和社区论坛。
 
 *   [IOS 工具工作流指南][14]
 
 *   [Xcode 使用者指南][15]
 
-*   從蘋果世界廣泛開發人員會議 (WWDC2012) 2012年[屆會議視頻][16]
+*   从苹果世界广泛开发人员会议 (WWDC2012) 2012年[届会议视频][16]
 
-*   安裝[xcode 選擇命令][17]，它有助於指定正確版本的 Xcode，如果不止一個的話。
+*   安装[xcode 选择命令][17]，它有助于指定正确版本的 Xcode，如果不止一个的话。
 
  [12]: http://developer.apple.com/library/ios/#referencelibrary/GettingStarted/RoadMapiOS/index.html#//apple_ref/doc/uid/TP40011343
  [13]: https://developer.apple.com/membercenter/index.action
@@ -216,4 +216,4 @@ Xcode 捆綁與最新版本的 iPhone 和 iPad 的模擬器。 舊版本也許�
  [16]: https://developer.apple.com/videos/wwdc/2012/
  [17]: http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/xcode-select.1.html
 
-（Mac ® OS X ® Xcode ® 蘋果 ® 的應用程式進行，iPad ®，iPhone ®，iPod ® Finder ®，蘋果公司商標)
+（Mac ® OS X ® Xcode ® 苹果 ® 的应用程式进行，iPad ®，iPhone ®，iPod ® Finder ®，苹果公司商标)

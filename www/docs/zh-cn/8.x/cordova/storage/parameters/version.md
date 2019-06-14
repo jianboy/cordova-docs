@@ -22,4 +22,4 @@ title: database_version
 
 # database_version
 
-資料庫的版本。
+资料库的版本。

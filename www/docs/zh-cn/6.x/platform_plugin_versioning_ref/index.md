@@ -17,30 +17,30 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: 平臺和外掛程式版本管理
+title: 平台和外挂程式版本管理
 toc_title: Manage versions and platforms
 ---
 
-# 平臺和外掛程式版本管理
+# 平台和外挂程式版本管理
 
-從版 4.3.0 開始，科爾多瓦提供保存和還原平臺和外掛程式的能力。
+从版 4.3.0 开始，科尔多瓦提供保存和还原平台和外挂程式的能力。
 
-此功能允許開發人員保存，並將他們的應用程式還原到已知狀態，而無需檢查在所有的平臺和外掛程式的原始程式碼。
+此功能允许开发人员保存，并将他们的应用程式还原到已知状态，而无需检查在所有的平台和外挂程式的原始程式码。
 
-保存命令在 config.xml 中存儲應用程式的平臺和外掛程式版本的詳細資訊。 '還原' 一步會自動發生**'cordova prepare'**發出，製作時使用以前保存的 config.xml 檔中的資訊。
+保存命令在 config.xml 中存储应用程式的平台和外挂程式版本的详细资讯。 '还原' 一步会自动发生**'cordova prepare'**发出，制作时使用以前保存的 config.xml 档中的资讯。
 
-在哪裡保存/恢復功能派上用場的一個方案是在處理一個應用程式，專注于一個平臺或者外掛程式每個團隊成員的大型團隊。 此功能很容易地共用專案和減少冗余檢查存儲庫中的代碼的數量。
+在哪里保存/恢复功能派上用场的一个方案是在处理一个应用程式，专注于一个平台或者外挂程式每个团队成员的大型团队。 此功能很容易地共用专案和减少冗余检查存储库中的代码的数量。
 
-## 平臺版本控制
+## 平台版本控制
 
-### 儲蓄的平臺
+### 储蓄的平台
 
-若要保存一個平臺，你可以發出以下命令:
+若要保存一个平台，你可以发出以下命令:
 
     $ cordova platform add <platform[@<version>] | directory | git_url> --save
     
 
-運行上述命令後，由此產生的 config.xml 看起來像:
+运行上述命令后，由此产生的 config.xml 看起来像:
 
     <?xml version='1.0' encoding='utf-8'?>
         ...
@@ -51,21 +51,21 @@ toc_title: Manage versions and platforms
 
 一些例子:
 
-  * **'cordova platform add android --save'** => 檢索固定的版本的 android 平臺，將其添加到該專案，然後更新 config.xml。
-  * **'cordova platform add android@3.7.0 --save'** => 檢索 android 平臺上，從新公共管理，版本 3.7.0 將它添加到專案，然後更新 config.xml。
-  * **'cordova platform add android@https://github.com/apache/cordova-android.git​ --save'** => 克隆指定的科爾多瓦 android git 倉庫，將 android 平臺添加到專案中，然後更新 config.xml 並指向指定的 git url 及其版本。
-  * **cordova platform add C:/path/to/android/platform --save** => 從指定的目錄中檢索的 android 平臺，將其添加到專案中，然後更新 config.xml 和指向的目錄。
+  * **'cordova platform add android --save'** => 检索固定的版本的 android 平台，将其添加到该专案，然后更新 config.xml。
+  * **'cordova platform add android@3.7.0 --save'** => 检索 android 平台上，从新公共管理，版本 3.7.0 将它添加到专案，然后更新 config.xml。
+  * **'cordova platform add android@https://github.com/apache/cordova-android.git​ --save'** => 克隆指定的科尔多瓦 android git 仓库，将 android 平台添加到专案中，然后更新 config.xml 并指向指定的 git url 及其版本。
+  * **cordova platform add C:/path/to/android/platform --save** => 从指定的目录中检索的 android 平台，将其添加到专案中，然后更新 config.xml 和指向的目录。
 
-### 保存對現有專案的平臺的大眾
+### 保存对现有专案的平台的大众
 
-'--save' 上文所述的旗幟只是有用的你只要記得使用平臺添加期間。 如果你有一個預先存在的專案，並且您想要保存您的專案中的所有當前添加的平臺，您可以使用:
+'--save' 上文所述的旗帜只是有用的你只要记得使用平台添加期间。 如果你有一个预先存在的专案，并且您想要保存您的专案中的所有当前添加的平台，您可以使用:
 
     $ cordova platform save
     
 
-### 更新/刪除平臺
+### 更新/删除平台
 
-它也是可能更新或刪除從 config.xml 命令 '科爾多瓦平臺更新' 和 '科爾多瓦平臺刪除' 期間:
+它也是可能更新或删除从 config.xml 命令 '科尔多瓦平台更新' 和 '科尔多瓦平台删除' 期间:
 
     $ cordova platform update <platform[@<version>] | directory | git_url> --save
     $ cordova platform remove <platform> --save
@@ -73,20 +73,20 @@ toc_title: Manage versions and platforms
 
 一些例子:
 
-  * 除了到固定的版本，更新 config.xml 條目更新 android 平臺**'cordova platform update android --save'** =>
-  * 除了 android 平臺更新到版本 3.8.0，更新 config.xml 條目**'cordova platform update android@3.8.0 --save'** =>
-  * 除了 android 平臺更新到版本更新資料夾，更新 config.xml 條目中**'cordova platform update /path/to/android/platform --save'** =>
-  * =>**'cordova platform remove android --save'**從專案中移除的 android 平臺，從 config.xml 中刪除其專案。
+  * 除了到固定的版本，更新 config.xml 条目更新 android 平台**'cordova platform update android --save'** =>
+  * 除了 android 平台更新到版本 3.8.0，更新 config.xml 条目**'cordova platform update android@3.8.0 --save'** =>
+  * 除了 android 平台更新到版本更新资料夹，更新 config.xml 条目中**'cordova platform update /path/to/android/platform --save'** =>
+  * =>**'cordova platform remove android --save'**从专案中移除的 android 平台，从 config.xml 中删除其专案。
 
-### 恢復平臺
+### 恢复平台
 
-**'cordova prepare'**命令運行時，將會從 config.xml 自動還原平臺。
+**'cordova prepare'**命令运行时，将会从 config.xml 自动还原平台。
 
-如果沒有指定版本的資料夾/git_url 中添加一個平臺，要安裝的版本取自 config.xml，**如果發現**.
+如果没有指定版本的资料夹/git_url 中添加一个平台，要安装的版本取自 config.xml，**如果发现**.
 
 示例:
 
-假設您的 config.xml 檔包含以下項:
+假设您的 config.xml 档包含以下项:
 
     <?xml version='1.0' encoding='utf-8'?>
         ...
@@ -95,22 +95,22 @@ toc_title: Manage versions and platforms
     </xml>
     
 
-< / xml > 如果你運行命令**'cordova platform add android'** (沒有版本/資料夾/git_url 指定)，將安裝平臺 'android@3.7.0' (如從 config.xml 中檢索)。
+< / xml > 如果你运行命令**'cordova platform add android'** (没有版本/资料夹/git_url 指定)，将安装平台 'android@3.7.0' (如从 config.xml 中检索)。
 
 * * *
 
-## 外掛程式版本控制
+## 外挂程式版本控制
 
-*(外掛程式命令是外掛程式命令鏡像)*
+*(外挂程式命令是外挂程式命令镜像)*
 
-### 保存外掛程式
+### 保存外挂程式
 
-若要保存外掛程式，您可以發出以下命令:
+若要保存外挂程式，您可以发出以下命令:
 
     $ cordova plugin add <plugin[@<version>] | directory | git_url> --save
     
 
-運行上述命令後，由此產生的 config.xml 看起來像:
+运行上述命令后，由此产生的 config.xml 看起来像:
 
     <?xml version='1.0' encoding='utf-8'?>
         ...
@@ -121,21 +121,21 @@ toc_title: Manage versions and platforms
 
 一些例子:
 
-  * => **'cordova plugin add cordova-plugin-console --save'**檢索固定的版本的主控台外掛程式，將其添加到該專案，然後更新 config.xml。
-  * **cordova plugin add cordova-plugin-console@0.2.13 --save** => 檢索 android 外掛程式，版本 0.2.13 從新公共管理，將其添加到該專案，然後更新 config.xml。
-  * => **'cordova plugin add https://github.com/apache/cordova-plugin-console.git --save'**克隆指定的主控台外掛程式 git 倉庫、 將主控台外掛程式添加到該專案，然後更新 config.xml 和指向指定的 git url 及其版本。
-  * **cordova plugin add C:/path/to/console/plugin --save**=> 從指定的目錄中檢索該主控台外掛程式，將其添加到專案中，然後更新 config.xml 和指向的目錄。
+  * => **'cordova plugin add cordova-plugin-console --save'**检索固定的版本的主控台外挂程式，将其添加到该专案，然后更新 config.xml。
+  * **cordova plugin add cordova-plugin-console@0.2.13 --save** => 检索 android 外挂程式，版本 0.2.13 从新公共管理，将其添加到该专案，然后更新 config.xml。
+  * => **'cordova plugin add https://github.com/apache/cordova-plugin-console.git --save'**克隆指定的主控台外挂程式 git 仓库、 将主控台外挂程式添加到该专案，然后更新 config.xml 和指向指定的 git url 及其版本。
+  * **cordova plugin add C:/path/to/console/plugin --save**=> 从指定的目录中检索该主控台外挂程式，将其添加到专案中，然后更新 config.xml 和指向的目录。
 
-### 大眾在現有專案保存外掛程式
+### 大众在现有专案保存外挂程式
 
-'--save' 上文所述的旗幟只是有用的你只要記得使用外掛程式添加期間。 如果你有一個預先存在的專案，並且您想要保存所有當前專案中添加的外掛程式，您可以使用:
+'--save' 上文所述的旗帜只是有用的你只要记得使用外挂程式添加期间。 如果你有一个预先存在的专案，并且您想要保存所有当前专案中添加的外挂程式，您可以使用:
 
     $ cordova plugin save
     
 
-### 更新/刪除外掛程式
+### 更新/删除外挂程式
 
-它也是可能更新或刪除從 config.xml 命令 '科爾多瓦外掛程式更新' 和 '科爾多瓦外掛程式刪除' 期間:
+它也是可能更新或删除从 config.xml 命令 '科尔多瓦外挂程式更新' 和 '科尔多瓦外挂程式删除' 期间:
 
     $ cordova plugin update <plugin[@<version>] | directory | git_url> --save
     $ cordova plugin remove <plugin> --save
@@ -143,20 +143,20 @@ toc_title: Manage versions and platforms
 
 一些例子:
 
-  * 除了到固定的版本，更新 config.xml 條目更新主控台外掛程式**'cordova plugin update cordova-plugin-console --save'** =>
-  * 除了 android 外掛程式更新到版本 3.8.0，更新 config.xml 條目**'cordova plugin update cordova-plugin-console@0.2.13 --save'** =>
-  * 除了更新到版本資料夾，更新 config.xml 條目中的主控台外掛程式**'cordova plugin update /path/to/console/plugin --save'** =>
-  * =>**'cordova plugin remove cordova-plugin-console --save'**從專案中移除該主控台外掛程式和從 config.xml 中刪除它的條目。
+  * 除了到固定的版本，更新 config.xml 条目更新主控台外挂程式**'cordova plugin update cordova-plugin-console --save'** =>
+  * 除了 android 外挂程式更新到版本 3.8.0，更新 config.xml 条目**'cordova plugin update cordova-plugin-console@0.2.13 --save'** =>
+  * 除了更新到版本资料夹，更新 config.xml 条目中的主控台外挂程式**'cordova plugin update /path/to/console/plugin --save'** =>
+  * =>**'cordova plugin remove cordova-plugin-console --save'**从专案中移除该主控台外挂程式和从 config.xml 中删除它的条目。
 
-### 恢復外掛程式
+### 恢复外挂程式
 
-從 config.xml 的外掛程式會自動復原， **'cordova prepare'**命令運行時。
+从 config.xml 的外挂程式会自动复原， **'cordova prepare'**命令运行时。
 
-如果沒有指定版本的資料夾/git_url 添加一個外掛程式，要安裝的版本取自 config.xml，**如果發現**.
+如果没有指定版本的资料夹/git_url 添加一个外挂程式，要安装的版本取自 config.xml，**如果发现**.
 
 示例:
 
-假設您的 config.xml 檔包含以下項:
+假设您的 config.xml 档包含以下项:
 
     <?xml version='1.0' encoding='utf-8'?>
         ...
@@ -165,4 +165,4 @@ toc_title: Manage versions and platforms
     </ xml>
     
 
-< / xml > 如果你運行命令**'cordova plugin add cordova-plugin-console'** (沒veresion/folder/git_url 指定)，將安裝該外掛程式 'cordova-plugin-console@0.2.11' (如從 config.xml 中檢索)。
+< / xml > 如果你运行命令**'cordova plugin add cordova-plugin-console'** (没veresion/folder/git_url 指定)，将安装该外挂程式 'cordova-plugin-console@0.2.11' (如从 config.xml 中检索)。

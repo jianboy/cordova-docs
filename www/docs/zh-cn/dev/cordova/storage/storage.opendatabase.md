@@ -22,19 +22,19 @@ title: 大概
 
 # 大概
 
-返回一個新的 `Database` 物件。
+返回一个新的 `Database` 物件。
 
     var dbShell = window.openDatabase(database_name, database_version, database_displayname, database_size);
     
 
-## 說明
+## 说明
 
-方法創建一個新的 SQL Lite 資料庫並返回 `Database` 允許對資料進行操作的物件。
+方法创建一个新的 SQL Lite 资料库并返回 `Database` 允许对资料进行操作的物件。
 
-## 支援的平臺
+## 支援的平台
 
-*   Android 系統
-*   黑莓手機 WebWorks （OS 6.0 和更高）
+*   Android 系统
+*   黑莓手机 WebWorks （OS 6.0 和更高）
 *   iOS
 *   Tizen
 

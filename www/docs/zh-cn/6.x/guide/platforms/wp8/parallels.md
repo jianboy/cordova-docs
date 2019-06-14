@@ -22,23 +22,23 @@ title: 配置 512mb
 
 # 配置 512mb
 
-這一節演示如何在 Mac 上配置的相似之處桌面，以便您可以使用科爾多瓦生成 Windows Phone 應用程式。
+这一节演示如何在 Mac 上配置的相似之处桌面，以便您可以使用科尔多瓦生成 Windows Phone 应用程式。
 
-[Microsoft 開發人員網路][1]提供有關如何運行 Windows 的相似之處的桌面下的一般說明。 之後安裝 Windows，請執行以下步驟：
+[Microsoft 开发人员网路][1]提供有关如何运行 Windows 的相似之处的桌面下的一般说明。 之后安装 Windows，请执行以下步骤：
 
  [1]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945424
 
-1.  在桌面的相似之處內, 選擇您已經準備好的 Windows 8 磁片映射並選擇**設置**.
+1.  在桌面的相似之处内, 选择您已经准备好的 Windows 8 磁片映射并选择**设置**.
 
-2.  選擇的**一般 → Cpu**選項。指定*兩個*Cpu。指定至少 2 GB 的記憶體，即使它不屬於建議的範圍：
+2.  选择的**一般 → Cpu**选项。指定*两个*Cpu。指定至少 2 GB 的记忆体，即使它不属于建议的范围：
     
     ![][2]
 
-3.  要能運行 Windows 8 虛擬機器中的設備模擬程式圖像，選擇**優化**選項並啟用**嵌套的虛擬化**.
+3.  要能运行 Windows 8 虚拟机器中的设备模拟程式图像，选择**优化**选项并启用**嵌套的虚拟化**.
     
     ![][3]
 
  [2]: {{ site.baseurl }}/static/img/guide/platforms/wp8/parallel_cpu_opts.png
  [3]: {{ site.baseurl }}/static/img/guide/platforms/wp8/parallel_optimize_opts.png
 
-一旦你完成這些步驟，你是準備好安裝 Windows Phone SDK。請參閱 Windows Phone 8 平臺指南的詳細資訊。
+一旦你完成这些步骤，你是准备好安装 Windows Phone SDK。请参阅 Windows Phone 8 平台指南的详细资讯。

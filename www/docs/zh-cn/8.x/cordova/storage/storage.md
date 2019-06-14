@@ -17,53 +17,53 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: 存儲
+title: 存储
 toc_title: Store data
 ---
 
-# 存儲
+# 存储
 
-> 科爾多瓦的存儲選項的概述。
+> 科尔多瓦的存储选项的概述。
 
-幾個存儲 Api 是對科爾多瓦應用程式可用。請參閱 [html5rocks][1]。有關更完整的概述和示例。
+几个存储 Api 是对科尔多瓦应用程式可用。请参阅 [html5rocks][1]。有关更完整的概述和示例。
 
  [1]: http://www.html5rocks.com/en/features/storage
 
-## 認為
+## 认为
 
-此 API 也已知作為*web 存儲*、*簡單的存儲*，或由其備用*會話存儲*介面，提供同步鍵/值對存儲，是可用基礎 web 視圖實現中。 請參閱[W3C 規範][2]的詳細資訊。
+此 API 也已知作为*web 存储*、*简单的存储*，或由其备用*会话存储*介面，提供同步键/值对存储，是可用基础 web 视图实现中。 请参阅[W3C 规范][2]的详细资讯。
 
  [2]: http://www.w3.org/TR/webstorage/
 
 ## WebSQL
 
-此 API 是在底層 web 視圖中可用。 [Web SQL 資料庫規範][3]提供了更多的功能全面的資料庫表可以通過 SQL 查詢訪問。
+此 API 是在底层 web 视图中可用。 [Web SQL 资料库规范][3]提供了更多的功能全面的资料库表可以通过 SQL 查询访问。
 
  [3]: http://dev.w3.org/html5/webdatabase/
 
-以下平臺支援 WebSQL：
+以下平台支援 WebSQL：
 
-*   Android 系統
+*   Android 系统
 *   黑莓 10
 *   iOS
 *   Tizen
 
 ## IndexedDB
 
-此 API 是在底層 web 視圖中可用。[索引 DB][4]提供更多的功能比 LocalStorage 但較少比 WebSQL。
+此 API 是在底层 web 视图中可用。[索引 DB][4]提供更多的功能比 LocalStorage 但较少比 WebSQL。
 
  [4]: http://www.w3.org/TR/IndexedDB/
 
-以下平臺支援 IndexedDB：
+以下平台支援 IndexedDB：
 
 *   黑莓 10
-*   火狐瀏覽器的作業系統
+*   火狐浏览器的作业系统
 *   Windows Phone 8
 *   Windows 8
 
-## 基於外掛程式的選項
+## 基于外挂程式的选项
 
-除了上面列出的 Api 的存儲，[檔 API][5]允許您對本地檔案系統上的緩存資料。 其他的[科爾多瓦外掛程式][6]提供類似的存儲選項。
+除了上面列出的 Api 的存储，[档 API][5]允许您对本地档案系统上的缓存资料。 其他的[科尔多瓦外挂程式][6]提供类似的存储选项。
 
  [5]: https://github.com/apache/cordova-plugin-file/blob/master/doc/index.md
  [6]: http://plugins.cordova.io/

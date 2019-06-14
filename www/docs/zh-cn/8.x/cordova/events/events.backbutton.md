@@ -22,19 +22,19 @@ title: backbutton
 
 # backbutton
 
-在使用者按後退按鈕時，將觸發該事件。
+在使用者按后退按钮时，将触发该事件。
 
     document.addEventListener("backbutton", yourCallbackFunction, false);
     
 
-## 詳細資訊
+## 详细资讯
 
-要重寫後退按鈕的預設行為，註冊為事件攔截器 `backbutton` 事件，通常通過調用 `document.addEventListener` 一旦您收到 `[deviceready](events.deviceready.html)` 事件。 不再需要調用任何其他方法重寫的後退按鈕的行為。
+要重写后退按钮的预设行为，注册为事件拦截器 `backbutton` 事件，通常通过调用 `document.addEventListener` 一旦您收到 `[deviceready](events.deviceready.html)` 事件。 不再需要调用任何其他方法重写的后退按钮的行为。
 
-## 支援的平臺
+## 支援的平台
 
-*   亞馬遜火 OS
-*   Android 系統
+*   亚马逊火 OS
+*   Android 系统
 *   黑莓 10
 *   Windows Phone 8
 

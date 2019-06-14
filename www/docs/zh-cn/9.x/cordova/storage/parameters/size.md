@@ -22,4 +22,4 @@ title: database_size
 
 # database_size
 
-以位元組為單位的資料庫的大小。
+以位元组为单位的资料库的大小。

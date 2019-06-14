@@ -17,13 +17,13 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: 平臺支援
+title: 平台支援
 toc_title: Platform support
 ---
 
-# 平臺支援
+# 平台支援
 
-下面顯示一的組開發工具和設備的 Api 可為每個移動平臺。 Api 在此處列出的設備是由核心外掛程式，提供額外的 Api 都是通過[協力廠商外掛程式][1]提供。 列標題顯示的 CLI 速記名稱。
+下面显示一的组开发工具和设备的 Api 可为每个移动平台。 Api 在此处列出的设备是由核心外挂程式，提供额外的 Api 都是通过[协力厂商外挂程式][1]提供。 列标题显示的 CLI 速记名称。
 
  [1]: http://plugins.cordova.io
 
@@ -33,11 +33,11 @@ toc_title: Platform support
   <tr>
     <th>
       </td> <th>
-        亞馬遜-fireos
+        亚马逊-fireos
       </th>
 
       <th>
-        android 系統
+        android 系统
       </th>
 
       <th>
@@ -45,7 +45,7 @@ toc_title: Platform support
       </th>
 
       <th>
-        火狐瀏覽器作業系統
+        火狐浏览器作业系统
       </th>
 
       <th>
@@ -61,7 +61,7 @@ toc_title: Platform support
       </th>
 
       <th>
-        windows<br />(8.0、 8.1，10<br />8.1 的電話）
+        windows<br />(8.0、 8.1，10<br />8.1 的电话）
       </th>
 
       <th>
@@ -70,7 +70,7 @@ toc_title: Platform support
 
       <tr>
         <th>
-          <a href="../cli/index.html">科爾多瓦<br />CLI</a>
+          <a href="../cli/index.html">科尔多瓦<br />CLI</a>
         </th>
 
         <td data-col="amazon-fireos" class="y">
@@ -110,15 +110,15 @@ toc_title: Platform support
 
       <tr>
         <th>
-          <a href="../hybrid/webviews/index.html">嵌入式<br />Web 視圖</a>
+          <a href="../hybrid/webviews/index.html">嵌入式<br />Web 视图</a>
         </th>
 
         <td data-col="amazon-fireos" class="y">
-          <a href="../platforms/amazonfireos/webview.html">（請參閱詳細資訊）</a>
+          <a href="../platforms/amazonfireos/webview.html">（请参阅详细资讯）</a>
         </td>
 
         <td data-col="android"    class="y">
-          <a href="../platforms/android/webview.html">（請參閱詳細資訊）</a>
+          <a href="../platforms/android/webview.html">（请参阅详细资讯）</a>
         </td>
 
         <td data-col="blackberry10" class="n">
@@ -128,7 +128,7 @@ toc_title: Platform support
         </td>
 
         <td data-col="ios"        class="y">
-          <a href="../platforms/ios/webview.html">（請參閱詳細資訊）</a>
+          <a href="../platforms/ios/webview.html">（请参阅详细资讯）</a>
         </td>
 
         <td data-col="ubuntu"        class="y">
@@ -146,33 +146,33 @@ toc_title: Platform support
 
       <tr>
         <th>
-          <a href="../hybrid/plugins/index.html">外掛程式<br />介面</a>
+          <a href="../hybrid/plugins/index.html">外挂程式<br />介面</a>
         </th>
 
         <td data-col="amazon-fireos" class="y">
-          <a href="../platforms/amazonfireos/plugin.html">（請參閱詳細資訊）</a>
+          <a href="../platforms/amazonfireos/plugin.html">（请参阅详细资讯）</a>
         </td>
 
         <td data-col="android"    class="y">
-          <a href="../platforms/android/plugin.html">（請參閱詳細資訊）</a>
+          <a href="../platforms/android/plugin.html">（请参阅详细资讯）</a>
         </td>
 
         <td data-col="blackberry10" class="y">
-          <a href="../platforms/blackberry10/plugin.html">（請參閱詳細資訊）</a>
+          <a href="../platforms/blackberry10/plugin.html">（请参阅详细资讯）</a>
         </td>
 
         <td data-col="firefoxos" class="n">
         </td>
 
         <td data-col="ios"        class="y">
-          <a href="../platforms/ios/plugin.html">（請參閱詳細資訊）</a>
+          <a href="../platforms/ios/plugin.html">（请参阅详细资讯）</a>
         </td>
 
         <td data-col="ubuntu"        class="y">
         </td>
 
         <td data-col="winphone8"  class="y">
-          <a href="../platforms/wp8/plugin.html">（請參閱詳細資訊）</a>
+          <a href="../platforms/wp8/plugin.html">（请参阅详细资讯）</a>
         </td>
 
         <td data-col="win8"       class="y">
@@ -187,13 +187,13 @@ toc_title: Platform support
         </th>
 
         <th colspan="20">
-          平臺 Api
+          平台 Api
         </th>
       </tr>
 
       <tr>
         <th>
-          <a href="https://www.npmjs.com/package/cordova-plugin-device-motion">加速度計</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-device-motion">加速度计</a>
         </th>
 
         <td data-col="amazon-fireos" class="y">
@@ -251,7 +251,7 @@ toc_title: Platform support
         </td>
 
         <td data-col="win8"       class="y">
-          * 僅限於 Windows Phone 8.1
+          * 仅限于 Windows Phone 8.1
         </td>
 
         <td data-col="tizen"       class="y">
@@ -260,7 +260,7 @@ toc_title: Platform support
 
       <tr>
         <th>
-          <a href="https://www.npmjs.com/package/cordova-plugin-camera">相機</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-camera">相机</a>
         </th>
 
         <td data-col="amazon-fireos" class="y">
@@ -293,7 +293,7 @@ toc_title: Platform support
 
       <tr>
         <th>
-          <a href="https://www.npmjs.com/package/cordova-plugin-media-capture">捕獲</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-media-capture">捕获</a>
         </th>
 
         <td data-col="amazon-fireos" class="y">
@@ -326,7 +326,7 @@ toc_title: Platform support
 
       <tr>
         <th>
-          <a href="https://www.npmjs.com/package/cordova-plugin-device-orientation">指南針</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-device-orientation">指南针</a>
         </th>
 
         <td data-col="amazon-fireos" class="y">
@@ -360,7 +360,7 @@ toc_title: Platform support
 
       <tr>
         <th>
-          <a href="https://www.npmjs.com/package/cordova-plugin-network-information">連接</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-network-information">连接</a>
         </th>
 
         <td data-col="amazon-fireos" class="y">
@@ -393,7 +393,7 @@ toc_title: Platform support
 
       <tr>
         <th>
-          <a href="https://www.npmjs.com/package/cordova-plugin-contacts">連絡人</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-contacts">连络人</a>
         </th>
 
         <td data-col="amazon-fireos" class="y">
@@ -427,7 +427,7 @@ toc_title: Platform support
 
       <tr>
         <th>
-          <a href="https://www.npmjs.com/package/cordova-plugin-device">設備</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-device">设备</a>
         </th>
 
         <td data-col="amazon-fireos" class="y">
@@ -493,7 +493,7 @@ toc_title: Platform support
 
       <tr>
         <th>
-          <a href="https://www.npmjs.com/package/cordova-plugin-file">檔</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-file">档</a>
         </th>
 
         <td data-col="amazon-fireos" class="y">
@@ -526,7 +526,7 @@ toc_title: Platform support
 
       <tr>
         <th>
-          <a href="https://www.npmjs.com/package/cordova-plugin-file-transfer">檔案傳輸</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-file-transfer">档案传输</a>
         </th>
 
         <td data-col="amazon-fireos" class="y">
@@ -536,7 +536,7 @@ toc_title: Platform support
         </td>
 
         <td data-col="blackberry10" class="y">
-          * 不支援 onprogress，也不放棄
+          * 不支援 onprogress，也不放弃
         </td>
 
         <td data-col="firefoxos" class="n">
@@ -549,11 +549,11 @@ toc_title: Platform support
         </td>
 
         <td data-col="winphone8"  class="y">
-          * 不支援 onprogress，也不放棄
+          * 不支援 onprogress，也不放弃
         </td>
 
         <td data-col="win8"       class="y">
-          * 不支援 onprogress，也不放棄
+          * 不支援 onprogress，也不放弃
         </td>
 
         <td data-col="tizen"       class="n">
@@ -662,7 +662,7 @@ toc_title: Platform support
 
       <tr>
         <th>
-          <a href="https://www.npmjs.com/package/cordova-plugin-media">媒體</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-media">媒体</a>
         </th>
 
         <td data-col="amazon-fireos" class="y">
@@ -728,7 +728,7 @@ toc_title: Platform support
 
       <tr>
         <th>
-          <a href="https://www.npmjs.com/package/cordova-plugin-splashscreen">閃屏</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-splashscreen">闪屏</a>
         </th>
 
         <td data-col="amazon-fireos" class="y">
@@ -761,7 +761,7 @@ toc_title: Platform support
 
       <tr>
         <th>
-          <a href="https://www.npmjs.com/package/cordova-plugin-statusbar">狀態列</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-statusbar">状态列</a>
         </th>
 
         <td data-col="amazon-fireos" class="n">
@@ -786,7 +786,7 @@ toc_title: Platform support
         </td>
 
         <td data-col="win8"       class="y">
-          僅限於 Windows Phone 8.1
+          仅限于 Windows Phone 8.1
         </td>
 
         <td data-col="tizen"       class="n">
@@ -795,7 +795,7 @@ toc_title: Platform support
 
       <tr>
         <th>
-          <a href="../../cordova/storage/storage.html">存儲</a>
+          <a href="../../cordova/storage/storage.html">存储</a>
         </th>
 
         <td data-col="amazon-fireos" class="y">
@@ -830,7 +830,7 @@ toc_title: Platform support
 
       <tr>
         <th>
-          <a href="https://www.npmjs.com/package/cordova-plugin-vibration">振動</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-vibration">振动</a>
         </th>
 
         <td data-col="amazon-fireos" class="y">
@@ -855,7 +855,7 @@ toc_title: Platform support
         </td>
 
         <td data-col="win8"       class="y">
-          * 僅限於 Windows Phone 8.1
+          * 仅限于 Windows Phone 8.1
         </td>
 
         <td data-col="tizen"       class="n">

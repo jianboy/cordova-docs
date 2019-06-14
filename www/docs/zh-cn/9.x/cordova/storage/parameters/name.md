@@ -22,4 +22,4 @@ title: database_name
 
 # database_name
 
-資料庫的名稱。
+资料库的名称。

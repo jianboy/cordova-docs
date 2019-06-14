@@ -22,25 +22,25 @@ title: 配置 VMWare 融合
 
 # 配置 VMWare 融合
 
-這一節演示如何配置 VMWare 融合在 Mac 上，以便您可以使用科爾多瓦生成 Windows Phone 應用程式。
+这一节演示如何配置 VMWare 融合在 Mac 上，以便您可以使用科尔多瓦生成 Windows Phone 应用程式。
 
-[Microsoft 開發人員網路][1]提供有關如何運行 Windows 下 VMWare 融合的一般說明。 之後安裝 Windows，請執行以下步驟：
+[Microsoft 开发人员网路][1]提供有关如何运行 Windows 下 VMWare 融合的一般说明。 之后安装 Windows，请执行以下步骤：
 
  [1]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945426
 
-1.  在 VMWare 融合內, 選擇您已編寫並選擇**設置**的 Windows 8 磁片映射.
+1.  在 VMWare 融合内, 选择您已编写并选择**设置**的 Windows 8 磁片映射.
 
-2.  選擇的**處理器和記憶體**的配置選項。 請確保指定*兩個*處理器內核，並**啟用在此虛擬機器的虛擬機器管理程式應用程式**：
+2.  选择的**处理器和记忆体**的配置选项。 请确保指定*两个*处理器内核，并**启用在此虚拟机器的虚拟机器管理程式应用程式**：
     
     ![][2]
     
-    Windows Phone 模擬器單獨使用半位元組的記憶體，所以，總體來說，你應該為 VMWare 預留至少 2 GB。
+    Windows Phone 模拟器单独使用半位元组的记忆体，所以，总体来说，你应该为 VMWare 预留至少 2 GB。
 
-3.  選擇**高級**設置。啟用**首選虛擬化引擎： 英特爾 VT-x 與 EPT**選項：
+3.  选择**高级**设置。启用**首选虚拟化引擎： 英特尔 VT-x 与 EPT**选项：
     
     ![][3]
 
-4.  修改*.vmx*檔，添加或修改以下設置：
+4.  修改*.vmx*档，添加或修改以下设置：
     
         hypervisor.cpuid.v0 ="FALSE"mce.enable ="TRUE"vhv.enable ="TRUE"
         
@@ -48,4 +48,4 @@ title: 配置 VMWare 融合
  [2]: {{ site.baseurl }}/static/img/guide/platforms/wp8/vmware_memory_opts.png
  [3]: {{ site.baseurl }}/static/img/guide/platforms/wp8/vmware_advanced_opts.png
 
-一旦你完成這些步驟，你準備然後安裝 Windows Phone SDK。請參閱 Windows Phone 8 平臺指南的詳細資訊。
+一旦你完成这些步骤，你准备然后安装 Windows Phone SDK。请参阅 Windows Phone 8 平台指南的详细资讯。

@@ -22,13 +22,13 @@ title: SQLError
 
 # SQLError
 
-A `SQLError` 物件當發生錯誤時引發。
+A `SQLError` 物件当发生错误时引发。
 
-## 屬性
+## 属性
 
-*   **代碼**： 下面列出的預定義的錯誤代碼之一。
+*   **代码**： 下面列出的预定义的错误代码之一。
 
-*   **消息**： 錯誤的說明。
+*   **消息**： 错误的说明。
 
 ## 常量
 
@@ -41,6 +41,6 @@ A `SQLError` 物件當發生錯誤時引發。
 *   `SQLError.CONSTRAINT_ERR`
 *   `SQLError.TIMEOUT_ERR`
 
-## 說明
+## 说明
 
-`SQLError`物件運算元據庫時出現錯誤時引發。
+`SQLError`物件运算元据库时出现错误时引发。

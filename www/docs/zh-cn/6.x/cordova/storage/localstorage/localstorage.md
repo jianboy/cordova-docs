@@ -22,7 +22,7 @@ title: localStorage
 
 # localStorage
 
-提供對 W3C [Web 存儲介面][1]的訪問
+提供对 W3C [Web 存储介面][1]的访问
 
  [1]: http://dev.w3.org/html5/webstorage/#the-localstorage-attribute
 
@@ -32,47 +32,47 @@ title: localStorage
 
 ## 方法
 
-*   **鍵**： 返回在指定的位置的鍵的名稱。
+*   **键**： 返回在指定的位置的键的名称。
 
-*   **getItem**： 返回由指定的鍵標識的項。
+*   **getItem**： 返回由指定的键标识的项。
 
-*   **setItem**： 分配一個鍵控的項值。
+*   **setItem**： 分配一个键控的项值。
 
-*   **removeItem**: 刪除標識由指定鍵的項。
+*   **removeItem**: 删除标识由指定键的项。
 
-*   **清除**： 中移除所有鍵/值對。
+*   **清除**： 中移除所有键/值对。
 
-## 詳細資訊
+## 详细资讯
 
-`window.localStorage`介面實現，W3C [Web 存儲介面][2]。 應用程式可以使用它來保存永久資料使用鍵-值對。 `window.sessionStorage`介面在每個方面，除了，所有資料都被都清除應用程式關閉每次的工作方式相同。 每個資料庫提供了單獨的命名空間。
+`window.localStorage`介面实现，W3C [Web 存储介面][2]。 应用程式可以使用它来保存永久资料使用键-值对。 `window.sessionStorage`介面在每个方面，除了，所有资料都被都清除应用程式关闭每次的工作方式相同。 每个资料库提供了单独的命名空间。
 
  [2]: http://dev.w3.org/html5/webstorage/
 
-## 支援的平臺
+## 支援的平台
 
-*   Android 系統
-*   黑莓手機 WebWorks （OS 6.0 和更高）
+*   Android 系统
+*   黑莓手机 WebWorks （OS 6.0 和更高）
 *   iOS
 *   Tizen
 *   Windows Phone 7 和 8
 
-## 鍵快速示例
+## 键快速示例
 
     var keyName = window.localStorage.key(0);
     
 
-## 設置的專案的快速示例
+## 设置的专案的快速示例
 
     window.localStorage.setItem("key", "value");
     
 
-## 獲取專案的快速示例
+## 获取专案的快速示例
 
         var value = window.localStorage.getItem("key");
         // value is now equal to "value"
     
 
-## 刪除專案快速示例
+## 删除专案快速示例
 
         window.localStorage.removeItem("key");
     
@@ -121,4 +121,4 @@ title: localStorage
 
 ## Windows Phone 7 的怪癖
 
-點標記法是*沒有*可用的 Windows Phone 7。 一定要使用 `setItem` 或 `getItem` ，而不是直接從存儲物件，如便捷鍵`window.localStorage.someKey`.
+点标记法是*没有*可用的 Windows Phone 7。 一定要使用 `setItem` 或 `getItem` ，而不是直接从存储物件，如便捷键`window.localStorage.someKey`.

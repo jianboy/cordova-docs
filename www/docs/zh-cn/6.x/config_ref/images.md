@@ -17,39 +17,39 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: 圖示和啟動畫面
+title: 图示和启动画面
 toc_title: Customize icons
 ---
 
-# 圖示和啟動畫面
+# 图示和启动画面
 
-這一節演示如何配置應用程式的圖示和可選初始螢幕上的各種平臺上，兩者在科爾多瓦 CLI （描述在命令列介面） 中工作時或使用特定于平臺 SDK 工具 （平臺指南中詳細說明）。
+这一节演示如何配置应用程式的图示和可选初始萤幕上的各种平台上，两者在科尔多瓦 CLI （描述在命令列介面） 中工作时或使用特定于平台 SDK 工具 （平台指南中详细说明）。
 
-## 在 CLI 中配置圖示
+## 在 CLI 中配置图示
 
-當工作在 CLI 中你可以定義應用程式圖示通過 `<icon>` 元素 （ `config.xml` ）。如果你不指定一個圖示然後使用 Apache 科爾多瓦徽標。
+当工作在 CLI 中你可以定义应用程式图示通过 `<icon>` 元素 （ `config.xml` ）。如果你不指定一个图示然后使用 Apache 科尔多瓦徽标。
 
         <icon src="res/ios/icon.png" platform="ios" width="57" height="57" density="mdpi" />
     
 
-src： （必填） 指定的影像檔，與您的專案目錄的位置
+src： （必填） 指定的影像档，与您的专案目录的位置
 
-平臺： （可選） 目標平臺
+平台： （可选） 目标平台
 
-寬度： （可選） 圖示的寬度 （以圖元為單位）
+宽度： （可选） 图示的宽度 （以图元为单位）
 
-高度： （可選） 圖示的高度 （以圖元為單位）
+高度： （可选） 图示的高度 （以图元为单位）
 
-密度： （可選） android 具體，指定圖示密度
+密度： （可选） android 具体，指定图示密度
 
-下面的配置可以用於定義單個預設圖示，將用於所有平臺。
+下面的配置可以用于定义单个预设图示，将用于所有平台。
 
         <icon src="res/icon.png" />
     
 
-為每個平臺還可以定義設置以適合不同的螢幕解析度圖元完美圖示。
+为每个平台还可以定义设置以适合不同的萤幕解析度图元完美图示。
 
-亞馬遜火 OS
+亚马逊火 OS
 
          <platform name="amazon-fireos">
                   <icon src="res/android/ldpi.png" density="ldpi" />
@@ -59,7 +59,7 @@ src： （必填） 指定的影像檔，與您的專案目錄的位置
          </platform>
     
 
-Android 系統
+Android 系统
 
          <platform name="android">
                   <icon src="res/android/ldpi.png" density="ldpi" />
@@ -77,9 +77,9 @@ BlackBerry10
          </platform>
     
 
-請參閱針對多個大小和地區設定黑莓的文檔。[] HTTP://developer.blackberry.com/html5/documentation/icon_element.html
+请参阅针对多个大小和地区设定黑莓的文档。[] HTTP://developer.blackberry.com/html5/documentation/icon_element.html
 
-火狐瀏覽器作業系統
+火狐浏览器作业系统
 
          <platform name="firefoxos">
                   <icon src="res/ff/logo.png" width="60" height="60" />
@@ -143,13 +143,13 @@ Windows8
          </platform>
     
 
-## 在 CLI 中配置初始螢幕
+## 在 CLI 中配置初始萤幕
 
-在頂級 `config.xml` 檔 （不是在一個 `platforms` ），添加像那些在此指定的配置元素。
+在顶级 `config.xml` 档 （不是在一个 `platforms` ），添加像那些在此指定的配置元素。
 
 # 配置示例
 
-請注意"src"屬性的值是相對於專案目錄而不是 www 目錄。 你可以命名源映射任何你喜歡的。 在應用程式中的內部名稱取決於科爾多瓦。
+请注意"src"属性的值是相对于专案目录而不是 www 目录。 你可以命名源映射任何你喜欢的。 在应用程式中的内部名称取决于科尔多瓦。
 
     <platform name="android">
         <!-- you can use any density that exists in the Android project -->
@@ -198,9 +198,9 @@ Windows8
     <preference name="SplashScreenDelay" value="10000" />
     
 
-# 支援的平臺
+# 支援的平台
 
-到目前為止 （科爾多瓦 3.5.0 7 月 2014年) 以下平臺支援的閃屏。
+到目前为止 （科尔多瓦 3.5.0 7 月 2014年) 以下平台支援的闪屏。
 
     android
     ios
@@ -209,6 +209,6 @@ Windows8
     blackberry10
     
 
-# 閃屏外掛程式
+# 闪屏外挂程式
 
-Apache 科爾多瓦還提供特殊飛濺螢幕外掛程式，它可以用來以程式設計方式顯示和隱藏在應用程式啟動 HTTPs://github.com/apache/cordova-plugin-splashscreen 期間的初始螢幕
+Apache 科尔多瓦还提供特殊飞溅萤幕外挂程式，它可以用来以程式设计方式显示和隐藏在应用程式启动 HTTPs://github.com/apache/cordova-plugin-splashscreen 期间的初始萤幕

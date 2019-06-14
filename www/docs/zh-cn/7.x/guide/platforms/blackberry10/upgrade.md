@@ -17,385 +17,385 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: 升級黑莓 10
+title: 升级黑莓 10
 ---
 
-# 升級黑莓 10
+# 升级黑莓 10
 
-本指南演示如何修改黑莓手機的專案從科爾多瓦的舊版本進行升級。 大多數這些說明適用于與舊集的前面的命令列工具創建的專案 `cordova` CLI 實用程式。 資訊，請參閱命令列介面如何更新的 CLI 版本。
+本指南演示如何修改黑莓手机的专案从科尔多瓦的旧版本进行升级。 大多数这些说明适用于与旧集的前面的命令列工具创建的专案 `cordova` CLI 实用程式。 资讯，请参阅命令列介面如何更新的 CLI 版本。
 
-## 4.0.0 3.6.0 版升級專案
+## 4.0.0 3.6.0 版升级专案
 
-對於非 CLI 的專案，請運行：
+对于非 CLI 的专案，请运行：
 
         bin/update path/to/project
     
 
-對於 CLI 專案:
+对于 CLI 专案:
 
-1.  更新 `cordova` CLI 版本。請參閱命令列介面。
+1.  更新 `cordova` CLI 版本。请参阅命令列介面。
 
-2.  在你現有的專案中運行 `cordova platform update blackberry`。
+2.  在你现有的专案中运行 `cordova platform update blackberry`。
 
-## 從 3.1.0 升級到 3.2.0
+## 从 3.1.0 升级到 3.2.0
 
-為專案創建的科爾多瓦 CLI:
+为专案创建的科尔多瓦 CLI:
 
-1.  更新 `cordova` CLI 版本。請參閱命令列介面。
+1.  更新 `cordova` CLI 版本。请参阅命令列介面。
 
-2.  運行 `cordova platform update blackberry`
+2.  运行 `cordova platform update blackberry`
 
-對於不使用 CLI 科爾多瓦創建的專案，請運行：
+对于不使用 CLI 科尔多瓦创建的专案，请运行：
 
         bin/update <project_path>
     
 
-## 從 3.0.0 升級到 3.1.0
+## 从 3.0.0 升级到 3.1.0
 
-1.  創建一個新的 Apache 科爾多瓦 3.1.0 專案使用 CLI，科爾多瓦，所述的命令列介面。
+1.  创建一个新的 Apache 科尔多瓦 3.1.0 专案使用 CLI，科尔多瓦，所述的命令列介面。
 
-2.  添加您的平臺到科爾多瓦專案中，例如：`cordova
+2.  添加您的平台到科尔多瓦专案中，例如：`cordova
 platform add blackberry10`.
 
-3.  複製的原始專案內容 `www` 目錄到 `www` 目錄在您剛剛創建的科爾多瓦專案的根目錄。
+3.  复制的原始专案内容 `www` 目录到 `www` 目录在您刚刚创建的科尔多瓦专案的根目录。
 
-4.  複製或覆蓋原始專案中的任何本機資產 ( `Resources` ，等等.)
+4.  复制或覆盖原始专案中的任何本机资产 ( `Resources` ，等等.)
 
-5.  複製 `config.xml` 檔到 `www` 目錄中，並刪除任何外掛程式定義。您需要修改設置，在這裡，而不是平臺目錄內。
+5.  复制 `config.xml` 档到 `www` 目录中，并删除任何外挂程式定义。您需要修改设置，在这里，而不是平台目录内。
 
-6.  使用科爾多瓦 CLI 工具來安裝您需要的任何外掛程式。 注意 CLI 處理所有核心 Api 作為外掛程式，所以他們可能需要添加。 只有外掛程式標記 3.0.0 並且以上與 CLI 相容。
+6.  使用科尔多瓦 CLI 工具来安装您需要的任何外挂程式。 注意 CLI 处理所有核心 Api 作为外挂程式，所以他们可能需要添加。 只有外挂程式标记 3.0.0 并且以上与 CLI 相容。
 
-7.  生成並測試。
+7.  生成并测试。
 
-請注意，CLI 完全支援 BlackBerry10 平臺。劇本和 BBOS，請參閱科爾多瓦版本 2.9.0 及以下。
+请注意，CLI 完全支援 BlackBerry10 平台。剧本和 BBOS，请参阅科尔多瓦版本 2.9.0 及以下。
 
-## 從 2.9.0 升級到 CLI （3.0.0)
+## 从 2.9.0 升级到 CLI （3.0.0)
 
-1.  創建新的 Apache 科爾多瓦 3.0.0 專案使用 CLI，科爾多瓦，如所述的命令列介面。
+1.  创建新的 Apache 科尔多瓦 3.0.0 专案使用 CLI，科尔多瓦，如所述的命令列介面。
 
-2.  添加您的平臺到科爾多瓦專案中，例如:`cordova
+2.  添加您的平台到科尔多瓦专案中，例如:`cordova
 platform add blackberry10`.
 
-3.  將原始專案的內容複寫 `www` 目錄到 `www` 目錄在科爾多瓦專案您剛剛創建的根。
+3.  将原始专案的内容复写 `www` 目录到 `www` 目录在科尔多瓦专案您刚刚创建的根。
 
-4.  複製或覆蓋任何本機的資產從原始專案 ( `Resources` ，等等.)
+4.  复制或覆盖任何本机的资产从原始专案 ( `Resources` ，等等.)
 
-5.  複製 `config.xml` 檔到 `www` 目錄，並刪除任何外掛程式定義。你需要修改設置在這裡，而不是平臺目錄內。
+5.  复制 `config.xml` 档到 `www` 目录，并删除任何外挂程式定义。你需要修改设置在这里，而不是平台目录内。
 
-6.  使用科爾多瓦 CLI 工具來安裝您需要的任何外掛程式。請注意 CLI 處理所有核心 Api 作為外掛程式，所以他們可能需要添加。只有 3.0.0 外掛程式是與 CLI 相容。
+6.  使用科尔多瓦 CLI 工具来安装您需要的任何外挂程式。请注意 CLI 处理所有核心 Api 作为外挂程式，所以他们可能需要添加。只有 3.0.0 外挂程式是与 CLI 相容。
 
-7.  生成並測試。
+7.  生成并测试。
 
-## 升級 2.8.0 專案到 2.9.0
+## 升级 2.8.0 专案到 2.9.0
 
 黑莓 10：
 
-1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄位置的科爾多瓦 2.9.0 源，例如到`~/Cordova-2.9.0`.
+1.  下载并解压缩到您的硬碟磁碟机上的永久目录位置的科尔多瓦 2.9.0 源，例如到`~/Cordova-2.9.0`.
 
-2.  退出任何正在運行的 SDK 工具： 日食、 Momentics 和類似。
+2.  退出任何正在运行的 SDK 工具： 日食、 Momentics 和类似。
 
-3.  導航到您放在上面，使用的 unix 像終端的下載的源的目錄： 終端程式，Bash，這個軟體，等等。
+3.  导航到您放在上面，使用的 unix 像终端的下载的源的目录： 终端程式，Bash，这个软体，等等。
 
-4.  創建一個新的專案，如黑莓手機殼工具指南中所述。這成為家中你更新的專案。
+4.  创建一个新的专案，如黑莓手机壳工具指南中所述。这成为家中你更新的专案。
 
-5.  從舊專案複製您的專案源 `/ www` 目錄到新的專案 `/ www` 目錄。
+5.  从旧专案复制您的专案源 `/ www` 目录到新的专案 `/ www` 目录。
 
-6.  科爾多瓦的腳本中的引用更新 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova.js` 檔。
+6.  科尔多瓦的脚本中的引用更新 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 以指向新 `cordova.js` 档。
 
-為 BlackBerryOS/行動手冊：
+为 BlackBerryOS/行动手册：
 
-1.  下載並解壓縮到硬碟上，永久目錄位置科爾多瓦 2.9.0 源例如到`~/Cordova-2.9.0`.
+1.  下载并解压缩到硬碟上，永久目录位置科尔多瓦 2.9.0 源例如到`~/Cordova-2.9.0`.
 
-2.  退出任何正在運行的 SDK 工具： 日食、 Momentics 和類似。
+2.  退出任何正在运行的 SDK 工具： 日食、 Momentics 和类似。
 
-3.  導航到您放在上面，使用的 unix 像終端的下載的源的目錄： 終端程式，Bash，這個軟體，等等。
+3.  导航到您放在上面，使用的 unix 像终端的下载的源的目录： 终端程式，Bash，这个软体，等等。
 
-4.  創建一個新的專案，如黑莓手機殼工具指南中所述。你需要從這個新的專案資產。
+4.  创建一个新的专案，如黑莓手机壳工具指南中所述。你需要从这个新的专案资产。
 
-5.  複製 `www/cordova.js` 到新專案中的檔 `www` 目錄和刪除 `www/cordova.js` 檔。
+5.  复制 `www/cordova.js` 到新专案中的档 `www` 目录和删除 `www/cordova.js` 档。
 
-6.  科爾多瓦的腳本中的引用更新 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova.js` 檔。
+6.  科尔多瓦的脚本中的引用更新 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 以指向新 `cordova.js` 档。
 
-7.  複製 `native` 目錄從新專案到現有專案中，並覆蓋舊 `native` 目錄。
+7.  复制 `native` 目录从新专案到现有专案中，并覆盖旧 `native` 目录。
 
-8.  複製 `lib` 目錄從新專案到現有專案中，並覆蓋舊 `lib` 目錄。
+8.  复制 `lib` 目录从新专案到现有专案中，并覆盖旧 `lib` 目录。
 
-9.  複製 `cordova` 目錄從新專案到現有專案中，並覆蓋舊 `cordova` 目錄。
+9.  复制 `cordova` 目录从新专案到现有专案中，并覆盖旧 `cordova` 目录。
 
-## 升級 2.7.0 專案到 2.8.0
+## 升级 2.7.0 专案到 2.8.0
 
-黑莓 10 使用新的 CLI 工具和管理核心作為外掛程式 Api。 說明將您的專案遷移到一個新的專案，而不是更新現有專案，更新舊專案的複雜性。 也說明科爾多瓦 js 指令檔現在被稱為 'cordova.js'，並不再包含版本字串。
+黑莓 10 使用新的 CLI 工具和管理核心作为外挂程式 Api。 说明将您的专案迁移到一个新的专案，而不是更新现有专案，更新旧专案的复杂性。 也说明科尔多瓦 js 指令档现在被称为 'cordova.js'，并不再包含版本字串。
 
-1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄位置的科爾多瓦 2.8.0 源，例如到`~/Cordova-2.8.0`.
+1.  下载并解压缩到您的硬碟磁碟机上的永久目录位置的科尔多瓦 2.8.0 源，例如到`~/Cordova-2.8.0`.
 
-2.  退出任何正在運行的 SDK 工具： 日食、 Momentics 和類似。
+2.  退出任何正在运行的 SDK 工具： 日食、 Momentics 和类似。
 
-3.  導航到您放在上面，使用的 unix 像終端的下載的源的目錄： 終端程式，Bash，這個軟體，等等。
+3.  导航到您放在上面，使用的 unix 像终端的下载的源的目录： 终端程式，Bash，这个软体，等等。
 
-4.  創建一個新的專案，如黑莓手機殼工具指南中所述。這成為家中你更新的專案。
+4.  创建一个新的专案，如黑莓手机壳工具指南中所述。这成为家中你更新的专案。
 
-5.  從舊專案複製您的專案源 `/ www` 目錄到新的專案 `/ www` 目錄。
+5.  从旧专案复制您的专案源 `/ www` 目录到新的专案 `/ www` 目录。
 
-6.  科爾多瓦的腳本中的引用更新 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova.js` 檔。
+6.  科尔多瓦的脚本中的引用更新 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 以指向新 `cordova.js` 档。
 
-為 BlackBerryOS/劇本:
+为 BlackBerryOS/剧本:
 
-1.  下載並解壓縮到硬碟上，永久目錄位置科爾多瓦 2.8.0 源例如到`~/Cordova-2.8.0`.
+1.  下载并解压缩到硬碟上，永久目录位置科尔多瓦 2.8.0 源例如到`~/Cordova-2.8.0`.
 
-2.  退出任何正在運行的 SDK 工具： 日食、 Momentics 和類似。
+2.  退出任何正在运行的 SDK 工具： 日食、 Momentics 和类似。
 
-3.  導航到您放在上面，使用的 unix 像終端的下載的源的目錄： 終端程式，Bash，這個軟體，等等。
+3.  导航到您放在上面，使用的 unix 像终端的下载的源的目录： 终端程式，Bash，这个软体，等等。
 
-4.  創建一個新的專案，如黑莓手機殼工具指南中所述。你需要從這個新的專案資產。
+4.  创建一个新的专案，如黑莓手机壳工具指南中所述。你需要从这个新的专案资产。
 
-5.  複製 `www/cordova.js` 到新專案中的檔 `www` 目錄和刪除 `www/cordova.js` 檔。
+5.  复制 `www/cordova.js` 到新专案中的档 `www` 目录和删除 `www/cordova.js` 档。
 
-6.  更新在科爾多瓦腳本參考 `www/index.html` 檔 (以及包含該腳本引用的任何其他檔) 以指向新 `cordova.js` 檔。
+6.  更新在科尔多瓦脚本参考 `www/index.html` 档 (以及包含该脚本引用的任何其他档) 以指向新 `cordova.js` 档。
 
-7.  複製 `native` 到現有專案中，並覆蓋舊從新專案目錄 `native` 目錄。
+7.  复制 `native` 到现有专案中，并覆盖旧从新专案目录 `native` 目录。
 
-8.  複製 `lib` 到現有專案中，並覆蓋舊從新專案目錄 `lib` 目錄。
+8.  复制 `lib` 到现有专案中，并覆盖旧从新专案目录 `lib` 目录。
 
-9.  複製 `cordova` 到現有專案中，並覆蓋舊從新專案目錄 `cordova` 目錄。
+9.  复制 `cordova` 到现有专案中，并覆盖旧从新专案目录 `cordova` 目录。
 
-## 升級 2.6.0 專案到 2.7.0
+## 升级 2.6.0 专案到 2.7.0
 
-1.  下載並解壓縮到硬碟上，例如對 `~/Cordova-2.7.0` 的永久目錄位置的科爾多瓦 2.7.0 源.
+1.  下载并解压缩到硬碟上，例如对 `~/Cordova-2.7.0` 的永久目录位置的科尔多瓦 2.7.0 源.
 
-2.  退出任何正在運行的 SDK 工具: Eclipse、 Momentics 等。
+2.  退出任何正在运行的 SDK 工具: Eclipse、 Momentics 等。
 
-3.  導航到您放置上面，使用的 unix 像終端下載的原始目錄: 終端程式，Bash，Cygwin。
+3.  导航到您放置上面，使用的 unix 像终端下载的原始目录: 终端程式，Bash，Cygwin。
 
-4.  創建一個新的專案，如黑莓手機殼工具指南中所述。你需要從這個新的專案資產。
+4.  创建一个新的专案，如黑莓手机壳工具指南中所述。你需要从这个新的专案资产。
 
-5.  複製 `www/cordova-2.7.0.js` 到新專案中的檔 `www` 目錄和刪除 `www/cordova-2.6.0.js` 檔。
+5.  复制 `www/cordova-2.7.0.js` 到新专案中的档 `www` 目录和删除 `www/cordova-2.6.0.js` 档。
 
-6.  更新在科爾多瓦腳本參考 `www/index.html` 檔 (以及包含該腳本引用的任何其他檔) 以指向新 `cordova-2.7.0.js` 檔。
+6.  更新在科尔多瓦脚本参考 `www/index.html` 档 (以及包含该脚本引用的任何其他档) 以指向新 `cordova-2.7.0.js` 档。
 
-7.  複製 `native` 目錄從新專案到現有專案中，並覆蓋舊 `native` 目錄。
+7.  复制 `native` 目录从新专案到现有专案中，并覆盖旧 `native` 目录。
 
-8.  複製 `lib` 目錄從新專案到現有專案中，並覆蓋舊 `lib` 目錄。
+8.  复制 `lib` 目录从新专案到现有专案中，并覆盖旧 `lib` 目录。
 
-9.  複製 `cordova` 目錄從新專案到現有專案中，並覆蓋舊 `cordova` 目錄。
+9.  复制 `cordova` 目录从新专案到现有专案中，并覆盖旧 `cordova` 目录。
 
-## 從 2.5.0 升級到 2.6.0
+## 从 2.5.0 升级到 2.6.0
 
-更新 PhoneGap 下載目錄:
+更新 PhoneGap 下载目录:
 
-它被建議你下載整個目錄的最新副本。
+它被建议你下载整个目录的最新副本。
 
-但是，這裡有新的部件所需的零敲碎打的更新:
+但是，这里有新的部件所需的零敲碎打的更新:
 
-1.  更新中的 cordova.blackberry.js 檔 `Phonegap-2.6.0/lib/blackberry/javascript` 目錄。
+1.  更新中的 cordova.blackberry.js 档 `Phonegap-2.6.0/lib/blackberry/javascript` 目录。
 
-2.  更新 `ext` ， `ext-air` ，和 `ext-qnx` 在 `Phonegap-2.6.0/lib/blackberry/framework` 目錄。
+2.  更新 `ext` ， `ext-air` ，和 `ext-qnx` 在 `Phonegap-2.6.0/lib/blackberry/framework` 目录。
 
-3.  更新 `build.xml` 檔在 `Phonegap-2.6.0/lib/blackberry` 目錄。
+3.  更新 `build.xml` 档在 `Phonegap-2.6.0/lib/blackberry` 目录。
 
-4.  更新 `Phonegap-2.6.0/lib/blackberry/bin` 目錄。
+4.  更新 `Phonegap-2.6.0/lib/blackberry/bin` 目录。
 
-5.  更新 `VERSION` 檔在 `Phonegap-2.6.0/lib/blackberry` 目錄。
+5.  更新 `VERSION` 档在 `Phonegap-2.6.0/lib/blackberry` 目录。
 
-更新示例 / 目錄或遷移現有的專案:
+更新示例 / 目录或迁移现有的专案:
 
-1.  打開 `www` 目錄，其中包含該應用程式。
+1.  打开 `www` 目录，其中包含该应用程式。
 
-2.  刪除和更新中的.jar 檔 `ext/` 目錄。
+2.  删除和更新中的.jar 档 `ext/` 目录。
 
-3.  更新的內容 `ext-air/` 目錄。
+3.  更新的内容 `ext-air/` 目录。
 
-4.  更新的內容 `ext-qnx/` 目錄。
+4.  更新的内容 `ext-qnx/` 目录。
 
-5.  複製新 `cordova-2.6.0.js` 到您的專案。
+5.  复制新 `cordova-2.6.0.js` 到您的专案。
 
-6.  更新你的 html 代碼，使用新的 `cordova-2.6.0.js` 檔。
+6.  更新你的 html 代码，使用新的 `cordova-2.6.0.js` 档。
 
-## 從 2.4.0 升級到 2.5.0
+## 从 2.4.0 升级到 2.5.0
 
-更新 PhoneGap 下載目錄:
+更新 PhoneGap 下载目录:
 
-它被建議你下載整個目錄的最新副本。
+它被建议你下载整个目录的最新副本。
 
-但是，這裡有新的部件所需的零敲碎打的更新:
+但是，这里有新的部件所需的零敲碎打的更新:
 
-1.  更新中的 cordova.blackberry.js 檔 `Phonegap-2.5.0/lib/blackberry/javascript` 目錄。
+1.  更新中的 cordova.blackberry.js 档 `Phonegap-2.5.0/lib/blackberry/javascript` 目录。
 
-2.  更新 `ext` ， `ext-air` ，和 `ext-qnx` 在 `Phonegap-2.5.0/lib/blackberry/framework` 目錄。
+2.  更新 `ext` ， `ext-air` ，和 `ext-qnx` 在 `Phonegap-2.5.0/lib/blackberry/framework` 目录。
 
-3.  更新 `build.xml` 檔在 `Phonegap-2.5.0/lib/blackberry` 目錄。
+3.  更新 `build.xml` 档在 `Phonegap-2.5.0/lib/blackberry` 目录。
 
-4.  更新 `Phonegap-2.5.0/lib/blackberry/bin` 目錄。
+4.  更新 `Phonegap-2.5.0/lib/blackberry/bin` 目录。
 
-5.  更新 `VERSION` 檔在 `Phonegap-2.5.0/lib/blackberry` 目錄。
+5.  更新 `VERSION` 档在 `Phonegap-2.5.0/lib/blackberry` 目录。
 
-更新示例 / 目錄或遷移現有的專案:
+更新示例 / 目录或迁移现有的专案:
 
-1.  打開 `www` 目錄，其中包含該應用程式。
+1.  打开 `www` 目录，其中包含该应用程式。
 
-2.  刪除和更新中的.jar 檔 `ext/` 目錄。
+2.  删除和更新中的.jar 档 `ext/` 目录。
 
-3.  更新的內容 `ext-air/` 目錄。
+3.  更新的内容 `ext-air/` 目录。
 
-4.  更新的內容 `ext-qnx/` 目錄。
+4.  更新的内容 `ext-qnx/` 目录。
 
-5.  複製新 `cordova-2.5.0.js` 到您的專案。
+5.  复制新 `cordova-2.5.0.js` 到您的专案。
 
-6.  更新你的 html 代碼，使用新的 `cordova-2.5.0.js` 檔。
+6.  更新你的 html 代码，使用新的 `cordova-2.5.0.js` 档。
 
-## 從 2.3.0 升級到 2.4.0
+## 从 2.3.0 升级到 2.4.0
 
-更新只是 `www` 目錄：
+更新只是 `www` 目录：
 
-1.  打開 `www` 目錄，其中包含該應用程式。
+1.  打开 `www` 目录，其中包含该应用程式。
 
-2.  刪除和更新中的.jar 檔 `ext/` 目錄。
+2.  删除和更新中的.jar 档 `ext/` 目录。
 
-3.  更新的內容 `ext-air/` 目錄。
+3.  更新的内容 `ext-air/` 目录。
 
-4.  複製新 `cordova-2.4.0.js` 到您的專案。
+4.  复制新 `cordova-2.4.0.js` 到您的专案。
     
-    *   如果劇本，然後更新.js 檔在 `playbook/` 目錄。
-    *   如果黑莓 10，然後更新中的.js 檔 `qnx/` 目錄。
+    *   如果剧本，然后更新.js 档在 `playbook/` 目录。
+    *   如果黑莓 10，然后更新中的.js 档 `qnx/` 目录。
 
-5.  更新你的 html 代碼，使用新的 `cordova-2.4.0.js` 檔。
+5.  更新你的 html 代码，使用新的 `cordova-2.4.0.js` 档。
 
-更新 （即，更新使用 ant 工具） 的示例目錄：
+更新 （即，更新使用 ant 工具） 的示例目录：
 
-1.  打開 `sample/lib/` 目錄。
+1.  打开 `sample/lib/` 目录。
 
-2.  更新中的.jar 檔 `cordova.2.3.0/ext/` 目錄。
+2.  更新中的.jar 档 `cordova.2.3.0/ext/` 目录。
 
-3.  更新的內容 `cordova.2.3.0/ext-air/` 目錄。
+3.  更新的内容 `cordova.2.3.0/ext-air/` 目录。
 
-4.  更新的內容 `cordova.2.3.0/ext-qnx/` 目錄。
+4.  更新的内容 `cordova.2.3.0/ext-qnx/` 目录。
 
-5.  更新中的.js 檔 `cordova.2.3.0/javascript/` 目錄。
+5.  更新中的.js 档 `cordova.2.3.0/javascript/` 目录。
 
-6.  打開 `sample/lib/` 目錄和重命名 `cordova.2.3.0/` 目錄到`cordova.2.4.0/`.
+6.  打开 `sample/lib/` 目录和重命名 `cordova.2.3.0/` 目录到`cordova.2.4.0/`.
 
-7.  類型 `ant blackberry build` 或 `ant playbook build` 更新 `www` 目錄與更新科爾多瓦。
+7.  类型 `ant blackberry build` 或 `ant playbook build` 更新 `www` 目录与更新科尔多瓦。
 
-8.  打開 `www` 目錄並更新你的 html 代碼，使用新的 `cordova-2.4.0.js` 檔。
+8.  打开 `www` 目录并更新你的 html 代码，使用新的 `cordova-2.4.0.js` 档。
 
-## 從 2.2.0 升級到 2.3.0
+## 从 2.2.0 升级到 2.3.0
 
-更新只是 `www` 目錄:
+更新只是 `www` 目录:
 
-1.  打開 `www` 目錄，其中包含該應用程式。
+1.  打开 `www` 目录，其中包含该应用程式。
 
-2.  刪除和更新中的.jar 檔 `ext/` 目錄。
+2.  删除和更新中的.jar 档 `ext/` 目录。
 
-3.  更新的內容 `ext-air/` 目錄。
+3.  更新的内容 `ext-air/` 目录。
 
-4.  複製新 `cordova-2.3.0.js` 到您的專案。
+4.  复制新 `cordova-2.3.0.js` 到您的专案。
     
-    *   如果劇本，然後更新.js 檔在 `playbook/` 目錄。
-    *   如果黑莓 10，然後更新中的.js 檔 `qnx/` 目錄。
+    *   如果剧本，然后更新.js 档在 `playbook/` 目录。
+    *   如果黑莓 10，然后更新中的.js 档 `qnx/` 目录。
 
-5.  更新你的 html 代碼，使用新的 `cordova-2.3.0.js` 檔。
+5.  更新你的 html 代码，使用新的 `cordova-2.3.0.js` 档。
 
-更新 （即，更新使用 ant 工具） 的示例目錄：
+更新 （即，更新使用 ant 工具） 的示例目录：
 
-1.  打開 `sample/lib/` 目錄。
+1.  打开 `sample/lib/` 目录。
 
-2.  更新中的.jar 檔 `cordova.2.2.0/ext/` 目錄。
+2.  更新中的.jar 档 `cordova.2.2.0/ext/` 目录。
 
-3.  更新的內容 `cordova.2.2.0/ext-air/` 目錄。
+3.  更新的内容 `cordova.2.2.0/ext-air/` 目录。
 
-4.  更新的內容 `cordova.2.2.0/ext-qnx/` 目錄。
+4.  更新的内容 `cordova.2.2.0/ext-qnx/` 目录。
 
-5.  更新中的.js 檔 `cordova.2.2.0/javascript/` 目錄。
+5.  更新中的.js 档 `cordova.2.2.0/javascript/` 目录。
 
-6.  打開 `sample/lib/` 目錄和重命名 `cordova.2.2.0/` 目錄到`cordova.2.3.0/`.
+6.  打开 `sample/lib/` 目录和重命名 `cordova.2.2.0/` 目录到`cordova.2.3.0/`.
 
-7.  類型 `ant blackberry build` 或 `ant playbook build` 來更新 `www` 目錄與更新的科爾多瓦。
+7.  类型 `ant blackberry build` 或 `ant playbook build` 来更新 `www` 目录与更新的科尔多瓦。
 
-8.  打開 `www` 目錄並更新你的 html 代碼，使用新的 `cordova-2.3.0.js` 檔。
+8.  打开 `www` 目录并更新你的 html 代码，使用新的 `cordova-2.3.0.js` 档。
 
-## 從 2.1.0 升級到 2.2.0
+## 从 2.1.0 升级到 2.2.0
 
-更新只是 www 目錄：
+更新只是 www 目录：
 
-1.  打開 `www` 目錄，其中包含該應用程式。
+1.  打开 `www` 目录，其中包含该应用程式。
 
-2.  刪除和更新中的.jar 檔 `ext/` 目錄。
+2.  删除和更新中的.jar 档 `ext/` 目录。
 
-3.  更新的內容 `ext-air/` 目錄。
+3.  更新的内容 `ext-air/` 目录。
 
-4.  複製新 `cordova-2.2.0.js` 到您的專案。
+4.  复制新 `cordova-2.2.0.js` 到您的专案。
     
-    *   如果劇本，然後更新的.js 檔中 `playbook/` 目錄。
-    *   如果黑莓 10，然後更新中的.js 檔 `qnx/` 目錄。
+    *   如果剧本，然后更新的.js 档中 `playbook/` 目录。
+    *   如果黑莓 10，然后更新中的.js 档 `qnx/` 目录。
 
-5.  更新你的 html 代碼，使用新的 `cordova-2.2.0.js` 檔。
+5.  更新你的 html 代码，使用新的 `cordova-2.2.0.js` 档。
 
-更新 （即，更新使用 ant 工具） 的示例目錄：
+更新 （即，更新使用 ant 工具） 的示例目录：
 
-1.  打開 `sample/lib/` 目錄。
+1.  打开 `sample/lib/` 目录。
 
-2.  更新中的.jar 檔 `cordova.2.1.0/ext/` 目錄。
+2.  更新中的.jar 档 `cordova.2.1.0/ext/` 目录。
 
-3.  更新的內容 `cordova.2.1.0/ext-air/` 目錄。
+3.  更新的内容 `cordova.2.1.0/ext-air/` 目录。
 
-4.  更新的內容 `cordova.2.1.0/ext-qnx/` 目錄。
+4.  更新的内容 `cordova.2.1.0/ext-qnx/` 目录。
 
-5.  更新中的.js 檔 `cordova.2.1.0/javascript/` 目錄。
+5.  更新中的.js 档 `cordova.2.1.0/javascript/` 目录。
 
-6.  打開 `sample/lib/` 目錄和重命名 `cordova.2.1.0/` 目錄到`cordova.2.2.0/`.
+6.  打开 `sample/lib/` 目录和重命名 `cordova.2.1.0/` 目录到`cordova.2.2.0/`.
 
-7.  類型 `ant blackberry build` 或 `ant playbook build` 更新 `www` 目錄與更新科爾多瓦。
+7.  类型 `ant blackberry build` 或 `ant playbook build` 更新 `www` 目录与更新科尔多瓦。
 
-8.  打開 `www` 目錄並更新你的 html 代碼，使用新的 `cordova-2.2.0.js` 檔。
+8.  打开 `www` 目录并更新你的 html 代码，使用新的 `cordova-2.2.0.js` 档。
 
-## 從 2.0.0 升級到 2.1.0
+## 从 2.0.0 升级到 2.1.0
 
-更新只是 `www` 目錄：
+更新只是 `www` 目录：
 
-1.  打開 `www` 目錄，其中包含該應用程式。
+1.  打开 `www` 目录，其中包含该应用程式。
 
-2.  刪除和更新中的.jar 檔 `ext/` 目錄。
+2.  删除和更新中的.jar 档 `ext/` 目录。
 
-3.  更新的內容 `ext-air/` 目錄。
+3.  更新的内容 `ext-air/` 目录。
 
-4.  複製新 `cordova-2.1.0.js` 到您的專案。
+4.  复制新 `cordova-2.1.0.js` 到您的专案。
     
-    *   如果劇本，然後更新.js 檔在 `playbook/` 目錄。
+    *   如果剧本，然后更新.js 档在 `playbook/` 目录。
 
-5.  更新你的 html 代碼，使用新的 `cordova-2.1.0.js` 檔。
+5.  更新你的 html 代码，使用新的 `cordova-2.1.0.js` 档。
 
-更新 （即，更新使用 ant 工具） 的示例目錄：
+更新 （即，更新使用 ant 工具） 的示例目录：
 
-1.  打開 `sample/lib/` 目錄。
+1.  打开 `sample/lib/` 目录。
 
-2.  更新中的.jar 檔 `cordova.2.0.0/ext/` 目錄。
+2.  更新中的.jar 档 `cordova.2.0.0/ext/` 目录。
 
-3.  更新的內容 `cordova.2.0.0/ext-air/` 目錄。
+3.  更新的内容 `cordova.2.0.0/ext-air/` 目录。
 
-4.  更新中的.js 檔 `cordova.2.0.0/javascript/` 目錄。
+4.  更新中的.js 档 `cordova.2.0.0/javascript/` 目录。
 
-5.  打開 `sample/lib/` 目錄和重命名 `cordova.2.0.0/` 目錄到`cordova.2.1.0/`.
+5.  打开 `sample/lib/` 目录和重命名 `cordova.2.0.0/` 目录到`cordova.2.1.0/`.
 
-6.  類型 `ant blackberry build` 或 `ant playbook build` 更新 `www` 目錄與更新科爾多瓦。
+6.  类型 `ant blackberry build` 或 `ant playbook build` 更新 `www` 目录与更新科尔多瓦。
 
-7.  打開 `www` 目錄並更新你的 html 代碼，使用新的 `cordova-2.1.0.js` 檔。
+7.  打开 `www` 目录并更新你的 html 代码，使用新的 `cordova-2.1.0.js` 档。
 
-## 從 1.9.0 升級到 2.0.0
+## 从 1.9.0 升级到 2.0.0
 
-更新只是 `www` 目錄：
+更新只是 `www` 目录：
 
-1.  打開 `www` 目錄，其中包含該應用程式。
+1.  打开 `www` 目录，其中包含该应用程式。
 
-2.  刪除和更新中的.jar 檔 `ext/` 目錄。
+2.  删除和更新中的.jar 档 `ext/` 目录。
 
-3.  更新的內容 `ext-air/` 目錄。
+3.  更新的内容 `ext-air/` 目录。
 
-4.  複製新 `cordova-2.0.0.js` 到您的專案。
+4.  复制新 `cordova-2.0.0.js` 到您的专案。
     
-    *   如果劇本，然後更新.js 檔在 `playbook/` 目錄。
+    *   如果剧本，然后更新.js 档在 `playbook/` 目录。
 
-5.  更新你的 html 代碼，使用新的 `cordova-2.0.0.js` 檔。
+5.  更新你的 html 代码，使用新的 `cordova-2.0.0.js` 档。
 
-6.  更新 `www/plugins.xml` 檔。兩個外掛程式更改其命名空間/服務標籤。更改用於捕獲和連絡人的外掛程式，從舊的條目:
+6.  更新 `www/plugins.xml` 档。两个外挂程式更改其命名空间/服务标签。更改用于捕获和连络人的外挂程式，从旧的条目:
     
         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
@@ -407,23 +407,23 @@ platform add blackberry10`.
         <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
         
 
-更新 （即，更新使用 ant 工具） 的示例目錄：
+更新 （即，更新使用 ant 工具） 的示例目录：
 
-1.  打開 `sample/lib/` 目錄。
+1.  打开 `sample/lib/` 目录。
 
-2.  更新中的.jar 檔 `cordova.1.9.0/ext/` 目錄。
+2.  更新中的.jar 档 `cordova.1.9.0/ext/` 目录。
 
-3.  更新的內容 `cordova.1.9.0/ext-air/` 目錄。
+3.  更新的内容 `cordova.1.9.0/ext-air/` 目录。
 
-4.  更新中的.js 檔 `cordova.1.9.0/javascript/` 目錄。
+4.  更新中的.js 档 `cordova.1.9.0/javascript/` 目录。
 
-5.  打開 `sample/lib/` 目錄和重命名 `cordova.1.9.0/` 目錄到`cordova.2.0.0/`.
+5.  打开 `sample/lib/` 目录和重命名 `cordova.1.9.0/` 目录到`cordova.2.0.0/`.
 
-6.  類型 `ant blackberry build` 或 `ant playbook build` 更新 `www` 目錄與更新科爾多瓦。
+6.  类型 `ant blackberry build` 或 `ant playbook build` 更新 `www` 目录与更新科尔多瓦。
 
-7.  打開 `www` 目錄並更新你的 html 代碼，使用新的 `cordova-2.0.0.js` 檔。
+7.  打开 `www` 目录并更新你的 html 代码，使用新的 `cordova-2.0.0.js` 档。
 
-8.  打開 `www` 目錄和更新 `plugins.xml` 檔。兩個外掛程式更改其命名空間/服務標籤。更改用於捕獲和連絡人的外掛程式，從舊的條目:
+8.  打开 `www` 目录和更新 `plugins.xml` 档。两个外挂程式更改其命名空间/服务标签。更改用于捕获和连络人的外挂程式，从旧的条目:
     
          <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
          <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
@@ -435,25 +435,25 @@ platform add blackberry10`.
          <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
         
 
-*   要升級到 1.8.0，請轉從 1.7.0
+*   要升级到 1.8.0，请转从 1.7.0
 
-## 從 1.7.0 以來升級到 1.8.0
+## 从 1.7.0 以来升级到 1.8.0
 
-更新只是 `www` 目錄:
+更新只是 `www` 目录:
 
-1.  打開 `www` 目錄，其中包含該應用程式。
+1.  打开 `www` 目录，其中包含该应用程式。
 
-2.  刪除和更新中的.jar 檔 `ext/` 目錄。
+2.  删除和更新中的.jar 档 `ext/` 目录。
 
-3.  更新的內容 `ext-air/` 目錄。
+3.  更新的内容 `ext-air/` 目录。
 
-4.  複製新 `cordova-1.8.0.js` 到您的專案。
+4.  复制新 `cordova-1.8.0.js` 到您的专案。
     
-    *   如果劇本，然後更新.js 檔在 `playbook/` 目錄。
+    *   如果剧本，然后更新.js 档在 `playbook/` 目录。
 
-5.  更新你的 html 代碼，使用新的 `cordova-1.8.0.js` 檔。
+5.  更新你的 html 代码，使用新的 `cordova-1.8.0.js` 档。
 
-6.  更新 `www/plugins.xml` 檔。兩個外掛程式更改其命名空間/服務標籤。更改用於捕獲和連絡人的外掛程式，從舊的條目:
+6.  更新 `www/plugins.xml` 档。两个外挂程式更改其命名空间/服务标签。更改用于捕获和连络人的外挂程式，从旧的条目:
     
         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
@@ -465,23 +465,23 @@ platform add blackberry10`.
         <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
         
 
-更新示例目錄中 (即，更新使用 ant 工具):
+更新示例目录中 (即，更新使用 ant 工具):
 
-1.  打開 `sample/lib/` 目錄。
+1.  打开 `sample/lib/` 目录。
 
-2.  更新中的.jar 檔 `cordova.1.7.0/ext/` 目錄。
+2.  更新中的.jar 档 `cordova.1.7.0/ext/` 目录。
 
-3.  更新的內容 `cordova.1.7.0/ext-air/` 目錄。
+3.  更新的内容 `cordova.1.7.0/ext-air/` 目录。
 
-4.  更新中的.js 檔 `cordova.1.7.0/javascript/` 目錄。
+4.  更新中的.js 档 `cordova.1.7.0/javascript/` 目录。
 
-5.  打開 `sample/lib/` 目錄和重命名 `cordova.1.7.0/` 目錄到`cordova.1.8.0/`.
+5.  打开 `sample/lib/` 目录和重命名 `cordova.1.7.0/` 目录到`cordova.1.8.0/`.
 
-6.  類型 `ant blackberry build` 或 `ant playbook build` 更新 `www` 目錄與更新科爾多瓦。
+6.  类型 `ant blackberry build` 或 `ant playbook build` 更新 `www` 目录与更新科尔多瓦。
 
-7.  打開 `www` 目錄並更新你的 html 代碼，使用新的 `cordova-1.8.0.js` 檔。
+7.  打开 `www` 目录并更新你的 html 代码，使用新的 `cordova-1.8.0.js` 档。
 
-8.  打開 `www` 目錄和更新 `plugins.xml` 檔。兩個外掛程式更改其命名空間/服務標籤。更改用於捕獲和連絡人的外掛程式，從舊的條目:
+8.  打开 `www` 目录和更新 `plugins.xml` 档。两个外挂程式更改其命名空间/服务标签。更改用于捕获和连络人的外挂程式，从旧的条目:
     
          <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
          <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>

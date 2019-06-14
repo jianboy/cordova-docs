@@ -17,22 +17,22 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: Android 殼工具指南
+title: Android 壳工具指南
 ---
 
-# Android 殼工具指南
+# Android 壳工具指南
 
-本指南演示如何使用平臺為中心的外殼工具科爾多瓦的一整套開發 Android 應用程式。 這種發展道路，概述中討論可能會為您提供比所述的命令列介面的跨平臺 CLI 工具更大範圍的發展方案。 例如，您需要部署一個科爾多瓦 web 視圖自訂旁邊的本機組件時使用外殼程式工具。 在使用之前要麼發展路徑，您必須首先配置 Android SDK 環境 Android 平臺指南中所述。
+本指南演示如何使用平台为中心的外壳工具科尔多瓦的一整套开发 Android 应用程式。 这种发展道路，概述中讨论可能会为您提供比所述的命令列介面的跨平台 CLI 工具更大范围的发展方案。 例如，您需要部署一个科尔多瓦 web 视图自订旁边的本机组件时使用外壳程式工具。 在使用之前要么发展路径，您必须首先配置 Android SDK 环境 Android 平台指南中所述。
 
-要為 android 系統啟用外殼工具，請從[cordova.apache.org][1]下載科爾多瓦。 下載檔案中包含單獨的檔案，為每個平臺。 展開每個您想要的目標， `android` 在這種情況下。 相關的工具，通常可用在頂級 `bin` 目錄中，否則為諮詢**自述**檔，瞭解有關更多詳細的指示。
+要为 android 系统启用外壳工具，请从[cordova.apache.org][1]下载科尔多瓦。 下载档案中包含单独的档案，为每个平台。 展开每个您想要的目标， `android` 在这种情况下。 相关的工具，通常可用在顶级 `bin` 目录中，否则为咨询**自述**档，了解有关更多详细的指示。
 
  [1]: http://cordova.apache.org
 
-這些工具允許您創建、 構建和運行 Android 應用程式。 額外的命令列介面，可以跨所有平臺的外掛程式功能的資訊，請參閱使用 Plugman 到管理外掛程式。 有關如何開發外掛程式的詳細資訊，請參閱應用程式外掛程式。
+这些工具允许您创建、 构建和运行 Android 应用程式。 额外的命令列介面，可以跨所有平台的外挂程式功能的资讯，请参阅使用 Plugman 到管理外挂程式。 有关如何开发外挂程式的详细资讯，请参阅应用程式外挂程式。
 
-## 創建一個專案
+## 创建一个专案
 
-運行 `create` 命令，指定的現有路徑的專案、 反向域風格包識別碼和應用程式的顯示名稱。 這裡是 Mac/Linux 和 Windows 的語法：
+运行 `create` 命令，指定的现有路径的专案、 反向域风格包识别码和应用程式的显示名称。 这里是 Mac/Linux 和 Windows 的语法：
 
         $ /path/to/cordova-android/bin/create /path/to/project com.example.project_name ProjectName
     
@@ -41,56 +41,56 @@ title: Android 殼工具指南
 
 ## 生成
 
-此清理，然後生成專案。
+此清理，然后生成专案。
 
-在 Mac/Linux 或 Windows 上調試：
+在 Mac/Linux 或 Windows 上调试：
 
         $ /path/to/project/cordova/build --debug
     
         C:\>\path\to\project\cordova\build.bat --debug
     
 
-釋放，Mac/Linux 或 Windows 上：
+释放，Mac/Linux 或 Windows 上：
 
         $ /path/to/project/cordova/build --release
     
         C:\>\path\to\project\cordova\build.bat --release
     
 
-## 運行應用程式
+## 运行应用程式
 
-`run`命令接受下列*可選*的參數：
+`run`命令接受下列*可选*的参数：
 
-*   目標規範。這包括 `--emulator` ， `--device` ，或`--target=<targetID>`.
+*   目标规范。这包括 `--emulator` ， `--device` ，或`--target=<targetID>`.
 
-*   生成規范。這包括 `--debug` ， `--release` ，或`--nobuild`.
+*   生成规范。这包括 `--debug` ， `--release` ，或`--nobuild`.
     
         $ /path/to/project/cordova/run [Target] [Build]
         
         C:\>\path\to\project\cordova\run.bat [Target] [Build]
         
 
-請確保您創建至少一個 Android 虛擬裝置，否則為系統會提示您這樣與做 `android` 命令。 如果多個 AVD 可用作為目標，提示您選擇一個。 預設情況下 `run` 命令檢測連接的設備或當前正在運行的模擬程式，如果沒有設備發現。
+请确保您创建至少一个 Android 虚拟装置，否则为系统会提示您这样与做 `android` 命令。 如果多个 AVD 可用作为目标，提示您选择一个。 预设情况下 `run` 命令检测连接的设备或当前正在运行的模拟程式，如果没有设备发现。
 
-## 簽署應用程式
+## 签署应用程式
 
-您可以查看簽名要求在這裡的安卓應用程式： HTTP://developer.android.com/tools/publishing/app-signing.html
+您可以查看签名要求在这里的安卓应用程式： HTTP://developer.android.com/tools/publishing/app-signing.html
 
-要簽名的應用程式，您需要以下參數:
+要签名的应用程式，您需要以下参数:
 
-*   金鑰庫 (`--keystore`): 可容納一套鑰匙的二進位檔案的路徑。
+*   金钥库 (`--keystore`): 可容纳一套钥匙的二进位档案的路径。
 
-*   金鑰庫口令 (`-storePassword`): 到金鑰庫的密碼
+*   金钥库口令 (`-storePassword`): 到金钥库的密码
 
-*   別名 (`--alias`): 指定私密金鑰用於唱歌的 id。
+*   别名 (`--alias`): 指定私密金钥用于唱歌的 id。
 
-*   * 密碼 （`--password`）： 為指定的私密金鑰的密碼。
+*   * 密码 （`--password`）： 为指定的私密金钥的密码。
 
-*   金鑰庫 (`--keystoreType`) 類型: pkcs12 jks (預設: 自動檢測基於檔副檔名)
+*   金钥库 (`--keystoreType`) 类型: pkcs12 jks (预设: 自动检测基于档副档名)
 
-可以使用`build`或`run`腳本上面的命令列參數指定這些參數。
+可以使用`build`或`run`脚本上面的命令列参数指定这些参数。
 
-或者，您可以指定它們在組建組態檔 (build.json) 中使用 ( `--buildConfig` ) 參數。這裡是組建組態檔的一個示例:
+或者，您可以指定它们在组建组态档 (build.json) 中使用 ( `--buildConfig` ) 参数。这里是组建组态档的一个示例:
 
     {
          "android": {
@@ -112,11 +112,11 @@ title: Android 殼工具指南
      }
     
 
-對於發佈簽名，可以排除密碼和構建系統會發出提示要求輸入密碼。
+对于发布签名，可以排除密码和构建系统会发出提示要求输入密码。
 
-此外，它還支援以混合和匹配的命令列參數和 build.json 檔中的參數。 從命令列參數的值將會得到優先。 這可用於在命令列上指定的密碼。
+此外，它还支援以混合和匹配的命令列参数和 build.json 档中的参数。 从命令列参数的值将会得到优先。 这可用于在命令列上指定的密码。
 
-## 日誌記錄
+## 日志记录
 
         $ /path/to/project/cordova/log
     
@@ -130,31 +130,31 @@ title: Android 殼工具指南
         C:\>\path\to\project\cordova\clean.bat
     
 
-## Gradle 建築
+## Gradle 建筑
 
-截至 cordova-android@4.0.0，專案生成使用[Gradle][2]。 關於建設與螞蟻的說明，請參閱文檔的舊版本。
+截至 cordova-android@4.0.0，专案生成使用[Gradle][2]。 关于建设与蚂蚁的说明，请参阅文档的旧版本。
 
  [2]: http://www.gradle.org/
 
-### Gradle 屬性
+### Gradle 属性
 
-可以設置這些[屬性][3]以自訂生成:
+可以设置这些[属性][3]以自订生成:
 
  [3]: http://www.gradle.org/docs/current/userguide/tutorial_this_and_that.html
 
-*   **cdvBuildMultipleApks**(預設: false)
+*   **cdvBuildMultipleApks**(预设: false)
     
-    如果設置此值，則將生成多個 APK 檔: 庫專案所支援的本機平臺每一個 (x 86，ARM，等)。 這可能是重要的如果您的專案使用大型的本機庫，可以大幅增加生成 apk 檔的大小。
+    如果设置此值，则将生成多个 APK 档: 库专案所支援的本机平台每一个 (x 86，ARM，等)。 这可能是重要的如果您的专案使用大型的本机库，可以大幅增加生成 apk 档的大小。
     
-    如果未設置，然後將生成單個 APK，可以在所有設備上使用。
+    如果未设置，然后将生成单个 APK，可以在所有设备上使用。
 
 *   **cdvVersionCode**
     
-    VersionCode 在`AndroidManifest.xml`中設置將重寫
+    VersionCode 在`AndroidManifest.xml`中设置将重写
 
-*   **cdvReleaseSigningPropertiesFile**（預設： release-signing.properties)
+*   **cdvReleaseSigningPropertiesFile**（预设： release-signing.properties)
     
-    包含簽名發佈的資訊進行.properties 檔路徑生成。 該檔應該看起來像:
+    包含签名发布的资讯进行.properties 档路径生成。 该档应该看起来像:
     
         storeFile=relative/path/to/keystore.p12
         storePassword=SECRET1
@@ -163,27 +163,27 @@ title: Android 殼工具指南
         keyPassword=SECRET2
         
     
-    `storePassword`和`keyPassword`是可選的如果省略將提示輸入。
+    `storePassword`和`keyPassword`是可选的如果省略将提示输入。
 
-*   **cdvDebugSigningPropertiesFile**（預設： debug-signing.properties)
+*   **cdvDebugSigningPropertiesFile**（预设： debug-signing.properties)
     
-    同樣作為 cdvReleaseSigningPropertiesFile，但用於調試生成。當您需要與其他開發人員共用的簽名金鑰時有用。
+    同样作为 cdvReleaseSigningPropertiesFile，但用于调试生成。当您需要与其他开发人员共用的签名金钥时有用。
 
 *   **cdvMinSdkVersion**
     
-    重寫`minSdkVersion`在`AndroidManifest.xml`中設置的值。有用的當創建多個 APKs 基於 SDK 版本。
+    重写`minSdkVersion`在`AndroidManifest.xml`中设置的值。有用的当创建多个 APKs 基于 SDK 版本。
 
 *   **cdvBuildToolsVersion**
     
-    重寫自動檢測到的`android.buildToolsVersion`值。
+    重写自动检测到的`android.buildToolsVersion`值。
 
 *   **cdvCompileSdkVersion**
     
-    重寫自動檢測到的`android.compileSdkVersion`值。
+    重写自动检测到的`android.compileSdkVersion`值。
 
-### 擴展 build.gradle
+### 扩展 build.gradle
 
-如果您需要自訂`build.gradle`，而不是直接編輯，您應該創建一個名為`build-extras.gradle`的同級檔。 此檔將包含由主要的`build.gradle`時本。 下面是一個示例:
+如果您需要自订`build.gradle`，而不是直接编辑，您应该创建一个名为`build-extras.gradle`的同级档。 此档将包含由主要的`build.gradle`时本。 下面是一个示例:
 
     # Example build-extras.gradle
     # This file is included at the beginning of `build.gradle`
@@ -194,7 +194,7 @@ title: Android 殼工具指南
     }
     
 
-請注意，外掛程式也可以包括通過`build-extras.gradle`檔:
+请注意，外挂程式也可以包括通过`build-extras.gradle`档:
 
     <framework src="some.gradle" custom="true" type="gradleReference" />
     

@@ -17,7 +17,7 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: 輔助線
+title: 辅助线
 ---
 
 {% include generated_docs_index.html %}

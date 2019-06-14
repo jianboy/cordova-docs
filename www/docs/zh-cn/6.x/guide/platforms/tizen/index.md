@@ -17,22 +17,22 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: Tizen 平臺指南
+title: Tizen 平台指南
 ---
 
-# Tizen 平臺指南
+# Tizen 平台指南
 
-本指南介紹了如何設置您的 SDK 開發環境部署科爾多瓦運行 Tizen 作業系統的設備的應用程式。
+本指南介绍了如何设置您的 SDK 开发环境部署科尔多瓦运行 Tizen 作业系统的设备的应用程式。
 
 ## 要求和支援
 
 Tizen SDK 需要 Linux Ubuntu 10.04/10.10/11.04/11.10 （32 位） 或 Windows XP SP3/7 （32 位）。
 
-開發人員應使用 `cordova` 實用程式 Tizen SDK 的結合。 命令列介面資訊，請參閱如何安裝它，添加專案，然後生成和部署專案。
+开发人员应使用 `cordova` 实用程式 Tizen SDK 的结合。 命令列介面资讯，请参阅如何安装它，添加专案，然后生成和部署专案。
 
-## 安裝 SDK
+## 安装 SDK
 
-從[tizen.org][1]下載 Tizen SDK.
+从[tizen.org][1]下载 Tizen SDK.
 
  [1]: https://developer.tizen.org/sdk
 
@@ -60,25 +60,25 @@ Tizen SDK 需要 Linux Ubuntu 10.04/10.10/11.04/11.10 （32 位） 或 Windows X
 
 -->
 
-## 在 SDK 中打開的專案
+## 在 SDK 中打开的专案
 
 1.  推出 Tizen Eclipse IDE。
 
-2.  選擇**檔 → 導入 → Tizen Web 專案**：
+2.  选择**档 → 导入 → Tizen Web 专案**：
     
     ![][2]
 
 3.  按**下一步**.
 
-4.  請確保選中了**選擇根目錄**。
+4.  请确保选中了**选择根目录**。
 
-5.  請確保選中了**複製到工作區中的專案**。
+5.  请确保选中了**复制到工作区中的专案**。
 
-6.  按**流覽**並選擇科爾多瓦 Tizen `samples` 專案目錄 （如 `/cordova-basic` ）：
+6.  按**流览**并选择科尔多瓦 Tizen `samples` 专案目录 （如 `/cordova-basic` ）：
     
     ![][3]
 
-7.  按**完成**。您的專案現在應該將其導入並出現在**專案資源管理器**視圖中：
+7.  按**完成**。您的专案现在应该将其导入并出现在**专案资源管理器**视图中：
     
     ![][4]
 
@@ -86,31 +86,31 @@ Tizen SDK 需要 Linux Ubuntu 10.04/10.10/11.04/11.10 （32 位） 或 Windows X
  [3]: {{ site.baseurl }}/static/img/guide/platforms/tizen/import_widget.png
  [4]: {{ site.baseurl }}/static/img/guide/platforms/tizen/project_explorer.png
 
-重新生成專案，在**專案資源管理器**視圖中按右鍵並選擇**生成專案**：
+重新生成专案，在**专案资源管理器**视图中按右键并选择**生成专案**：
 
 ![][5]
 
  [5]: {{ site.baseurl }}/static/img/guide/platforms/tizen/build_project.png
 
-如*hello.wgt*的小部件包檔應在專案的根目錄中生成。
+如*hello.wgt*的小部件包档应在专案的根目录中生成。
 
-## 部署到模擬程式
+## 部署到模拟程式
 
-用滑鼠右鍵按一下**專案資源管理器**視圖中的專案並選擇**運行作為 → Tizen Web 模擬器應用程式**：
+用滑鼠右键按一下**专案资源管理器**视图中的专案并选择**运行作为 → Tizen Web 模拟器应用程式**：
 
 ![][6]
 
  [6]: {{ site.baseurl }}/static/img/guide/platforms/tizen/runas_web_sim_app.png
 
-## 將部署到設備
+## 将部署到设备
 
-*   請確保目標設備正常啟動、 連接和配置。必須正確設置其**日期和時間**設置。
+*   请确保目标设备正常启动、 连接和配置。必须正确设置其**日期和时间**设置。
 
-*   使用**連接資源管理器**視圖選擇的應用程式部署目標：**視窗顯示視圖 → 連接資源管理器**.
+*   使用**连接资源管理器**视图选择的应用程式部署目标：**视窗显示视图 → 连接资源管理器**.
     
     ![][7]
 
-*   用滑鼠右鍵按一下該專案在**專案資源管理器**視圖，然後選擇**運行作為 → Tizen Web 應用程式**：
+*   用滑鼠右键按一下该专案在**专案资源管理器**视图，然后选择**运行作为 → Tizen Web 应用程式**：
     
     ![][8]
 

@@ -17,21 +17,21 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: Windows 外掛程式
+title: Windows 外挂程式
 toc_title: Windows
 ---
 
-# Windows 外掛程式
+# Windows 外挂程式
 
-此部分提供了如何在 Windows 應用商店應用程式中實現一個使用的外掛程式的詳細資訊。之前讀這篇文章，請參閱應用程式外掛程式外掛程式的結構和其共同的 JavaScript 介面的概述。 這一節繼續顯示示例*回聲*外掛程式從科爾多瓦 web 視圖的本機平臺和背部進行通信。
+此部分提供了如何在 Windows 应用商店应用程式中实现一个使用的外挂程式的详细资讯。之前读这篇文章，请参阅应用程式外挂程式外挂程式的结构和其共同的 JavaScript 介面的概述。 这一节继续显示示例*回声*外挂程式从科尔多瓦 web 视图的本机平台和背部进行通信。
 
-很重要的是要注意 Windows 支援直接在 JAVAscript 中，這意味著發展中國家的 '本土' 的部分，只需要在特殊情況下發展。
+很重要的是要注意 Windows 支援直接在 JAVAscript 中，这意味著发展中国家的 '本土' 的部分，只需要在特殊情况下发展。
 
-## 在 JavaScript 中創建一個 Windows 外掛程式
+## 在 JavaScript 中创建一个 Windows 外挂程式
 
-這些指令是要創建一個純 JavaScript 外掛程式。理解這一點對於理解如何添加本機/託管位至關重要。
+这些指令是要创建一个纯 JavaScript 外挂程式。理解这一点对于理解如何添加本机/托管位至关重要。
 
-Windows 科爾多瓦外掛程式是本質上是一個薄包裝周圍現有 WinJS 提供的功能，但假設你會想要定義為多個設備你 JS 通用介面，你通常會提供 API 的 1 JS 檔。
+Windows 科尔多瓦外挂程式是本质上是一个薄包装周围现有 WinJS 提供的功能，但假设你会想要定义为多个设备你 JS 通用介面，你通常会提供 API 的 1 JS 档。
 
     // inside file echoplugin.js
     var EchoPlugin = {
@@ -43,9 +43,9 @@ Windows 科爾多瓦外掛程式是本質上是一個薄包裝周圍現有 WinJS
     }
     
 
-## 在 Windows 上的裡面科爾多瓦 exec。
+## 在 Windows 上的里面科尔多瓦 exec。
 
-Cordova.exec 函數以不同的方式定義的每個平臺上，這是因為每個平臺都有它自己的應用 js 代碼和本機包裝代碼之間進行通信的方式。 但在 Windows 中，有沒有本地的包裝，所以 exec 調用有一致性。 就像你可以直接在 EchoPlugin.echo，你 js 只有外掛程式工作：
+Cordova.exec 函数以不同的方式定义的每个平台上，这是因为每个平台都有它自己的应用 js 代码和本机包装代码之间进行通信的方式。 但在 Windows 中，有没有本地的包装，所以 exec 调用有一致性。 就像你可以直接在 EchoPlugin.echo，你 js 只有外挂程式工作：
 
     // inside file echoplugin.js ( this is what NOT to do if you want to reuse the JS API cross platform )
     var EchoPlugin = {
@@ -60,17 +60,17 @@ Cordova.exec 函數以不同的方式定義的每個平臺上，這是因為每�
     }
     
 
-這將可能會做工精細，但是它意味著您將需要為不同的平臺，不同版本的 echoPlugin.js，可能你可以在你的實現中有不一致的問題。 作為最佳實踐，我們決定模仿 cordova.exec 上窗戶，裡面的本機 API，所以我們可以運行相同的 JS 代碼，並不需要重寫一遍為平臺，和也利用檢查，任何參數或其他常見的代碼，由開發人員在其他平臺上工作的人員提供。
+这将可能会做工精细，但是它意味著您将需要为不同的平台，不同版本的 echoPlugin.js，可能你可以在你的实现中有不一致的问题。 作为最佳实践，我们决定模仿 cordova.exec 上窗户，里面的本机 API，所以我们可以运行相同的 JS 代码，并不需要重写一遍为平台，和也利用检查，任何参数或其他常见的代码，由开发人员在其他平台上工作的人员提供。
 
-## 科爾多瓦 exec 代理
+## 科尔多瓦 exec 代理
 
-在 Windows 上，科爾多瓦提供一個代理，您可以使用來註冊一個物件，它將處理所有的 cordova.exec 調用的 API。
+在 Windows 上，科尔多瓦提供一个代理，您可以使用来注册一个物件，它将处理所有的 cordova.exec 调用的 API。
 
-例如如果你想要為加速度感應器 API 提供實現，你會這樣做：
+例如如果你想要为加速度感应器 API 提供实现，你会这样做：
 
-cordova.commandProxy.add ("加速度"{開始： function() {/ / 你代碼在這裡......}/ /......，其餘的在這裡的 API}） ；
+cordova.commandProxy.add ("加速度"{开始： function() {/ / 你代码在这里......}/ /......，其余的在这里的 API}） ；
 
-所以在我們的例子中，我們將假設中 echoplugin.js 的代碼處理跨平臺相關，JavaScript，和我們可以只編寫 Windows 的代理
+所以在我们的例子中，我们将假设中 echoplugin.js 的代码处理跨平台相关，JavaScript，和我们可以只编写 Windows 的代理
 
     // in file echopluginProxy.js
     cordova.commandProxy.add("EchoPlugin",{
@@ -85,9 +85,9 @@ cordova.commandProxy.add ("加速度"{開始： function() {/ / 你代碼在這�
     });
     
 
-外掛程式定義
+外挂程式定义
 
-如果我們希望我們的外掛程式的使用者能夠輕鬆地安裝我們的外掛程式，我們需要定義根據 PlugMan 是如何定義的外掛程式。 更多關於這在[外掛程式規範][1]
+如果我们希望我们的外挂程式的使用者能够轻松地安装我们的外挂程式，我们需要定义根据 PlugMan 是如何定义的外挂程式。 更多关于这在[外挂程式规范][1]
 
  [1]: plugin_ref_spec.md.html#Plugin%20Specification
 
@@ -112,15 +112,15 @@ cordova.commandProxy.add ("加速度"{開始： function() {/ / 你代碼在這�
     </plugin>
     
 
-這給了我們 Windows JavaScript 外掛程式，使用一個通用的檔 （echoplugin.js） 和使用代理伺服器提供實施 （echopluginProxy.js） 的 Windows 只有部分工作。 我們怎麼做將本機/託管代碼添加到這？ 好吧我們要開始相同，唯一的區別將在 echopluginProxy 方法中我們做裡面。
+这给了我们 Windows JavaScript 外挂程式，使用一个通用的档 （echoplugin.js） 和使用代理伺服器提供实施 （echopluginProxy.js） 的 Windows 只有部分工作。 我们怎么做将本机/托管代码添加到这？ 好吧我们要开始相同，唯一的区别将在 echopluginProxy 方法中我们做里面。
 
-# WinJS 如何訪問本機/託管代碼
+# WinJS 如何访问本机/托管代码
 
-在 Windows 中，WinJS 編寫的應用程式都能夠與本機代碼進行交互，這間的 op 是供 Windows 運行時元件。 細節很多，和本指南只會掩蓋基本知識。 Microsoft 提供了更多的資訊[在這裡][2].
+在 Windows 中，WinJS 编写的应用程式都能够与本机代码进行交互，这间的 op 是供 Windows 运行时元件。 细节很多，和本指南只会掩盖基本知识。 Microsoft 提供了更多的资讯[在这里][2].
 
  [2]: http://msdn.microsoft.com/en-us/library/windows/apps/hh441569.aspx
 
-當您創建您的 Windows 運行時元件，任何類被定義為 '公共 ref 類密封' 被認為是 '可啟動班'，將可從 JavaScript 調用。
+当您创建您的 Windows 运行时元件，任何类被定义为 '公共 ref 类密封' 被认为是 '可启动班'，将可从 JavaScript 调用。
 
     // in your header file .h
     namespace EchoRuntimeComponent
@@ -149,9 +149,9 @@ cordova.commandProxy.add ("加速度"{開始： function() {/ / 你代碼在這�
     }
     
 
-現在為了讓我們來調用本機代碼，我們使用的命名空間、 類名和 lowerCamelCase 我們正在調用的方法。
+现在为了让我们来调用本机代码，我们使用的命名空间、 类名和 lowerCamelCase 我们正在调用的方法。
 
-var res = EchoRuntimeComponent.EchoPluginRT.echo("boom") ；我們將這移動到我們的 echopluginProxy.js 檔，得到這個：
+var res = EchoRuntimeComponent.EchoPluginRT.echo("boom") ；我们将这移动到我们的 echopluginProxy.js 档，得到这个：
 
     // in file echopluginProxy.js
     cordova.commandProxy.add("EchoPlugin",{
@@ -167,17 +167,17 @@ var res = EchoRuntimeComponent.EchoPluginRT.echo("boom") ；我們將這移動�
     });
     
 
-就是這樣，我們在 Apache Cordova Windows 中有使用端到端 c + + 支援 js 調用外掛程式 ！
+就是这样，我们在 Apache Cordova Windows 中有使用端到端 c + + 支援 js 调用外挂程式 ！
 
-# 技術的一些注意事項：
+# 技术的一些注意事项：
 
-*   回檔通常是非同步所以馬上調用回檔可能預計不會由調用方。 在實踐中，如果電話不是非同步，你應該至少使用 javascript 超時強制被稱為非同步回檔。
-*   可啟動的類可以做各種各樣的太棒了，像在調度，非同步回檔，通過您自己的物件類型、 陣列、 集合、 重載的方法和更多的事件。 我建議你做你的家庭作業。
-*   如果你堅持共同的 Windows Phone 8.0 和 Windows SDK API 呼叫，你將能夠在 Windows Phone 8.0 Apache 科爾多瓦外掛程式中使用相同的運行時元件 （本機或託管的位）。 ~ 敬請期待這一職務。
+*   回档通常是非同步所以马上调用回档可能预计不会由调用方。 在实践中，如果电话不是非同步，你应该至少使用 javascript 超时强制被称为非同步回档。
+*   可启动的类可以做各种各样的太棒了，像在调度，非同步回档，通过您自己的物件类型、 阵列、 集合、 重载的方法和更多的事件。 我建议你做你的家庭作业。
+*   如果你坚持共同的 Windows Phone 8.0 和 Windows SDK API 呼叫，你将能够在 Windows Phone 8.0 Apache 科尔多瓦外挂程式中使用相同的运行时元件 （本机或托管的位）。 ~ 敬请期待这一职务。
 
-# 定義你的外掛程式
+# 定义你的外挂程式
 
-現在，我們有一個工作的外掛程式，我們需要重新審視從早些時候的外掛程式定義，所以我們可以將其發佈。 我們現在可以作為一種框架添加運行時元件。 注意 WindowsRuntimeComponent 的輸出類型可以是.winmd 或.dll
+现在，我们有一个工作的外挂程式，我们需要重新审视从早些时候的外挂程式定义，所以我们可以将其发布。 我们现在可以作为一种框架添加运行时元件。 注意 WindowsRuntimeComponent 的输出类型可以是.winmd 或.dll
 
     <?xml version="1.0" encoding="UTF-8"?>
     <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
@@ -201,7 +201,7 @@ var res = EchoRuntimeComponent.EchoPluginRT.echo("boom") ；我們將這移動�
     </plugin>
     
 
-就是這樣，你現在有一個可分發的外掛程式，你可以與世界分享 ！ 要注意，將框架添加到 Windows 科爾多瓦專案支援最近才加入，所以您將需要確保模具當前你科爾多瓦的一件事。 科爾多瓦 cli 和科爾多瓦 plugman 支援添加刪除本機支援的外掛程式。
+就是这样，你现在有一个可分发的外挂程式，你可以与世界分享 ！ 要注意，将框架添加到 Windows 科尔多瓦专案支援最近才加入，所以您将需要确保模具当前你科尔多瓦的一件事。 科尔多瓦 cli 和科尔多瓦 plugman 支援添加删除本机支援的外挂程式。
 
 > cordova plugin add com.risingj.echoplugin
 

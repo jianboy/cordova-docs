@@ -22,18 +22,18 @@ title: endcallbutton
 
 # endcallbutton
 
-當使用者按下結束通話按鈕時，將激發此事件。
+当使用者按下结束通话按钮时，将激发此事件。
 
     document.addEventListener("endcallbutton", yourCallbackFunction, false);
     
 
-## 詳細資訊
+## 详细资讯
 
-該事件將重寫預設結束調用行為。
+该事件将重写预设结束调用行为。
 
-應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `[deviceready](events.deviceready.html)` 事件火災。
+应用程式通常应使用 `document.addEventListener` 将一个事件拦截器附加一次 `[deviceready](events.deviceready.html)` 事件火灾。
 
-## 支援的平臺
+## 支援的平台
 
 *   黑莓 10
 

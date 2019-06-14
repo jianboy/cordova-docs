@@ -17,23 +17,23 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: 鉤子指南
+title: 钩子指南
 toc_title: Hooks
 ---
 
-# 鉤子指南
+# 钩子指南
 
-科爾多瓦鉤表示特別的腳本可以由應用程式和外掛程式開發人員添加或甚至由您自己構建體系，以自訂科爾多瓦命令。 鉤腳本可以通過將其添加到特殊的預定義資料夾 (`/hooks`) 或通過設定檔 (`config.xml`和`plugin.xml`) 定義和連續運行順序如下:
+科尔多瓦钩表示特别的脚本可以由应用程式和外挂程式开发人员添加或甚至由您自己构建体系，以自订科尔多瓦命令。 钩脚本可以通过将其添加到特殊的预定义资料夹 (`/hooks`) 或通过设定档 (`config.xml`和`plugin.xml`) 定义和连续运行顺序如下:
 
-  * 應用程式掛鉤從`/hooks`;
-  * 應用鉤子從`config.xml`;
-  * 從`plugins/.../plugin.xml`外掛程式鉤子.
+  * 应用程式挂钩从`/hooks`;
+  * 应用钩子从`config.xml`;
+  * 从`plugins/.../plugin.xml`外挂程式钩子.
 
-**注**: `/hooks`目錄被認為是支援在 config.xml 和 plugin.xml 鉤元素，否決。
+**注**: `/hooks`目录被认为是支援在 config.xml 和 plugin.xml 钩元素，否决。
 
-## 支援的鉤類型
+## 支援的钩类型
 
-支援以下的鉤子類型:
+支援以下的钩子类型:
 
     after_build
     after_compile
@@ -71,23 +71,23 @@ toc_title: Hooks
     pre_package // Windows and Windows Phone only
     
 
-## 如何定義鉤子
+## 如何定义钩子
 
-### 通過`/hooks`目錄
+### 通过`/hooks`目录
 
-**注意**: 此方法被認為是支援在 config.xml 和 plugin.xml 鉤元素，否決。
+**注意**: 此方法被认为是支援在 config.xml 和 plugin.xml 钩元素，否决。
 
-在相應的鉤子類型觸發時執行自訂操作、 使用鉤型作為 '鉤' 目錄內的子資料夾的名稱和地方您編寫的指令檔在這裡，例如:
+在相应的钩子类型触发时执行自订操作、 使用钩型作为 '钩' 目录内的子资料夹的名称和地方您编写的指令档在这里，例如:
 
     # script file will be automatically executed after each build
     hooks/after_build/after_build_custom_action.js
     
 
-當使用這些鉤子，他們總是將作為不作為可載入 JavaScript 模組的可執行檔運行。 **記住**: 在這種情況下使您的腳本可執行。
+当使用这些钩子，他们总是将作为不作为可载入 JavaScript 模组的可执行档运行。 **记住**: 在这种情况下使您的脚本可执行。
 
 ### Config.xml
 
-鉤子可以定義在專案的`config.xml`使用`< 鉤 >`元素，例如:
+钩子可以定义在专案的`config.xml`使用`< 钩 >`元素，例如:
 
     <hook type="before_build" src="scripts/appBeforeBuild.bat" />
     <hook type="before_build" src="scripts/appBeforeBuild.js" />
@@ -108,9 +108,9 @@ toc_title: Hooks
     </platform>
     
 
-### 外掛程式鉤子 (plugin.xml)
+### 外挂程式钩子 (plugin.xml)
 
-作為外掛程式的開發人員，您可以定義掛接在`plugin.xml`中那樣使用`< 鉤 >`元素的腳本:
+作为外挂程式的开发人员，您可以定义挂接在`plugin.xml`中那样使用`< 钩 >`元素的脚本:
 
     <hook type="before_plugin_install" src="scripts/beforeInstall.js" />
     <hook type="after_build" src="scripts/afterBuild.js" />
@@ -122,13 +122,13 @@ toc_title: Hooks
     </platform>
     
 
-`before_plugin_install`， `after_plugin_install`， `before_plugin_uninstall`外掛程式鉤子將發射專門為正在安裝卸載該外掛程式。
+`before_plugin_install`， `after_plugin_install`， `before_plugin_uninstall`外挂程式钩子将发射专门为正在安装卸载该外挂程式。
 
-## 指令碼介面
+## 指令码介面
 
 ### JAVAscript
 
-如果您正在編寫鉤使用 Node.js，應使用下列模組定義:
+如果您正在编写钩使用 Node.js，应使用下列模组定义:
 
 ```javascript
 module.exports = function(context) {
@@ -136,7 +136,7 @@ module.exports = function(context) {
 }
 ```
 
-您可以使用問: 你 scipts 非同步
+您可以使用问: 你 scipts 非同步
 
 ```javascript
 module.exports = function(context) {
@@ -152,7 +152,7 @@ module.exports = function(context) {
 }
 ```
 
-`上下文`物件包含的鉤子類型，執行的腳本的完整路徑，鉤選項，命令列參數傳遞給科爾多瓦和頂級的"科爾多瓦"物件:
+`上下文`物件包含的钩子类型，执行的脚本的完整路径，钩选项，命令列参数传递给科尔多瓦和顶级的"科尔多瓦"物件:
 
 ```json
 {
@@ -180,45 +180,45 @@ module.exports = function(context) {
 
 ```
 
-`coNtext.opts.plugin`物件僅將傳遞到外掛程式鉤子腳本。
+`coNtext.opts.plugin`物件仅将传递到外挂程式钩子脚本。
 
-您還可以通過以下方式使用`coNtext.requireCordovaModule`腳本中要求科爾多瓦的附加模組:
+您还可以通过以下方式使用`coNtext.requireCordovaModule`脚本中要求科尔多瓦的附加模组:
 
 ```javascript
 var Q = context.requireCordovaModule('q');
 ```
 
-**注意**: 新模組載入程式指令碼介面用於定義通過`config.xml`或`plugin.xml`只的`.js`檔。 出於相容性原因鉤檔指定通過`/hooks`資料夾運行通過節點 child_process 菌種，見 ' 非 javascript 一節。
+**注意**: 新模组载入程式指令码介面用于定义通过`config.xml`或`plugin.xml`只的`.js`档。 出于相容性原因钩档指定通过`/hooks`资料夹运行通过节点 child_process 菌种，见 ' 非 javascript 一节。
 
 ### 非 javascript
 
-**注意**: 我們強烈推薦寫你鉤使用 Node.js，所以，他們都是跨平臺的見上面的 'JAVAscript 一節。
+**注意**: 我们强烈推荐写你钩使用 Node.js，所以，他们都是跨平台的见上面的 'JAVAscript 一节。
 
-非 javascript 腳本從專案的根目錄中通過節點 child_process 菌種運行，並且都經過目錄根作為第一個參數。 所有其他選項都傳遞到腳本使用環境變數:
+非 javascript 脚本从专案的根目录中通过节点 child_process 菌种运行，并且都经过目录根作为第一个参数。 所有其他选项都传递到脚本使用环境变数:
 
-  * CORDOVA_VERSION-科爾多瓦 CLI 的版本。
-  * CORDOVA_PLATFORMS-的逗號分隔清單命令適用于的平臺 (例如: android、 ios)。
-  * CORDOVA_PLUGINS-以逗號分隔的清單中的外掛程式 Id 命令適用于 (如: org.apache.cordova.file、 org.apache.cordova.file 轉讓)
-  * CORDOVA_HOOK-的掛鉤上正在執行的路徑。
-  * CORDOVA_CMDLINE-傳遞到科爾多瓦的確切的命令列參數 (例如: 科爾多瓦運行 ios — — 模仿)
+  * CORDOVA_VERSION-科尔多瓦 CLI 的版本。
+  * CORDOVA_PLATFORMS-的逗号分隔清单命令适用于的平台 (例如: android、 ios)。
+  * CORDOVA_PLUGINS-以逗号分隔的清单中的外挂程式 Id 命令适用于 (如: org.apache.cordova.file、 org.apache.cordova.file 转让)
+  * CORDOVA_HOOK-的挂钩上正在执行的路径。
+  * CORDOVA_CMDLINE-传递到科尔多瓦的确切的命令列参数 (例如: 科尔多瓦运行 ios — — 模仿)
 
-如果一個腳本返回一個非零結束代碼，然後將中止父科爾多瓦命令。
+如果一个脚本返回一个非零结束代码，然后将中止父科尔多瓦命令。
 
-此外請注意，即使您正在在 Windows 上，以防你鉤腳本並不是蝙蝠檔 (這建議，如果你想要你上班非 Windows 作業系統中的腳本) 科爾多瓦 CLI 將期望一切線作為第一行才知道翻譯它需要使用啟動腳本。 一切行應匹配下面的示例:
+此外请注意，即使您正在在 Windows 上，以防你钩脚本并不是蝙蝠档 (这建议，如果你想要你上班非 Windows 作业系统中的脚本) 科尔多瓦 CLI 将期望一切线作为第一行才知道翻译它需要使用启动脚本。 一切行应匹配下面的示例:
 
     #!/usr/bin/env [name_of_interpreter_executable]
     
 
 ## 示例用法
 
-此示例演示科爾多瓦鉤用法跟蹤到主控台輸出為 Android 平臺生成的.apk 檔的大小。
+此示例演示科尔多瓦钩用法跟踪到主控台输出为 Android 平台生成的.apk 档的大小。
 
-創建空白科爾多瓦 app 並向`config.xml`來告訴科爾多瓦在每個平臺生成後運行`afterBuild.js`腳本添加下面的定義。
+创建空白科尔多瓦 app 并向`config.xml`来告诉科尔多瓦在每个平台生成后运行`afterBuild.js`脚本添加下面的定义。
 
     <hook type="after_build" src="scripts/afterBuild.js" />
     
 
-創建`scripts/afterBuild.js`檔並添加下面的實現。 我們使用`fs.stat`方法的非同步版本來演示如何非同步功能可以通過掛鉤。
+创建`scripts/afterBuild.js`档并添加下面的实现。 我们使用`fs.stat`方法的非同步版本来演示如何非同步功能可以通过挂钩。
 
     module.exports = function(ctx) {
         // make sure android platform is part of build 
@@ -245,9 +245,9 @@ var Q = context.requireCordovaModule('q');
     };
     
 
-參數`環磷醯胺`在上面例子中通過科爾多瓦和表示腳本的完整路徑、 目標平臺、 命令列參數等的執行上下文，也暴露出額外的協助工具。 有關更多詳細資訊請參見`指令碼介面`節以上。
+参数`环磷醯胺`在上面例子中通过科尔多瓦和表示脚本的完整路径、 目标平台、 命令列参数等的执行上下文，也暴露出额外的协助工具。 有关更多详细资讯请参见`指令码介面`节以上。
 
-現在可以添加 android 平臺，並執行生成。
+现在可以添加 android 平台，并执行生成。
 
     cordova platform add android
     ..
@@ -256,6 +256,6 @@ var Q = context.requireCordovaModule('q');
     Size of path\to\app\platforms\android\build\outputs\apk\android-debug.apk is 1821193 bytes
     
 
-可以在這裡找到更多好的用法示例:
+可以在这里找到更多好的用法示例:
 
 <http://devgirl.org/2013/11/12/three-hooks-your-cordovaphonegap-project-needs/>

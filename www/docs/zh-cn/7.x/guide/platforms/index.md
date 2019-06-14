@@ -17,71 +17,71 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: 平臺指南
+title: 平台指南
 ---
 
-# 平臺指南
+# 平台指南
 
-在開發之前為任何下面列出的平臺，安裝科爾多瓦的命令列介面 (CLI)。（有關詳細資訊，見命令列介面）。
+在开发之前为任何下面列出的平台，安装科尔多瓦的命令列介面 (CLI)。（有关详细资讯，见命令列介面）。
 
-要開發科爾多瓦的應用程式，您必須為您的目標每個移動平臺安裝 Sdk。 這種安裝是工作的必要無論你做你在 SDK 中多數還是為您組建循環使用 CLI 的。
+要开发科尔多瓦的应用程式，您必须为您的目标每个移动平台安装 Sdk。 这种安装是工作的必要无论你做你在 SDK 中多数还是为您组建循环使用 CLI 的。
 
-下面列出每個*平臺指南*告訴您您需要知道要設置的每個平臺的開發環境： 在何處獲取 SDK、 如何設置設備模擬程式、 如何連接設備進行直接測試和如何管理簽署的關鍵要求。 附加指南提供了每個平臺特有的配置選項，說明添加外掛程式，資訊如何升級每個平臺，以及特定于平臺的命令列工具，作為一個較低級別的替代 `cordova` 命令列實用程式。
+下面列出每个*平台指南*告诉您您需要知道要设置的每个平台的开发环境： 在何处获取 SDK、 如何设置设备模拟程式、 如何连接设备进行直接测试和如何管理签署的关键要求。 附加指南提供了每个平台特有的配置选项，说明添加外挂程式，资讯如何升级每个平台，以及特定于平台的命令列工具，作为一个较低级别的替代 `cordova` 命令列实用程式。
 
-## 亞馬遜火 OS
+## 亚马逊火 OS
 
-*   [亞馬遜火 OS 平臺指南](amazonfireos/index.html)
-*   [亞馬遜火 OS 配置](amazonfireos/config.html)
-*   [亞馬遜火 OS WebViews](amazonfireos/webview.html)
-*   [亞馬遜火 OS 外掛程式](amazonfireos/plugin.html)
+*   [亚马逊火 OS 平台指南](amazonfireos/index.html)
+*   [亚马逊火 OS 配置](amazonfireos/config.html)
+*   [亚马逊火 OS WebViews](amazonfireos/webview.html)
+*   [亚马逊火 OS 外挂程式](amazonfireos/plugin.html)
 
-## Android 系統
+## Android 系统
 
-*   [Android 平臺指南](android/index.html)
-*   [Android 殼工具指南](android/tools.html)
-*   [Android 系統組態](android/config.html)
-*   [Android 外掛程式](android/plugin.html)
+*   [Android 平台指南](android/index.html)
+*   [Android 壳工具指南](android/tools.html)
+*   [Android 系统组态](android/config.html)
+*   [Android 外挂程式](android/plugin.html)
 *   [Android WebViews](android/webview.html)
-*   [升級 Android](android/upgrading.html)
+*   [升级 Android](android/upgrading.html)
 
 ## 黑莓 10
 
-*   [10 黑莓平臺指南](blackberry10/index.html)
-*   [黑莓 10 手機殼工具指南](blackberry10/tools.html)
+*   [10 黑莓平台指南](blackberry10/index.html)
+*   [黑莓 10 手机壳工具指南](blackberry10/tools.html)
 *   [黑莓 10 配置](blackberry10/config.html)
-*   [黑莓 10 外掛程式](blackberry10/plugin.html)
-*   [升級黑莓 10](blackberry10/upgrading.html)
+*   [黑莓 10 外挂程式](blackberry10/plugin.html)
+*   [升级黑莓 10](blackberry10/upgrading.html)
 
-## 火狐瀏覽器作業系統
+## 火狐浏览器作业系统
 
-*   [火狐瀏覽器作業系統平臺指南](firefoxos/index.html)
+*   [火狐浏览器作业系统平台指南](firefoxos/index.html)
 
 ## iOS
 
-*   [iOS 平臺指南](ios/index.html)
-*   [iOS 殼工具指南](ios/tools.html)
+*   [iOS 平台指南](ios/index.html)
+*   [iOS 壳工具指南](ios/tools.html)
 *   [iOS 配置](ios/config.html)
-*   [iOS 外掛程式](ios/plugin.html)
+*   [iOS 外挂程式](ios/plugin.html)
 *   [WebViews iOS](ios/webview.html)
-*   [升級 iOS](ios/upgrading.html)
+*   [升级 iOS](ios/upgrading.html)
 
 ## Ubuntu
 
-*   [Ubuntu 平臺指南](ubuntu/index.html)
+*   [Ubuntu 平台指南](ubuntu/index.html)
 
 ## Windows Phone 8
 
-*   [Windows Phone 8 平臺指南](wp8/index.html)
-*   [Windows Phone 8 外掛程式](wp8/plugin.html)
-*   [升級 Windows Phone 8](wp8/upgrade.html)
+*   [Windows Phone 8 平台指南](wp8/index.html)
+*   [Windows Phone 8 外挂程式](wp8/plugin.html)
+*   [升级 Windows Phone 8](wp8/upgrade.html)
 
 ## Windows
 
-*   [Windows 平臺指南](win8/index.html)
-*   [Windows 外掛程式](win8/plugin.html)
-*   [Windows 包裝](win8/packaging.html)
-*   [升級 Windows 8](win8/upgrading.html)
+*   [Windows 平台指南](win8/index.html)
+*   [Windows 外挂程式](win8/plugin.html)
+*   [Windows 包装](win8/packaging.html)
+*   [升级 Windows 8](win8/upgrading.html)
 
 ## Tizen
 
-*   [Tizen 平臺指南](tizen/index.html)
+*   [Tizen 平台指南](tizen/index.html)

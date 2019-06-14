@@ -22,21 +22,21 @@ title: resume
 
 # resume
 
-當應用程式從背景中檢索時，將觸發該事件。
+当应用程式从背景中检索时，将触发该事件。
 
     document.addEventListener("resume", yourCallbackFunction, false);
     
 
-## 詳細資訊
+## 详细资讯
 
-`resume`事件觸發時的本機平臺拔出從背景的應用程式。
+`resume`事件触发时的本机平台拔出从背景的应用程式。
 
-應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `[deviceready](events.deviceready.html)` 事件火災。
+应用程式通常应使用 `document.addEventListener` 将一个事件拦截器附加一次 `[deviceready](events.deviceready.html)` 事件火灾。
 
-## 支援的平臺
+## 支援的平台
 
-*   亞馬遜火 OS
-*   Android 系統
+*   亚马逊火 OS
+*   Android 系统
 *   黑莓 10
 *   iOS
 *   Windows Phone 8
@@ -87,15 +87,15 @@ title: resume
 
 ## iOS 的怪癖
 
-從調用任何互動式函數 `[pause](events.pause.html)` 事件處理常式以後執行應用程式恢復時，由發出信號 `resume` 事件。 這些包括警報， `console.log()` ，和任何調用從外掛程式或 API，科爾多瓦，穿過目標 C.
+从调用任何互动式函数 `[pause](events.pause.html)` 事件处理常式以后执行应用程式恢复时，由发出信号 `resume` 事件。 这些包括警报， `console.log()` ，和任何调用从外挂程式或 API，科尔多瓦，穿过目标 C.
 
-*   **活動**事件
+*   **活动**事件
     
-    特定于 iOS `active` 事件是可用作為替代 `resume` ，並檢測時使用者禁用**鎖定**按鈕以解鎖設備與應用程式在前臺運行。 如果為多工啟用的應用程式 （和設備），則這配對與其後 `resume` 事件，但只在 iOS 5 下的。 實際上，所有鎖定應用程式已啟用多工的 iOS 5 中被推到背景中。 對於應用程式繼續運行在 iOS 5 下鎖定時，禁用應用程式的多工處理通過將[UIApplicationExitsOnSuspend][1]設置為 `YES` 。 若要運行在 iOS 4 上鎖定狀態時，此設置並不重要。
+    特定于 iOS `active` 事件是可用作为替代 `resume` ，并检测时使用者禁用**锁定**按钮以解锁设备与应用程式在前台运行。 如果为多工启用的应用程式 （和设备），则这配对与其后 `resume` 事件，但只在 iOS 5 下的。 实际上，所有锁定应用程式已启用多工的 iOS 5 中被推到背景中。 对于应用程式继续运行在 iOS 5 下锁定时，禁用应用程式的多工处理通过将[UIApplicationExitsOnSuspend][1]设置为 `YES` 。 若要运行在 iOS 4 上锁定状态时，此设置并不重要。
 
-*   **恢復**事件
+*   **恢复**事件
     
-    當從調用 `resume` 事件處理常式，如互動式功能 `alert()` 需要包裝在 `setTimeout()` 調用超時值為零，否則應用程式掛起。 例如：
+    当从调用 `resume` 事件处理常式，如互动式功能 `alert()` 需要包装在 `setTimeout()` 调用超时值为零，否则应用程式挂起。 例如：
     
         document.addEventListener("resume", onResume, false);
         function onResume() {

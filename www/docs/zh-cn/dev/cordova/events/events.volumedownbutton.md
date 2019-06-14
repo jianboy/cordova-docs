@@ -22,21 +22,21 @@ title: volumedownbutton
 
 # volumedownbutton
 
-在使用者按下按鈕卷時，將觸發該事件。
+在使用者按下按钮卷时，将触发该事件。
 
     document.addEventListener("volumedownbutton", yourCallbackFunction, false);
     
 
-## 詳細資訊
+## 详细资讯
 
-如果您需要重寫預設音量降低的行為你可以註冊為事件攔截器 `volumedownbutton` 事件。
+如果您需要重写预设音量降低的行为你可以注册为事件拦截器 `volumedownbutton` 事件。
 
-應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `[deviceready](events.deviceready.html)` 事件火災。
+应用程式通常应使用 `document.addEventListener` 将一个事件拦截器附加一次 `[deviceready](events.deviceready.html)` 事件火灾。
 
-## 支援的平臺
+## 支援的平台
 
 *   黑莓 10
-*   安卓系統
+*   安卓系统
 
 ## 快速的示例
 

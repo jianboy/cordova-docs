@@ -22,4 +22,4 @@ title: database_displayname
 
 # database_displayname
 
-顯示資料庫的名稱。
+显示资料库的名称。

@@ -17,27 +17,27 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: 資料庫
+title: 资料库
 ---
 
-# 資料庫
+# 资料库
 
-提供對 SQL 資料庫的訪問。
+提供对 SQL 资料库的访问。
 
 ## 方法
 
-*   **交易記錄**： 運行資料庫事務。
+*   **交易记录**： 运行资料库事务。
 
-*   **changeVersion**: 允許腳本自動驗證的版本號和更新架構時更改它。
+*   **changeVersion**: 允许脚本自动验证的版本号和更新架构时更改它。
 
-## 詳細資訊
+## 详细资讯
 
 `window.openDatabase()`方法返回 `Database` 的物件。
 
-## 支援的平臺
+## 支援的平台
 
-*   Android 系統
-*   黑莓手機 WebWorks （OS 6.0 和更高）
+*   Android 系统
+*   黑莓手机 WebWorks （OS 6.0 和更高）
 *   iOS
 *   Tizen
 

@@ -22,25 +22,25 @@ title: deviceready
 
 # deviceready
 
-科爾多瓦是在完全載入時，將觸發該事件。
+科尔多瓦是在完全载入时，将触发该事件。
 
     document.addEventListener("deviceready", yourCallbackFunction, false);
     
 
-## 詳細資訊
+## 详细资讯
 
-此事件的任何應用程式至關重要。它發出信號科爾多瓦的設備已載入的 Api，並準備訪問。
+此事件的任何应用程式至关重要。它发出信号科尔多瓦的设备已载入的 Api，并准备访问。
 
-科爾多瓦組成的兩個代碼庫： 本機和 JavaScript。 雖然本機代碼載入、 顯示的自訂載入圖像。 然而，JavaScript 僅載入一旦 DOM 裝載。 這意味著 web 應用程式可能有可能調用的科爾多瓦 JavaScript 函數之前的相應的本機代碼變得可用。
+科尔多瓦组成的两个代码库： 本机和 JavaScript。 虽然本机代码载入、 显示的自订载入图像。 然而，JavaScript 仅载入一旦 DOM 装载。 这意味著 web 应用程式可能有可能调用的科尔多瓦 JavaScript 函数之前的相应的本机代码变得可用。
 
-`deviceready`科爾多瓦已完全載入後會觸發事件。 一次事件火，你可以安全地使對科爾多瓦 Api 的調用。 應用程式通常將附加一個事件攔截器與 `document.addEventListener` 一旦 HTML 文檔的 DOM 已載入。
+`deviceready`科尔多瓦已完全载入后会触发事件。 一次事件火，你可以安全地使对科尔多瓦 Api 的调用。 应用程式通常将附加一个事件拦截器与 `document.addEventListener` 一旦 HTML 文档的 DOM 已载入。
 
-`deviceready`事件從其他人的行為方式略有不同。註冊後的任何事件處理 `deviceready` 事件將觸發了其立即調用的回呼函數。
+`deviceready`事件从其他人的行为方式略有不同。注册后的任何事件处理 `deviceready` 事件将触发了其立即调用的回呼函数。
 
-## 支援的平臺
+## 支援的平台
 
-*   亞馬遜火 OS
-*   Android 系統
+*   亚马逊火 OS
+*   Android 系统
 *   黑莓 10
 *   iOS
 *   Tizen
