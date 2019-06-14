@@ -22,16 +22,16 @@ title: Windows Phone 8 平台指南
 
 # Windows Phone 8 平台指南
 
-本指南介绍如何设置您的 SDK 开发环境部署科尔多瓦的 Windows Phone 设备的应用程式。 它侧重于 Windows Phone 8，但提供如何支援 Windows Phone 7 的附加详细资讯。
+本指南介绍如何设置您的 SDK 开发环境部署Cordova的 Windows Phone 设备的应用程式。 它侧重于 Windows Phone 8，但提供如何支援 Windows Phone 7 的附加详细资讯。
 
-该示例演示如何使用任一特定的 Windows Phone 外壳程式工具来生成和生成的应用程式，或者跨平台科尔多瓦 CLI 讨论在命令列介面。 （见的概述的这些发展工作流比较）。此部分还显示了如何打开科尔多瓦的应用程式，以便您可以在 Visual Studio 中修改他们。 无论你采取哪种方法，您需要安装 Windows Phone SDK，如下所述。
+该示例演示如何使用任一特定的 Windows Phone 外壳程式工具来生成和生成的应用程式，或者跨平台Cordova CLI 讨论在命令列介面。 （见的概述的这些发展工作流比较）。此部分还显示了如何打开Cordova的应用程式，以便您可以在 Visual Studio 中修改他们。 无论你采取哪种方法，您需要安装 Windows Phone SDK，如下所述。
 
 见到 Windows Phone 平台特定的详细资讯如下：
 
 *   [Windows Phone 8 外挂程式](plugin.html)
 *   [升级 Windows Phone 8](upgrade.html)
 
-对于 Windows Phone 8 平台，科尔多瓦 web 视图依赖于互联网资源管理器中 10 作为自己的渲染引擎，因此作为一个实际问题你可以使用 IE10 的功能强大的调试器来测试并不调用科尔多瓦 Api 的任何 web 内容。 Windows Phone 开发者博客如何支援 IE10 和可比较的 WebKit 浏览器提供[有益的指导][1]。
+对于 Windows Phone 8 平台，Cordova web 视图依赖于互联网资源管理器中 10 作为自己的渲染引擎，因此作为一个实际问题你可以使用 IE10 的功能强大的调试器来测试并不调用Cordova Api 的任何 web 内容。 Windows Phone 开发者博客如何支援 IE10 和可比较的 WebKit 浏览器提供[有益的指导][1]。
 
  [1]: http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx
 
@@ -49,7 +49,7 @@ title: Windows Phone 8 平台指南
  [3]: http://www.microsoft.com/en-us/download/details.aspx?id=35471
  [4]: https://support.microsoft.com/en-us/kb/2797912
 
-为了开发科尔多瓦的 Windows Phone 设备的应用程式，您可以使用运行 Windows 的电脑，但你也可能发展的 mac，通过运行一个虚拟机器环境或者通过使用新兵训练营双启动 Windows 的分区。 请查阅这些资源以设置在 Mac 上所需的 Windows 开发环境：
+为了开发Cordova的 Windows Phone 设备的应用程式，您可以使用运行 Windows 的电脑，但你也可能发展的 mac，通过运行一个虚拟机器环境或者通过使用新兵训练营双启动 Windows 的分区。 请查阅这些资源以设置在 Mac 上所需的 Windows 开发环境：
 
 *   **VMWare 融合**： 要设置了 Windows 8 的虚拟机器，按照[Microsoft 开发人员网路][5]，所提供的说明，然后请参阅配置 VMWare 融合的虚拟环境运行 SDK 捆绑的模拟器的准备工作资讯。
 
@@ -75,13 +75,13 @@ title: Windows Phone 8 平台指南
  [8]: http://en.wikipedia.org/wiki/Second_Level_Address_Translation
  [9]: http://ark.intel.com/Products/VirtualizationTechnology
 
-## 使用科尔多瓦外壳工具
+## 使用Cordova外壳工具
 
-如果您想要使用科尔多瓦的 Windows Phone 居中外壳工具与 SDK 一起，你有两个基本选项：
+如果您想要使用Cordova的 Windows Phone 居中外壳工具与 SDK 一起，你有两个基本选项：
 
 *   本地访问它们生成的 CLI 的专案代码中。他们是可用在 `platforms/wp8/cordova` 目录在您添加后 `wp8` 平台如下所述。
 
-*   从单独的分发在[cordova.apache.org][10]下载它们。 科尔多瓦分布包含单独的档案，为每个平台。 一定要展开相应的存档， `cordova-wp8\wp8` 在这种情况下，在一个空的目录内。 有关批次处理实用程式可用在顶级 `bin` 目录。 (参阅**自述**档，如果有必要作更详细的指示）。
+*   从单独的分发在[cordova.apache.org][10]下载它们。 Cordova分布包含单独的档案，为每个平台。 一定要展开相应的存档， `cordova-wp8\wp8` 在这种情况下，在一个空的目录内。 有关批次处理实用程式可用在顶级 `bin` 目录。 (参阅**自述**档，如果有必要作更详细的指示）。
 
  [10]: http://cordova.apache.org
 
@@ -189,10 +189,10 @@ title: Windows Phone 8 平台指南
 
 ## 修改在 SDK 中的专案
 
-一旦你建立科尔多瓦的应用程式，如上文所述，您可以使用 SDK 打开它。 各种 `build` 命令会生成一个 Visual Studio 解决方案 (*.sln*) 档。 打开要修改在 Visual Studio 专案的档。 基于 web 的原始程式码，该代码是在专案内可用 `www` 目录。 以及其他工具 SDK 提供，下面的功能表控制项使您可以启动该应用程式在 Windows Phone 模拟器中：
+一旦你建立Cordova的应用程式，如上文所述，您可以使用 SDK 打开它。 各种 `build` 命令会生成一个 Visual Studio 解决方案 (*.sln*) 档。 打开要修改在 Visual Studio 专案的档。 基于 web 的原始程式码，该代码是在专案内可用 `www` 目录。 以及其他工具 SDK 提供，下面的功能表控制项使您可以启动该应用程式在 Windows Phone 模拟器中：
 
 ![][17]
 
  [17]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_vs.png
 
-如何在您的工作流中使用科尔多瓦的命令列工具或 SDK 的建议咨询的概述。 科尔多瓦 CLI 依赖于跨平台原始程式码通常会覆盖使用 SDK 的特定于平台的档。 如果你想要在 SDK 内工作，使用较低级别外壳工具作为 CLI 的替代方法。
+如何在您的工作流中使用Cordova的命令列工具或 SDK 的建议咨询的概述。 Cordova CLI 依赖于跨平台原始程式码通常会覆盖使用 SDK 的特定于平台的档。 如果你想要在 SDK 内工作，使用较低级别外壳工具作为 CLI 的替代方法。

@@ -22,9 +22,9 @@ title: Windows Phone 8.0 WebViews
 
 # Windows Phone 8.0 WebViews
 
-本指南说明如何将嵌入在一个较大的 Windows Phone 8.0 应用程式内的科尔多瓦启用 web 视图元件。
+本指南说明如何将嵌入在一个较大的 Windows Phone 8.0 应用程式内的Cordova启用 web 视图元件。
 
-要按照这些说明进行操作，请确保您有最新的科尔多瓦分布。 从[cordova.apache.org](http://cordova.apache.org)下载和解压缩其 Windows Phone 8.0 套装软体 （科尔多瓦-wp8-*.zip）。
+要按照这些说明进行操作，请确保您有最新的Cordova分布。 从[cordova.apache.org](http://cordova.apache.org)下载和解压缩其 Windows Phone 8.0 套装软体 （Cordova-wp8-*.zip）。
 
   1. 导航到包的 `wp8/framework` 目录和生成 `WPCordovaClassLib.sln` 。它将创建`Bin\Debug[Release]\WPCordovaClassLib.dll`.
 
@@ -42,4 +42,4 @@ title: Windows Phone 8.0 WebViews
 
   5. 复制 `wp8/template/config.xml` 到专案的根目录中和
 
-上面的说明将连结仅核心科尔多瓦元件，看到使用 Plugman 管理外挂程式连结科尔多瓦外挂程式。
+上面的说明将连结仅核心Cordova元件，看到使用 Plugman 管理外挂程式连结Cordova外挂程式。

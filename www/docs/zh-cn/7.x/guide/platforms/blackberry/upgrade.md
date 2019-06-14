@@ -22,13 +22,13 @@ title: 升级黑莓手机
 
 # 升级黑莓手机
 
-本指南演示如何修改黑莓手机的专案从科尔多瓦的旧版本进行升级。 这些说明适用于与旧集的前面的命令列工具创建的专案 `cordova` CLI 实用程式。 资讯，请参阅命令列介面如何更新的 CLI 版本。
+本指南演示如何修改黑莓手机的专案从Cordova的旧版本进行升级。 这些说明适用于与旧集的前面的命令列工具创建的专案 `cordova` CLI 实用程式。 资讯，请参阅命令列介面如何更新的 CLI 版本。
 
 ## 升级 2.8.0 专案到 2.9.0
 
 黑莓 10：
 
-1.  下载并解压缩到您的硬碟磁碟机上永久位置的科尔多瓦 2.9.0 源，例如到`~/Cordova-2.9.0`.
+1.  下载并解压缩到您的硬碟磁碟机上永久位置的Cordova 2.9.0 源，例如到`~/Cordova-2.9.0`.
 
 2.  退出任何正在运行的 SDK 工具： 日食、 Momentics 和类似。
 
@@ -38,11 +38,11 @@ title: 升级黑莓手机
 
 5.  从旧专案复制您的专案源 `/www` 目录到新的专案的 `/www` 目录。
 
-6.  科尔多瓦的脚本中的引用更新 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 以指向新 `cordova.js` 档。
+6.  Cordova的脚本中的引用更新 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 以指向新 `cordova.js` 档。
 
 ### BlackBerryOS/操作手册
 
-1.  下载并解压缩到您的硬碟磁碟机上永久位置的科尔多瓦 2.9.0 源，例如到`~/Cordova-2.9.0`.
+1.  下载并解压缩到您的硬碟磁碟机上永久位置的Cordova 2.9.0 源，例如到`~/Cordova-2.9.0`.
 
 2.  退出任何正在运行的 SDK 工具： 日食、 Momentics 和类似。
 
@@ -52,7 +52,7 @@ title: 升级黑莓手机
 
 5.  复制 `www/cordova.js` 到新专案中的档 `www` 目录中，并删除 `www/cordova.js` 档。
 
-6.  科尔多瓦的脚本中的引用更新 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 以指向新 `cordova.js` 档。
+6.  Cordova的脚本中的引用更新 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 以指向新 `cordova.js` 档。
 
 7.  复制 `native` 到现有专案中，并覆盖旧从新专案目录 `native` 目录。
 
@@ -64,9 +64,9 @@ title: 升级黑莓手机
 
 黑莓 10：
 
-黑莓 10 使用新的 CLI 模具和管理核心作为外挂程式的 Api。 说明将您的专案迁移到新的专案，而不是更新现有的专案，由于更新一个旧的专案的复杂性。 此外注意到科尔多瓦 js 指令档现在被称为 'cordova.js' 和不再包含版本的字串。
+黑莓 10 使用新的 CLI 模具和管理核心作为外挂程式的 Api。 说明将您的专案迁移到新的专案，而不是更新现有的专案，由于更新一个旧的专案的复杂性。 此外注意到Cordova js 指令档现在被称为 'cordova.js' 和不再包含版本的字串。
 
-1.  下载并解压缩到您的硬碟磁碟机上永久位置的科尔多瓦 2.8.0 源，例如到`~/Cordova-2.8.0`.
+1.  下载并解压缩到您的硬碟磁碟机上永久位置的Cordova 2.8.0 源，例如到`~/Cordova-2.8.0`.
 
 2.  退出任何正在运行的 SDK 工具： 日食、 Momentics 和类似。
 
@@ -76,11 +76,11 @@ title: 升级黑莓手机
 
 5.  从旧专案复制您的专案源 `/www` 目录到新的专案的 `/www` 目录。
 
-6.  科尔多瓦的脚本中的引用更新 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 以指向新 `cordova.js` 档。
+6.  Cordova的脚本中的引用更新 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 以指向新 `cordova.js` 档。
 
 BlackBerryOS/行动手册：
 
-1.  下载并解压缩到您的硬碟磁碟机上永久位置的科尔多瓦 2.8.0 源，例如到`~/Cordova-2.8.0`.
+1.  下载并解压缩到您的硬碟磁碟机上永久位置的Cordova 2.8.0 源，例如到`~/Cordova-2.8.0`.
 
 2.  退出任何正在运行的 SDK 工具： 日食、 Momentics 和类似。
 
@@ -90,7 +90,7 @@ BlackBerryOS/行动手册：
 
 5.  复制 `www/cordova.js` 到新专案中的档 `www` 目录中，并删除 `www/cordova.js` 档。
 
-6.  科尔多瓦的脚本中的引用更新 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 以指向新 `cordova.js` 档。
+6.  Cordova的脚本中的引用更新 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 以指向新 `cordova.js` 档。
 
 7.  复制 `native` 到现有专案中，并覆盖旧从新专案目录 `native` 目录。
 
@@ -100,7 +100,7 @@ BlackBerryOS/行动手册：
 
 ## 升级 2.6.0 专案到 2.7.0
 
-1.  下载并解压缩到您的硬碟磁碟机上永久位置的科尔多瓦 2.7.0 源，例如到`~/Cordova-2.7.0`.
+1.  下载并解压缩到您的硬碟磁碟机上永久位置的Cordova 2.7.0 源，例如到`~/Cordova-2.7.0`.
 
 2.  退出任何正在运行的 SDK 工具： 日食、 Momentics 和类似。
 
@@ -110,7 +110,7 @@ BlackBerryOS/行动手册：
 
 5.  复制 `www/cordova-2.7.0.js` 到新专案中的档 `www` 目录中，并删除 `www/cordova-2.6.0.js` 档。
 
-6.  科尔多瓦的脚本中的引用更新 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 以指向新 `cordova-2.7.0.js` 档。
+6.  Cordova的脚本中的引用更新 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 以指向新 `cordova-2.7.0.js` 档。
 
 7.  复制 `native` 到现有专案中，并覆盖旧从新专案目录 `native` 目录。
 
@@ -213,7 +213,7 @@ BlackBerryOS/行动手册：
 
 6.  打开 `sample/lib/` 目录和重命名 `cordova.2.3.0/` 到目录`cordova.2.4.0/`.
 
-7.  类型 `ant blackberry build` 或 `ant playbook build` 来更新 `www` 目录与更新科尔多瓦。
+7.  类型 `ant blackberry build` 或 `ant playbook build` 来更新 `www` 目录与更新Cordova。
 
 8.  打开 `www` 目录和更新您的 html 代码，使用新的 `cordova-2.4.0.js` 档。
 
@@ -248,7 +248,7 @@ BlackBerryOS/行动手册：
 
 6.  打开 `sample/lib/` 目录和重命名 `cordova.2.2.0/` 到目录`cordova.2.3.0/`.
 
-7.  类型 `ant blackberry build` 或 `ant playbook build` 来更新 `www` 目录与更新科尔多瓦。
+7.  类型 `ant blackberry build` 或 `ant playbook build` 来更新 `www` 目录与更新Cordova。
 
 8.  打开 `www` 目录和更新您的 html 代码，使用新的 `cordova-2.3.0.js` 档。
 
@@ -283,7 +283,7 @@ BlackBerryOS/行动手册：
 
 6.  打开 `sample/lib/` 目录和重命名 `cordova.2.1.0/` 到目录`cordova.2.2.0/`.
 
-7.  类型 `ant blackberry build` 或 `ant playbook build` 来更新 `www` 目录与更新科尔多瓦。
+7.  类型 `ant blackberry build` 或 `ant playbook build` 来更新 `www` 目录与更新Cordova。
 
 8.  打开 `www` 目录和更新您的 html 代码，使用新的 `cordova-2.2.0.js` 档。
 
@@ -315,7 +315,7 @@ BlackBerryOS/行动手册：
 
 5.  打开 `sample/lib/` 目录和重命名 `cordova.2.0.0/` 到目录`cordova.2.1.0/`.
 
-6.  类型 `ant blackberry build` 或 `ant playbook build` 来更新 `www` 目录与更新科尔多瓦。
+6.  类型 `ant blackberry build` 或 `ant playbook build` 来更新 `www` 目录与更新Cordova。
 
 7.  打开 `www` 目录和更新您的 html 代码，使用新的 `cordova-2.1.0.js` 档。
 
@@ -357,7 +357,7 @@ BlackBerryOS/行动手册：
 
 5.  打开 `sample/lib/` 目录和重命名 `cordova.1.9.0/` 到目录`cordova.2.0.0/`.
 
-6.  类型 `ant blackberry build` 或 `ant playbook build` 来更新 `www` 目录与更新科尔多瓦。
+6.  类型 `ant blackberry build` 或 `ant playbook build` 来更新 `www` 目录与更新Cordova。
 
 7.  打开 `www` 目录和更新您的 html 代码，使用新的 `cordova-2.0.0.js` 档。
 
@@ -411,7 +411,7 @@ BlackBerryOS/行动手册：
 
 5.  打开 `sample/lib/` 目录和重命名 `cordova.1.7.0/` 到目录`cordova.1.8.0/`.
 
-6.  类型 `ant blackberry build` 或 `ant playbook build` 来更新 `www` 目录与更新科尔多瓦。
+6.  类型 `ant blackberry build` 或 `ant playbook build` 来更新 `www` 目录与更新Cordova。
 
 7.  打开 `www` 目录和更新您的 html 代码，使用新的 `cordova-1.8.0.js` 档。
 

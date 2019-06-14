@@ -22,7 +22,7 @@ title: Windows Phone 的命令列工具
 
 # Windows Phone 的命令列工具
 
-`cordova`命令列实用程式是一个高级别的工具，允许您在一次跨几个平台生成的应用程式。 旧版本的科尔多瓦框架提供了特定于每个平台的命令列工具集。 若要使用它们作为 CLI 的替代，您需要从[cordova.apache.org][1]下载此版本的科尔多瓦。 下载档案中包含单独的档案，为每个平台。 展开您想要的目标平台。 这里描述的工具，通常可用在顶级 `bin` 目录中，否则为咨询**自述**档，了解有关更多详细的指示。
+`cordova`命令列实用程式是一个高级别的工具，允许您在一次跨几个平台生成的应用程式。 旧版本的Cordova框架提供了特定于每个平台的命令列工具集。 若要使用它们作为 CLI 的替代，您需要从[cordova.apache.org][1]下载此版本的Cordova。 下载档案中包含单独的档案，为每个平台。 展开您想要的目标平台。 这里描述的工具，通常可用在顶级 `bin` 目录中，否则为咨询**自述**档，了解有关更多详细的指示。
 
  [1]: http://cordova.apache.org
 
@@ -36,12 +36,12 @@ WP8 回购现在包括用于生成 WP7 + WP8 代码的应用程式。回购为�
 
 ## 创建一个专案
 
-有 2 种方法去有关创建一个新的 Apache 科尔多瓦 WP7 或 WP8 应用程式。
+有 2 种方法去有关创建一个新的 Apache Cordova WP7 或 WP8 应用程式。
 
 ### 运行该批次档来创建和安装范本
 
 *   根的回购协定包含 `createTemplates.bat` 档。 按两下它产生两个 `.zip` 档： `CordovaWP7_x_x_x.zip` 和 `CordovaWP8_x_x_x.zip` ，其中*x.x.x*表示的当前版本号。 若要方便地使用这些档在 Visual Studio 中的，复制它们到 `My Documents\Visual Studio
-2012\Templates\ProjectTemplates\` 。 然后，可以从 Visual Studio 中创建新的 Apache 科尔多瓦 Windows Phone 应用程式**档 → 新建专案**功能表。
+2012\Templates\ProjectTemplates\` 。 然后，可以从 Visual Studio 中创建新的 Apache Cordova Windows Phone 应用程式**档 → 新建专案**功能表。
 
 *   如果您从命令列运行该批次档，还可以调用同一个参数，以便自动安装
 

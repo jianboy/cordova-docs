@@ -22,7 +22,7 @@ title: 亚马逊火 OS 平台指南
 
 # 亚马逊火 OS 平台指南
 
-本指南介绍如何设置您的 SDK 开发环境部署亚马逊火 OS 的设备，如 Kindle 火 HDX 科尔多瓦应用软体。
+本指南介绍如何设置您的 SDK 开发环境部署亚马逊火 OS 的设备，如 Kindle 火 HDX Cordova应用软体。
 
 请参阅下列特定于平台的详细资讯：
 
@@ -32,7 +32,7 @@ title: 亚马逊火 OS 平台指南
 
 ## 简介
 
-通过针对亚马逊火 OS 平台，科尔多瓦开发人员可以创建利用先进的 web 引擎集成的 Kindle 消防设备的混合 web 应用程式。 亚马逊 web 视图 API (AWV) 是独有的火 OS 铬派生的 web 运行时。 为 web 视图使用的 Android 设备附带的投递更换，AWV 使成为可能，更好地执行功能更强大的混合 web 应用程式通过创建为一个更快的 JavaScript 引擎 (V8)、 远端侦错和 Kindle 消防设备包括加速 2D 画布的硬体优化提供支援和不支援的 Android 的 HTML5 功能的访问内置的 web 视图如: CSS 除垢，表单验证，getUserMedia，IndexedDB、 网路工作者、 WebSockets 和 WebGL。
+通过针对亚马逊火 OS 平台，Cordova开发人员可以创建利用先进的 web 引擎集成的 Kindle 消防设备的混合 web 应用程式。 亚马逊 web 视图 API (AWV) 是独有的火 OS 铬派生的 web 运行时。 为 web 视图使用的 Android 设备附带的投递更换，AWV 使成为可能，更好地执行功能更强大的混合 web 应用程式通过创建为一个更快的 JavaScript 引擎 (V8)、 远端侦错和 Kindle 消防设备包括加速 2D 画布的硬体优化提供支援和不支援的 Android 的 HTML5 功能的访问内置的 web 视图如: CSS 除垢，表单验证，getUserMedia，IndexedDB、 网路工作者、 WebSockets 和 WebGL。
 
 关于亚马逊 web 视图 API 的详细资讯，请参阅亚马逊开发人员门户[HTML5 混合应用程式页][1]。 有关获取开始和其他的问题支援问题，请参见亚马逊开发人员门户[论坛-HTML5 混合应用程式][2].
 
@@ -41,7 +41,7 @@ title: 亚马逊火 OS 平台指南
 
 ## 要求和支援
 
-亚马逊火 os 开发科尔多瓦的应用程式需要安装的各种支援档，包括 android 系统的发展，以及亚马逊 web 视图 SDK 所需的一切。 请检查下面的清单中所需的安装：
+亚马逊火 os 开发Cordova的应用程式需要安装的各种支援档，包括 android 系统的发展，以及亚马逊 web 视图 SDK 所需的一切。 请检查下面的清单中所需的安装：
 
 *   [命令列介面](../../cli/index.html)
 *   [Android SDK][3]
@@ -57,7 +57,7 @@ title: 亚马逊火 OS 平台指南
 
 从[developer.android.com/sdk][3]安装 Android SDK。 你可能会出现一个选择在哪里安装 SDK，否则移动下载 `adt-bundle` 树到无论您存储的开发工具。
 
-你需要在运行 Android SDK 管理器 （ `android` 从命令列） 开始您的科尔多瓦专案前至少一次。 一定要安装最新版本的 Android SDK 工具和 SDK 平台**具体 API 级别为 19**。 请关于亚马逊开发人员门户如何设置您的开发环境为 Kindle 火 OS 设备的详细资讯，参阅[您的开发环境设置][5]。
+你需要在运行 Android SDK 管理器 （ `android` 从命令列） 开始您的Cordova专案前至少一次。 一定要安装最新版本的 Android SDK 工具和 SDK 平台**具体 API 级别为 19**。 请关于亚马逊开发人员门户如何设置您的开发环境为 Kindle 火 OS 设备的详细资讯，参阅[您的开发环境设置][5]。
 
  [5]: https://developer.amazon.com/public/resources/development-tools/ide-tools/tech-docs/01-setting-up-your-development-environment
 
@@ -66,7 +66,7 @@ Apache Ant 生成工具[下载蚂蚁二进位分发][6]，解压缩到您以后�
  [6]: http://ant.apache.org/bindownload.cgi
  [7]: http://ant.apache.org/manual/index.html
 
-对于科尔多瓦的命令列工具来工作，您需要包括 Android SDK 的 `tools` 、 `platform-tools` 和 `apache-ant/bin` 目录路径环境中的。
+对于Cordova的命令列工具来工作，您需要包括 Android SDK 的 `tools` 、 `platform-tools` 和 `apache-ant/bin` 目录路径环境中的。
 
 #### Mac/Linux 路径
 
@@ -106,11 +106,11 @@ Apache Ant 生成工具[下载蚂蚁二进位分发][6]，解压缩到您以后�
 
 ### 亚马逊 web 视图 SDK
 
-若要创建使用目标亚马逊火 OS 平台的科尔多瓦应用程式，您需要下载、 解压和安装亚马逊 web 视图 SDK 的支援档。 这一步只需要为你的第一个亚马逊火 OS 专案做。
+若要创建使用目标亚马逊火 OS 平台的Cordova应用程式，您需要下载、 解压和安装亚马逊 web 视图 SDK 的支援档。 这一步只需要为你的第一个亚马逊火 OS 专案做。
 
 *   从[亚马逊开发人员门户][1]下载亚马逊 web 视图 SDK.
 
-*   复制 `awv_interface.jar` 从下载 SDK 到科尔多瓦的工作目录。如果它不存在，请创建 commonlibs(shown below) 资料夹：
+*   复制 `awv_interface.jar` 从下载 SDK 到Cordova的工作目录。如果它不存在，请创建 commonlibs(shown below) 资料夹：
     
     **Mac/Linux:** `~/.cordova/lib/commonlibs/`
     
@@ -118,7 +118,7 @@ Apache Ant 生成工具[下载蚂蚁二进位分发][6]，解压缩到您以后�
 
 ## 为亚马逊火 OS 创建新专案
 
-使用 `cordova` 实用程式来建立一个新的专案，如所述在科尔多瓦的命令列介面。例如，在一个原始程式码目录:
+使用 `cordova` 实用程式来建立一个新的专案，如所述在Cordova的命令列介面。例如，在一个原始程式码目录:
 
     $ cordova create hello com.example.hello "HelloWorld"
     $ cd hello
@@ -126,7 +126,7 @@ Apache Ant 生成工具[下载蚂蚁二进位分发][6]，解压缩到您以后�
     $ cordova build
     
 
-***注：***第一次亚马逊 fireos 平台的安装在您的系统，它会到科尔多瓦的工作目录，下载相应的档但然后会失败，因为它缺少 AWV SDK 的支援档 （见上文）。 请按照上面的说明来安装 `awv_interface.jar` ，删除，然后重新将亚马逊 fireos 平台添加到您的专案。 这一步只需要为第一次亚马逊火 OS 专案做。
+***注：***第一次亚马逊 fireos 平台的安装在您的系统，它会到Cordova的工作目录，下载相应的档但然后会失败，因为它缺少 AWV SDK 的支援档 （见上文）。 请按照上面的说明来安装 `awv_interface.jar` ，删除，然后重新将亚马逊 fireos 平台添加到您的专案。 这一步只需要为第一次亚马逊火 OS 专案做。
 
 ## 将部署到设备
 
@@ -136,7 +136,7 @@ Apache Ant 生成工具[下载蚂蚁二进位分发][6]，解压缩到您以后�
 
 您可以从命令列将应用程式推送到设备：
 
-    $ 科尔多瓦运行亚马逊 fireos
+    $ Cordova运行亚马逊 fireos
     
 
 或者在 Eclipse，按右键该专案，然后选择**→ 作为运行 Android 应用程式**.
@@ -145,7 +145,7 @@ Apache Ant 生成工具[下载蚂蚁二进位分发][6]，解压缩到您以后�
 
 ### 运行标志
 
-运行命令接受可选参数作为科尔多瓦的命令列介面文档中指定，火 OS 也接受额外 `--debug` 将启用远端 web 调试铬的开发人员工具的标志。
+运行命令接受可选参数作为Cordova的命令列介面文档中指定，火 OS 也接受额外 `--debug` 将启用远端 web 调试铬的开发人员工具的标志。
 
 要使用的开发工具，请输入：
 
@@ -163,7 +163,7 @@ Apache Ant 生成工具[下载蚂蚁二进位分发][6]，解压缩到您以后�
 
 ### 可选的 Eclipse 支援
 
-一旦创建，您可以使用 Eclipse 随之而来的 Android SDK 来修改专案。 要小心是否你继续使用科尔多瓦命令列工具，通过 Eclipse 所做的修改将被覆盖。
+一旦创建，您可以使用 Eclipse 随之而来的 Android SDK 来修改专案。 要小心是否你继续使用Cordova命令列工具，通过 Eclipse 所做的修改将被覆盖。
 
 *   启动**Eclipse**应用程式。
 

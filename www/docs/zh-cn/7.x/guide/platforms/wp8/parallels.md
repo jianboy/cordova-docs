@@ -22,7 +22,7 @@ title: 配置 512mb
 
 # 配置 512mb
 
-这一节演示如何在 Mac 上配置的相似之处桌面，以便您可以使用科尔多瓦生成 Windows Phone 应用程式。
+这一节演示如何在 Mac 上配置的相似之处桌面，以便您可以使用Cordova生成 Windows Phone 应用程式。
 
 [Microsoft 开发人员网路][1]提供有关如何运行 Windows 的相似之处的桌面下的一般说明。 之后安装 Windows，请执行以下步骤：
 

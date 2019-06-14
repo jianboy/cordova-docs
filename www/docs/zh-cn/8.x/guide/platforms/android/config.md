@@ -26,7 +26,7 @@ title: Android 系统组态
 
  [1]: config_ref_index.md.html#The%20config.xml%20File
 
-*   `KeepRunning`(boolean 类型的值，预设值为 `true` ）： 确定应用程式是否保持甚至后在后台运行 `[pause](../../../cordova/events/events.pause.html)` 事件火灾。 将此设置为 `false` 不会杀死后的 app `[pause](../../../cordova/events/events.pause.html)` 事件，但只是暂停执行代码内科尔多瓦 web 视图应用程式时在背景中。
+*   `KeepRunning`(boolean 类型的值，预设值为 `true` ）： 确定应用程式是否保持甚至后在后台运行 `[pause](../../../cordova/events/events.pause.html)` 事件火灾。 将此设置为 `false` 不会杀死后的 app `[pause](../../../cordova/events/events.pause.html)` 事件，但只是暂停执行代码内Cordova web 视图应用程式时在背景中。
 
         <preference name="KeepRunning" value="false"/>
 
@@ -83,7 +83,7 @@ title: Android 系统组态
         <preference name="AndroidLaunchMode" value="singleTop"/>
 
 
-*   `DefaultVolumeStream`（字串，预设值为 `default` ，加在科尔多瓦 android 3.7.0): 设置的音量按钮连结到的硬体音量。 预设情况下这是"叫"手机和平板电脑的"媒体"。 将此设置为"媒体"有您的应用程式卷按钮总是改变媒体卷。 请注意，当使用科尔多瓦的媒体外挂程式时，音量按钮将动态地更改为任何媒体物件处于活动状态时，控制的媒体卷。
+*   `DefaultVolumeStream`（字串，预设值为 `default` ，加在Cordova android 3.7.0): 设置的音量按钮连结到的硬体音量。 预设情况下这是"叫"手机和平板电脑的"媒体"。 将此设置为"媒体"有您的应用程式卷按钮总是改变媒体卷。 请注意，当使用Cordova的媒体外挂程式时，音量按钮将动态地更改为任何媒体物件处于活动状态时，控制的媒体卷。
 
 *   `OverrideUserAgent`(字串，预设情况下未设置): 如果设置，值将替换旧使用者代理的 web 视图。 它有利于从应用程式或浏览器请求时请求远端页面，识别。 使用持谨慎态度，这可能导致与 web 伺服器的 compitiable 问题。 对于大多数情况下，改用 AppendUserAgent。
 

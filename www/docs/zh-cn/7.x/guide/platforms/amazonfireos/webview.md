@@ -22,13 +22,13 @@ title: 亚马逊火 OS WebViews
 
 # 亚马逊火 OS WebViews
 
-从 3.3.0 开始，你可以使用科尔多瓦作为亚马逊火 OS 应用程式中的一个元件。 亚马逊火 OS 是指这种元件 `CordovaWebView` 。 `CordovaWebView`扩展建立在开放原始码铬专案的亚马逊 web 视图。 通过利用此功能，您的 web 应用程式可以利用最新的 HTML5 web 标准在现代 web 运行时引擎中运行。
+从 3.3.0 开始，你可以使用Cordova作为亚马逊火 OS 应用程式中的一个元件。 亚马逊火 OS 是指这种元件 `CordovaWebView` 。 `CordovaWebView`扩展建立在开放原始码铬专案的亚马逊 web 视图。 通过利用此功能，您的 web 应用程式可以利用最新的 HTML5 web 标准在现代 web 运行时引擎中运行。
 
 如果你是亚马逊火 OS 不熟悉，您应首先熟悉亚马逊火 OS 平台指南和有最新的 Sdk 安装之前您尝试嵌入 web 视图的更多不寻常的发展方案。
 
 ## 系统必备元件
 
-*   科尔多瓦 3.3.0 或更高
+*   Cordova 3.3.0 或更高
 
 *   Android SDK 更新到最新的 SDK
 
@@ -36,11 +36,11 @@ title: 亚马逊火 OS WebViews
 
 ## 在亚马逊火 OS 专案中使用 CordovaWebView 的指南
 
-1.  要按照这些说明进行操作，请确保您有最新的科尔多瓦分布。从[cordova.apache.org][1]下载并解压其亚马逊火 OS 套装程式。
+1.  要按照这些说明进行操作，请确保您有最新的Cordova分布。从[cordova.apache.org][1]下载并解压其亚马逊火 OS 套装程式。
 
 2.  下载并展开[亚马逊 web 视图 SDK][2] ，然后复制到 awv_interface.jar `/framework/libs` 目录。 创建库 / 资料夹如果它不存在。
 
-3.  导航到包的 `/framework` 目录，运行 `ant jar` 。它创建了科尔多瓦 `.jar` 档中，形成了作为`/framework/cordova-x.x.x.jar`.
+3.  导航到包的 `/framework` 目录，运行 `ant jar` 。它创建了Cordova `.jar` 档中，形成了作为`/framework/cordova-x.x.x.jar`.
 
 4.  复制 `.jar` 到 Android 专案档案 `/libs` 目录。
 

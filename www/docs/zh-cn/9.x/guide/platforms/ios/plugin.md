@@ -23,7 +23,7 @@ toc_title: iOS
 
 # iOS 外挂程式
 
-此部分提供了如何在 iOS 平台上实现本机外挂程式代码的详细资讯。 之前读这篇文章，请参阅应用程式外挂程式外挂程式的结构和其共同的 JavaScript 介面的概述。 这一节继续表明通信从科尔多瓦 web 视图的本机平台和后面的示例*回声*外挂程式。
+此部分提供了如何在 iOS 平台上实现本机外挂程式代码的详细资讯。 之前读这篇文章，请参阅应用程式外挂程式外挂程式的结构和其共同的 JavaScript 介面的概述。 这一节继续表明通信从Cordova web 视图的本机平台和后面的示例*回声*外挂程式。
 
 IOS 外挂程式作为扩展目标 C 类实现 `CDVPlugin` 类。 对于 JavaScript 的 `exec` 方法的 `service` 参数将映射到一个目标 C 类，每个外挂程式必须注册为 `<feature>` 标记命名的应用程式目录中 `config.xml` 档。
 
@@ -36,14 +36,14 @@ IOS 外挂程式作为扩展目标 C 类实现 `CDVPlugin` 类。 对于 JavaScr
 
 这封送一个请求从 `UIWebView` 到 iOS 本机一侧，有效地调用 `action` 方法在 `service` 类，传入的参数中的 `args` 阵列。
 
-指定作为外挂程式 `<feature>` 科尔多瓦 iOS 应用程式专案中的标记 `config.xml` 档，使用 `plugin.xml` 档来自动应用程式外挂程式中所述注入此标记：
+指定作为外挂程式 `<feature>` Cordova iOS 应用程式专案中的标记 `config.xml` 档，使用 `plugin.xml` 档来自动应用程式外挂程式中所述注入此标记：
 
         <feature name="LocalStorage">
             <param name="ios-package" value="CDVLocalStorage" />
         </feature>
     
 
-该功能的 `name` 属性应匹配您所指定的作为 JavaScript `exec` 调用的 `service` 参数。 `value`属性应与外挂程式的目标 C 类的名称相匹配。 `<param>`元素的 `name` 应始终是 `ios-package` 。 如果你不遵守这些准则，该外挂程式可能会编译，但科尔多瓦可能仍然不能够访问它。
+该功能的 `name` 属性应匹配您所指定的作为 JavaScript `exec` 调用的 `service` 参数。 `value`属性应与外挂程式的目标 C 类的名称相匹配。 `<param>`元素的 `name` 应始终是 `ios-package` 。 如果你不遵守这些准则，该外挂程式可能会编译，但Cordova可能仍然不能够访问它。
 
 ## 外挂程式初始化和存留期
 
@@ -59,7 +59,7 @@ IOS 外挂程式作为扩展目标 C 类实现 `CDVPlugin` 类。 对于 JavaScr
 
 外挂程式需要长时间运行的请求，如媒体重播、 听众，保持内部状态应执行的背景活动 `onReset` 方法来清理这些活动。 在方法运行时 `UIWebView` 定位到新的一页或刷新，重新载入 JavaScript。
 
-## 写作 iOS 科尔多瓦外挂程式
+## 写作 iOS Cordova外挂程式
 
 JavaScript 调用触发外挂程式请求到本机的一边，和相应的 iOS 目标 C 外挂程式映射正确地在 `config.xml` 档中，但最后 iOS 目标 C 外挂程式类看起来像什么？ 无论派往与 JavaScript 的外挂程式 `exec` 函数传递到相应的外挂程式类的 `action` 方法。 外挂程式的方法有此签名：
 
@@ -107,7 +107,7 @@ JavaScript 调用触发外挂程式请求到本机的一边，和相应的 iOS �
         </platform>
     
 
-然后我们将添加以下 `Echo.h` 和 `Echo.m` 档到 `Plugins` 内科尔多瓦 iOS 应用程式目录的资料夹：
+然后我们将添加以下 `Echo.h` 和 `Echo.m` 档到 `Plugins` 内Cordova iOS 应用程式目录的资料夹：
 
         /********* Echo.h Cordova Plugin Header *******/
     
@@ -173,7 +173,7 @@ JavaScript 调用触发外挂程式请求到本机的一边，和相应的 iOS �
 
 ## 调试 iOS 外挂程式
 
-若要调试的目标 C 一边，你需要 Xcode 的内置调试器。 对于 JavaScript，在 iOS 5.0 或更高版本上你可以使用 [Weinre、 Apache 科尔多瓦专案][3] 或 [iWebInspector、 一个协力厂商实用程式][4]。 Ios 8，您可以附加 Safari 8.0 8 模拟器在 iOS 中运行的应用程式。
+若要调试的目标 C 一边，你需要 Xcode 的内置调试器。 对于 JavaScript，在 iOS 5.0 或更高版本上你可以使用 [Weinre、 Apache Cordova专案][3] 或 [iWebInspector、 一个协力厂商实用程式][4]。 Ios 8，您可以附加 Safari 8.0 8 模拟器在 iOS 中运行的应用程式。
 
  [3]: https://github.com/apache/cordova-weinre
  [4]: http://www.iwebinspector.com/

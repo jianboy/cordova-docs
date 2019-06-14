@@ -26,7 +26,7 @@ title: 亚马逊火 OS 配置
 
  [1]: config_ref_index.md.html#The%20config.xml%20File
 
-*   `KeepRunning`(boolean 类型的值，预设值为 `true` ）： 确定应用程式是否保持甚至后在后台运行 `[pause](../../../cordova/events/events.pause.html)` 事件火灾。 将此设置为 `false` 不会杀死后的 app `[pause](../../../cordova/events/events.pause.html)` 事件，但只是暂停执行代码内科尔多瓦 web 视图应用程式时在背景中。
+*   `KeepRunning`(boolean 类型的值，预设值为 `true` ）： 确定应用程式是否保持甚至后在后台运行 `[pause](../../../cordova/events/events.pause.html)` 事件火灾。 将此设置为 `false` 不会杀死后的 app `[pause](../../../cordova/events/events.pause.html)` 事件，但只是暂停执行代码内Cordova web 视图应用程式时在背景中。
     
         <preference name="KeepRunning" value="false"/>
         

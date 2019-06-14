@@ -22,24 +22,24 @@ title: 升级 Windows 8
 
 # 升级 Windows 8
 
-本指南演示如何修改 Windows 8 专案从科尔多瓦的旧版本进行升级。 大多数这些说明适用于与旧集的前面的命令列工具创建的专案 `cordova` CLI 实用程式。 命令列介面资讯，请参阅如何更新的 CLI 版本。
+本指南演示如何修改 Windows 8 专案从Cordova的旧版本进行升级。 大多数这些说明适用于与旧集的前面的命令列工具创建的专案 `cordova` CLI 实用程式。 命令列介面资讯，请参阅如何更新的 CLI 版本。
 
 ## 从 3.1.0 升级到 3.2.0
 
-为创建的科尔多瓦 CLI 的专案：
+为创建的Cordova CLI 的专案：
 
 1.  更新 `cordova` CLI 版本。请参阅命令列介面。
 
 2.  运行`cordova platform update windows8`.
 
-对于不使用 CLI 科尔多瓦创建的专案，请运行：
+对于不使用 CLI Cordova创建的专案，请运行：
 
         bin\update <project_path>
     
 
 ## 升级到 3.1.0
 
-在科尔多瓦 3.1.0 引入了对 Windows 8 的科尔多瓦 CLI 支援。若要升级，我们建议创建新的科尔多瓦 CLI 专案和所有必要的资产转移。
+在Cordova 3.1.0 引入了对 Windows 8 的Cordova CLI 支援。若要升级，我们建议创建新的Cordova CLI 专案和所有必要的资产转移。
 
 ## 从 2.8.0 升级到 2.9.0
 

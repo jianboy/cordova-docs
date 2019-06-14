@@ -22,18 +22,18 @@ title: deviceready
 
 # deviceready
 
-科尔多瓦是在完全载入时，将触发该事件。
+Cordova是在完全载入时，将触发该事件。
 
     document.addEventListener("deviceready", yourCallbackFunction, false);
     
 
 ## 详细资讯
 
-此事件的任何应用程式至关重要。它发出信号科尔多瓦的设备已载入的 Api，并准备访问。
+此事件的任何应用程式至关重要。它发出信号Cordova的设备已载入的 Api，并准备访问。
 
-科尔多瓦组成的两个代码库： 本机和 JavaScript。 虽然本机代码载入、 显示的自订载入图像。 然而，JavaScript 仅载入一旦 DOM 装载。 这意味著 web 应用程式可能有可能调用的科尔多瓦 JavaScript 函数之前的相应的本机代码变得可用。
+Cordova组成的两个代码库： 本机和 JavaScript。 虽然本机代码载入、 显示的自订载入图像。 然而，JavaScript 仅载入一旦 DOM 装载。 这意味著 web 应用程式可能有可能调用的Cordova JavaScript 函数之前的相应的本机代码变得可用。
 
-`deviceready`科尔多瓦已完全载入后会触发事件。 一次事件火，你可以安全地使对科尔多瓦 Api 的调用。 应用程式通常将附加一个事件拦截器与 `document.addEventListener` 一旦 HTML 文档的 DOM 已载入。
+`deviceready`Cordova已完全载入后会触发事件。 一次事件火，你可以安全地使对Cordova Api 的调用。 应用程式通常将附加一个事件拦截器与 `document.addEventListener` 一旦 HTML 文档的 DOM 已载入。
 
 `deviceready`事件从其他人的行为方式略有不同。注册后的任何事件处理 `deviceready` 事件将触发了其立即调用的回呼函数。
 

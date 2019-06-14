@@ -25,11 +25,11 @@ toc_title: Ubuntu
 
 ## 初始版本
 
-欢迎来到科尔多瓦 Ubuntu 平台支援的初始版本。 此版本中，重点是在 Ubuntu 的系统上开发和使用概述中讨论的跨平台工作流。 这包括将 Ubuntu 平台添加到您的专案，添加标准科尔多瓦外挂程式，以及建设和运行的 Ubuntu 平台的应用程式。
+欢迎来到Cordova Ubuntu 平台支援的初始版本。 此版本中，重点是在 Ubuntu 的系统上开发和使用概述中讨论的跨平台工作流。 这包括将 Ubuntu 平台添加到您的专案，添加标准Cordova外挂程式，以及建设和运行的 Ubuntu 平台的应用程式。
 
 ### Ubuntu SDK
 
-您还可能想要安装 Ubuntu QtCreator 开发环境。 请参阅[developer.ubuntu.com][1]为更多的资讯。 (QtCreator SDK 不是需要将 Ubuntu 平台支援添加到应用程式科尔多瓦。)
+您还可能想要安装 Ubuntu QtCreator 开发环境。 请参阅[developer.ubuntu.com][1]为更多的资讯。 (QtCreator SDK 不是需要将 Ubuntu 平台支援添加到应用程式Cordova。)
 
  [1]: http://developer.ubuntu.com
 
@@ -39,7 +39,7 @@ Ubuntu 是众所周知的其桌面环境 （用于笔记本电脑、 Pc 和此�
 
 ### 最新资讯
 
-科尔多瓦 app 支援 Ubuntu 运行时平台的最新资讯，请参阅[wiki.ubuntu.com/Cordova][2].
+Cordova app 支援 Ubuntu 运行时平台的最新资讯，请参阅[wiki.ubuntu.com/Cordova][2].
 
  [2]: http://wiki.ubuntu.com/Cordova
 
@@ -47,11 +47,11 @@ Ubuntu 是众所周知的其桌面环境 （用于笔记本电脑、 Pc 和此�
 
 此初始发行版本的开发平台应该是 Ubuntu 桌面。Ubuntu 13.10 (代号 '暧昧') 或更高版本需要享受完整的支援的功能集。
 
-你可以安装科尔多瓦非 Ubuntu 使用在系统上 （故宫），但重要的能力，在这个时候只提供通过 Ubuntu debian 套装软体。
+你可以安装Cordova非 Ubuntu 使用在系统上 （故宫），但重要的能力，在这个时候只提供通过 Ubuntu debian 套装软体。
 
-## 科尔多瓦安装
+## Cordova安装
 
-添加到您的 Ubuntu 系统 Ubuntu 科尔多瓦[个人包存档][3]：
+添加到您的 Ubuntu 系统 Ubuntu Cordova[个人包存档][3]：
 
  [3]: https://launchpad.net/~cordova-ubuntu/+archive/ppa
 
@@ -59,7 +59,7 @@ Ubuntu 是众所周知的其桌面环境 （用于笔记本电脑、 Pc 和此�
     $ sudo apt-get update
     
 
-安装科尔多瓦 cli 包 （和它的依赖项）：
+安装Cordova cli 包 （和它的依赖项）：
 
     $ sudo apt-get install cordova-cli
     

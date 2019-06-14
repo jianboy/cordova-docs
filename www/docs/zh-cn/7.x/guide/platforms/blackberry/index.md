@@ -29,15 +29,15 @@ title: 黑莓平台指南
 *   [黑莓手机的外挂程式](plugin.html)
 *   [黑莓手机的命令列工具](tools.html)
 
-上面的命令列工具请参阅科尔多瓦 3.0 以前的版本。关于当前介面的资讯，请参阅命令列介面。
+上面的命令列工具请参阅Cordova 3.0 以前的版本。关于当前介面的资讯，请参阅命令列介面。
 
 ## 要求和支援
 
-此版本的黑莓手机不支援由 `cordova` 所述的命令列介面，而是由一组单独的命令列工具的实用程式。 从[cordova.apache.org][1]下载的科尔多瓦分布.
+此版本的黑莓手机不支援由 `cordova` 所述的命令列介面，而是由一组单独的命令列工具的实用程式。 从[cordova.apache.org][1]下载的Cordova分布.
 
  [1]: http://cordova.apache.org/#download
 
-科尔多瓦的黑莓手机依赖于[黑莓 WebWorks 框架][2]，这是可用于 Windows XP （32 位），Windows 7 （32 位和 64 位） 和 Mac (OS X 10.6.4+)。 WebWorks 应用程式可以*只*在以下黑莓平台上部署：
+Cordova的黑莓手机依赖于[黑莓 WebWorks 框架][2]，这是可用于 Windows XP （32 位），Windows 7 （32 位和 64 位） 和 Mac (OS X 10.6.4+)。 WebWorks 应用程式可以*只*在以下黑莓平台上部署：
 
  [2]: https://bdsc.webapps.blackberry.com/html5
 
@@ -68,17 +68,17 @@ WebWorks 需要 JAVA 开发工具组 (JDK)。 对于 Windows，使用 32 位版�
  [7]: https://www.blackberry.com/SignedKeys
  [8]: https://developer.blackberry.com/html5/documentation/signing_setup_bb10_apps_2008396_11.html
 
-## 安装科尔多瓦
+## 安装Cordova
 
-下载并解压缩[科尔多瓦][1]的最新副本.
+下载并解压缩[Cordova][1]的最新副本.
 
 ## 设立了一个新的专案
 
-*   打开一个命令列终端并导航到您解压缩科尔多瓦。
+*   打开一个命令列终端并导航到您解压缩Cordova。
 
-*   那里是科尔多瓦支援每个平台的目录。导航到 `blackberry` 目录。
+*   那里是Cordova支援每个平台的目录。导航到 `blackberry` 目录。
 
-*   `blackberry`目录中包含几个子目录。 `example`目录中包含一个完整的科尔多瓦专案。 复制 `example` 目录到您的电脑上的另一个位置和导航到那里。
+*   `blackberry`目录中包含几个子目录。 `example`目录中包含一个完整的Cordova专案。 复制 `example` 目录到您的电脑上的另一个位置和导航到那里。
 
 *   编辑 `project.properties` 档，以指定您使用的 WebWorks SDK。 例如，下面是黑莓 PlayBook，黑莓智慧手机 (OS5-7） 或黑莓 10 (QNX) 的各自设置：
     
@@ -87,7 +87,7 @@ WebWorks 需要 JAVA 开发工具组 (JDK)。 对于 Windows，使用 32 位版�
 
 这些参数对应于参数指定在生成您的专案时。首次运行这些命令，它们生成一个"HelloWorld"应用程式：
 
-        科尔多瓦/生成 playbook 科尔多瓦/生成黑莓科尔多瓦/生成 qnx
+        Cordova/生成 playbook Cordova/生成黑莓Cordova/生成 qnx
     
 
 和 SDK，您还需要注册的代码签名金钥和调试标记。 签名金钥允许您分发通过黑莓应用程式。 调试标记使您可以测试黑莓手机模拟器或设备上未签名的应用程式。 您不需要创建和安装调试标记自己 ；如果你提供的金钥库的密码，生成脚本创建，并为您安装调试标记。 若要设置签名金钥，请转到黑莓手机网站来得到它，确保保留您指定的密码。 然后运行 `blackberry-signer` 实用套装程式含的 SDK。 黑莓手机提供了更多的资讯在这里：
@@ -126,7 +126,7 @@ Files\\BlackBerry\\Simulator`.
 
 一旦该模拟程式已安装并运行，运行任一以下操作以安装到主画面的应用程式：
 
-        科尔多瓦/运行 playbook 科尔多瓦/运行黑莓
+        Cordova/运行 playbook Cordova/运行黑莓
     
 
 如果设备连接到您的电脑是否提示您时，回答否。
@@ -145,7 +145,7 @@ Files\\BlackBerry\\Simulator`.
 
 然后从该专案的目录，运行你会在模拟程式中查看该应用程式的命令之一：
 
-        科尔多瓦/运行 playbook 科尔多瓦/运行黑莓
+        Cordova/运行 playbook Cordova/运行黑莓
     
 
 如果设备连接到您的电脑是否提示您时，回答是。

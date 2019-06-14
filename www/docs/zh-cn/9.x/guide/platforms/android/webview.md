@@ -22,13 +22,13 @@ title: Android WebViews
 
 # Android WebViews
 
-本指南说明如何将嵌入在较大型的 Android 应用程式内的科尔多瓦启用 web 视图元件。这些元件可以如何与对方沟通的详细资讯，请参阅应用程式外挂程式。
+本指南说明如何将嵌入在较大型的 Android 应用程式内的Cordova启用 web 视图元件。这些元件可以如何与对方沟通的详细资讯，请参阅应用程式外挂程式。
 
-如果你熟悉 Android，你应首先熟悉 Android 平台指南和之前你尝试更不寻常发展嵌入 web 视图的选项，安装了最新 Android sdk。 从开始科尔多瓦 1.9，Android 平台依靠 `CordovaWebView` 元件，生成遗留下来 `CordovaActivity` 预日期 1.9 版本的元件。
+如果你熟悉 Android，你应首先熟悉 Android 平台指南和之前你尝试更不寻常发展嵌入 web 视图的选项，安装了最新 Android sdk。 从开始Cordova 1.9，Android 平台依靠 `CordovaWebView` 元件，生成遗留下来 `CordovaActivity` 预日期 1.9 版本的元件。
 
-1.  要按照这些说明进行操作，请确保您有最新的科尔多瓦分布。从[cordova.apache.org][1]下载和解压缩其 android 系统的套装软体。
+1.  要按照这些说明进行操作，请确保您有最新的Cordova分布。从[cordova.apache.org][1]下载和解压缩其 android 系统的套装软体。
 
-2.  导航到 Android 包 `/framework` 目录并运行 `ant jar` 。它创建了科尔多瓦 `.jar` 档中，形成了作为`/framework/cordova-x.x.x.jar`.
+2.  导航到 Android 包 `/framework` 目录并运行 `ant jar` 。它创建了Cordova `.jar` 档中，形成了作为`/framework/cordova-x.x.x.jar`.
 
 3.  复制 `.jar` 到 Android 专案档案 `/libs` 目录。
 

@@ -23,9 +23,9 @@ toc_title: Store data
 
 # 存储
 
-> 科尔多瓦的存储选项的概述。
+> Cordova的存储选项的概述。
 
-几个存储 Api 是对科尔多瓦应用程式可用。请参阅 [html5rocks][1]。有关更完整的概述和示例。
+几个存储 Api 是对Cordova应用程式可用。请参阅 [html5rocks][1]。有关更完整的概述和示例。
 
  [1]: http://www.html5rocks.com/en/features/storage
 
@@ -63,7 +63,7 @@ toc_title: Store data
 
 ## 基于外挂程式的选项
 
-除了上面列出的 Api 的存储，[档 API][5]允许您对本地档案系统上的缓存资料。 其他的[科尔多瓦外挂程式][6]提供类似的存储选项。
+除了上面列出的 Api 的存储，[档 API][5]允许您对本地档案系统上的缓存资料。 其他的[Cordova外挂程式][6]提供类似的存储选项。
 
  [5]: https://github.com/apache/cordova-plugin-file/blob/master/doc/index.md
  [6]: http://plugins.cordova.io/

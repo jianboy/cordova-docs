@@ -22,13 +22,13 @@ title: WebViews iOS
 
 # WebViews iOS
 
-本指南说明如何将嵌入在一个较大的 iOS 应用程式内的科尔多瓦启用 web 视图元件。这些元件可以如何与对方沟通的详细资讯，请参阅应用程式外挂程式。
+本指南说明如何将嵌入在一个较大的 iOS 应用程式内的Cordova启用 web 视图元件。这些元件可以如何与对方沟通的详细资讯，请参阅应用程式外挂程式。
 
-WebViews 为 iOS 支援开始与科尔多瓦版本 1.4，用`切肉刀`元件为其 Xcode 范本可作为一个参考实现。 科尔多瓦 2.0 及更高版本仅支援基于子专案的刀实施。
+WebViews 为 iOS 支援开始与Cordova版本 1.4，用`切肉刀`元件为其 Xcode 范本可作为一个参考实现。 Cordova 2.0 及更高版本仅支援基于子专案的刀实施。
 
-这些指示要求至少科尔多瓦 3.x 和 Xcode 6.0 中，以及从新创建的 iOS 专案的 `config.xml` 档。 你可以使用程式的命令列介面来创建一个新专案，然后获取 `config.xml` 从档中的命名的应用程式子目录内`platforms/ios`.
+这些指示要求至少Cordova 3.x 和 Xcode 6.0 中，以及从新创建的 iOS 专案的 `config.xml` 档。 你可以使用程式的命令列介面来创建一个新专案，然后获取 `config.xml` 从档中的命名的应用程式子目录内`platforms/ios`.
 
-要按照这些说明进行操作，请确保您有最新的科尔多瓦分布。从[cordova.apache.org][1]下载并解压其 iOS 包。
+要按照这些说明进行操作，请确保您有最新的Cordova分布。从[cordova.apache.org][1]下载并解压其 iOS 包。
 
  [1]: http://cordova.apache.org
 
@@ -36,7 +36,7 @@ WebViews 为 iOS 支援开始与科尔多瓦版本 1.4，用`切肉刀`元件为
 
 1.  如果它正在运行，请退出 Xcode。
 
-2.  打开一个终端并导航到科尔多瓦 iOS 的原始目录。
+2.  打开一个终端并导航到Cordova iOS 的原始目录。
 
 3.  复制 `config.xml` 档到专案目录上文所述。
 
@@ -87,7 +87,7 @@ WebViews 为 iOS 支援开始与科尔多瓦版本 1.4，用`切肉刀`元件为
         "$(BUILT_PRODUCTS_DIR)"
         
     
-    科尔多瓦 2.1.0，如 `CordovaLib` 已升级为使用**自动引用计数 (弧)**。 你不需要升级到**弧**要使用 `CordovaLib` ，但如果您想要升级您的专案使用**弧**，则应使用 Xcode 迁移向导从**编辑 → 重构 → 转换为目标 C 弧...**功能表中，**取消选择 libCordova.a**，然后运行向导完成。
+    Cordova 2.1.0，如 `CordovaLib` 已升级为使用**自动引用计数 (弧)**。 你不需要升级到**弧**要使用 `CordovaLib` ，但如果您想要升级您的专案使用**弧**，则应使用 Xcode 迁移向导从**编辑 → 重构 → 转换为目标 C 弧...**功能表中，**取消选择 libCordova.a**，然后运行向导完成。
 
 ## 使用 CDVViewController
 

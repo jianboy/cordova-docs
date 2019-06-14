@@ -23,7 +23,7 @@ toc_title: Events
 
 # 事件
 
-> 科尔多瓦生命周期事件。
+> Cordova生命周期事件。
 
 ## 事件种类
 
@@ -38,7 +38,7 @@ toc_title: Events
 *   [volumedownbutton](events.volumedownbutton.html)
 *   [volumeupbutton](events.volumeupbutton.html)
 
-## 添加的[科尔多瓦外挂程式电池状态][1]的事件
+## 添加的[Cordova外挂程式电池状态][1]的事件
 
  [1]: https://github.com/apache/cordova-plugin-battery-status/blob/master/README.md
 
@@ -46,7 +46,7 @@ toc_title: Events
 *   batterylow
 *   batterystatus
 
-## 事件由[科尔多瓦外挂程式网路资讯][2]添加
+## 事件由[Cordova外挂程式网路资讯][2]添加
 
  [2]: https://github.com/apache/cordova-plugin-network-information/blob/master/README.md
 

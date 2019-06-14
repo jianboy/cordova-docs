@@ -23,9 +23,9 @@ toc_title: WP8
 
 # Windows Phone 8 外挂程式
 
-此部分提供了如何在 Windows Phone 平台上实现本机外挂程式代码的详细资讯。 之前读这篇文章，请参阅外挂程式开发指南外挂程式的结构和其共同的 JavaScript 介面的概述。 这一节继续表明通信从科尔多瓦 web 视图的本机平台和后面的示例*回声*外挂程式。
+此部分提供了如何在 Windows Phone 平台上实现本机外挂程式代码的详细资讯。 之前读这篇文章，请参阅外挂程式开发指南外挂程式的结构和其共同的 JavaScript 介面的概述。 这一节继续表明通信从Cordova web 视图的本机平台和后面的示例*回声*外挂程式。
 
-在 Windows Phone 上的科尔多瓦编写外挂程式需要科尔多瓦的体系结构的一个基本的了解。 科尔多瓦 WP8 组成的 `WebBrowser` ，承载应用程式的 JavaScript 代码和管理本机 API 呼叫。 您可以扩展 C# `BaseCommand` 类 （ `WPCordovaClassLib.Cordova.Commands.BaseCommand` ），其中附带了大部分的你需要的功能：
+在 Windows Phone 上的Cordova编写外挂程式需要Cordova的体系结构的一个基本的了解。 Cordova WP8 组成的 `WebBrowser` ，承载应用程式的 JavaScript 代码和管理本机 API 呼叫。 您可以扩展 C# `BaseCommand` 类 （ `WPCordovaClassLib.Cordova.Commands.BaseCommand` ），其中附带了大部分的你需要的功能：
 
 1.  选择您的专案，并按一下滑鼠右键，选择**添加 → 新专案......**如果您愿意，您可以添加它到 `Plugins` 资料夹。
 
@@ -120,7 +120,7 @@ JavaScript 会需要调用 `exec` 像这样：
 
 ## 处理序列化错误
 
-您的论点，在解释时 `try` / `catch` 块可说明遮罩掉坏的输入。这种模式将出现在整个科尔多瓦 C# 代码：
+您的论点，在解释时 `try` / `catch` 块可说明遮罩掉坏的输入。这种模式将出现在整个Cordova C# 代码：
 
         string optVal = null;
     

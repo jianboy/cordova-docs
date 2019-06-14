@@ -22,7 +22,7 @@ title: 升级 iOS
 
 # 升级 iOS
 
-本指南演示如何修改 iOS 专案从科尔多瓦的旧版本进行升级。 大多数这些说明适用于与旧集的前面的命令列工具创建的专案 `cordova` CLI 实用程式。 资讯，请参阅命令列介面如何更新的 CLI 版本。
+本指南演示如何修改 iOS 专案从Cordova的旧版本进行升级。 大多数这些说明适用于与旧集的前面的命令列工具创建的专案 `cordova` CLI 实用程式。 资讯，请参阅命令列介面如何更新的 CLI 版本。
 
 **注**： Xcode 6 是必需。 目前，若要提交到苹果应用程式商店，您应该使用 iOS SDK，是 iOS 8 最新的发布的版本，这是只包括在 Xcode 6。
 
@@ -107,23 +107,23 @@ Xcode 5 的问题：
 
 ## 从 2.9.0 升级到 CLI （3.0.0)
 
-1.  创建一个新的 Apache 科尔多瓦 3.0.0 专案使用 CLI，科尔多瓦，所述的命令列介面。
+1.  创建一个新的 Apache Cordova 3.0.0 专案使用 CLI，Cordova，所述的命令列介面。
 
-2.  添加您的平台的科尔多瓦的专案，例如： `cordova platform add ios`.
+2.  添加您的平台的Cordova的专案，例如： `cordova platform add ios`.
 
-3.  该专案的内容复写 `www` 目录到 `www` 目录在您刚刚创建的科尔多瓦专案的根目录。
+3.  该专案的内容复写 `www` 目录到 `www` 目录在您刚刚创建的Cordova专案的根目录。
 
 4.  复制或覆盖任何本机的资产从原始专案 （`资源` 等），并确保向 `.xcodeproj` 专案中添加任何新档。 IOS 专案生成 `platforms\ios` 目录内。
 
 5.  复制 `config.xml` 到 `www` 目录中，并移除任何外挂程式定义。修改而不是平台目录的设置。
 
-6.  使用科尔多瓦 CLI 工具来安装您需要的任何外挂程式。注意 CLI 处理所有核心 Api 作为外挂程式，所以他们可能需要添加。只有 3.0.0 外挂程式是与 CLI 相容。
+6.  使用Cordova CLI 工具来安装您需要的任何外挂程式。注意 CLI 处理所有核心 Api 作为外挂程式，所以他们可能需要添加。只有 3.0.0 外挂程式是与 CLI 相容。
 
 7.  生成并测试。
 
 ## 升级 2.9.0 专案 3.0.0
 
-1.  下载并解压缩到硬碟上，例如对 `~/Documents/Cordova-3.0.0` 的永久目录位置的科尔多瓦 3.0.0 源.
+1.  下载并解压缩到硬碟上，例如对 `~/Documents/Cordova-3.0.0` 的永久目录位置的Cordova 3.0.0 源.
 
 2.  如果它正在运行，请退出 Xcode。
 
@@ -133,15 +133,15 @@ Xcode 5 的问题：
 
 5.  复制 `www/cordova.js` （注意它再也没有一个版本尾码，该版本是在该档本身在标题中） 到新专案中的档 `www` 目录中，并删除 `www/cordova.js` 档。
 
-6.  科尔多瓦的脚本中的引用更新 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 以指向新 `cordova.js` 档。
+6.  Cordova的脚本中的引用更新 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 以指向新 `cordova.js` 档。
 
 7.  删除 `CordovaLib` 目录和副本 `CordovaLib` 目录从新专案到专案的根目录。
 
-**注**： 从科尔多瓦 3.0.0 开始，未预先安装的外挂程式，和你需要使用 `plugman` 命令列实用程式来安装它们自己。 请参阅使用 Plugman 管理外挂程式。
+**注**： 从Cordova 3.0.0 开始，未预先安装的外挂程式，和你需要使用 `plugman` 命令列实用程式来安装它们自己。 请参阅使用 Plugman 管理外挂程式。
 
 ## 升级 2.8.0 专案 2.9.0
 
-1.  下载并解压缩到硬碟上，例如对 `~/Documents/Cordova-2.9.0` 的永久目录位置的科尔多瓦 2.9.0 源.
+1.  下载并解压缩到硬碟上，例如对 `~/Documents/Cordova-2.9.0` 的永久目录位置的Cordova 2.9.0 源.
 
 2.  如果它正在运行，请退出 Xcode。
 
@@ -151,13 +151,13 @@ Xcode 5 的问题：
 
 5.  复制 `www/cordova.js` （请注意它不再有版本尾码，该版本位于档本身在标题中） 到新专案中的档 `www` 目录中，并删除 `www/cordova.js` 档。
 
-6.  科尔多瓦的脚本中的引用更新 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 以指向新 `cordova.js` 档。
+6.  Cordova的脚本中的引用更新 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 以指向新 `cordova.js` 档。
 
 7.  删除 `CordovaLib` 目录和复制 `CordovaLib` 目录从新专案到您的专案的根目录。
 
 ## 升级 2.7.0 专案到 2.8.0
 
-1.  下载并解压缩到硬碟上，例如对 `~/Documents/Cordova-2.8.0` 的永久目录位置的科尔多瓦 2.8.0 源.
+1.  下载并解压缩到硬碟上，例如对 `~/Documents/Cordova-2.8.0` 的永久目录位置的Cordova 2.8.0 源.
 
 2.  如果它正在运行，请退出 Xcode。
 
@@ -167,7 +167,7 @@ Xcode 5 的问题：
 
 5.  复制 `www/cordova.js` （请注意它不再有版本尾码，该版本位于档本身在标题中） 到 `www` 目录中，从新的专案档案并删除 `www/cordova-2.7.0.js` 档。
 
-6.  科尔多瓦脚本中的引用更新 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 使其指向新 `cordova.js` 档。
+6.  Cordova脚本中的引用更新 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 使其指向新 `cordova.js` 档。
 
 7.  更新的 `config.xml` 档中的任何 `<plugin>` 标记为 `<feature>` 标记。 请注意现有 `<plugin>` 标签仍然工作，但都被否决了。 您可以在一个新的专案的 `config.xml` 档中复制此资讯。 举个例子：
     
@@ -199,7 +199,7 @@ Xcode 5 的问题：
 
 ## 升级 2.6.0 专案 2.7.0
 
-1.  下载并解压缩到硬碟上，例如对 `~/Documents/Cordova-2.7.0` 的永久目录位置的科尔多瓦 2.7.0 源.
+1.  下载并解压缩到硬碟上，例如对 `~/Documents/Cordova-2.7.0` 的永久目录位置的Cordova 2.7.0 源.
 
 2.  如果它正在运行，请退出 Xcode。
 
@@ -209,7 +209,7 @@ Xcode 5 的问题：
 
 5.  复制 `www/cordova-2.7.0.js` 到新专案中的档 `www` 目录中，并删除 `www/cordova-2.6.0.js` 档。
 
-6.  科尔多瓦脚本中的引用更新 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 使其指向新 `cordova-2.7.0.js` 档。
+6.  Cordova脚本中的引用更新 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 使其指向新 `cordova-2.7.0.js` 档。
 
 7.  更新 （或替换，如果你永远不会更改档） `AppDelegate.m` 档根据从新一个专案 （见 [此比较][3]).
 
@@ -222,7 +222,7 @@ Xcode 5 的问题：
 
 ## 升级 2.5.0 专案到 2.6.0
 
-1.  下载并解压缩到硬碟上，例如对 `~/Documents/Cordova-2.6.0` 的永久目录位置的科尔多瓦 2.6.0 源.
+1.  下载并解压缩到硬碟上，例如对 `~/Documents/Cordova-2.6.0` 的永久目录位置的Cordova 2.6.0 源.
 
 2.  如果它正在运行，请退出 Xcode。
 
@@ -232,7 +232,7 @@ Xcode 5 的问题：
 
 5.  将该专案的 `www/cordova-2.6.0.js` 档案复制到 `www` 目录中，并删除 `www/cordova-2.5.0.js` 档。
 
-6.  科尔多瓦 （以及其他引用脚本的档） 的 `www/index.html` 档中的脚本引用更新指向新的 `科尔多瓦 2.6.0.js` 档。
+6.  Cordova （以及其他引用脚本的档） 的 `www/index.html` 档中的脚本引用更新指向新的 `Cordova 2.6.0.js` 档。
 
 7.  更新 （或替换，如果你永远不会更改档） `AppDelegate.m` 档根据从新一个专案 （见 [此比较][5]).
 
@@ -253,7 +253,7 @@ Xcode 5 的问题：
 
 ## 升级 2.4.0 专案 2.5.0
 
-1.  下载并解压缩到硬碟上，例如对 `~/Documents/Cordova-2.5.0` 的永久目录位置的科尔多瓦 2.5.0 源.
+1.  下载并解压缩到硬碟上，例如对 `~/Documents/Cordova-2.5.0` 的永久目录位置的Cordova 2.5.0 源.
 
 2.  如果它正在运行，请退出 Xcode。
 
@@ -263,17 +263,17 @@ Xcode 5 的问题：
 
 5.  将 `www/cordova-2.5.0.js` 档从新专案复制到 `www` 目录并删除 `www/cordova-2.4.0.js` 档。
 
-6.  科尔多瓦脚本中 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 的引用更新为指向新的 `科尔多瓦 2.5.0.js` 档。
+6.  Cordova脚本中 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 的引用更新为指向新的 `Cordova 2.5.0.js` 档。
 
 7.  更新 （或替换，如果你永远不会更改档） `AppDelegate.m` 档根据从新一个专案 （见 [此比较][9]).
 
 8.  在 `config.xml` 档中，[添加这些新行][10].
 
-9.  在 `config.xml` 档中，[编辑的根项目，改变它从科尔多瓦到小部件][11].
+9.  在 `config.xml` 档中，[编辑的根项目，改变它从Cordova到小部件][11].
 
 10. 在 `config.xml` 档中，[删除 OpenAllWhitelistURLsInWebView 偏好][12].
 
-11. 删除 `科尔多瓦` 目录中，并从新专案中 `科尔多瓦` 目录复写到您的专案的根目录。在 2.5.0，这已更新脚本。
+11. 删除 `Cordova` 目录中，并从新专案中 `Cordova` 目录复写到您的专案的根目录。在 2.5.0，这已更新脚本。
 
 12. 删除 `CordovaLib` 目录和复制 `CordovaLib` 目录从新专案到您的专案的根目录。
 
@@ -284,7 +284,7 @@ Xcode 5 的问题：
 
 ## 升级 2.3.0 专案 2.4.0
 
-1.  下载并解压缩到硬碟上，例如对 `~/Documents/Cordova-2.4.0` 的永久目录位置的科尔多瓦 2.4.0 源.
+1.  下载并解压缩到硬碟上，例如对 `~/Documents/Cordova-2.4.0` 的永久目录位置的Cordova 2.4.0 源.
 
 2.  如果它正在运行，请退出 Xcode。
 
@@ -294,7 +294,7 @@ Xcode 5 的问题：
 
 5.  从新专案中的 `www/cordova-2.4.0.js` 档案复制到 `www` 目录中，并删除 `www/cordova-2.3.0.js` 档。
 
-6.  科尔多瓦脚本中 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 的引用更新为指向新的 `科尔多瓦 2.4.0.js` 档。
+6.  Cordova脚本中 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 的引用更新为指向新的 `Cordova 2.4.0.js` 档。
 
 7.  更新 （或替换，如果你永远不会更改的档） `MainViewController.m` 档根据从新一个专案 （见 [此比较][13]).
 
@@ -302,7 +302,7 @@ Xcode 5 的问题：
 
 9.  在 `config.xml` 档中，[添加这条新线][15].
 
-10. 删除 `科尔多瓦` 目录中，并从新专案中 `科尔多瓦` 目录复写到您的专案的根目录。在 2.4.0，这具有固定的脚本。
+10. 删除 `Cordova` 目录中，并从新专案中 `Cordova` 目录复写到您的专案的根目录。在 2.4.0，这具有固定的脚本。
 
 11. 删除 `CordovaLib` 目录和复制 `CordovaLib` 目录从新专案到您的专案的根目录。
 
@@ -315,7 +315,7 @@ Xcode 5 的问题：
 
 ## 2.2.0 升级专案到 2.3.0
 
-1.  下载并解压缩到硬碟上，例如对 `~/Documents/Cordova-2.3.0` 的永久目录位置的科尔多瓦 2.3.0 源.
+1.  下载并解压缩到硬碟上，例如对 `~/Documents/Cordova-2.3.0` 的永久目录位置的Cordova 2.3.0 源.
 
 2.  如果它正在运行，请退出 Xcode。
 
@@ -325,22 +325,22 @@ Xcode 5 的问题：
 
 5.  从新专案中的 `www/cordova-2.3.0.js` 档案复制到 `www` 目录中，并删除 `www/cordova-2.2.0.js` 档。
 
-6.  科尔多瓦脚本中 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 的引用更新为指向新的 `cordova-2.3.0.js` 档。
+6.  Cordova脚本中 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 的引用更新为指向新的 `cordova-2.3.0.js` 档。
 
 7.  更新 （或替换，如果你永远不会更改档） `MainViewController.m` 根据新专案中的一个。
 
-8.  删除 `科尔多瓦` 目录中，并从新专案中 `科尔多瓦` 目录复写到您的专案的根目录。这在 2.3.0，新的脚本。
+8.  删除 `Cordova` 目录中，并从新专案中 `Cordova` 目录复写到您的专案的根目录。这在 2.3.0，新的脚本。
 
 9.  删除 `CordovaLib` 目录和复制 `CordovaLib` 目录从新专案到您的专案的根目录。
 
 10. `Cordova.plist` 档转换 `config.xml`，通过在您的专案档案上运行脚本 `bin/cordova\_plist\_to\_config\_xml`）。
 
-11. 通过添加此标记下 `< 科尔多瓦 >< 外挂程式 >` 对 `config.xml`，添加 InAppBrowser 外挂程式：
+11. 通过添加此标记下 `< Cordova >< 外挂程式 >` 对 `config.xml`，添加 InAppBrowser 外挂程式：
     
         <plugin name="InAppBrowser" value="CDVInAppBrowser" />
         
 
-12. 请注意目标 C 外挂程式不再 *不* 列入白名单。 到白名单中您的连接与软体白名单中，您需要将该连接的 `使用者代理` 标头设置为相同的使用者代理作为主要的科尔多瓦 web 视图。 你可以通过访问关闭主要的视图控制器的 `使用者代理` 属性。 主视图-控制器 （`CDVViewController`） 也有 `URLisAllowed` 的方法，使您要检查 URL 是否通过白名单。
+12. 请注意目标 C 外挂程式不再 *不* 列入白名单。 到白名单中您的连接与软体白名单中，您需要将该连接的 `使用者代理` 标头设置为相同的使用者代理作为主要的Cordova web 视图。 你可以通过访问关闭主要的视图控制器的 `使用者代理` 属性。 主视图-控制器 （`CDVViewController`） 也有 `URLisAllowed` 的方法，使您要检查 URL 是否通过白名单。
 
 13. 设备的 API 更改：
     
@@ -350,7 +350,7 @@ Xcode 5 的问题：
 
 ## 2.2.0 升级 2.1.0 专案
 
-1.  下载并解压缩到硬碟上，例如对 `~/Documents/Cordova-2.2.0` 的永久目录位置的科尔多瓦 2.2.0 源.
+1.  下载并解压缩到硬碟上，例如对 `~/Documents/Cordova-2.2.0` 的永久目录位置的Cordova 2.2.0 源.
 
 2.  如果它正在运行，请退出 Xcode。
 
@@ -360,7 +360,7 @@ Xcode 5 的问题：
 
 5.  从新专案中的 `www/cordova-2.2.0.js` 档案复制到 `www` 目录中，并删除 `www/cordova-2.1.0.js` 档。
 
-6.  科尔多瓦脚本中 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 的引用更新为指向新的 `cordova-2.2.0.js` 档。
+6.  Cordova脚本中 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 的引用更新为指向新的 `cordova-2.2.0.js` 档。
 
 7.  更新 （或替换，如果你永远不会更改档） `MainViewController.m` 根据新专案中的一个：
     
@@ -368,10 +368,10 @@ Xcode 5 的问题：
 
 8.  将 `cordova` 目录从新专案复制到您的专案的根目录。这在 2.2.0，更新后的模仿脚本。
 
-9.  下一步，更新 `CordovaLib` 子专案引用。 开头科尔多瓦 2.1.0，我们不使用 CORDOVALIB Xcode 变数不再当引用 `CordovaLib` 驻留在何处的引用是绝对档引用现在。
+9.  下一步，更新 `CordovaLib` 子专案引用。 开头Cordova 2.1.0，我们不使用 CORDOVALIB Xcode 变数不再当引用 `CordovaLib` 驻留在何处的引用是绝对档引用现在。
     
     1.  启动终端程式
-    2.  转到科尔多瓦的安装的位置 （见步骤 1），在 `bin` 子目录中
+    2.  转到Cordova的安装的位置 （见步骤 1），在 `bin` 子目录中
     3.  运行该脚本下面其中的第一个参数是您的专案 `.xcodeproj` 档的路径：
         
         `update_cordova_subproject path/to/your/project/xcodeproj`
@@ -380,9 +380,9 @@ Xcode 5 的问题：
 
 ## 2.1.0 升级 2.0.0 专案
 
-2.1.0 的科尔多瓦，`CordovaLib` 已被升级，从而使用 **自动引用计数 （ARC）**。 你不需要升级到 **弧**，使用 CordovaLib，但如果您想要升级您的专案使用 **弧**，请使用 Xcode 迁移向导从功能表中： **编辑 → 重构 → 转换为目标 C 弧......**，取消选择 libCordova.a，然后运行该向导以完成。
+2.1.0 的Cordova，`CordovaLib` 已被升级，从而使用 **自动引用计数 （ARC）**。 你不需要升级到 **弧**，使用 CordovaLib，但如果您想要升级您的专案使用 **弧**，请使用 Xcode 迁移向导从功能表中： **编辑 → 重构 → 转换为目标 C 弧......**，取消选择 libCordova.a，然后运行该向导以完成。
 
-1.  下载并解压缩到硬碟上，例如对 `~/Documents/Cordova-2.1.0` 的永久目录位置的科尔多瓦 2.1.0 源.
+1.  下载并解压缩到硬碟上，例如对 `~/Documents/Cordova-2.1.0` 的永久目录位置的Cordova 2.1.0 源.
 
 2.  如果它正在运行，请退出 Xcode。
 
@@ -392,7 +392,7 @@ Xcode 5 的问题：
 
 5.  从新专案中的 `www/cordova-2.1.0.js` 档案复制到 `www` 目录中，并删除 `www/cordova-2.0.0.js` 档。
 
-6.  科尔多瓦脚本中 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 的引用更新为指向新的 `科尔多瓦 2.1.0.js` 档。
+6.  Cordova脚本中 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 的引用更新为指向新的 `Cordova 2.1.0.js` 档。
 
 7.  更新 （或替换，如果你永远不会更改档） `AppDelegate.m` 根据新专案中的一个：
     
@@ -403,27 +403,27 @@ Xcode 5 的问题：
     
     *   添加 → viewWillAppear
 
-9.  将 `科尔多瓦` 目录从新专案复制到您的专案的根目录。这在 2.1.0，更新的脚本，以支援包含空格的路径。
+9.  将 `Cordova` 目录从新专案复制到您的专案的根目录。这在 2.1.0，更新的脚本，以支援包含空格的路径。
 
 10. 从您的专案 （是在 `CordovaLib` 中删除 `VERSION` 档引用).
 
-11. 下一步，更新 `CordovaLib` 子专案引用。 开头科尔多瓦 2.1.0，我们不使用 CORDOVALIB Xcode 变数不再当引用 `CordovaLib` 驻留在何处的引用是绝对档引用现在。
+11. 下一步，更新 `CordovaLib` 子专案引用。 开头Cordova 2.1.0，我们不使用 CORDOVALIB Xcode 变数不再当引用 `CordovaLib` 驻留在何处的引用是绝对档引用现在。
     
     1.  启动终端程式
-    2.  转到科尔多瓦的安装的位置 （见步骤 1），在 `bin` 子目录中
+    2.  转到Cordova的安装的位置 （见步骤 1），在 `bin` 子目录中
     3.  运行该脚本下面其中的第一个参数是您的专案 `.xcodeproj` 档的路径：
         
         `update_cordova_subproject path/to/your/project/xcodeproj`
 
 ## 升级 1.9.0 专案 2.0.0
 
-1.  安装 2.0.0 科尔多瓦。
+1.  安装 2.0.0 Cordova。
 
 2.  创建一个新专案，iOS 壳工具指南中所述。你需要从这个新的专案资产。
 
 3.  从新专案中的 `www/cordova-2.0.0.js` 档案复制到 `www` 目录中，并删除 `www/cordova-1.9.0.js` 档。
 
-4.  科尔多瓦脚本中 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 的引用更新为指向新的 `cordova-2.0.0.js` 档。
+4.  Cordova脚本中 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 的引用更新为指向新的 `cordova-2.0.0.js` 档。
 
 5.  `cordova` 目录从新专案复制到您的专案的根目录 （如果你想要的专案的命令列工具）。
 
@@ -453,7 +453,7 @@ Xcode 5 的问题：
         #import <Cordova/CDV.h>
         
     
-    删除任何 `#ifdef` （wrapper 任何科尔多瓦进口，他们再也不需要 （现在统一进口)
+    删除任何 `#ifdef` （wrapper 任何Cordova进口，他们再也不需要 （现在统一进口)
 
 15. 再次，生成您的专案，它不应该有任何的 `#import` 错误。
 
@@ -513,13 +513,13 @@ Xcode 5 的问题：
 
 ## 1.8.x 计划升级为 1.9.0
 
-1.  安装科尔多瓦 1.9.0。
+1.  安装Cordova 1.9.0。
 
 2.  创建一个新专案。您将需要的一些资产从这个新的专案。
 
 3.  从新专案中的 `www/cordova-1.9.0.js` 档案复制到 `www` 目录中，并删除 `www/cordova-1.8.x.js` 档。
 
-4.  科尔多瓦脚本中 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 的引用更新为指向新的 `cordova-1.9.0.js` 档。
+4.  Cordova脚本中 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 的引用更新为指向新的 `cordova-1.9.0.js` 档。
 
 **注**： 1.9.0 支援新的 `BackupWebStorage` 布林 `Cordova.plist` 设置。 它预设启用的所以将其设置为 `false` 以禁用它，尤其是在 iOS 6。 请参阅 [版本资讯： Safari 和 UIKit 科][17]
 
@@ -527,13 +527,13 @@ Xcode 5 的问题：
 
 ## 1.8.x 升级 1.7.0 以来专案
 
-1.  安装科尔多瓦 1.8.0。
+1.  安装Cordova 1.8.0。
 
 2.  创建一个新的专案。您将需要一些资产从这个新的专案。
 
 3.  从新专案中的 `www/cordova-1.8.0.js` 档案复制到 `www` 目录中，并删除 `www/cordova-1.7.x.js` 档。
 
-4.  科尔多瓦脚本中 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 的引用更新为指向新的 `科尔多瓦 1.8.0.js` 档。
+4.  Cordova脚本中 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 的引用更新为指向新的 `Cordova 1.8.0.js` 档。
 
 如果您打算使用捕获的 API，您将需要新的 **iPad 视网膜显示** 资产：
 
@@ -545,17 +545,17 @@ Xcode 5 的问题：
 
 ## 1.6.x 专案升级到 1.7.0 以来
 
-1.  安装科尔多瓦 1.7.0 以来。
+1.  安装Cordova 1.7.0 以来。
 
 2.  创建一个新的专案。您将需要一些资产从这个新的专案。
 
 3.  从新专案中的 `www/cordova-1.7.0.js` 档案复制到 `www` 目录中，并删除 `www/cordova-1.6.0.js` 档。
 
-4.  科尔多瓦脚本中 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 的引用更新为指向新的 `cordova-1.7.0.js` 档。
+4.  Cordova脚本中 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 的引用更新为指向新的 `cordova-1.7.0.js` 档。
 
 ## 1.6.x 版升级 1.5.0 专案
 
-1.  安装 1.6.1 科尔多瓦。
+1.  安装 1.6.1 Cordova。
 
 2.  在您的专案制作一个备份的 `AppDelegate.m`、 `AppDelegate.h`、 `MainViewController.m`、 `MainViewController.h`、 `Cordova.plist`。
 
@@ -574,9 +574,9 @@ Xcode 5 的问题：
 
 6.  从新专案中的 `www/cordova-1.6.1.js` 档案复制到 `www` 目录中，并删除 `www/cordova-1.5.0.js` 档。
 
-7.  科尔多瓦脚本中 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 的引用更新为指向新的 `cordova-1.6.1.js` 档。
+7.  Cordova脚本中 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 的引用更新为指向新的 `cordova-1.6.1.js` 档。
 
-8.  新的 `Cordova.plist` 档添加到您的专案中。 这是必要的因为核心外挂程式服务名称必须更改以匹配那些从 Android 和黑莓，为统一的科尔多瓦 JavaScript 档 (`cordova-js`).
+8.  新的 `Cordova.plist` 档添加到您的专案中。 这是必要的因为核心外挂程式服务名称必须更改以匹配那些从 Android 和黑莓，为统一的Cordova JavaScript 档 (`cordova-js`).
 
 9.  集成任何设置、 **外挂程式** 和 **ExternalHosts** 的条目，你在你的 **备份 Cordova.plist** `Cordova.plist` 新进.
 
@@ -592,13 +592,13 @@ Xcode 5 的问题：
 
 ## 升级到 1.5.0 版的 1.4.x 专案
 
-1.  安装科尔多瓦 1.5.0 版。
+1.  安装Cordova 1.5.0 版。
 
 2.  创建一个新的专案并运行一次。您将需要一些资产从这个新的专案。
 
 3.  从新专案中的 `www/cordova-1.5.0.js` 档案复制到 `www` 目录中，并删除 `www/phonegap-1.4.x.js` 档。
 
-4.  科尔多瓦脚本中 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 的引用更新为指向新的科尔多瓦 `cordova-1.5.0.js` 档。
+4.  Cordova脚本中 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 的引用更新为指向新的Cordova `cordova-1.5.0.js` 档。
 
 5.  在您的专案浏览器中找到 `PhoneGap.framework`，请选择它。
 
@@ -645,7 +645,7 @@ Xcode 5 的问题：
 
 25. 扩展 **运行脚本**.
 
-26. 任何替换 **PhoneGap** 与 **科尔多瓦**.
+26. 任何替换 **PhoneGap** 与 **Cordova**.
 
 27. 在专案导航器中找到 `PhoneGap.plist` 档，然后按一下档案名一旦进入编辑模式的名称。
 
@@ -663,7 +663,7 @@ Xcode 5 的问题：
 
 ## 1.4.1 升级 1.4.0 专案
 
-1.  安装 1.4.1 科尔多瓦。
+1.  安装 1.4.1 Cordova。
 
 2.  制作一个备份 `MainViewController.m`.
 
@@ -679,7 +679,7 @@ Xcode 5 的问题：
 
 ## 1.4.0 升级 1.3.0 专案
 
-1.  安装科尔多瓦 1.4.0。
+1.  安装Cordova 1.4.0。
 
 2.  制作一个备份的 `AppDelegate.m` 和 `AppDelegate.h` 在您的专案中。
 
@@ -698,7 +698,7 @@ Xcode 5 的问题：
 
 6.  从新专案中的 `www/phonegap-1.4.0.js` 档案复制到 `www` 目录中，并删除 `www/phonegap-1.3.0.js` 档。
 
-7.  科尔多瓦脚本中 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 的引用更新为指向新的 `phonegap-1.4.0.js` 档。
+7.  Cordova脚本中 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 的引用更新为指向新的 `phonegap-1.4.0.js` 档。
 
 8.  添加一个新条目下的 `Plugins` 的 `PhoneGap.plist` 档。关键是 `com.phonegap.battery` 和值是`PGBattery`.
 
@@ -706,7 +706,7 @@ Xcode 5 的问题：
 
 ## 1.3.0 升级 1.2.0 专案
 
-1.  安装科尔多瓦 1.3.0。
+1.  安装Cordova 1.3.0。
 
 2.  制作一个备份的 `AppDelegate.m` 和 `AppDelegate.h` 在您的专案中。
 
@@ -725,7 +725,7 @@ Xcode 5 的问题：
 
 6.  从新专案中的 `www/phonegap-1.3.0.js` 档案复制到 `www` 目录中，并删除 `www/phonegap-1.2.0.js` 档。
 
-7.  科尔多瓦脚本中 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 的引用更新为指向新的 `phonegap-1.3.0.js` 档。
+7.  Cordova脚本中 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 的引用更新为指向新的 `phonegap-1.3.0.js` 档。
 
 8.  添加一个新条目下的 `Plugins` 的 `PhoneGap.plist` 档。关键是 `com.phonegap.battery` 和值是`PGBattery`.
 
@@ -733,7 +733,7 @@ Xcode 5 的问题：
 
 ## 1.2.0 升级 1.1.0 专案
 
-1.  安装科尔多瓦 1.2.0。
+1.  安装Cordova 1.2.0。
 
 2.  制作一个备份的 `AppDelegate.m` 和 `AppDelegate.h` 在您的专案中。
 
@@ -752,7 +752,7 @@ Xcode 5 的问题：
 
 6.  从新专案中的 `www/phonegap-1.2.0.js` 档案复制到 `www` 目录中，并删除 `www/phonegap-1.1.0.js` 档。
 
-7.  科尔多瓦脚本中 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 的引用更新为指向新的 `phonegap-1.2.0.js` 档。
+7.  Cordova脚本中 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 的引用更新为指向新的 `phonegap-1.2.0.js` 档。
 
 8.  添加一个新条目下的 `Plugins` 的 `PhoneGap.plist` 档。关键是 `com.phonegap.battery` 和值是`PGBattery`.
 
@@ -760,7 +760,7 @@ Xcode 5 的问题：
 
 ## 升级 1.0.0 专案到 1.1.0
 
-1.  安装科尔多瓦 1.1.0。
+1.  安装Cordova 1.1.0。
 
 2.  制作一个备份的 `AppDelegate.m` 和 `AppDelegate.h` 在您的专案中。
 
@@ -779,7 +779,7 @@ Xcode 5 的问题：
 
 6.  从新专案中的 `www/phonegap-1.1.0.js` 档案复制到 `www` 目录中，并删除 `www/phonegap-1.0.0.js` 档。
 
-7.  科尔多瓦脚本中 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 的引用更新为指向新的 `phonegap-1.1.0.js` 档。
+7.  Cordova脚本中 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 的引用更新为指向新的 `phonegap-1.1.0.js` 档。
 
 8.  添加一个新条目下的 `Plugins` 的 `PhoneGap.plist` 档。关键是 `com.phonegap.battery` 和值是`PGBattery`.
 
@@ -787,7 +787,7 @@ Xcode 5 的问题：
 
 ## 升级 0.9.6 专案 1.0.0
 
-1.  安装科尔多瓦 1.0.0。
+1.  安装Cordova 1.0.0。
 
 2.  制作一个备份的 `AppDelegate.m` 和 `AppDelegate.h` 在您的专案中。
 
@@ -806,7 +806,7 @@ Xcode 5 的问题：
 
 6.  从新专案中的 `www/phonegap-1.0.0.js` 档案复制到 `www` 目录中，并删除 `www/phonegap-0.9.6.js` 档。
 
-7.  科尔多瓦脚本中 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 的引用更新为指向新的 `phonegap-1.0.0.js` 档。
+7.  Cordova脚本中 `www/index.html` 档 （以及包含该脚本引用的任何其他档） 的引用更新为指向新的 `phonegap-1.0.0.js` 档。
 
 8.  添加一个新条目下的 `Plugins` 的 `PhoneGap.plist` 档。关键是 `com.phonegap.battery` 的值`PGBattery`.
 

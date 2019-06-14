@@ -23,7 +23,7 @@ toc_title: Windows
 
 # Windows 外挂程式
 
-此部分提供了如何在 Windows 应用商店应用程式中实现一个使用的外挂程式的详细资讯。之前读这篇文章，请参阅应用程式外挂程式外挂程式的结构和其共同的 JavaScript 介面的概述。 这一节继续显示示例*回声*外挂程式从科尔多瓦 web 视图的本机平台和背部进行通信。
+此部分提供了如何在 Windows 应用商店应用程式中实现一个使用的外挂程式的详细资讯。之前读这篇文章，请参阅应用程式外挂程式外挂程式的结构和其共同的 JavaScript 介面的概述。 这一节继续显示示例*回声*外挂程式从Cordova web 视图的本机平台和背部进行通信。
 
 很重要的是要注意 Windows 支援直接在 JAVAscript 中，这意味著发展中国家的 '本土' 的部分，只需要在特殊情况下发展。
 
@@ -31,7 +31,7 @@ toc_title: Windows
 
 这些指令是要创建一个纯 JavaScript 外挂程式。理解这一点对于理解如何添加本机/托管位至关重要。
 
-Windows 科尔多瓦外挂程式是本质上是一个薄包装周围现有 WinJS 提供的功能，但假设你会想要定义为多个设备你 JS 通用介面，你通常会提供 API 的 1 JS 档。
+Windows Cordova外挂程式是本质上是一个薄包装周围现有 WinJS 提供的功能，但假设你会想要定义为多个设备你 JS 通用介面，你通常会提供 API 的 1 JS 档。
 
     // inside file echoplugin.js
     var EchoPlugin = {
@@ -43,7 +43,7 @@ Windows 科尔多瓦外挂程式是本质上是一个薄包装周围现有 WinJS
     }
     
 
-## 在 Windows 上的里面科尔多瓦 exec。
+## 在 Windows 上的里面Cordova exec。
 
 Cordova.exec 函数以不同的方式定义的每个平台上，这是因为每个平台都有它自己的应用 js 代码和本机包装代码之间进行通信的方式。 但在 Windows 中，有没有本地的包装，所以 exec 调用有一致性。 就像你可以直接在 EchoPlugin.echo，你 js 只有外挂程式工作：
 
@@ -62,9 +62,9 @@ Cordova.exec 函数以不同的方式定义的每个平台上，这是因为每�
 
 这将可能会做工精细，但是它意味著您将需要为不同的平台，不同版本的 echoPlugin.js，可能你可以在你的实现中有不一致的问题。 作为最佳实践，我们决定模仿 cordova.exec 上窗户，里面的本机 API，所以我们可以运行相同的 JS 代码，并不需要重写一遍为平台，和也利用检查，任何参数或其他常见的代码，由开发人员在其他平台上工作的人员提供。
 
-## 科尔多瓦 exec 代理
+## Cordova exec 代理
 
-在 Windows 上，科尔多瓦提供一个代理，您可以使用来注册一个物件，它将处理所有的 cordova.exec 调用的 API。
+在 Windows 上，Cordova提供一个代理，您可以使用来注册一个物件，它将处理所有的 cordova.exec 调用的 API。
 
 例如如果你想要为加速度感应器 API 提供实现，你会这样做：
 
@@ -173,7 +173,7 @@ var res = EchoRuntimeComponent.EchoPluginRT.echo("boom") ；我们将这移动�
 
 *   回档通常是非同步所以马上调用回档可能预计不会由调用方。 在实践中，如果电话不是非同步，你应该至少使用 javascript 超时强制被称为非同步回档。
 *   可启动的类可以做各种各样的太棒了，像在调度，非同步回档，通过您自己的物件类型、 阵列、 集合、 重载的方法和更多的事件。 我建议你做你的家庭作业。
-*   如果你坚持共同的 Windows Phone 8.0 和 Windows SDK API 呼叫，你将能够在 Windows Phone 8.0 Apache 科尔多瓦外挂程式中使用相同的运行时元件 （本机或托管的位）。 ~ 敬请期待这一职务。
+*   如果你坚持共同的 Windows Phone 8.0 和 Windows SDK API 呼叫，你将能够在 Windows Phone 8.0 Apache Cordova外挂程式中使用相同的运行时元件 （本机或托管的位）。 ~ 敬请期待这一职务。
 
 # 定义你的外挂程式
 
@@ -201,7 +201,7 @@ var res = EchoRuntimeComponent.EchoPluginRT.echo("boom") ；我们将这移动�
     </plugin>
     
 
-就是这样，你现在有一个可分发的外挂程式，你可以与世界分享 ！ 要注意，将框架添加到 Windows 科尔多瓦专案支援最近才加入，所以您将需要确保模具当前你科尔多瓦的一件事。 科尔多瓦 cli 和科尔多瓦 plugman 支援添加删除本机支援的外挂程式。
+就是这样，你现在有一个可分发的外挂程式，你可以与世界分享 ！ 要注意，将框架添加到 Windows Cordova专案支援最近才加入，所以您将需要确保模具当前你Cordova的一件事。 Cordova cli 和Cordova plugman 支援添加删除本机支援的外挂程式。
 
 > cordova plugin add com.risingj.echoplugin
 

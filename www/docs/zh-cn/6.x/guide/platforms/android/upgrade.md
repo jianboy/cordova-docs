@@ -22,7 +22,7 @@ title: 升级 Android
 
 # 升级 Android
 
-本指南演示如何修改 Android 专案从科尔多瓦的旧版本进行升级。 大多数这些说明适用于与旧集的前面的命令列工具创建的专案 `cordova` CLI 实用程式。 资讯，请参阅命令列介面如何更新的 CLI 版本。
+本指南演示如何修改 Android 专案从Cordova的旧版本进行升级。 大多数这些说明适用于与旧集的前面的命令列工具创建的专案 `cordova` CLI 实用程式。 资讯，请参阅命令列介面如何更新的 CLI 版本。
 
 ## 升级到 4.0.0
 
@@ -41,7 +41,7 @@ title: 升级 Android
 
 ### 升级白名单
 
-现在通过外挂程式实现所有的白名单功能。 无外挂程式升级到 4.0.0 后您的应用程式不再却是白名单的保护。科尔多瓦有两个白名单外挂程式，提供不同的保护层级。
+现在通过外挂程式实现所有的白名单功能。 无外挂程式升级到 4.0.0 后您的应用程式不再却是白名单的保护。Cordova有两个白名单外挂程式，提供不同的保护层级。
 
 1.  `cordova-plugin-whitelist` 外挂程式 *（推荐）*
     
@@ -91,17 +91,17 @@ title: 升级 Android
 
 按照关于 `3.2.0` 相同的说明.
 
-入手 3.3.0，科尔多瓦运行时现在被编译为 Android 的库，而不是一个罐子里。 这都不应该影响为命令列用法，但 IDE 使用者将需要新增的 `MyProject CordovaLib` 专案导入到他们的工作区。
+入手 3.3.0，Cordova运行时现在被编译为 Android 的库，而不是一个罐子里。 这都不应该影响为命令列用法，但 IDE 使用者将需要新增的 `MyProject CordovaLib` 专案导入到他们的工作区。
 
 ## 从 3.1.0 升级到 3.2.0
 
-为专案创建的科尔多瓦 CLI:
+为专案创建的Cordova CLI:
 
 1.  更新 `cordova` CLI 版本。请参阅命令列介面。
 
 2.  运行 `cordova platform update android`
 
-不创建与科尔多瓦 CLI 的专案，请运行:
+不创建与Cordova CLI 的专案，请运行:
 
         bin/update <project_path>
     
@@ -110,32 +110,32 @@ title: 升级 Android
 
 ## 从 3.0.0 升级到 3.1.0
 
-为专案创建的科尔多瓦 CLI:
+为专案创建的Cordova CLI:
 
 1.  更新 `cordova` CLI 版本。请参阅命令列介面。
 
 2.  运行 `cordova platform update android`
 
-不创建与科尔多瓦 CLI 的专案，请运行:
+不创建与Cordova CLI 的专案，请运行:
 
         bin/update <project_path>
     
 
 ## 从 2.9.0 升级到 CLI (3.0.0)
 
-1.  创建一个新的 Apache 科尔多瓦 3.0.0 专案使用 CLI，科尔多瓦在命令列介面所述。
+1.  创建一个新的 Apache Cordova 3.0.0 专案使用 CLI，Cordova在命令列介面所述。
 
-2.  添加您的平台的科尔多瓦的专案，例如： `cordova platform add android`.
+2.  添加您的平台的Cordova的专案，例如： `cordova platform add android`.
 
-3.  将您的专案 `www` 目录中的内容复写到您刚刚创建的科尔多瓦专案根本 `www` 目录。
+3.  将您的专案 `www` 目录中的内容复写到您刚刚创建的Cordova专案根本 `www` 目录。
 
-4.  将本机的任何资产从旧专案复制到相应的目录下 `平台/android`： 此目录是您的本机科尔多瓦 android 专案所在。
+4.  将本机的任何资产从旧专案复制到相应的目录下 `平台/android`： 此目录是您的本机Cordova android 专案所在。
 
-5.  使用科尔多瓦 CLI 工具来安装您需要的任何外挂程式。注意，CLI 处理所有核心 Api 作为外挂程式，所以他们可能需要添加。只有 3.0.0 外挂程式是与 CLI 相容。
+5.  使用Cordova CLI 工具来安装您需要的任何外挂程式。注意，CLI 处理所有核心 Api 作为外挂程式，所以他们可能需要添加。只有 3.0.0 外挂程式是与 CLI 相容。
 
 ## 从 2.9.0 升级到 3.0.0
 
-1.  创建一个新的 Apache 科尔多瓦 Android 专案。
+1.  创建一个新的 Apache Cordova Android 专案。
 
 2.  将 `www` 目录中的内容复写到新专案中。
 
@@ -209,7 +209,7 @@ title: 升级 Android
 
 8.  将档从复制 `bin/templates/cordova` 到专案的 `cordova` 目录。
 
-科尔多瓦原始目录中列出的专案路径与运行 `bin/update < 专案 >`。
+Cordova原始目录中列出的专案路径与运行 `bin/update < 专案 >`。
 
 ## 从 2.4.0 升级到 2.5.0
 

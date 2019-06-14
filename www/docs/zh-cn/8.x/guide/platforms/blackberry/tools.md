@@ -22,7 +22,7 @@ title: 黑莓手机的命令列工具
 
 # 黑莓手机的命令列工具
 
-`cordova`命令列实用程式是一个高级别的工具，允许您在一次跨几个平台生成的应用程式。 旧版本的科尔多瓦框架提供了特定于每个平台的命令列工具集。 若要使用它们作为 CLI 的替代，您需要从[cordova.apache.org][1]下载此版本的科尔多瓦。 下载档案中包含单独的档案，为每个平台。 展开您想要的目标平台。 这里描述的工具，通常可用在顶级 `bin` 目录中，否则为咨询**自述**档，了解有关更多详细的指示。
+`cordova`命令列实用程式是一个高级别的工具，允许您在一次跨几个平台生成的应用程式。 旧版本的Cordova框架提供了特定于每个平台的命令列工具集。 若要使用它们作为 CLI 的替代，您需要从[cordova.apache.org][1]下载此版本的Cordova。 下载档案中包含单独的档案，为每个平台。 展开您想要的目标平台。 这里描述的工具，通常可用在顶级 `bin` 目录中，否则为咨询**自述**档，了解有关更多详细的指示。
 
  [1]: http://cordova.apache.org
 
@@ -38,7 +38,7 @@ title: 黑莓手机的命令列工具
 
 ## 生成专案
 
-对于黑莓手机的专案，请确保您自订 `project.properties` 在科尔多瓦专案的根目录中的档。 你需要提供你的黑莓手机签名金钥的密码，这样做并指定黑莓 WebWorks SDK 和黑莓模拟程式的可执行档的位置。
+对于黑莓手机的专案，请确保您自订 `project.properties` 在Cordova专案的根目录中的档。 你需要提供你的黑莓手机签名金钥的密码，这样做并指定黑莓 WebWorks SDK 和黑莓模拟程式的可执行档的位置。
 
     $ /path/to/my_new_project/cordova/build <platform>
     $ /path/to/my_new_project/cordova/build.bat <platform>
@@ -46,7 +46,7 @@ title: 黑莓手机的命令列工具
 
 ## 启动模拟程式
 
-对于黑莓手机的专案，请确保您自订 `project.properties` 科尔多瓦专案目录的根目录中的档。 你需要提供你的黑莓手机签名金钥的密码，这样做并指定黑莓 WebWorks SDK 和黑莓模拟程式的可执行档的位置。
+对于黑莓手机的专案，请确保您自订 `project.properties` Cordova专案目录的根目录中的档。 你需要提供你的黑莓手机签名金钥的密码，这样做并指定黑莓 WebWorks SDK 和黑莓模拟程式的可执行档的位置。
 
     $ /path/to/my_new_project/cordova/run <platform>
     

@@ -23,7 +23,7 @@ toc_title: Blackberry 10
 
 # 黑莓 10 外挂程式
 
-此部分提供了如何在黑莓 10 平台上实现本机外挂程式代码的详细资讯。 之前读这篇文章，请参阅应用程式外挂程式外挂程式的结构和其共同的 JavaScript 介面的概述。 这一节继续表明通信从科尔多瓦 web 视图的本机平台和后面的示例*回声*外挂程式。
+此部分提供了如何在黑莓 10 平台上实现本机外挂程式代码的详细资讯。 之前读这篇文章，请参阅应用程式外挂程式外挂程式的结构和其共同的 JavaScript 介面的概述。 这一节继续表明通信从Cordova web 视图的本机平台和后面的示例*回声*外挂程式。
 
 Echo 外挂程式基本上返回任何字串 `window.echo` 从 JavaScript 函数发送：
 
@@ -34,7 +34,7 @@ Echo 外挂程式基本上返回任何字串 `window.echo` 从 JavaScript 函数
         };
     
 
-黑莓 10 科尔多瓦外挂程式包含 JavaScript 和本机代码，其中提供的 JNEXT 框架通过互相沟通。 每个外挂程式还必须包含 `plugin.xml` 档。
+黑莓 10 Cordova外挂程式包含 JavaScript 和本机代码，其中提供的 JNEXT 框架通过互相沟通。 每个外挂程式还必须包含 `plugin.xml` 档。
 
 ## 创建本机类
 
@@ -127,9 +127,9 @@ JNEXT 扩展的本机介面可以查看外挂程式标头档位于专案的公�
 
 该外挂程式必须包含以下的 JavaScript 档：
 
-*   `client.js`: 这被认为是在用户端，并包含可用到科尔多瓦的应用程式的 API。 中的 API `client.js` 调用程式调用 `index.js` 。 中的 API `client.js` 也连接到火，回档的事件的回呼函数。
+*   `client.js`: 这被认为是在用户端，并包含可用到Cordova的应用程式的 API。 中的 API `client.js` 调用程式调用 `index.js` 。 中的 API `client.js` 也连接到火，回档的事件的回呼函数。
 
-*   `index.js`： 科尔多瓦载入 `index.js` 并使其可通过 cordova.exec 桥。 `client.js`档程式中的 API 呼叫 `index.js` 档中，从而使打电话到 JNEXT 与本机端进行通信。
+*   `index.js`： Cordova载入 `index.js` 并使其可通过 cordova.exec 桥。 `client.js`档程式中的 API 呼叫 `index.js` 档中，从而使打电话到 JNEXT 与本机端进行通信。
 
 用户端和伺服器端 ( `client.js` 和 `index.js` ) 进行交互，通过 `Cordova.exec` 函数。 `client.js`需要调用 `exec` 函数并提供必要的参数。 `Echo`外挂程式实现以下在 `client.js` 档：
 

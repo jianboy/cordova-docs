@@ -23,7 +23,7 @@ toc_title: Create a plugin
 
 # 外挂程式开发指南
 
-*外挂程式*是代码的一个套装软体，注入，允许在其中应用程式呈现与在其上运行的本机平台进行通信的科尔多瓦 web 视图。 外挂程式提供对基于 web 的应用程式通常不可用的设备和平台功能的访问。 科尔多瓦 API 的所有主要功能作为外挂程式，实现和许多其他的可用条码扫描器、 NFC 通信等功能的启用或定制日历的介面。 有可用外挂程式[注册表][1]。
+*外挂程式*是代码的一个套装软体，注入，允许在其中应用程式呈现与在其上运行的本机平台进行通信的Cordova web 视图。 外挂程式提供对基于 web 的应用程式通常不可用的设备和平台功能的访问。 Cordova API 的所有主要功能作为外挂程式，实现和许多其他的可用条码扫描器、 NFC 通信等功能的启用或定制日历的介面。 有可用外挂程式[注册表][1]。
 
  [1]: http://plugins.cordova.io
 
@@ -37,7 +37,7 @@ toc_title: Create a plugin
 
 ## 建设一个外挂程式
 
-应用程式开发人员使用 CLI 的 `plugin add` 命令 （讨论中的命令列介面），适用于一个专案的一个外挂程式。 该命令的参数是一个包含外挂程式代码的*git*存储库的 URL。 此示例实现科尔多瓦的设备 API：
+应用程式开发人员使用 CLI 的 `plugin add` 命令 （讨论中的命令列介面），适用于一个专案的一个外挂程式。 该命令的参数是一个包含外挂程式代码的*git*存储库的 URL。 此示例实现Cordova的设备 API：
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
     
@@ -154,11 +154,11 @@ Tizen 平台不支援外挂程式。
  [4]: https://www.npmjs.com
  [5]: http://plugins.cordova.io/npm/developers.html
 
-**注**:[科尔多瓦外挂程式注册表][6]移动到唯读状态。 `publish`/`unpublish`命令删除从`plugman`，所以你需要使用相应的`新公共管理`命令。
+**注**:[Cordova外挂程式注册表][6]移动到唯读状态。 `publish`/`unpublish`命令删除从`plugman`，所以你需要使用相应的`新公共管理`命令。
 
  [6]: https://plugins.cordova.io
 
-其他开发人员可以安装你的外挂程式使用`plugman`或科尔多瓦 CLI 自动。 (每个发展路径的详细资讯，请参阅使用 Plugman 管理外挂程式和命令列介面。)
+其他开发人员可以安装你的外挂程式使用`plugman`或Cordova CLI 自动。 (每个发展路径的详细资讯，请参阅使用 Plugman 管理外挂程式和命令列介面。)
 
 要将一个外挂程式发布到故宫注册表你需要按照以下的步骤:
 

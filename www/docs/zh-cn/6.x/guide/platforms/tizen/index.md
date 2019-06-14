@@ -22,7 +22,7 @@ title: Tizen 平台指南
 
 # Tizen 平台指南
 
-本指南介绍了如何设置您的 SDK 开发环境部署科尔多瓦运行 Tizen 作业系统的设备的应用程式。
+本指南介绍了如何设置您的 SDK 开发环境部署Cordova运行 Tizen 作业系统的设备的应用程式。
 
 ## 要求和支援
 
@@ -74,7 +74,7 @@ Tizen SDK 需要 Linux Ubuntu 10.04/10.10/11.04/11.10 （32 位） 或 Windows X
 
 5.  请确保选中了**复制到工作区中的专案**。
 
-6.  按**流览**并选择科尔多瓦 Tizen `samples` 专案目录 （如 `/cordova-basic` ）：
+6.  按**流览**并选择Cordova Tizen `samples` 专案目录 （如 `/cordova-basic` ）：
     
     ![][3]
 

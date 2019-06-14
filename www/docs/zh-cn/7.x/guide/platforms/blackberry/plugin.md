@@ -22,7 +22,7 @@ title: 黑莓手机的外挂程式
 
 # 黑莓手机的外挂程式
 
-本指南介绍了如何开发回声外挂程式在黑莓手机上。 外挂程式开发指南提供广泛概述，你应该已经是熟悉的和本指南捡起它的留下。 此外，下载[科尔多瓦黑莓手机存储库][1].
+本指南介绍了如何开发回声外挂程式在黑莓手机上。 外挂程式开发指南提供广泛概述，你应该已经是熟悉的和本指南捡起它的留下。 此外，下载[Cordova黑莓手机存储库][1].
 
  [1]: https://git-wip-us.apache.org/repos/asf?p=cordova-blackberry-webworks.git;a=summary
 
@@ -39,7 +39,7 @@ Echo 外挂程式基本上是返回使用者不管消息提供给 `window.echo` 
 
 ## 修改 plugins.xml
 
-您的专案的 `www/plugins.xml` 目录中包含的所有必要引用到科尔多瓦专案的外挂程式。 添加一个额外的引用，这样，当 `cordova.exec` 是科尔多瓦叫，知道如何映射 `Echo` 参数的 `cordova.exec` 到 `Echo` 我们想要写本机的类：
+您的专案的 `www/plugins.xml` 目录中包含的所有必要引用到Cordova专案的外挂程式。 添加一个额外的引用，这样，当 `cordova.exec` 是Cordova叫，知道如何映射 `Echo` 参数的 `cordova.exec` 到 `Echo` 我们想要写本机的类：
 
     <feature name="Echo">
         <param name="blackberry-package" value="org.apache.cordova.echo.Echo" />
@@ -48,7 +48,7 @@ Echo 外挂程式基本上是返回使用者不管消息提供给 `window.echo` 
 
 ## 添加 Echo.java
 
-如果您注意到结构的值属性，您将看到已定义的路径，导致回声外挂程式。 在科尔多瓦黑莓 WebWorks 回购的根目录中，查找名为的目录 `framework` 。 此目录包含所有的原始程式码在黑莓手机上本机运行。 导航到 `framework/ext/src/org/apache/cordova` 。 此时，您将看到所有的外挂程式目录，所是的原始程式码。 因此，添加目录回显到 `framework/ext/src/org/apache/cordova/echo` ，并创建一个档称为 `Echo.java` 在`framework/ext/src/org/apache/cordova/echo/Echo.java`.
+如果您注意到结构的值属性，您将看到已定义的路径，导致回声外挂程式。 在Cordova黑莓 WebWorks 回购的根目录中，查找名为的目录 `framework` 。 此目录包含所有的原始程式码在黑莓手机上本机运行。 导航到 `framework/ext/src/org/apache/cordova` 。 此时，您将看到所有的外挂程式目录，所是的原始程式码。 因此，添加目录回显到 `framework/ext/src/org/apache/cordova/echo` ，并创建一个档称为 `Echo.java` 在`framework/ext/src/org/apache/cordova/echo/Echo.java`.
 
 ## 书写 Echo.java
 

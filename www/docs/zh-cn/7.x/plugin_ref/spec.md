@@ -49,7 +49,7 @@ toc_title: Plugin.xml
 
 ## *发动机*和*引擎*的元素
 
-子项目的 `<engines>` 元素指定版本的此外挂程式支援的基于 Apache 科尔多瓦的框架。示例：
+子项目的 `<engines>` 元素指定版本的此外挂程式支援的基于 Apache Cordova的框架。示例：
 
     <engines>
         <engine name="cordova" version="1.7.0" />
@@ -71,7 +71,7 @@ toc_title: Plugin.xml
     </engines>
     
 
-`<engine>`标签也有预设支援的所有主要平台存在的科尔多瓦。 指定 `cordova` 引擎标记，则意味著所有版本的科尔多瓦在任何平台上必须都满足发动机版本属性。 你可能还会列出特定的平台和它们的版本以覆盖全部捕获 `cordova` 引擎：
+`<engine>`标签也有预设支援的所有主要平台存在的Cordova。 指定 `cordova` 引擎标记，则意味著所有版本的Cordova在任何平台上必须都满足发动机版本属性。 你可能还会列出特定的平台和它们的版本以覆盖全部捕获 `cordova` 引擎：
 
     <engines>
         <engine name="cordova" version=">=1.7.0" />
@@ -96,7 +96,7 @@ toc_title: Plugin.xml
 *   `apple-osx` // returns the OSX version
 *   `blackberry-ndk` // returns the native blackberry SDK version
 
-指定自订的基于 Apache 科尔多瓦的框架应列出引擎标记下就像这样：
+指定自订的基于 Apache Cordova的框架应列出引擎标记下就像这样：
 
     <engines>
         <engine name="my_custom_framework" version="1.0.0" platform="android" scriptSrc="path_to_my_custom_framework_version"/>
@@ -105,7 +105,7 @@ toc_title: Plugin.xml
     </engines>
     
 
-一个自订的基于 Apache 科尔多瓦框架需要引擎的元素包含以下特性： `name` ， `version` ， `scriptSrc` ，和`platform`.
+一个自订的基于 Apache Cordova框架需要引擎的元素包含以下特性： `name` ， `version` ， `scriptSrc` ，和`platform`.
 
 *   `name`(必填): 人类可读的名称为您自订的框架。
 
@@ -117,7 +117,7 @@ toc_title: Plugin.xml
 
 plugman 中止与非零代码为其目标专案不能满足发动机的约束任何外挂程式。
 
-如果不是 `<engine>` 指定的标记、 plugman 尝试盲目地安装到指定的科尔多瓦的专案目录。
+如果不是 `<engine>` 指定的标记、 plugman 尝试盲目地安装到指定的Cordova的专案目录。
 
 ## *名称*元素
 
@@ -160,7 +160,7 @@ plugman 中止与非零代码为其目标专案不能满足发动机的约束任
 
 ## *资产*元素
 
-一个或多个元素列出档或目录复写到科尔多瓦 app `www` 目录。例子：
+一个或多个元素列出档或目录复写到Cordova app `www` 目录。例子：
 
     <!-- a single file, to be copied in the root directory -->
     <asset src="www/foo.js" target="foo.js" />
@@ -174,7 +174,7 @@ plugman 中止与非零代码为其目标专案不能满足发动机的约束任
 
 *   `target` (required):
     
-    在那里的档或目录应位于科尔多瓦 app，相对于`www`目录。 资产可以有针对性地对子目录，例如:
+    在那里的档或目录应位于Cordova app，相对于`www`目录。 资产可以有针对性地对子目录，例如:
     
         <asset src="www/new-foo.js" target="js/experimental/foo.js" />
         
@@ -239,7 +239,7 @@ plugman 中止与非零代码为其目标专案不能满足发动机的约束任
 
 ## *平台*元素
 
-`<platform>`标记标识平台有关联的本机代码或需要对它们的设定档进行修改。 使用此规范的工具可以标识支援的平台和科尔多瓦专案中安装代码。
+`<platform>`标记标识平台有关联的本机代码或需要对它们的设定档进行修改。 使用此规范的工具可以标识支援的平台和Cordova专案中安装代码。
 
 无外挂程式 `<platform>` 标签被假定为只 JavaScript 的并因此可安装在所有的平台上。
 
@@ -281,7 +281,7 @@ plugman 中止与非零代码为其目标专案不能满足发动机的约束任
 
 *   `src`(必填): 相对于`plugin.xml`档的位置。 如果不能找到`src`档，plugman 停止和反转安装、 然后发出一个通知有关的问题，并在此与非零代码退出。
 
-*   `target-dir`: 档应该将复制到其中，相对于科尔多瓦专案的根目录的目录。 在实践中，这是最重要的是基于 JAVA 的平台上，在`com.alunny.foo`包中的档必须位于`com/alunny/美孚`目录内。 对于原始目录是不重要的平台，应忽略此属性。
+*   `target-dir`: 档应该将复制到其中，相对于Cordova专案的根目录的目录。 在实践中，这是最重要的是基于 JAVA 的平台上，在`com.alunny.foo`包中的档必须位于`com/alunny/美孚`目录内。 对于原始目录是不重要的平台，应忽略此属性。
     
     作为资产，如果`target``source-file`会覆盖现有的档，plugman 停止和反转安装，发出一个通知有关的问题，并退出非零代码。
 
@@ -323,7 +323,7 @@ XML 的的示例：
 
 *   `target`:
     
-    要修改档和科尔多瓦专案根目录的相对路径。
+    要修改档和Cordova专案根目录的相对路径。
     
     目标可以包括万用字元 (``*) 元素。在这种情况下，plugman 递回搜索专案目录结构，并使用第一场比赛。
     
@@ -362,7 +362,7 @@ Windows 平台支援两个附加属性 （两个可选） 时影响 `package.app
 
 ## *外挂程式-plist*元素
 
-这是 *过时* 的因为它只适用于科尔多瓦 ios 2.2.0 和下面。科尔多瓦的较新版本使用 `<config-file>` 标记。
+这是 *过时* 的因为它只适用于Cordova ios 2.2.0 和下面。Cordova的较新版本使用 `<config-file>` 标记。
 
 示例:
 
@@ -373,7 +373,7 @@ Windows 平台支援两个附加属性 （两个可选） 时影响 `package.app
     </config-file>
     
 
-指定的键和值追加到 iOS 科尔多瓦专案中的正确的 `AppInfo.plist` 档。举个例子：
+指定的键和值追加到 iOS Cordova专案中的正确的 `AppInfo.plist` 档。举个例子：
 
     <plugins-plist key="Foo" string="CDVFoo" />
     
@@ -462,7 +462,7 @@ Android 的示例：
 
 为 pre-android@4.0.0 (基于 ANT 的专案):
 
-可选的`type`属性是一个字串，指示框架添加的类型。 目前，只有`projectReference`支援并且仅用于 Windows。 使用`custom='true'`和`type='projectReference'`将引用添加到专案，将被添加到编译 + 连结科尔多瓦专案的步骤。 这基本上是目前唯一的方式，'custom' 的框架可以针对多个体系结构，因为他们作为一种依赖由显式引用科尔多瓦应用程式。
+可选的`type`属性是一个字串，指示框架添加的类型。 目前，只有`projectReference`支援并且仅用于 Windows。 使用`custom='true'`和`type='projectReference'`将引用添加到专案，将被添加到编译 + 连结Cordova专案的步骤。 这基本上是目前唯一的方式，'custom' 的框架可以针对多个体系结构，因为他们作为一种依赖由显式引用Cordova应用程式。
 
 可选的`parent`将相对路径设置为包含要向其增加参考的子专案的目录。 预设值是`.`，即应用程式专案。 它允许添加像在此示例中的子专案之间的引用:
 
@@ -505,7 +505,7 @@ Windows 平台支援三个附加属性 (所有可选) 精炼时框架应包括:
 
 ## *hook*元素
 
-表示您自订的脚本，将调用由科尔多瓦发生某些操作时 (例如，添加外挂程式或平台编写逻辑之后调用)。 当您需要扩展预设科尔多瓦功能时，这很有用。 更多的资讯，请参阅挂钩的指南。
+表示您自订的脚本，将调用由Cordova发生某些操作时 (例如，添加外挂程式或平台编写逻辑之后调用)。 当您需要扩展预设Cordova功能时，这很有用。 更多的资讯，请参阅挂钩的指南。
 
     <hook type="after_plugin_install" src="scripts/afterPluginInstall.js" />
     

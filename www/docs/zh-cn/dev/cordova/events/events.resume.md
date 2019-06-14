@@ -87,7 +87,7 @@ title: resume
 
 ## iOS 的怪癖
 
-从调用任何互动式函数 `[pause](events.pause.html)` 事件处理常式以后执行应用程式恢复时，由发出信号 `resume` 事件。 这些包括警报， `console.log()` ，和任何调用从外挂程式或 API，科尔多瓦，穿过目标 C.
+从调用任何互动式函数 `[pause](events.pause.html)` 事件处理常式以后执行应用程式恢复时，由发出信号 `resume` 事件。 这些包括警报， `console.log()` ，和任何调用从外挂程式或 API，Cordova，穿过目标 C.
 
 *   **活动**事件
     

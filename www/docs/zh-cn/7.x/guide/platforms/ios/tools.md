@@ -22,9 +22,9 @@ title: iOS 壳工具指南
 
 # iOS 壳工具指南
 
-本指南演示如何使用科尔多瓦的套的平台为中心的外壳程式工具来开发 iOS 应用程式。 这种发展道路，概述中讨论可能会为您提供更广泛的发展方案时，iOS 比所述的命令列介面的跨平台 CLI 工具。 例如，您需要部署一个科尔多瓦 web 视图自订旁边的本机组件时使用外壳程式工具。 在使用之前要么发展路径，您必须首先配置 SDK 环境的 iOS 平台指南中所述。 这些工具依赖于 Xcode 的命令列工具如 `xcode-select` 和`xcodebuild`.
+本指南演示如何使用Cordova的套的平台为中心的外壳程式工具来开发 iOS 应用程式。 这种发展道路，概述中讨论可能会为您提供更广泛的发展方案时，iOS 比所述的命令列介面的跨平台 CLI 工具。 例如，您需要部署一个Cordova web 视图自订旁边的本机组件时使用外壳程式工具。 在使用之前要么发展路径，您必须首先配置 SDK 环境的 iOS 平台指南中所述。 这些工具依赖于 Xcode 的命令列工具如 `xcode-select` 和`xcodebuild`.
 
-若要启用 iOS 的外壳工具，请从[cordova.apache.org][1]下载科尔多瓦。 下载档案中包含单独的档案，为每个平台。 展开每个您想要的目标， `ios` 在这种情况下。 相关的工具，通常可用在顶级 `bin` 目录中，否则为咨询**自述**档，了解有关更多详细的指示。
+若要启用 iOS 的外壳工具，请从[cordova.apache.org][1]下载Cordova。 下载档案中包含单独的档案，为每个平台。 展开每个您想要的目标， `ios` 在这种情况下。 相关的工具，通常可用在顶级 `bin` 目录中，否则为咨询**自述**档，了解有关更多详细的指示。
 
  [1]: http://cordova.apache.org
 
@@ -58,7 +58,7 @@ title: iOS 壳工具指南
 
  [2]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html
 
-签在科尔多瓦 app 需要具备以下条件:
+签在Cordova app 需要具备以下条件:
 
 *   代码签名标识 (`-codeSignIdentity`):[使用 XCode][3]可以创建新的 iOS 签名标识并将其添加到您的钥匙串。 类型的代码签名身份 — — 通常分布或发展，需要在这里指定。
 

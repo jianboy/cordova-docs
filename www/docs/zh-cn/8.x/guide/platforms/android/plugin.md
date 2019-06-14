@@ -23,11 +23,11 @@ toc_title: Android
 
 # Android 外挂程式
 
-此部分提供了如何在 Android 平台上实现本机外挂程式代码的详细资讯。 之前读这篇文章，请参阅应用程式外挂程式外挂程式的结构和其共同的 JavaScript 介面的概述。 这一节继续表明通信从科尔多瓦 web 视图的本机平台和后面的示例*回声*外挂程式。 另一个示例，请参阅还在[CordovaPlugin.java][1]的评论.
+此部分提供了如何在 Android 平台上实现本机外挂程式代码的详细资讯。 之前读这篇文章，请参阅应用程式外挂程式外挂程式的结构和其共同的 JavaScript 介面的概述。 这一节继续表明通信从Cordova web 视图的本机平台和后面的示例*回声*外挂程式。 另一个示例，请参阅还在[CordovaPlugin.java][1]的评论.
 
  [1]: https://github.com/apache/cordova-android/blob/master/framework/src/org/apache/cordova/CordovaPlugin.java
 
-Android 外挂程式基于科尔多瓦-Android，Android 的 web 视图包括与附加到它上面的钩子。 外挂程式被表示为类映射的 `config.xml` 档。 外挂程式包括至少一个扩展的 JAVA 类的 `CordovaPlugin` 类，重写的一个其 `execute` 方法。 作为最佳实践，该外挂程式还应处理 `[pause](../../../cordova/events/events.pause.html)` 和 `[resume](../../../cordova/events/events.resume.html)` 事件，以及任何外挂程式之间传递的消息。 外挂程式需要长时间运行的请求，后台活动媒体重播、 听众或内部状态等应执行 `onReset()` ，以及方法。 它执行时 `WebView` 定位到新的一页或刷新，重新载入 JavaScript。
+Android 外挂程式基于Cordova-Android，Android 的 web 视图包括与附加到它上面的钩子。 外挂程式被表示为类映射的 `config.xml` 档。 外挂程式包括至少一个扩展的 JAVA 类的 `CordovaPlugin` 类，重写的一个其 `execute` 方法。 作为最佳实践，该外挂程式还应处理 `[pause](../../../cordova/events/events.pause.html)` 和 `[resume](../../../cordova/events/events.resume.html)` 事件，以及任何外挂程式之间传递的消息。 外挂程式需要长时间运行的请求，后台活动媒体重播、 听众或内部状态等应执行 `onReset()` ，以及方法。 它执行时 `WebView` 定位到新的一页或刷新，重新载入 JavaScript。
 
 ## 外挂程式类映射
 
@@ -38,14 +38,14 @@ Android 外挂程式基于科尔多瓦-Android，Android 的 web 视图包括与
 
 这封送请求从 web 视图到 Android 的本机对岸，有效地调用 `action` 方法 `service` 具有额外的参数中传递的类 `args` 阵列。
 
-是否您分发外挂程式作为 JAVA 档或作为它自己的一个*jar*档，必须在科尔多瓦 Android 应用程式中指定外挂程式 `res/xml/config.xml` 档。 有关如何使用的详细资讯，请参阅应用程式外挂程式 `plugin.xml` 档，把这个注射 `feature` 元素：
+是否您分发外挂程式作为 JAVA 档或作为它自己的一个*jar*档，必须在Cordova Android 应用程式中指定外挂程式 `res/xml/config.xml` 档。 有关如何使用的详细资讯，请参阅应用程式外挂程式 `plugin.xml` 档，把这个注射 `feature` 元素：
 
         <feature name="<service_name>">
             <param name="android-package" value="<full_name_including_namespace>" />
         </feature>
     
 
-服务名称匹配在 JavaScript 中使用 `exec` 调用。 值是 JAVA 类的完全限定命名空间识别码。 否则为该外挂程式可能会编译，但仍不能使用到科尔多瓦。
+服务名称匹配在 JavaScript 中使用 `exec` 调用。 值是 JAVA 类的完全限定命名空间识别码。 否则为该外挂程式可能会编译，但仍不能使用到Cordova。
 
 ## 外挂程式初始化和存留期
 
@@ -173,7 +173,7 @@ JavaScript `exec` 函数的 `action` 参数对应于一个类的私有类方法�
 
 Android 功能 `Intent` 允许进程互相沟通的系统。 外挂程式可以访问 `CordovaInterface` 物件，可以访问 Android `Activity` ，运行应用程式。 这是 `Context` 启动新的 android 系统所需 `Intent` 。 `CordovaInterface`允许外挂程式启动 `Activity` 一个结果，并设置回档外挂程式时 `Intent` 返回到应用程式。
 
-到科尔多瓦 2.0 外挂程式可以不再直接存取 `Context` ，和遗产 `ctx` 成员已被否决。 所有 `ctx` 的方法上存在 `Context` ，所以这两个 `getContext()` 和 `getActivity()` 可以返回所需的物件。
+到Cordova 2.0 外挂程式可以不再直接存取 `Context` ，和遗产 `ctx` 成员已被否决。 所有 `ctx` 的方法上存在 `Context` ，所以这两个 `getContext()` 和 `getActivity()` 可以返回所需的物件。
 
 ## 调试 Android 外挂程式
 

@@ -23,25 +23,25 @@ toc_title: Android
 
 # Android 平台指南
 
-本指南演示如何设置您的 SDK 环境部署科尔多瓦的 Android 设备的应用程式以及如何在您的开发工作流中 （可选） 使用 Android 居中的命令列工具。 您需要安装 Android SDK 无论是否你想要使用这些平台为中心的外壳工具或跨平台 Cordova CLI 的发展。 两条发展路径的比较，请参见概述。 CLI 的详细资讯，请参阅命令列介面。
+本指南演示如何设置您的 SDK 环境部署Cordova的 Android 设备的应用程式以及如何在您的开发工作流中 （可选） 使用 Android 居中的命令列工具。 您需要安装 Android SDK 无论是否你想要使用这些平台为中心的外壳工具或跨平台 Cordova CLI 的发展。 两条发展路径的比较，请参见概述。 CLI 的详细资讯，请参阅命令列介面。
 
 ## 要求和支援
 
-科尔多瓦安卓系统要求可以在 OS X、 Linux 或 Windows 作业系统安装 Android SDK。 请参阅 Android SDK[的系统要求][1].
+Cordova安卓系统要求可以在 OS X、 Linux 或 Windows 作业系统安装 Android SDK。 请参阅 Android SDK[的系统要求][1].
 
  [1]: http://developer.android.com/sdk/index.html#Requirements
 
-科尔多瓦支援 Android 4.0.x (入手 Android API 级别 14） 和更高。 作为一般规则，Android 版本成为受科尔多瓦作为他们低于 5%的谷歌的[分布的仪表板][2]。 Android 版本早于 API 级别 10，和 3.x 版本 （蜂窝，API 级别 11 13） 显著低于那 5%的门槛。
+Cordova支援 Android 4.0.x (入手 Android API 级别 14） 和更高。 作为一般规则，Android 版本成为受Cordova作为他们低于 5%的谷歌的[分布的仪表板][2]。 Android 版本早于 API 级别 10，和 3.x 版本 （蜂窝，API 级别 11 13） 显著低于那 5%的门槛。
 
  [2]: http://developer.android.com/about/dashboards/index.html
 
-## 安装科尔多瓦壳工具
+## 安装Cordova壳工具
 
-如果您想要使用科尔多瓦的 Android 居中外壳工具与 SDK 一起，从[cordova.apache.org][3]下载科尔多瓦。 如果您计划使用所述的命令列介面的跨平台 CLI 工具，否则忽略此节。
+如果您想要使用Cordova的 Android 居中外壳工具与 SDK 一起，从[cordova.apache.org][3]下载Cordova。 如果您计划使用所述的命令列介面的跨平台 CLI 工具，否则忽略此节。
 
  [3]: http://cordova.apache.org
 
-科尔多瓦下载包含单独的档案，为每个平台。 一定要展开相应的存档， `android` 在这种情况下，在一个空的目录内。 有关 executible 实用程式可用在顶级 `bin` 目录。 (参阅**自述**档，如果有必要作更详细的指示）。
+Cordova下载包含单独的档案，为每个平台。 一定要展开相应的存档， `android` 在这种情况下，在一个空的目录内。 有关 executible 实用程式可用在顶级 `bin` 目录。 (参阅**自述**档，如果有必要作更详细的指示）。
 
 这些外壳工具允许您创建、 构建和运行 Android 应用程式。 额外的命令列介面，可以跨所有平台的外挂程式功能的资讯，请参阅使用 Plugman 到管理外挂程式。 有关如何开发外挂程式的详细资讯，请参阅应用程式外挂程式。
 
@@ -55,14 +55,14 @@ toc_title: Android
 
 ## 安装 Android SDK
 
-安装[独立的 Android SDK 工具][5]或[Android 的工作室][6]。 如果您计划开发新科尔多瓦为 Android 外挂程式或使用本机工具来运行和调试 Android 平台`Android 工作室`水墨画之发展。 否则， `Android 独立 SDK 工具`就足以构建和部署 Android 应用程式。
+安装[独立的 Android SDK 工具][5]或[Android 的工作室][6]。 如果您计划开发新Cordova为 Android 外挂程式或使用本机工具来运行和调试 Android 平台`Android 工作室`水墨画之发展。 否则， `Android 独立 SDK 工具`就足以构建和部署 Android 应用程式。
 
  [5]: http://developer.android.com/sdk/installing/index.html?pkg=tools
  [6]: http://developer.android.com/sdk/installing/index.html?pkg=studio
 
 详细的安装说明，请参见上面的安装连结的一部分。
 
-科尔多瓦的命令列工具来工作，或者基于他们的 CLI，您需要在您的`路径`中包括 SDK 的`工具`和`平台工具`目录。 在 Mac 或 Linux 上，你可以使用一个文字编辑器来创建或修改`~/.bash_profile`档，添加行，如下，根据 SDK 安装的位置:
+Cordova的命令列工具来工作，或者基于他们的 CLI，您需要在您的`路径`中包括 SDK 的`工具`和`平台工具`目录。 在 Mac 或 Linux 上，你可以使用一个文字编辑器来创建或修改`~/.bash_profile`档，添加行，如下，根据 SDK 安装的位置:
 
         export PATH=${PATH}:/Development/android-sdk/platform-tools:/Development/android-sdk/tools
 
@@ -191,7 +191,7 @@ AVD 然后出现在**虚拟的 Android 设备**清单中：
         $ cordova build android --release # build release for only Android
 
 
-如果使用的特定于 Android 的 shell 工具在发展中，还有一个不同的方法。 一旦您生成专案时，预设的应用程式的来源是可用的`资产/www`子目录中。 后续的命令，可在其`科尔多瓦`子目录。
+如果使用的特定于 Android 的 shell 工具在发展中，还有一个不同的方法。 一旦您生成专案时，预设的应用程式的来源是可用的`资产/www`子目录中。 后续的命令，可在其`Cordova`子目录。
 
 `build`命令清理专案档案并重新生成应用程式。这里是 Mac 和 Windows 的语法。 第一次两个示例生成调试资讯，和第二个构建版本的应用程式：
 
@@ -204,7 +204,7 @@ AVD 然后出现在**虚拟的 Android 设备**清单中：
 
 ## 部署应用程式
 
-`科尔多瓦`CLI 实用程式可用于应用程式部署到模拟器或设备从命令列：
+`Cordova`CLI 实用程式可用于应用程式部署到模拟器或设备从命令列：
 
         $ cordova emulate android       #to deploy the app on a default android emulator
         $ cordova run android --device  #to deploy the app on a connected device

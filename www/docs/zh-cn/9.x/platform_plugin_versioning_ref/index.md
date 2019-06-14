@@ -23,7 +23,7 @@ toc_title: Manage versions and platforms
 
 # 平台和外挂程式版本管理
 
-从版 4.3.0 开始，科尔多瓦提供保存和还原平台和外挂程式的能力。
+从版 4.3.0 开始，Cordova提供保存和还原平台和外挂程式的能力。
 
 此功能允许开发人员保存，并将他们的应用程式还原到已知状态，而无需检查在所有的平台和外挂程式的原始程式码。
 
@@ -53,7 +53,7 @@ toc_title: Manage versions and platforms
 
   * **'cordova platform add android --save'** => 检索固定的版本的 android 平台，将其添加到该专案，然后更新 config.xml。
   * **'cordova platform add android@3.7.0 --save'** => 检索 android 平台上，从新公共管理，版本 3.7.0 将它添加到专案，然后更新 config.xml。
-  * **'cordova platform add android@https://github.com/apache/cordova-android.git​ --save'** => 克隆指定的科尔多瓦 android git 仓库，将 android 平台添加到专案中，然后更新 config.xml 并指向指定的 git url 及其版本。
+  * **'cordova platform add android@https://github.com/apache/cordova-android.git​ --save'** => 克隆指定的Cordova android git 仓库，将 android 平台添加到专案中，然后更新 config.xml 并指向指定的 git url 及其版本。
   * **cordova platform add C:/path/to/android/platform --save** => 从指定的目录中检索的 android 平台，将其添加到专案中，然后更新 config.xml 和指向的目录。
 
 ### 保存对现有专案的平台的大众
@@ -65,7 +65,7 @@ toc_title: Manage versions and platforms
 
 ### 更新/删除平台
 
-它也是可能更新或删除从 config.xml 命令 '科尔多瓦平台更新' 和 '科尔多瓦平台删除' 期间:
+它也是可能更新或删除从 config.xml 命令 'Cordova平台更新' 和 'Cordova平台删除' 期间:
 
     $ cordova platform update <platform[@<version>] | directory | git_url> --save
     $ cordova platform remove <platform> --save
@@ -135,7 +135,7 @@ toc_title: Manage versions and platforms
 
 ### 更新/删除外挂程式
 
-它也是可能更新或删除从 config.xml 命令 '科尔多瓦外挂程式更新' 和 '科尔多瓦外挂程式删除' 期间:
+它也是可能更新或删除从 config.xml 命令 'Cordova外挂程式更新' 和 'Cordova外挂程式删除' 期间:
 
     $ cordova plugin update <plugin[@<version>] | directory | git_url> --save
     $ cordova plugin remove <plugin> --save

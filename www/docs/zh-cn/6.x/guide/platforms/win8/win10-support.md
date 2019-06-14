@@ -17,12 +17,12 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: Windows 10 的科尔多瓦
+title: Windows 10 的Cordova
 ---
 
-# Windows 10 的科尔多瓦
+# Windows 10 的Cordova
 
-也许你可以改称之为"科尔多瓦 10 视窗"。 Windows 10 已经重新设计使科尔多瓦支援到 web，并得到挡你路的平台安全限制其 HTML 和 JavaScript 应用程式平台。
+也许你可以改称之为"Cordova 10 视窗"。 Windows 10 已经重新设计使Cordova支援到 web，并得到挡你路的平台安全限制其 HTML 和 JavaScript 应用程式平台。
 
 ## 开始使用 Windows 10
 
@@ -78,7 +78,7 @@ title: Windows 10 的科尔多瓦
 
   * `10.0`，`UAP`: 为 Windows 10 通用的应用程式平台构建
   * `8.1`: 生成 Windows 8.1 或 Windows Phone 8.1
-  * `8.0`: 构建 windows 8.0。 对于 Windows Phone 无效 (改用**wp8**科尔多瓦平台)
+  * `8.0`: 构建 windows 8.0。 对于 Windows Phone 无效 (改用**wp8**Cordova平台)
 
 **方案**
 

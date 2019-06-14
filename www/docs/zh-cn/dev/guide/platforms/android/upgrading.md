@@ -22,56 +22,56 @@ title: 升级 Android
 
 # 升级 Android
 
-本指南演示如何修改 Android 专案从科尔多瓦的旧版本进行升级。 大多数这些说明适用于与旧集的前面的命令列工具创建的专案 `cordova` CLI 实用程式。 命令列介面资讯，请参阅如何更新的 CLI 版本。
+本指南演示如何修改 Android 专案从Cordova的旧版本进行升级。 大多数这些说明适用于与旧集的前面的命令列工具创建的专案 `cordova` CLI 实用程式。 命令列介面资讯，请参阅如何更新的 CLI 版本。
 
 ## 从 3.2.0 升级到 3.3.0
 
 遵循相同的 instructinos`3.2.0`.
 
-从 3.3.0 开始，科尔多瓦运行时是现在作为编译 Android 的库，而不是 Jar。 这都不应该影响对于命令列用法，但 IDE 使用者将需要导入到新添加的 `MyProject-CordovaLib` 到其工作区中的专案。
+从 3.3.0 开始，Cordova运行时是现在作为编译 Android 的库，而不是 Jar。 这都不应该影响对于命令列用法，但 IDE 使用者将需要导入到新添加的 `MyProject-CordovaLib` 到其工作区中的专案。
 
 ## 从 3.1.0 升级到 3.2.0
 
-为创建的科尔多瓦 CLI 的专案：
+为创建的Cordova CLI 的专案：
 
 1.  更新 `cordova` CLI 版本。请参阅命令列介面。
 
 2.  运行`cordova platform update android`
 
-对于不使用 CLI 科尔多瓦创建的专案，请运行：
+对于不使用 CLI Cordova创建的专案，请运行：
 
         bin/update <project_path>
     
 
 ## 从 3.0.0 升级到 3.1.0
 
-为创建的科尔多瓦 CLI 的专案：
+为创建的Cordova CLI 的专案：
 
 1.  更新 `cordova` CLI 版本。请参阅命令列介面。
 
 2.  运行`cordova platform update android`
 
-对于不使用 CLI 科尔多瓦创建的专案，请运行：
+对于不使用 CLI Cordova创建的专案，请运行：
 
         bin/update <project_path>
     
 
 ## 从 2.9.0 升级到 CLI （3.0.0)
 
-1.  创建新的 Apache 科尔多瓦 3.0.0 专案使用 CLI，科尔多瓦，如所述的命令列介面。
+1.  创建新的 Apache Cordova 3.0.0 专案使用 CLI，Cordova，如所述的命令列介面。
 
-2.  添加您的平台的科尔多瓦专案，例如：`cordova
+2.  添加您的平台的Cordova专案，例如：`cordova
 platform add android`.
 
-3.  您的专案的内容复写 `www` 到目录 `www` 目录在您刚刚创建的科尔多瓦专案的根目录。
+3.  您的专案的内容复写 `www` 到目录 `www` 目录在您刚刚创建的Cordova专案的根目录。
 
-4.  将本机的任何资产从旧专案复制到相应的目录下 `platforms/android` ： 此目录是您的本机科尔多瓦 android 专案存在的地方。
+4.  将本机的任何资产从旧专案复制到相应的目录下 `platforms/android` ： 此目录是您的本机Cordova android 专案存在的地方。
 
-5.  使用科尔多瓦 CLI 工具来安装您需要的任何外挂程式。请注意 CLI 处理所有核心 Api 作为外挂程式，所以他们可能需要添加。只有 3.0.0 外挂程式是与 CLI 相容。
+5.  使用Cordova CLI 工具来安装您需要的任何外挂程式。请注意 CLI 处理所有核心 Api 作为外挂程式，所以他们可能需要添加。只有 3.0.0 外挂程式是与 CLI 相容。
 
 ## 从 2.9.0 升级到 3.0.0
 
-1.  创建一个新的 Apache 科尔多瓦 Android 专案。
+1.  创建一个新的 Apache Cordova Android 专案。
 
 2.  将复制的内容你 `www` 目录到新的专案。
 
@@ -145,7 +145,7 @@ platform add android`.
 
 8.  将档从复制 `bin/templates/cordova` 到专案中的 `cordova` 目录。
 
-运行 `bin/update <project>` 的专案路径与科尔多瓦原始目录中列出。
+运行 `bin/update <project>` 的专案路径与Cordova原始目录中列出。
 
 ## 从 2.4.0 升级到 2.5.0
 

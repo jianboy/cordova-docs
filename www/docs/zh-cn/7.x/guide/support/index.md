@@ -70,7 +70,7 @@ toc_title: Platform support
 
       <tr>
         <th>
-          <a href="../cli/index.html">科尔多瓦<br />CLI</a>
+          <a href="../cli/index.html">Cordova<br />CLI</a>
         </th>
 
         <td data-col="amazon-fireos" class="y">

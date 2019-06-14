@@ -23,11 +23,11 @@ toc_title: Customize icons
 
 # 图示和启动画面
 
-这一节演示如何配置应用程式的图示和可选初始萤幕上的各种平台上，两者在科尔多瓦 CLI （描述在命令列介面） 中工作时或使用特定于平台 SDK 工具 （平台指南中详细说明）。
+这一节演示如何配置应用程式的图示和可选初始萤幕上的各种平台上，两者在Cordova CLI （描述在命令列介面） 中工作时或使用特定于平台 SDK 工具 （平台指南中详细说明）。
 
 ## 在 CLI 中配置图示
 
-当工作在 CLI 中你可以定义应用程式图示通过 `<icon>` 元素 （ `config.xml` ）。如果你不指定一个图示然后使用 Apache 科尔多瓦徽标。
+当工作在 CLI 中你可以定义应用程式图示通过 `<icon>` 元素 （ `config.xml` ）。如果你不指定一个图示然后使用 Apache Cordova徽标。
 
         <icon src="res/ios/icon.png" platform="ios" width="57" height="57" density="mdpi" />
     
@@ -149,7 +149,7 @@ Windows8
 
 # 配置示例
 
-请注意"src"属性的值是相对于专案目录而不是 www 目录。 你可以命名源映射任何你喜欢的。 在应用程式中的内部名称取决于科尔多瓦。
+请注意"src"属性的值是相对于专案目录而不是 www 目录。 你可以命名源映射任何你喜欢的。 在应用程式中的内部名称取决于Cordova。
 
     <platform name="android">
         <!-- you can use any density that exists in the Android project -->
@@ -200,7 +200,7 @@ Windows8
 
 # 支援的平台
 
-到目前为止 （科尔多瓦 3.5.0 7 月 2014年) 以下平台支援的闪屏。
+到目前为止 （Cordova 3.5.0 7 月 2014年) 以下平台支援的闪屏。
 
     android
     ios
@@ -211,4 +211,4 @@ Windows8
 
 # 闪屏外挂程式
 
-Apache 科尔多瓦还提供特殊飞溅萤幕外挂程式，它可以用来以程式设计方式显示和隐藏在应用程式启动 HTTPs://github.com/apache/cordova-plugin-splashscreen 期间的初始萤幕
+Apache Cordova还提供特殊飞溅萤幕外挂程式，它可以用来以程式设计方式显示和隐藏在应用程式启动 HTTPs://github.com/apache/cordova-plugin-splashscreen 期间的初始萤幕

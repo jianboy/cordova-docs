@@ -23,13 +23,13 @@ toc_title: Windows
 
 # Windows 平台指南
 
-本指南介绍如何设置您的 SDK 开发环境来构建和部署应用程式科尔多瓦为 Windows 8、 Windows 8.1、 Windows Phone 8.1 和 Windows 10 通用应用程式平台。 它演示如何使用 shell 工具来生成和生成应用程式，或跨平台科尔多瓦 CLI 讨论了在命令列介面。 (见比较这些发展选项的概述)。本节还演示了如何修改科尔多瓦在 Visual Studio 中的应用程式。 无论你采取哪种方法，您需要安装 Visual Studio SDK，如下所述。
+本指南介绍如何设置您的 SDK 开发环境来构建和部署应用程式Cordova为 Windows 8、 Windows 8.1、 Windows Phone 8.1 和 Windows 10 通用应用程式平台。 它演示如何使用 shell 工具来生成和生成应用程式，或跨平台Cordova CLI 讨论了在命令列介面。 (见比较这些发展选项的概述)。本节还演示了如何修改Cordova在 Visual Studio 中的应用程式。 无论你采取哪种方法，您需要安装 Visual Studio SDK，如下所述。
 
-有关如何升级现有的 Windows 8 科尔多瓦专案的资讯，请参阅升级 Windows 8。
+有关如何升级现有的 Windows 8 Cordova专案的资讯，请参阅升级 Windows 8。
 
 视窗电话 8 （wp8） 住宿作为一个独立的平台，有关详细资讯，请参阅 Windows Phone 8 平台指南。
 
-在 Windows 上运行的科尔多瓦 WebViews 依赖互联网资源管理器中 10 （Windows 8.0） 和互联网资源管理器中 11 （Windows 8.1 和 Windows Phone 8.1） 作为他们的渲染引擎，因此作为一个实际问题你可以使用 IE 的功能强大的调试器来测试并不调用科尔多瓦 Api 的任何 web 内容。 Windows Phone 开发者博客上可比的 WebKit 浏览器支援 IE 如何提供[有益的指导][1]。
+在 Windows 上运行的Cordova WebViews 依赖互联网资源管理器中 10 （Windows 8.0） 和互联网资源管理器中 11 （Windows 8.1 和 Windows Phone 8.1） 作为他们的渲染引擎，因此作为一个实际问题你可以使用 IE 的功能强大的调试器来测试并不调用Cordova Api 的任何 web 内容。 Windows Phone 开发者博客上可比的 WebKit 浏览器支援 IE 如何提供[有益的指导][1]。
 
  [1]: http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx
 
@@ -67,7 +67,7 @@ toc_title: Windows
 
  [7]: http://www.windowsstore.com/
 
-为 Windows 开发科尔多瓦的应用程式，您可以使用 pc 机运行 Windows，但你也可能发展在 Mac 上运行的虚拟机器环境或到双启动 Windows 8.1 分区使用新兵训练营。 请查阅这些资源来设置在 Mac 上所需的 Windows 开发环境:
+为 Windows 开发Cordova的应用程式，您可以使用 pc 机运行 Windows，但你也可能发展在 Mac 上运行的虚拟机器环境或到双启动 Windows 8.1 分区使用新兵训练营。 请查阅这些资源来设置在 Mac 上所需的 Windows 开发环境:
 
 *   [VMWare Fusion][8]
 
@@ -79,13 +79,13 @@ toc_title: Windows
  [9]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945424
  [10]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945423
 
-## 使用科尔多瓦外壳工具
+## 使用Cordova外壳工具
 
-如果你想要将与 SDK 一起使用科尔多瓦的 Windows 居中外壳工具，你有两个基本选择：
+如果你想要将与 SDK 一起使用Cordova的 Windows 居中外壳工具，你有两个基本选择：
 
 *   他们从本地访问生成的 CLI 的专案代码。他们是在`平台/windows/`目录后添加`windows`平台如下所述。
 
-*   从单独的分发在[cordova.apache.org][11]下载它们。 科尔多瓦分布包含单独的档案，为每个平台。 一定要扩大相应的存档，`科尔多瓦 windows`在这种情况下，在一个空的目录内。 有关批次处理实用程式可用`包/bin`目录中。 (参阅**自述**档，如果需要更详细的说明)。
+*   从单独的分发在[cordova.apache.org][11]下载它们。 Cordova分布包含单独的档案，为每个平台。 一定要扩大相应的存档，`Cordova windows`在这种情况下，在一个空的目录内。 有关批次处理实用程式可用`包/bin`目录中。 (参阅**自述**档，如果需要更详细的说明)。
 
  [11]: https://www.apache.org/dist/cordova/platforms/
 
@@ -160,7 +160,7 @@ toc_title: Windows
 
 ### 目标 Windows 版本的注意事项
 
-Windows 10 科尔多瓦的应用程式 (和一般的 HTML 应用程式) 支援一种新的"远端"模式。 这种模式使应用程式更多的自由与尊重使用 DOM 操作和常见的 web 模式，例如使用内联脚本，但如此通过减少的功能集时提交给公共 Windows 应用商店，可使用您的应用程式。 有关 Windows 10 和远端模式的详细资讯，请查看[科尔多瓦为 Windows 10][13]文档。
+Windows 10 Cordova的应用程式 (和一般的 HTML 应用程式) 支援一种新的"远端"模式。 这种模式使应用程式更多的自由与尊重使用 DOM 操作和常见的 web 模式，例如使用内联脚本，但如此通过减少的功能集时提交给公共 Windows 应用商店，可使用您的应用程式。 有关 Windows 10 和远端模式的详细资讯，请查看[Cordova为 Windows 10][13]文档。
 
  [13]: win10-support.md.html
 
@@ -182,11 +182,11 @@ Windows 10 科尔多瓦的应用程式 (和一般的 HTML 应用程式) 支援�
 
 可以使用**cordova run windows --list**来查看所有可用的目标和**cordova run windows --target=target_name \-- -|-phone**，在特定的设备或模拟器上运行的应用程式 （例如，`cordova run windows --target="Emulator 8.1 720P 4.7 inch" -- --phone`).
 
-您还可以使用**科尔多瓦运行 — — 说明**查看附加的生成和运行选项。
+您还可以使用**Cordova运行 — — 说明**查看附加的生成和运行选项。
 
 ## 在 SDK 中打开的专案和部署应用程式
 
-一旦你建立科尔多瓦应用程式，如上文所述，可以在 Visual Studio 打开它。 各种`生成`命令生成一个 Visual Studio 解决方案 (*.sln*) 档。 档资源管理器来修改在 Visual Studio 专案中打开的档:
+一旦你建立Cordova应用程式，如上文所述，可以在 Visual Studio 打开它。 各种`生成`命令生成一个 Visual Studio 解决方案 (*.sln*) 档。 档资源管理器来修改在 Visual Studio 专案中打开的档:
 
 ![][14]
 
@@ -232,4 +232,4 @@ Visual Studio 主功能表下面的控制项允许您测试或部署应用程式
 
 与不同的桌面部署，此选项允许您类比平板电脑的定位，位置，和改变其网路设置。
 
-**注**: 有关如何在您的工作流中使用科尔多瓦的命令列工具或 SDK 建议查阅概述。 科尔多瓦 CLI 依赖于跨平台原始程式码通常覆盖 SDK 所使用的特定于平台的档。 如果你想要使用 SDK 来修改专案，使用较低级别外壳工具作为 CLI 的替代方法。
+**注**: 有关如何在您的工作流中使用Cordova的命令列工具或 SDK 建议查阅概述。 Cordova CLI 依赖于跨平台原始程式码通常覆盖 SDK 所使用的特定于平台的档。 如果你想要使用 SDK 来修改专案，使用较低级别外壳工具作为 CLI 的替代方法。

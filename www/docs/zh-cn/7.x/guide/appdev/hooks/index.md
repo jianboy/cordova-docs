@@ -23,7 +23,7 @@ toc_title: Hooks
 
 # 钩子指南
 
-科尔多瓦钩表示特别的脚本可以由应用程式和外挂程式开发人员添加或甚至由您自己构建体系，以自订科尔多瓦命令。 钩脚本可以通过将其添加到特殊的预定义资料夹 (`/hooks`) 或通过设定档 (`config.xml`和`plugin.xml`) 定义和连续运行顺序如下:
+Cordova钩表示特别的脚本可以由应用程式和外挂程式开发人员添加或甚至由您自己构建体系，以自订Cordova命令。 钩脚本可以通过将其添加到特殊的预定义资料夹 (`/hooks`) 或通过设定档 (`config.xml`和`plugin.xml`) 定义和连续运行顺序如下:
 
   * 应用程式挂钩从`/hooks`;
   * 应用钩子从`config.xml`;
@@ -152,7 +152,7 @@ module.exports = function(context) {
 }
 ```
 
-`上下文`物件包含的钩子类型，执行的脚本的完整路径，钩选项，命令列参数传递给科尔多瓦和顶级的"科尔多瓦"物件:
+`上下文`物件包含的钩子类型，执行的脚本的完整路径，钩选项，命令列参数传递给Cordova和顶级的"Cordova"物件:
 
 ```json
 {
@@ -182,7 +182,7 @@ module.exports = function(context) {
 
 `coNtext.opts.plugin`物件仅将传递到外挂程式钩子脚本。
 
-您还可以通过以下方式使用`coNtext.requireCordovaModule`脚本中要求科尔多瓦的附加模组:
+您还可以通过以下方式使用`coNtext.requireCordovaModule`脚本中要求Cordova的附加模组:
 
 ```javascript
 var Q = context.requireCordovaModule('q');
@@ -196,24 +196,24 @@ var Q = context.requireCordovaModule('q');
 
 非 javascript 脚本从专案的根目录中通过节点 child_process 菌种运行，并且都经过目录根作为第一个参数。 所有其他选项都传递到脚本使用环境变数:
 
-  * CORDOVA_VERSION-科尔多瓦 CLI 的版本。
+  * CORDOVA_VERSION-Cordova CLI 的版本。
   * CORDOVA_PLATFORMS-的逗号分隔清单命令适用于的平台 (例如: android、 ios)。
   * CORDOVA_PLUGINS-以逗号分隔的清单中的外挂程式 Id 命令适用于 (如: org.apache.cordova.file、 org.apache.cordova.file 转让)
   * CORDOVA_HOOK-的挂钩上正在执行的路径。
-  * CORDOVA_CMDLINE-传递到科尔多瓦的确切的命令列参数 (例如: 科尔多瓦运行 ios — — 模仿)
+  * CORDOVA_CMDLINE-传递到Cordova的确切的命令列参数 (例如: Cordova运行 ios — — 模仿)
 
-如果一个脚本返回一个非零结束代码，然后将中止父科尔多瓦命令。
+如果一个脚本返回一个非零结束代码，然后将中止父Cordova命令。
 
-此外请注意，即使您正在在 Windows 上，以防你钩脚本并不是蝙蝠档 (这建议，如果你想要你上班非 Windows 作业系统中的脚本) 科尔多瓦 CLI 将期望一切线作为第一行才知道翻译它需要使用启动脚本。 一切行应匹配下面的示例:
+此外请注意，即使您正在在 Windows 上，以防你钩脚本并不是蝙蝠档 (这建议，如果你想要你上班非 Windows 作业系统中的脚本) Cordova CLI 将期望一切线作为第一行才知道翻译它需要使用启动脚本。 一切行应匹配下面的示例:
 
     #!/usr/bin/env [name_of_interpreter_executable]
     
 
 ## 示例用法
 
-此示例演示科尔多瓦钩用法跟踪到主控台输出为 Android 平台生成的.apk 档的大小。
+此示例演示Cordova钩用法跟踪到主控台输出为 Android 平台生成的.apk 档的大小。
 
-创建空白科尔多瓦 app 并向`config.xml`来告诉科尔多瓦在每个平台生成后运行`afterBuild.js`脚本添加下面的定义。
+创建空白Cordova app 并向`config.xml`来告诉Cordova在每个平台生成后运行`afterBuild.js`脚本添加下面的定义。
 
     <hook type="after_build" src="scripts/afterBuild.js" />
     
@@ -245,7 +245,7 @@ var Q = context.requireCordovaModule('q');
     };
     
 
-参数`环磷醯胺`在上面例子中通过科尔多瓦和表示脚本的完整路径、 目标平台、 命令列参数等的执行上下文，也暴露出额外的协助工具。 有关更多详细资讯请参见`指令码介面`节以上。
+参数`环磷醯胺`在上面例子中通过Cordova和表示脚本的完整路径、 目标平台、 命令列参数等的执行上下文，也暴露出额外的协助工具。 有关更多详细资讯请参见`指令码介面`节以上。
 
 现在可以添加 android 平台，并执行生成。
 

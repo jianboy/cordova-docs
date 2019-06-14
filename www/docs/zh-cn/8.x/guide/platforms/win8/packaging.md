@@ -29,7 +29,7 @@ title: Windows 包装
   * 签章凭证
   * 身份细节匹配提供的签章凭证
 
-在 Windows 专案标识的详细资讯保存在名为 package.appxmanifest 的档。此档是自动填满每次科尔多瓦应用程式的构建。身份保留 3 重要栏位。
+在 Windows 专案标识的详细资讯保存在名为 package.appxmanifest 的档。此档是自动填满每次Cordova应用程式的构建。身份保留 3 重要栏位。
 
   * Name
   * Publisher
@@ -62,7 +62,7 @@ title: Windows 包装
 
 此外，它还支援以混合和匹配的命令列参数和 build.json 档中的参数。从命令列参数的值将会得到优先。
 
-# 如何创建证书金钥和标志科尔多瓦 windows 应用程式
+# 如何创建证书金钥和标志Cordova windows 应用程式
 
 需要分发和安装 Windows 应用商店应用程式签名的。 当你部署套装程式版本，这一过程将由 Visual Studio 通常进行处理。 我们要做 tmhis 没有 Visual Studio 创建我们自己的证书。
 
@@ -114,4 +114,4 @@ title: Windows 包装
 
 `powershell -Command " & {dir -path cert:\LocalMachine\My | where { $_.Subject -like \"*FakeCorp.com*\" }}"`
 
-一旦这些最后的值提供。科尔多瓦应该成功打包和签名应用程式。
+一旦这些最后的值提供。Cordova应该成功打包和签名应用程式。
