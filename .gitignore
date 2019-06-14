@@ -23,3 +23,6 @@ ruby_modules
 Gemfile.lock
 
 .*.swp
+
+/package-lock.json
+npm-debug.log

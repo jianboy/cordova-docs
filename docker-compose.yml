@@ -2,7 +2,7 @@ version: '2.1'
 
 services:
   cordova-docs:
-    image: cordova-docs:latest2
+    image: hub.tencentyun.com/google/cordova-docs:v1.1
     build: .
     ports:
       - 3000:3000

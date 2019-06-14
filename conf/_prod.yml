@@ -1,5 +1,5 @@
 baseurl: ""
-default_linked_docs_version: latest
+default_linked_docs_version: 9.x
 destination: build-prod
 exclude:
     - static/css-src

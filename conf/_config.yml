@@ -5,14 +5,13 @@
 # =======
 # Site settings
 # =======
-title:          Apache Cordova
-title_suffix:   "Apache Cordova"
+title:          Cordova 中文网
+title_suffix:   "Cordova 中文网"
 url:            "https://cordova.apache.org" # the base hostname & protocol
 baseurl:        "" # the subpath of the site, e.g. /blog; NOTE: no trailing slash
 rss_path:       /feed.xml
 description: >
-    Apache Cordova is a set of device APIs that allow a web mobile app
-    developer to access native device function from JavaScript.
+    Apache Cordova是一组设备api，允许web移动应用程序开发人员通过JavaScript访问本机设备功能。
 
 excerpt_separator: <!--more-->
 
@@ -25,12 +24,12 @@ latest_docs_version: dev
 default_linked_docs_version: latest
 
 # the language that serves as the source for the translations
-src_language: en
+src_language: zh-cn
 
 # NOTE:
 #      this value _might_ get overwritten on some pages;
 #      see _defaults.yml, which is a generated file
-language: en
+language: zh-cn
 
 # NOTE:
 #      this value gets overwritten in _defaults.yml, which is a generated file

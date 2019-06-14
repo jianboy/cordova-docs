@@ -169,11 +169,9 @@ NOTE:
                             {% comment %}
                             Name the latest version as "latest" to take advantage of redirects for "/latest/".
                             {% endcomment %}
-                            {% if other_version == site.latest_docs_version %}
-                                {% assign other_version_string = "latest" %}
-                            {% else %}
+                            
                                 {% assign other_version_string = other_version %}
-                            {% endif %}
+                            
 
                             {% capture version_entry_string %}
                                 {{ other_version }}

@@ -15,18 +15,19 @@ change_frequency: monthly
             <div class="col-xs-12 col-sm-7 hero_content">
                 <img class="hero_logo hidden-xs" src="{{ site.baseurl }}/static/img/cordova-logo-newbrand-textonly.svg" />
                 <!-- <img class="hero_logo visible-xs" src="{{ site.baseurl }}/static/img/logo_full_2.svg" /> -->
-                <p>Mobile apps with <em>HTML</em>, <em>CSS</em> &amp; <em>JS</em></p>
-                <p>Target multiple platforms with <em>one code base</em></p>
-                <p>Free and <em>open source</em></p>
+                <p>使用<em>HTML</em>, <em>CSS</em> &amp; <em>JS</em>进行移动App开发</p>
+                <p>多平台<em>共用一套代码</em></p>
+                <p>免费<em>开源</em></p>
+                <p>Cordova中文网QQ交流群：<em>1036846871</em></p>
                 <div class="hero_supported_platforms">
                     <img src="{{ site.baseurl }}/static/img/platform-logos.svg" width="140px" />
                 </div>
                 <div class="hero_buttons">
                     <a href="#getstarted" class="col-xs-12 col-sm-5 btn btn-lg btn-primary">
-                        Get Started
+                        入门
                     </a>
-                    <a href="{{ site.baseurl }}/docs/en/{{ site.default_linked_docs_version }}/" class="col-xs-12 col-sm-6 btn btn-lg btn-primary">
-                        Documentation
+                    <a href="{{ site.baseurl }}/docs/zh-cn/{{ site.default_linked_docs_version }}/" class="col-xs-12 col-sm-6 btn btn-lg btn-primary">
+                        文档
                     </a>
                 </div>
             </div>
@@ -39,19 +40,19 @@ change_frequency: monthly
             <div class="col-xs-4">
                 <div class="row">
                     <div class="col-sm-4 col-md-3"><div class="sprite_img" id="sprite_shared_code"></div></div>
-                    <div class="col-sm-8 col-md-9"><div class="value_prop"><p>Reusable code across platforms</p></div></div>
+                    <div class="col-sm-8 col-md-9"><div class="value_prop"><p>跨平台重用代码</p></div></div>
                 </div>
             </div>
             <div class="col-xs-4">
                 <div class="row">
                     <div class="col-sm-4 col-md-3"><div class="sprite_img" id="sprite_offline"></div></div>
-                    <div class="col-sm-8 col-md-9"><div class="value_prop"><p>Support for offline scenarios</p></div></div>
+                    <div class="col-sm-8 col-md-9"><div class="value_prop"><p>支持离线场景应用</p></div></div>
                 </div>
             </div>
             <div class="col-xs-4">
                 <div class="row">
                     <div class="col-sm-4 col-md-3"><div class="sprite_img" id="sprite_apis"></div></div>
-                    <div class="col-sm-8 col-md-9"><div class="value_prop"><p>Access native device APIs</p></div></div>
+                    <div class="col-sm-8 col-md-9"><div class="value_prop"><p>访问设备原生API</p></div></div>
                 </div>
             </div>
         </div>
@@ -63,7 +64,7 @@ change_frequency: monthly
     <div class="row">
         <div class="col-md-12 text-center">
             <a id="getstarted" name="getstarted" class="fragment-anchor"></a>
-            <h1>Get Started Fast</h1>
+            <h1>快速入门</h1>
         </div>
     </div>
     <!-- GETTING STARTED -->
@@ -72,11 +73,11 @@ change_frequency: monthly
             <div class="number_circle">1</div>
         </div>
         <div class="col-md-7 col-xs-10">
-            <h2>Installing Cordova</h2>
-            <p>Cordova command-line runs on <a target="_blank" href="http://nodejs.org/">Node.js</a> and is available on
+            <h2>安装Cordova</h2>
+            <p>Cordova的命令行运行在 <a target="_blank" href="http://nodejs.org/">Node.js</a> 上面并且可以通过
             <a target="_blank" href="https://npmjs.org/package/cordova">NPM</a>.
-            Follow <a href="{{ site.baseurl }}/docs/en/{{ site.default_linked_docs_version }}/index.html#develop-for-platforms">platform specific guides</a>
-            to install additional platform dependencies. Open a command prompt or Terminal, and type <code>npm install -g cordova</code>.</p>
+            安装。 根据 <a href="{{ site.baseurl }}/docs/en/{{ site.default_linked_docs_version }}/index.html#develop-for-platforms">平台具体指导</a>
+            安装相应平台的依赖。打开命令提示符或终端，然后键入 <code>npm install -g cordova</code>.</p>
         </div>
         <div class="col-md-4 col-xs-12">
             <div class="well_code">
@@ -93,9 +94,9 @@ change_frequency: monthly
             <div class="number_circle">2</div>
         </div>
         <div class="col-md-7 col-xs-10">
-            <h2>Create a project</h2>
-            <p>Create a blank Cordova project using the command-line tool.  Navigate to the directory where you wish to create your project and type <code>cordova create &lt;path&gt;</code>.</p>
-            <p>For a complete set of options, type <code>cordova help create</code>.</p>
+            <h2>创建一个项目</h2>
+            <p>使用命令行创建一个空的Cordova项目。导航到你希望创建项目的目录，然后键入 <code>cordova create &lt;path&gt;</code>.</p>
+            <p>要知道这个命令完整的选项，键入 <code>cordova help create</code>.</p>
         </div>
         <div class="col-md-4 col-xs-12">
             <div class="well_code">
@@ -112,10 +113,10 @@ change_frequency: monthly
             <div class="number_circle">3</div>
         </div>
         <div class="col-md-7 col-xs-10">
-            <h2>Add a platform</h2>
-            <p>After creating a Cordova project, navigate to the project directory.  From the project directory, you need to add a platform for which you want to build your app.</p>
-            <p>To add a platform, type <code>cordova platform add &lt;platform name&gt;</code>.</p>
-            <p>For a complete list of platforms you can add, run <code>cordova platform</code>.</p>
+            <h2>添加一个平台</h2>
+            <p>在创建完一个Cordova项目后，导航到项目目录。在项目目录中，你需要添加你想构建app的平台</p>
+            <p>为了添加平台， 键入 <code>cordova platform add &lt;platform name&gt;</code>.</p>
+            <p>为了知道你可以添加的平台，你可以运行 <code>cordova platform</code>.</p>
         </div>
         <div class="col-md-4 col-xs-12">
             <div class="well_code">
@@ -133,8 +134,8 @@ change_frequency: monthly
             <div class="number_circle">4</div>
         </div>
         <div class="col-md-7 col-xs-10">
-            <h2>Run your app</h2>
-            <p>From the command line, run <code>cordova run &lt;platform name&gt;</code>.</p>
+            <h2>运行App</h2>
+            <p>在命令中,键入 <code>cordova run &lt;platform name&gt;</code>.</p>
         </div>
         <div class="col-md-4 col-xs-12">
             <div class="well_code">
@@ -151,19 +152,19 @@ change_frequency: monthly
             <div class="number_circle">5</div>
         </div>
         <div class="col-md-7 col-xs-10">
-            <h2>Common next steps</h2>
+            <h2>通常的下一步</h2>
             <ul class="nav">
                 <li>
-                    <a href="{{ site.baseurl }}/docs/en/{{ site.default_linked_docs_version }}/guide/overview/">Read the docs</a>
+                    <a href="{{ site.baseurl }}/docs/en/{{ site.default_linked_docs_version }}/guide/overview/">阅读文档</a>
                 </li>
                 <li>
-                    <a href="{{ site.baseurl }}/docs/en/{{ site.default_linked_docs_version }}/guide/cli/#add-plugins">Add a Plugin</a>
+                    <a href="{{ site.baseurl }}/docs/en/{{ site.default_linked_docs_version }}/guide/cli/#add-plugins">添加插件</a>
                 </li>
                 <li>
-                    <a href="{{ site.baseurl }}/docs/en/{{ site.default_linked_docs_version }}/config_ref/images.html">Customize app icons</a>
+                    <a href="{{ site.baseurl }}/docs/en/{{ site.default_linked_docs_version }}/config_ref/images.html">自定义App ICON</a>
                 </li>
                 <li>
-                    <a href="{{ site.baseurl }}/docs/en/{{ site.default_linked_docs_version }}/config_ref/">Configure Your App</a>
+                    <a href="{{ site.baseurl }}/docs/en/{{ site.default_linked_docs_version }}/config_ref/">配置你的App</a>
                 </li>
             </ul>
         </div>
@@ -178,13 +179,11 @@ change_frequency: monthly
     <div class="container">
         <div class="row showcase_section_intro" id="supported_platforms_section">
             <div class="col-md-12 text-center">
-                <h1>Supported Platforms</h1>
-                <h2>See a list of
-                    <a href="{{ site.baseurl }}/docs/en/{{ site.default_linked_docs_version }}/guide/support/index.html">features supported</a> in each platform</h2>
+                <h1>支持平台</h1>
+                <h2>查看每个平台
+                    <a href="{{ site.baseurl }}/docs/en/{{ site.default_linked_docs_version }}/guide/support/index.html">支持特性</a> 列表</h2>
                 <p>
-                    Cordova wraps your HTML/JavaScript app into a native container which can access the device functions of several platforms.
-                    These functions are exposed via a unified JavaScript API, allowing you to easily write one set of code to target nearly every
-                    phone or tablet on the market today and publish to their app stores.
+                    Cordova包装你的HTML/JavaScript app到原生app容器中，可以让你访问每个平台设备的功能。这些功能通过统一的JavaScript API提供，让你轻松的编写一组代码运行在几乎市面上的所有手机和平板上，并可以发布到相应的app商城中。
                 </p>
             </div>
         </div>
