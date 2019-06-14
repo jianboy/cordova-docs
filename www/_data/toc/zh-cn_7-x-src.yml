@@ -3,12 +3,12 @@
     children:
         - url: guide/overview/index.html
 -
-    name: Create apps
+    name: 创建 APP
     children:
         - url: guide/cli/index.html
         - url: guide/support/index.html
         -
-            name: Develop for platforms
+            name: 平台开发
             children:
                 - url: guide/platforms/android/index.html
                 - url: guide/platforms/blackberry10/home.html
@@ -24,11 +24,11 @@
         - url: guide/appdev/security/index.html
         - url: guide/appdev/whitelist/index.html
 -
-    name: Create plugins
+    name: 创建插件
     children:
         - url: guide/hybrid/plugins/index.html
         -
-            name: Develop for platforms
+            name: 平台开发
             children:
                 - url: guide/platforms/android/plugin.html
                 - url: guide/platforms/blackberry10/plugin.html
@@ -37,12 +37,12 @@
                 - url: guide/platforms/wp8/plugin.html
         - url: plugin_ref/plugman.html
 -
-    name: Advanced Topics
+    name: 高级开发
     children:
         - url: guide/hybrid/webviews/index.html
         - url: guide/next/index.html
 -
-    name: Reference
+    name: 参考
     children:
         - url: config_ref/index.html
         - url: cordova/events/events.html
@@ -50,7 +50,7 @@
         - url: guide/appdev/hooks/index.html
         - url: plugin_ref/spec.html
         -
-            name: Plugin APIs
+            name: 插件 APIs
             children:
                 - url: reference/cordova-plugin-battery-status/index.html
                 - url: reference/cordova-plugin-camera/index.html

@@ -9,83 +9,79 @@
     image: Pacifica.png
     url: https://thinkpacifica.com
     description: >
-        Daily tools for stress, anxiety and depression based on Cognitive
-        Behavioral Therapy and Mindfulness.
+        缓解认知的压力，焦虑和抑郁的日常工具
+        
 
 -   name: Sworkit - Personal Workout Trainer
     image: Sworkit.png
     url: http://sworkit.com
     description: >
-        Sworkit delivers on-demand, personalized video exercises to millions
-        of users to help them stay fit.
+        Sworkit为数百万人提供按需，个性化的视频练习
+         用户帮助他们保持健康。
 
 -   name: FanReact - Sports Fans Social App
     image: FanReact.png
     url: http://fanreact.com/
     description: >
-        Sports only social app for fans to share their experiences.
+        体育只有社交应用程序让粉丝分享他们的经验。
 
 -   name: JustWatch - Streaming Search Engine
     image: JustWatch.png
     url: https://www.justwatch.com/
     description: >
-        JustWatch is the easiest way to see if your favorite movies or TV
-        shows are available on any streaming provider.
+        JustWatch是查看您最喜爱的电影或电视的最简单方法
+         节目可在任何流媒体提供商处获得。
 
 -   name: Gudog - Dog Boarding
     image: Gudog.png
     url: https://gudog.co.uk/mobile
     description: >
-        Gudog brings together dog owners and trustworthy dog sitters who
-        offer Home Dog Boarding, Dog Walking and Doggy Daycare.
+        Gudog汇集了狗主人和值得信赖的狗狗
+         提供家庭狗寄宿，狗步行和小狗日托。
 
 -   name: Series Seven
     image: SeriesSeven.png
     url: http://www.idangero.us/series7/
     description: >
-        Series Seven allows you to track your favorite TV shows and easily
-        get all information about TV show. You'll never miss new episode of
-        your favorite show with Series Seven.
+        Series Seven可让您轻松跟踪喜爱的电视节目
+         获取有关电视节目的所有信息。 你永远不会错过新剧集
+         你最喜欢的七连七秀。
 
 -   name: Keepe - Handyman on Demand
     image: Keepe.png
     url: http://www.keepe.com/?utm_source=cordova
     description: >
-        Get a Handyman or Plumber to your House in 1 Hour. Keepe delivers the
-        right contractor at your doorstep.
+        在1小时内为您的房子找一个勤杂工或水管工。 Keepe提供了
+         在你家门口的合适的承包商。
 
 -   name: Clever Baby - Baby Log & Tracker
     image: CleverBaby.png
     url: http://www.mycleverbaby.com/
     description: >
-        Clever Baby is the easiest way to track your baby's well-being, growth
-        and development.
+        聪明宝贝是追踪宝宝健康成长的最简单方法。
 
 -   name: Buildr
     image: Buildr.png
     url: https://itunes.apple.com/us/app/buildr./id987621361?mt=8
     description: >
-        You are using PhoneGap Build to develop your Apps? Then Buildr will
-        be your new best friend. Rebuild, pull and monitor your apps, unlock
-        and change signing keys.
+        您正在使用PhoneGap Build来开发您的应用程序？ 那么Buildr将成为你最好的朋友。 重建，拉取和监控您的应用，解锁和更改签名密钥。
 
 -   name: Graded
     image: Graded.png
     url: http://www.graded.us
     description: >
-        The easiest and prettiest way to check your grades from Home Access Center (HAC)
+        最简单和漂亮的方式用来检测你的成绩从家庭接入中心(HAC)。 
 
 -   name: One Verse BIBLE
     image: OneVerse.png
     url: http://www.onever.se
     description: >
-        One Verse BIBLE is a beautifully crafted Bible app to focus more on
-        each Bible Verse and to compare easily with various Bible Versions
+        One Verse BIBLE是一个精美的圣经应用程序，专注于每个圣经的经文和比较圣经的不同版本。 
 
 -   name: SparkChess
     image: SparkChess.png
     url: https://www.sparkchess.com
     description: > 
-        Finally, a game of chess everyone can enjoy. Play chess against the computer or 
-        challenge your friends in online multiplayer. SparkChess is available on the 
-        App Store, on Google Play and online. 
+        最后，每个人都可以享受下棋。 对着电脑或国际象棋下棋
+         在线多人游戏中挑战你的朋友。 SparkChess可用于
+         App Store，在Google Play和在线。

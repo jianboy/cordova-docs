@@ -9,93 +9,81 @@
     image: phonegap.svg
     url: http://phonegap.com/
     description: >
-        PhoneGap is the original and most popular distribution of Apache
-        Cordova. Turn your HTML, CSS and JavaScript into an app on your
-        device in minutes using our simple <a href="http://docs.phonegap.com/getting-started/1-install-phonegap/desktop/">
-        desktop</a> and <a href="http://docs.phonegap.com/references/developer-app/">
-        developer</a> apps.
+         PhoneGap是Apache Cordova最原始和最流行的分发。只需要几分钟，就可以让你的HTML,CSS和JavaScript变成你设备上的一个App，你只要简单的使用我们 桌面 和 开发者应用. 
 
 -   name: Ionic Framework
     image: ionic.png
     url: http://ionicframework.com/
     description: >
-        Ionic is a front-end SDK for building cross-platform mobile apps.
-        Built on top of Angular, Ionic also provides a platform for
-        integrating services like push notifications and analytics.
+         Ionic是一个前端SDK用来构建跨平台移动App。以Angular做基础，也提供平台集成服务，如消息推送和分析。 
 
 -   name: Monaca
     image: monaca.png
     url: https://monaca.io/
     description: >
-        Comprehensive cloud-powered and framework-agnostic set of tools
-        Monaca supports both online and offline development, debugging with
-        live-reload feature and cloud build experience.
+          综合云动力和框架无关的工具集。Monaca同时支持在线和离线的开发、动态加载调试和云构建体验。 
 
 -   name: Onsen UI
     image: onsen.png
     url: http://onsen.io/
     description: >
-        Custom Elements-based HTML5 framework offers a large selection of
-        components and responsive layout support. Onsen UI lets you create
-        professionally designed multiplatform apps without acquiring additional
-        skillset.
+         基于自定义元素的HTML5框架，提供大量可供选择的组件和响应式布局支持。Onsen UI可以让你设计专业的多平台应用，无需更多的技能。 
 
 -   name: Visual Studio
     image: visual_studio_white.png
     url: https://www.visualstudio.com/vs/features/cordova/
     description: >
-        Popular IDE for building cross-platform apps for Android, iOS, and
-        Windows. Complete with advanced build and debugging support.
+         流行的IDE，用来为Android，iOS和Windows构建跨平台的App。凭借先进的构建和调试支持来完成。 
 
 -   name: App Builder
     image: appbuilder.png
     url: http://www.getappbuilder.com/
     description: >
-        App Builder is a complete IDE for Microsoft Windows which allows to
-        create HTML5 and native apps without programming knowledge. Offers
-        dozens of controls and actions ready to be used in your apps and
-        lot of app samples to learn it.
+        App Builder是适用于Microsoft Windows的完整IDE
+         无需编程知识即可创建HTML5和本机应用程序。商情
+         准备在您的应用中使用的数十个控件和操作
+         很多应用样本来学习它。
 
 -   name: Framework7
     image: framework7.png
     url: http://www.idangero.us/framework7/
     description: >
-        Framework7 is a free and open source mobile HTML framework for
-        developing hybrid mobile apps or web apps with iOS & Android
-        native look and feel.
+        Framework7是一个免费的开源移动HTML框架
+         使用iOS和Android开发混合移动应用程序或Web应用程序
+         原生的外观和感觉。
 
 -   name: Evothings Studio
     image: evothings.png
     url: https://evothings.com/
     description: >
-        Evothings Studio provides Cordova developers with a rapid development
-        workflow, tutorials and example apps for the Internet of Things.
-        Support for Bluetooth Low Energy (BLE) and other IoT related
-        technologies.
+        Evothings Studio为Cordova开发人员提供了快速发展
+         物联网的工作流程，教程和示例应用程序。
+         支持蓝牙低功耗（BLE）和其他物联网相关
+        技术。
 
 -   name: NSB/AppStudio
     image: appstudio.png
     url: https://www.nsbasic.com/
     description: >
-        NSB/AppStudio is an IDE for webapps/native apps. One step install
-        includes complete PhoneGap integration, plus Bootstrap, jQuery Mobile
-        and jqWidgets. Drag and Drop Designer. Easy programming in JavaScript
-        or BASIC. Windows and MacOS.
+        NSB / AppStudio是一个用于webapps /本机应用程序的IDE。 一步安装
+         包括完整的PhoneGap集成，以及Bootstrap，jQuery Mobile
+         和jqWidgets。 拖放设计器。 在JavaScript中轻松编程
+         或BASIC。 Windows和MacOS。
 
 -   name: Mobiscroll
     image: mobiscroll.png
     url: https://mobiscroll.com
     description: >
-        Mobiscroll is a collection of cross platform UI
-        controls for delivering polished iOS, Android & Windows Phone apps.
-        Framework agnostic, use it with plain Javascript,
-        jQuery, Angular, React or Knockout.
+        Mobiscroll是跨平台UI的集合
+         提供优质iOS，Android和Windows Phone应用程序的控件。
+         框架不可知，使用普通的Javascript，
+         jQuery，Angular，React或Knockout。
 
 -   name: Instabug
     image: instabug.png
     url: https://instabug.com/platforms/cordova
     description: >
-        Instabug provides Cordova developers with a bug reporting and in-app
-        feedback solution. With a one minute install guide,
-         it enables users to seamlessly report bugs while automatically attaching
-        details such as network logs, repro-steps, etc.
+        Instabug为Cordova开发人员提供错误报告和应用程序内容
+         反馈解决方案 有一分钟的安装指南，
+          它使用户能够在自动附加时无缝地报告错误
+         网络日志，重复步骤等详细信息
