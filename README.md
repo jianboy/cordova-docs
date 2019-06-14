@@ -22,8 +22,10 @@ npm run-script build
 ```
 
 
-
+或者手动执行（更快）：
 ```
+node tools/bin/toc.js www/docs www/_data/toc
+
 bundle exec jekyll build --config conf/_config.yml,conf/_defaults.yml,conf/_version.yml,conf/_prod.yml --watch
 
 ```
